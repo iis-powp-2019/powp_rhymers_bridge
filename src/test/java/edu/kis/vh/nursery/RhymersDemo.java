@@ -33,3 +33,5 @@ class RhymersDemo {
     }
 
 }
+//  alr + strzałka w prawo = przskok na otwarty po prawo plik
+//  alr + strzałka w lewo = przskok na otwarty po lewo plik
