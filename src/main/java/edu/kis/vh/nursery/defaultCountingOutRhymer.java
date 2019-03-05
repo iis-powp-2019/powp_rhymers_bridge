@@ -33,4 +33,4 @@ public class defaultCountingOutRhymer {
 
 }
 
-//Skrót ctr + shift + backspace
+//Skrót ctr + shift + backspace cofa do ostatnio edytowanego pliku
