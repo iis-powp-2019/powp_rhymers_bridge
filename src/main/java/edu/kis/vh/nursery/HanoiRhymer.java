@@ -14,4 +14,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
         else
             super.countIn(in);
     }
+//    Skrót klawiszowy dla ostatniej lokalizacji edycji to CTRL + SHIFT + Backspace
 }
