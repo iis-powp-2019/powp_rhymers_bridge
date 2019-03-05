@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 //CTRL-SHIFT-BACKSPACE for going to last edited line
-public class FIFORhymer extends defaultCountingOutRhymer {
+public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	public defaultCountingOutRhymer temp = new defaultCountingOutRhymer();
+	public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
 	@Override
 	public int countOut() {
