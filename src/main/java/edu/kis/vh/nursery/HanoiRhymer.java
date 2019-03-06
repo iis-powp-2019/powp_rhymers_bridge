@@ -17,11 +17,11 @@ public final class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
     }
 
-    public int getTotalRejected() {
+    private int getTotalRejected() {
         return totalRejected;
     }
 
-    public void setTotalRejected(final int totalRejected) {
+    private void setTotalRejected(final int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }

@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     private static final int FULL_STACK_SIZE = 11;
     private static final int MAX_STACK_SIZE = 12;
 
-    private int[] numbers = new int[MAX_STACK_SIZE];
+    private final int[] numbers = new int[MAX_STACK_SIZE];
 
     private int total = INITIAL_STACK_INDEX;
 
