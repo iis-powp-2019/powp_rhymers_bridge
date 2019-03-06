@@ -17,3 +17,7 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		return ret;
 	}
 }
+//alt + strzałka w lewo
+//cofa się do poprzedniej edycji w projekcie
+//alt + strzałka w prawo
+//przemieszcza się do następnej edycji w projekcie
