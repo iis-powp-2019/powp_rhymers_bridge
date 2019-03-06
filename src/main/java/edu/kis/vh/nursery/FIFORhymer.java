@@ -19,3 +19,4 @@ public class FIFORhymer extends defaultCountingOutRhymer {
         return ret;
     }
 }
+// alt + <- i alt + -> przelaczaja miedzy otwartymi kartami
