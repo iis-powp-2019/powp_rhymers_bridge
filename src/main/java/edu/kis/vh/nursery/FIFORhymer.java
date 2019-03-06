@@ -18,4 +18,6 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 
 		return ret;
 	}
+	
+//	alt ze strzalka w lewo lub w prawo przelacza miedzy otwartymi plikami w kartach
 }
