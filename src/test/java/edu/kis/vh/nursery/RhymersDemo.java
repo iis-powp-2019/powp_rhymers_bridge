@@ -7,6 +7,8 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
+	public static final String TOTAL_REJECTED_IS = "total rejected is ";
+
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 		
@@ -31,7 +33,7 @@ class RhymersDemo {
 			System.out.println();
 		}
 		
-		System.out.println("total rejected is "  + ((HanoiRhymer) rhymers[3]).reportRejected());
+		System.out.println(TOTAL_REJECTED_IS + ((HanoiRhymer) rhymers[3]).reportRejected());
 		
 	}
 	
