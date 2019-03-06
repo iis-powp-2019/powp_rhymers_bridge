@@ -1,15 +1,17 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
+import edu.kis.vh.nursery.DefaultCoutingOutRhymer;
 
 public interface Rhymersfactory {
 
-	public defaultCountingOutRhymer GetStandardRhymer();
+	public DefaultCoutingOutRhymer GetStandardRhymer();
 
-	public defaultCountingOutRhymer GetFalseRhymer();
+	public DefaultCoutingOutRhymer GetFalseRhymer();
 
-	public defaultCountingOutRhymer GetFIFORhymer();
+	public DefaultCoutingOutRhymer GetFIFORhymer();
 
-	public defaultCountingOutRhymer GetHanoiRhymer();
+	public DefaultCoutingOutRhymer GetHanoiRhymer();
 
 }
+
+//skrot alt + strzalka powoduje przelaczanie miedzy plikami
