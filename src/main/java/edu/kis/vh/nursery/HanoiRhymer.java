@@ -11,6 +11,7 @@ public class HanoiRhymer
 		return totalRejected;
 	}
 	
+	@Override
 	public void countIn(final int in)
 	{
 		if(!callCheck() && in > peekaboo())
