@@ -15,3 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
 			super.countIn(in);
 	}
 }
+//1) źle sformatowane linie 5, 12, 14, 15
+//3) alt + strzałki zmienia przeglądany plik na ten na prawo lub lewo z paska z otwartymi plikami
