@@ -10,22 +10,14 @@ public class DefaultCoutingOutRhymer {
 
 	private int[] numbers = new int[MAX_STACK_SIZE];
 
-	private int total = NOT_FOUND_RETURN;
+	private int total = INITIAL_STACK_SIZE;
 
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-	public void countIn(int in) {
+	protected void countIn(int in) {
 		if (!isFull())
-			numbers[++total] = INITIAL_STACK_SIZE;
+			numbers[++total] = in;
 	}
 	
-	public int countOut() {
+	protected int countOut() {
 		if (callCheck())
 			return NOT_FOUND_RETURN;
 		return numbers[total--];
@@ -41,7 +33,7 @@ public class DefaultCoutingOutRhymer {
 		return numbers[total];
 	}
 
-	private boolean isFull() {
+	protected boolean isFull() {
 		return total == MAX_STACK_SIZE - 1;
 	}
 
