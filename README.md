@@ -13,3 +13,4 @@ Za zgłoszone w terminie rozwiązanie pojedynczej instrukcji można dostać max.
 Dodatkowe punkty mogą być przyznane za zadania z gwiazdką.
 Za każdy tydzień opóźnienia maksymalna liczba punktów zmniejsza się o jeden.
 Więcej obowiązujących informacji dotyczących pracy z repozytorium znajdują się w instrukcjach.
++
