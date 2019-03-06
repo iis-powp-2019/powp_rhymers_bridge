@@ -10,7 +10,15 @@ public class DefaultCoutingOutRhymer {
 
 	private int[] numbers = new int[MAX_STACK_SIZE];
 
-	public int total = NOT_FOUND_RETURN;
+	private int total = NOT_FOUND_RETURN;
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
 
 	public void countIn(int in) {
 		if (!isFull())
