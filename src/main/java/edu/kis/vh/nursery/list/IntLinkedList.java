@@ -40,7 +40,7 @@ public class IntLinkedList
 	{
 		if(isEmpty())
 			return EMPTY_STACK_VALUE;
-		int ret = last.getValue();
+		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
@@ -50,8 +50,4 @@ public class IntLinkedList
 		return i;
 	}
 	
-	public void setI(int i)
-	{
-		this.i = i;
-	}
 }
