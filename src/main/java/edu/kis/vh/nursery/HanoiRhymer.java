@@ -15,3 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
 			super.countIn(in);
 	}
 }
+//kombinacja klawiszy alt + <- pozwala na cofnięcie się do poprzednio modyfikowanego pliku
+//kombinacja klawiszy alt + -> pozwala na przeniesienie do modyfikowanego pliku przed cofnięciem (zrobienie kroku do przodu)
