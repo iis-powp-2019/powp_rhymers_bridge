@@ -8,32 +8,33 @@ public class DefaultCoutingOutRhymer {
 
 	private static final int MAX_STACK_SIZE = 12;
 
-	private int[] NUMBERS = new int[MAX_STACK_SIZE];
+	private int[] numbers = new int[MAX_STACK_SIZE];
 
 	public int total = NOT_FOUND_RETURN;
 
 	public void countIn(int in) {
 		if (!isFull())
-			NUMBERS[++total] = INITIAL_STACK_SIZE;
+			numbers[++total] = INITIAL_STACK_SIZE;
 	}
-
-	public boolean callCheck() {
-		return total == INITIAL_STACK_SIZE;
-	}
-
-	public boolean isFull() {
-		return total == MAX_STACK_SIZE - 1;
-	}
-
-	protected int peekaboo() {
-		if (callCheck())
-			return NOT_FOUND_RETURN;
-		return NUMBERS[total];
-	}
-
+	
 	public int countOut() {
 		if (callCheck())
 			return NOT_FOUND_RETURN;
-		return NUMBERS[total--];
+		return numbers[total--];
 	}
+
+	protected boolean callCheck() {
+		return total == INITIAL_STACK_SIZE;
+	}
+	
+	protected int peekaboo() {
+		if (callCheck())
+			return NOT_FOUND_RETURN;
+		return numbers[total];
+	}
+
+	private boolean isFull() {
+		return total == MAX_STACK_SIZE - 1;
+	}
+
 }
