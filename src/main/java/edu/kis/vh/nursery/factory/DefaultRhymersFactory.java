@@ -26,5 +26,5 @@ public class DefaultRhymersFactory implements Rhymersfactory {
     public DefaultCountingOutRhymer getHanoiRhymer() {
         return new HanoiRhymer();
     }
-
+    // I had not found any unused setter.
 }
