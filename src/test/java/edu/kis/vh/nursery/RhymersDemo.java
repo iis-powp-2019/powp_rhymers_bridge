@@ -27,11 +27,11 @@ class RhymersDemo
 		{
 			while(!rhymers[i].callCheck())
 				System.out.print(rhymers[i].countOut() + "  ");
+			
 			System.out.println();
 		}
 		
-		System.out.println("total rejected is "
-				+ ((HanoiRhymer)rhymers[3]).reportRejected());
+		System.out.println("total rejected is " + ((HanoiRhymer)rhymers[3]).reportRejected());
 		
 	}
 	
