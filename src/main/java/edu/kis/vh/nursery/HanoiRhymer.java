@@ -18,4 +18,6 @@ public class HanoiRhymer
 		else
 			super.countIn(in);
 	}
+	
+	// alt+lewo/prawo: przejscie do poprzedniego/kolejnego edytwoanego pliku
 }
