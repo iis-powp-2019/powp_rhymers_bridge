@@ -26,5 +26,5 @@ public class DefaultRhymersFactory implements Rhymersfactory {
 	public defaultCountingOutRhymer GetHanoiRhymer() {
 		return new HanoiRhymer();
 	}
-
+//	kombinacja klawiszy alt + strzałka prawo/ strzałka lewo powoduje odpowiednie przejście do następnego lub poprzedniego otwartego pliku.
 }
