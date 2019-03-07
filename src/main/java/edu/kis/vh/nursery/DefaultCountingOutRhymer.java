@@ -57,7 +57,4 @@ public class DefaultCountingOutRhymer {
 		return numbers;
 	}
 
-	private void setNumbers(int[] numbers) {
-		this.numbers = numbers;
-	}
 }
