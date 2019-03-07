@@ -15,5 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 
-
+//    Kombinacja "alt" + "->" lub "alt" + "<-" przełącza podgląd otwertych plików w IDE.
 }
