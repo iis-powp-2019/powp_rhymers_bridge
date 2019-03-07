@@ -15,3 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in); //źle sformatowana
     }
 }
+
+//klawisze alt + strzałki umożliwiają przemieszczanie się między plikami(kartami), na których operujemy
