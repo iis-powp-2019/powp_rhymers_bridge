@@ -15,3 +15,12 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+
+/*
+* Kombinacja alt + strzałka w przypadku Intellij powoduje przełączenie się pomiędzy kartami
+*
+* W Eclipsie umożliwia nam to powrów to poprzednio edytowanego miejsca
+*
+* Odpowiednikiem tego skrótu w Intellij jest ctr + alt + strzałka
+*
+* */
