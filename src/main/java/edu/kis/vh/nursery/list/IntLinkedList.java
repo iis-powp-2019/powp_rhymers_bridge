@@ -1,11 +1,17 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author modyfikował Piotr Marczewski 
+ */
 public class IntLinkedList {
 
 	public Node last;
 	private int i;
 	private int size = 0;
 	
+	/**
+	 * @param i Parametr stosowany w metodzie push, jest to wartość jaka jest dodawana do listy.
+	 */
 	protected void push(int i) {
 		if (last == null){
 			last = new Node(i);
@@ -19,21 +25,37 @@ public class IntLinkedList {
 		}
 	}
 	
+	/**
+	 * @return Zwraca wartość boolean true jeśli lista jest pusta.
+	 */
+	
 	protected boolean isEmpty() {
 		if(last == null) return true;
 		else return false;
 	}
+	
+	/**
+	 * @return Zwraca wartość boolean true jeśli lista jest zapełniona.
+	 */
 	
 	protected boolean isFull() {
 		if(size == 12) return true;
 		else return false;
 	}
 	
+	/**
+	 * @return Metoda zwraca ostatnio dodaną wartość do listy.
+	 */
+	
 	protected int top() {
 		if (isEmpty())
 			return -1;
 		return last.value;
 	}
+	
+	/**
+	 * @return Metoda zdejmuje jeden element z listy.
+	 */
 	
 	protected int pop() {
 		if (isEmpty())
@@ -44,9 +66,17 @@ public class IntLinkedList {
 		return ret;
 	}
 	
+	/**
+	 * @return Metoda zwraca parametr i.
+	 */
+	
 	protected int getI() {
 		return i;
 	}
+	
+	/**
+	 * @return Metoda zwraca last.
+	 */
 	
 	Node getLast() {
 		return last;
@@ -54,11 +84,10 @@ public class IntLinkedList {
 }
 
 class Node {
-
 	protected final int value;
 	private  Node prev;
 	protected Node next;
-	
+
 	protected Node(int i) {
 		value = i;
 	}
@@ -67,6 +96,9 @@ class Node {
 		return prev;
 	}
 	
+	/**
+	 * @return Metoda zwraca wartość prev. 
+	 */
 	protected void setPrev(Node prev) {
 		this.prev = prev;
 	}	

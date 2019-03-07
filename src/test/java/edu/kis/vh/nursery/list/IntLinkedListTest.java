@@ -43,6 +43,9 @@ public class IntLinkedListTest {
 		Assert.assertEquals(false, lList.isEmpty());
 	}
 	
+	/**
+	 * 
+	 */
 	@Test
 	public void testTop()
 	{
@@ -54,6 +57,9 @@ public class IntLinkedListTest {
 		Assert.assertEquals(7, lList.top());
 	}
 	
+	/**
+	 * 
+	 */
 	@Test
 	public void testIsFull()
 	{
