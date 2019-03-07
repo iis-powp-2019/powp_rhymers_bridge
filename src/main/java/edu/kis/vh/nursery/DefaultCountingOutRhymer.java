@@ -8,36 +8,56 @@ public class DefaultCountingOutRhymer {
 
 	private static final int MAX_SIZE_STACK = 12;
 
-	private int[] numbers = new int[MAX_SIZE_STACK];
+	private int[] numbers = new int[getMaxSizeStack()];
 
-	private int total = DEFAULT_INDEX_STACK;
+	private int total = getDefaultIndexStack();
+
+	private static int getDefaultIndexStack() {
+		return DEFAULT_INDEX_STACK;
+	}
+
+	private static int getNotFoundReturn() {
+		return NOT_FOUND_RETURN;
+	}
+
+	private static int getMaxSizeStack() {
+		return MAX_SIZE_STACK;
+	}
 
 	protected void countIn(int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			getNumbers()[++total] = in;
 	}
 
 	protected boolean callCheck() {
-		return total == DEFAULT_INDEX_STACK;
+		return total == getDefaultIndexStack();
 	}
 
 	protected boolean isFull() {
-		return total == MAX_SIZE_STACK-1;
+		return total == getMaxSizeStack() -1;
 	}
 
 	protected int peekaboo() {
 		if (callCheck())
-			return NOT_FOUND_RETURN;
-		return numbers[total];
+			return getNotFoundReturn();
+		return getNumbers()[total];
 	}
 
 	protected int countOut() {
 		if (callCheck())
-			return NOT_FOUND_RETURN;
-		return numbers[total--];
+			return getNotFoundReturn();
+		return getNumbers()[total--];
 	}
 
 	public int getTotal() {
 		return total;
+	}
+
+	private int[] getNumbers() {
+		return numbers;
+	}
+
+	private void setNumbers(int[] numbers) {
+		this.numbers = numbers;
 	}
 }
