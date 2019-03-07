@@ -5,15 +5,15 @@ public class Node {
 	protected final int value;
 	private  Node prev;
 	protected Node next;
-
+	
 	protected Node(int i) {
 		value = i;
 	}
-
+	
 	protected Node getPrev() {
 		return prev;
 	}
-
+	
 	protected void setPrev(Node prev) {
 		this.prev = prev;
 	}	

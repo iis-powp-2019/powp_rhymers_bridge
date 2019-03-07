@@ -14,25 +14,25 @@ public class DefaultCountingOutRhymer {
 		if (!isFull())
 			numbers[++total] = in;
 	}
-
+	
 	public boolean callCheck() {
 		return total == error;
 	}
-
+	
 	public boolean isFull() {
 		return total == 11;
 	}
-
+	
 	public int getTotal() {
 		return total;
 	}
-
+	
 	protected int peekaboo() {
 		if (callCheck())
 			return error;
 		return numbers[total];
 	}
-
+	
 	public int countOut() {
 		if (callCheck())
 			return error;
