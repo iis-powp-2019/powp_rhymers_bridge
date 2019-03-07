@@ -9,4 +9,7 @@ public class Node {
         value = i;
     }
 
+    //W intelij: dzięki alt + strzałka w lewo lub prawo poruszamy się po otwartych kartach w edytorze
+    //W eclipse: wracamy do ostatniego edytowanego pliku
+
 }
