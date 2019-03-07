@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
 
 	private int[] numbers = new int[maxArraySize];
 
-	public int total = error;
+	private int total = error;
 
 	public void countIn(int in) {
 		if (!isFull())
