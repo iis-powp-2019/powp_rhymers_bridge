@@ -15,7 +15,7 @@ public class defaultCountingOutRhymer {
 		return total == -1;
 	}
 
-	public boolean isFull() {
+    public boolean isFull() {
 		return total == 11;
 	}
 
