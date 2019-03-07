@@ -10,3 +10,5 @@ public class Node {
     }
 
 }
+// alt+→ switch to the next open file in IDE
+// alt+← switch to the previous open file in IDE
