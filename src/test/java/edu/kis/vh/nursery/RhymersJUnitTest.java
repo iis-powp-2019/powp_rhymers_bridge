@@ -3,6 +3,9 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
+@SuppressWarnings("unused")
 public class RhymersJUnitTest {
 
 	@Test
@@ -74,5 +77,32 @@ public class RhymersJUnitTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
+	
+	@Test
+	public void testCountOutFIFO() {
+		FIFORhymer rhymer = new FIFORhymer();
+		
+		final int EMPTY_STACK_VALUE = -1;
 
+		int result = rhymer.countOut();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		int testValue = 4;
+		rhymer.countIn(testValue);
+
+		result = rhymer.countOut();
+		Assert.assertEquals(testValue, result);
+		result = rhymer.countOut();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+	
+	@Test
+	public void testCountInHanoi() {
+		HanoiRhymer rhymer = new HanoiRhymer();
+		int testValue = 4;
+		rhymer.countIn(testValue);
+
+		int result = rhymer.peekaboo();
+		Assert.assertEquals(testValue, result);
+	}
 }
