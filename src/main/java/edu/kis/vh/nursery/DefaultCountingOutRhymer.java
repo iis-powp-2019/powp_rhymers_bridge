@@ -50,15 +50,8 @@ public class DefaultCountingOutRhymer {
 		return total;
 	}
 
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-    public int[] getNumbers() {
+	public int[] getNumbers() {
         return numbers;
     }
 
-    public void setNumbers(int[] numbers) {
-        this.numbers = numbers;
-    }
 }
