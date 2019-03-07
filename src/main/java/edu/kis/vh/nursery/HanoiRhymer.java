@@ -15,3 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+//Używam inteliJ i ctrl+left/right arrow skacze po słowach
