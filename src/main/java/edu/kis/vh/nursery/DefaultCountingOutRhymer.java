@@ -10,6 +10,14 @@ public class DefaultCountingOutRhymer {
     private static final int NAMBER_PIKABO = -1;
     private int[] numbers = new int[STACK_MAX_SIZE];
 
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     private int total = INDEX_EMPTY;
 
     public void countIn(int in) {
