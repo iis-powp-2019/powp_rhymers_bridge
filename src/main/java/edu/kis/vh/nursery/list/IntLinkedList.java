@@ -3,10 +3,13 @@ package edu.kis.vh.nursery.list;
 /**
  * Linked list which stores ints.
  */
+//TODO: think about changing methods names (e.g. push to add)
 public class IntLinkedList {
 
 	private static final int EMPTY = -1;
 	private Node last;
+
+	//TODO: remove unused variable.
 	int i;
 
 	public static int getEMPTY() {

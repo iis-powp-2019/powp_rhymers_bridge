@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+//TODO: think about extracting interface and using bridge.
 public class DefaultCountingOutRhymer {
 
 	private static final int EMPTY = -1;
