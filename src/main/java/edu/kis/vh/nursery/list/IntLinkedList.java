@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * Linked list which stores ints.
+ */
 public class IntLinkedList {
 
 	private static final int EMPTY = -1;
@@ -28,6 +31,10 @@ public class IntLinkedList {
 		return false;
 	}
 
+	/**
+	 * Returns last value added to list. If list is empty returns -1.
+	 * @return last value added or -1 if empty.
+	 */
 	public int top() {
 		if (isEmpty())
 			return getEMPTY();
