@@ -10,15 +10,15 @@ public class DefaultCountingOutRhymer {
 
 	private int total = getEMPTY();
 
-    public static int getEMPTY() {
+    private static int getEMPTY() {
         return EMPTY;
     }
 
-    public static int getNumbersSize() {
+    private static int getNumbersSize() {
         return NUMBERS_SIZE;
     }
 
-    public static int getFULL() {
+    private static int getFULL() {
         return FULL;
     }
 
@@ -51,7 +51,7 @@ public class DefaultCountingOutRhymer {
 		return total;
 	}
 
-	public int[] getNumbers() {
+	private int[] getNumbers() {
         return numbers;
     }
 

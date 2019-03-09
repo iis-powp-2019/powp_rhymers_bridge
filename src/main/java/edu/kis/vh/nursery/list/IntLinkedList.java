@@ -12,7 +12,7 @@ public class IntLinkedList {
 	//TODO: remove unused variable.
 	int i;
 
-	public static int getEMPTY() {
+	private static int getEMPTY() {
 		return EMPTY;
 	}
 
@@ -52,11 +52,11 @@ public class IntLinkedList {
 		return ret;
 	}
 
-	public Node getLast() {
+	private Node getLast() {
 		return last;
 	}
 
-	public void setLast(Node last) {
+	private void setLast(Node last) {
 		this.last = last;
 	}
 
@@ -74,27 +74,27 @@ public class IntLinkedList {
 			setValue(i);
 		}
 
-		public int getValue() {
+		int getValue() {
 			return value;
 		}
 
-		public void setValue(int value) {
+		void setValue(int value) {
 			this.value = value;
 		}
 
-		public Node getPrev() {
+		Node getPrev() {
 			return prev;
 		}
 
-		public void setPrev(Node prev) {
+		void setPrev(Node prev) {
 			this.prev = prev;
 		}
 
-		public Node getNext() {
+		Node getNext() {
 			return next;
 		}
 
-		public void setNext(Node next) {
+		void setNext(Node next) {
 			this.next = next;
 		}
 	}
