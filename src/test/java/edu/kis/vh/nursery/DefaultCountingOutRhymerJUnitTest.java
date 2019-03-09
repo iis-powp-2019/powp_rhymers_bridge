@@ -33,10 +33,11 @@ public class DefaultCountingOutRhymerJUnitTest {
 	public void testIsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
+		final int TEST_VALUE = 888;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
             Assert.assertFalse(result);
-			rhymer.countIn(888);
+			rhymer.countIn(TEST_VALUE);
 		}
 
 		boolean result = rhymer.isFull();
