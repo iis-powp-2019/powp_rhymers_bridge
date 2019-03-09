@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery.list;
 
+
+/*TODO: needs refactoring to the bridge pattern*/
 public class IntLinkedList {
 
     Node last;
