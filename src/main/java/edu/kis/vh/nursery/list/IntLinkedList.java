@@ -1,7 +1,10 @@
 package edu.kis.vh.nursery.list;
 
 
-
+/**
+ * @author Admin
+ * @param
+ */
 public class IntLinkedList {
 
     Node last;
@@ -17,20 +20,32 @@ public class IntLinkedList {
         }
     }
 
+    /**
+     * @return
+     */
     private boolean isEmpty() {
         return last == null;
     }
 
+    /**
+     * @return
+     */
     private boolean isFull() {
         return false;
     }
 
+    /**
+     * @return
+     */
     public int top() {
         if (isEmpty())
             return -1;
         return last.getValue();
     }
 
+    /**
+     * @return
+     */
     private int pop() {
         if (isEmpty())
             return -1;
