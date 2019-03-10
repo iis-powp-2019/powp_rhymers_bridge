@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+//Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 public class RhymersJUnitTest {
 
 	@Test
