@@ -9,6 +9,18 @@ public class DefaultCountingOutRhymer {
 
     private int total = EMPTY_STACK_HEAD_INDEX;
 
+    public static int getEmptyStackHeadIndex() {
+        return EMPTY_STACK_HEAD_INDEX;
+    }
+
+    public static int getFullStackHeadIndex() {
+        return FULL_STACK_HEAD_INDEX;
+    }
+
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
+
     public int getTotal() {
         return total;
     }
@@ -38,4 +50,15 @@ public class DefaultCountingOutRhymer {
         return numbers[total--];
     }
 
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 }
