@@ -2,12 +2,12 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int STACK_CAPACITY = 12;
+    private static final int STACK_CAPACITY = 12;
     private static final int EMPTY_INDEX = -1;
-    public static final int FULL_INDEX = 11;
+    private static final int FULL_INDEX = 11;
     private int[] numbers = new int[STACK_CAPACITY];
 
-    public int total = EMPTY_INDEX;
+    private int total = EMPTY_INDEX;
 
     public void countIn(int in) {
         if (!isFull())
