@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.list;
 
 /**
  *IntLinkedList is Linked List of integers where inner element of this List are nodes which is inner class
- * 
+ *
  */
 public class IntLinkedList {
     /**
