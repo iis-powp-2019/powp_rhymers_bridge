@@ -8,9 +8,9 @@ public class DefaultCountingOutRhymer {
     private static final int FULL = 11;
     private int[] numbers = new int[CAPACITY];
 
-    private int total = EMPTY_STACK_HEAD_INDEX;
+    private  int total = EMPTY_STACK_HEAD_INDEX;
 
-    protected void countIn(int in) {
+    protected void countIn(final int in) {
         if (!isFull())
             numbers[++total] = in;
     }

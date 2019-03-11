@@ -9,7 +9,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return getTotalRejected();
     }
 
-    protected void countIn(int in) {
+    protected void countIn(final int in) {
         if (!callCheck() && in > peekaboo())
             setTotalRejected(getTotalRejected() + 1);
         else
@@ -20,7 +20,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalRejected;
     }
 
-    public void setTotalRejected(int totalRejected) {
+    public void setTotalRejected(final int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }
