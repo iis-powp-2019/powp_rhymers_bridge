@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     private static final int MAX_SIZE_OF_QUEUE = 12;
     private static final int EMPTY_POSITION = -1;
-    private int[] queue = new int[MAX_SIZE_OF_QUEUE];
+    private final int[] queue = new int[MAX_SIZE_OF_QUEUE];
 
     private int currentIndex = EMPTY_POSITION;
 
