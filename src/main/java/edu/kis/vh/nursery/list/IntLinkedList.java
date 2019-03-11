@@ -6,7 +6,7 @@ public class IntLinkedList {
     private Node last;
     int i;
 
-    public void push(int i) {
+    public void push(final int i) {
 
         if (last == null)
             last = new Node(i);
@@ -36,7 +36,7 @@ public class IntLinkedList {
 
         if (isEmpty())
             return EMPTY_VALUE;
-        int ret = last.value;
+        final int ret = last.value;
         last = last.prev;
         return ret;
     }
