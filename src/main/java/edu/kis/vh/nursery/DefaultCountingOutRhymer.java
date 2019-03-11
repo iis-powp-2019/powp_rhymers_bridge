@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
 
     private int currentIndex = EMPTY_POSITION;
 
+    public int getCurrentIndex() {
+        return currentIndex;
+    }
+
     public void countIn(int in) {
         if (!isFull())
             queue[++currentIndex] = in;
