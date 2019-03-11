@@ -1,7 +1,9 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-
+    /**
+     * Komentarz przykladowy
+     */
     private static final int EMPTY = -1;
     private static final int MAX_SIZE = 11;
     public static final int STACK_CAPACITY = 12;
