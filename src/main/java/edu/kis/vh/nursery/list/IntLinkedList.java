@@ -1,6 +1,40 @@
 package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
+    private class Node {
+
+        private int value;
+        private Node prev;
+        private Node next;
+
+        protected Node(final int i) {
+            setValue(i);
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public void setValue(final int value) {
+            this.value = value;
+        }
+
+        public Node getPrev() {
+            return prev;
+        }
+
+        public void setPrev(final Node prev) {
+            this.prev = prev;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(final Node next) {
+            this.next = next;
+        }
+    }
 
     private static final int EMPTY = -1;
     private Node last;
@@ -52,3 +86,5 @@ public class IntLinkedList {
 
 
 }
+// alt+→ switch to the next open file in IDE
+// alt+← switch to the previous open file in IDE
