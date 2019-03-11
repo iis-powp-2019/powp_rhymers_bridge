@@ -4,6 +4,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
+    //TODO: DELETE reportRejected, does the same thing as getTotalRejected
+
     public int reportRejected() {
         return totalRejected;
     }

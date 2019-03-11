@@ -2,6 +2,8 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
+    //TODO: NEEDS REFACTORING TO THE BRIDGE PATTERN
+
     private static final int EMPTY_STACK_HEAD_INDEX = -1;
     private static final int FULL_STACK_HEAD_INDEX = 11;
     private static final int CAPACITY = 12;
