@@ -17,9 +17,7 @@ public class DefaultCountingOutRhymer {
         return total == DEFAULT_RETURN_VALUE;
     }
 
-    boolean isFull() {
-        return total == FULL_STACK;
-    }
+    boolean isFull() { return total == FULL_STACK; }
 
     int peekaboo() {
         if (callCheck())
@@ -35,9 +33,5 @@ public class DefaultCountingOutRhymer {
 
     public int getTotal() {
         return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
     }
 }
