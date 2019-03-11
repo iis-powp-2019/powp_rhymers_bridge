@@ -2,11 +2,11 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int MAX_SIZE_OF_QUEUE = 12;
-    public static final int EMPTY_POSITION = -1;
+    private static final int MAX_SIZE_OF_QUEUE = 12;
+    private static final int EMPTY_POSITION = -1;
     private int[] queue = new int[MAX_SIZE_OF_QUEUE];
 
-    public int currentIndex = EMPTY_POSITION;
+    private int currentIndex = EMPTY_POSITION;
 
     public void countIn(int in) {
         if (!isFull())

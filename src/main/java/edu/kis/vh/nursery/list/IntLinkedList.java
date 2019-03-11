@@ -2,8 +2,8 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    public static final int EMPTY_POSITION = -1;
-    Node lastNode;
+    private static final int EMPTY_POSITION = -1;
+    private Node lastNode;
     //martwa zmienna
 
     public void push(int i) {
