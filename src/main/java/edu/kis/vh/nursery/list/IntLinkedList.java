@@ -40,7 +40,7 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
-    private void push(final int i) {
+    public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {
@@ -50,21 +50,21 @@ public class IntLinkedList {
         }
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return getLast() == null;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return false;
     }
 
-    private int top() {
+    public int top() {
         if (isEmpty())
             return EMPTY;
         return getLast().getValue();
     }
 
-    private int pop() {
+    public int pop() {
         if (isEmpty())
             return EMPTY;
         int ret = getLast().getValue();
