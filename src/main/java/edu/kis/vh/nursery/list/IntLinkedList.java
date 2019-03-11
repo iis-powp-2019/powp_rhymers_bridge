@@ -1,12 +1,14 @@
 package edu.kis.vh.nursery.list;
 
 /**
- *Linked List of integers where inner element of this List are nodes
+ *IntLinkedList is Linked List of integers where inner element of this List are nodes which is inner class
+ * 
  */
 public class IntLinkedList {
     /**
      * Inner class of node in Linked List
      * elements of Linked List are nodes
+     * nodes have value as int, previous node and next node
      */
     private class Node {
 
@@ -15,7 +17,7 @@ public class IntLinkedList {
         private Node next;
 
         /**
-         * Constructor of node
+         * Constructor of node with parameter i which is node value
          * @param i value of Node
          */
         protected Node(final int i) {
@@ -23,7 +25,7 @@ public class IntLinkedList {
         }
 
         /**
-         * return value of node
+         * return value of current node
          * @return value of node as int
          */
         public int getValue() {
@@ -31,23 +33,23 @@ public class IntLinkedList {
         }
 
         /**
-         * Set new value of node where new value is value
-         * @param value new value of node
+         * Set new value of current node
+         * @param value new value of node as int
          */
         public void setValue(final int value) {
             this.value = value;
         }
 
         /**
-         * return previous node
-         * @return previous node of this node
+         * return previous node of current node
+         * @return previous node of current node as Node
          */
         public Node getPrev() {
             return prev;
         }
 
         /**
-         * Set previous node of this node
+         * Set previous node of current node
          * @param prev new previous node
          */
         public void setPrev(final Node prev) {
@@ -55,15 +57,15 @@ public class IntLinkedList {
         }
 
         /**
-         * Return next node of this node
-         * @return next node
+         * Return next node of current node
+         * @return return next node as Node
          */
         public Node getNext() {
             return next;
         }
 
         /**
-         * Set next node of this node
+         * Set next node of current node
          * @param next new next node of this node
          */
         public void setNext(final Node next) {
@@ -76,7 +78,7 @@ public class IntLinkedList {
     private int i;
 
     /**
-     * add i to the top of Linked List
+     * add i to the top of Linked List as new element
      * @param i value to add to Linked List as int
      */
     public void push(final int i) {
