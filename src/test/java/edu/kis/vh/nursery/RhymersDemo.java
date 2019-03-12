@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
-	public static final int COUNT_IN_AMOUNT_LIMIT = 15;
+	private static final int COUNT_IN_AMOUNT_LIMIT = 15;
 
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();

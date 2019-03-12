@@ -5,8 +5,8 @@ import org.junit.Test;
 
 public class RhymersJUnitTest {
 
-	public static final int DEFAULT_TEST_VALUE = 4;
-	public static final int DEFAULT_COUNT_IN_VALUE = 888;
+	private static final int DEFAULT_TEST_VALUE = 4;
+	private static final int DEFAULT_COUNT_IN_VALUE = 888;
 
 	@Test
 	public void testCountIn() {
