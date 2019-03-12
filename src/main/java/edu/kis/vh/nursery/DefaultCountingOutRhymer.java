@@ -7,31 +7,35 @@ public class DefaultCountingOutRhymer {
     private static final int max_size = capacity-1;
     private int[] numbers = new int[capacity];
 
-    private int head = array_initial_index;
+    private int total = array_initial_index;
+
+    public int getTotal() {
+        return total;
+    }
 
     void countIn(int in) {
         if (!isFull())
-            numbers[++head] = in;
+            numbers[++total] = in;
     }
 
     boolean callCheck() {
-        return head == array_initial_index;
+        return total == array_initial_index;
     }
 
     boolean isFull() {
-        return head == max_size;
+        return total == max_size;
     }
 
     int peekaboo() {
         if (callCheck())
             return array_initial_index;
-        return numbers[head];
+        return numbers[total];
     }
 
     int countOut() {
         if (callCheck())
             return array_initial_index;
-        return numbers[head--];
+        return numbers[total--];
     }
 
 }
