@@ -1,8 +1,9 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.stack.IntStack;
 
-	private static final int EMPTY_INDEX = -1;
+public class IntLinkedList implements IntStack {
+
 	private Node last;
 	private int total = EMPTY_INDEX;
 
