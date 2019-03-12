@@ -1,15 +1,16 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.IntStack;
+
 /**
- *  class implements own linkedList
+ * class implements own linkedList
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 
     private static final int EMPTY_POSITION = -1;
     private Node lastNode;
 
     /**
-     *
      * @param i - value for adding to list
      */
     public void countIn(int i) {
@@ -23,7 +24,6 @@ public class IntLinkedList {
     }
 
     /**
-     *
      * @return boolen value from checking if list is empty
      */
     public boolean callCheck() {
@@ -32,7 +32,6 @@ public class IntLinkedList {
 
 
     /**
-     *
      * @return boolen value from checking if list is full
      */
     public boolean isFull() {
@@ -40,7 +39,6 @@ public class IntLinkedList {
     }
 
     /**
-     *
      * @return peekaboo value on the list
      */
     public int peekaboo() {
@@ -51,7 +49,6 @@ public class IntLinkedList {
     }
 
     /**
-     *
      * @return peekaboo value on the list and remove it from list
      */
     public int countOut() {

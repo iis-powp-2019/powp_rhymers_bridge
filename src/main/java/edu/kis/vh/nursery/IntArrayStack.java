@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 /**
  *  class of own queue impl
  */
-public class IntArrayStack {
+public class IntArrayStack implements IntStack {
 
     private static final int MAX_SIZE_OF_QUEUE = 12;
     private static final int EMPTY_POSITION = -1;
@@ -23,6 +23,7 @@ public class IntArrayStack {
      *
      * @param in - input integer to add it to queue
      */
+    @Override
     public void countIn(int in) {
         if (!isFull())
             queue[++currentIndex] = in;
@@ -32,6 +33,7 @@ public class IntArrayStack {
      *
      * @return boolen value from checking if queue is empty
      */
+    @Override
     public boolean callCheck() {
         return currentIndex == EMPTY_POSITION;
     }
@@ -40,6 +42,7 @@ public class IntArrayStack {
      *
      * @return boolen value from checking if queue is full
      */
+    @Override
     public boolean isFull() {
         return currentIndex == MAX_SIZE_OF_QUEUE - 1;
     }
@@ -59,6 +62,7 @@ public class IntArrayStack {
      *
      * @return value of last queue position
      */
+    @Override
     public int countOut() {
         if (callCheck()) {
             return EMPTY_POSITION;
