@@ -1,40 +1,39 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * class of own queue impl
  */
 public class DefaultCountingOutRhymer {
-    private IntArrayStack intArrayStack;
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intArrayStack = intArrayStack;
+    private IntLinkedList intLinkedList;
+
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+        this.intLinkedList = intLinkedList;
     }
 
     public DefaultCountingOutRhymer() {
-        intArrayStack = new IntArrayStack();
-    }
-
-    public int getCurrentIndex() {
-        return intArrayStack.getCurrentIndex();
+        intLinkedList = new IntLinkedList();
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        intLinkedList.countIn(in);
     }
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return intLinkedList.callCheck();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return intLinkedList.isFull();
     }
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        return intLinkedList.peekaboo();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return intLinkedList.countOut();
     }
 }

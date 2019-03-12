@@ -7,13 +7,12 @@ public class IntLinkedList {
 
     private static final int EMPTY_POSITION = -1;
     private Node lastNode;
-    //martwa zmienna
 
     /**
      *
      * @param i - value for adding to list
      */
-    public void push(int i) {
+    public void countIn(int i) {
         if (lastNode == null) {
             lastNode = new Node(i);
         } else {
@@ -27,7 +26,7 @@ public class IntLinkedList {
      *
      * @return boolen value from checking if list is empty
      */
-    public boolean isEmpty() {
+    public boolean callCheck() {
         return lastNode == null;
     }
 
@@ -42,10 +41,10 @@ public class IntLinkedList {
 
     /**
      *
-     * @return top value on the list
+     * @return peekaboo value on the list
      */
-    public int top() {
-        if (isEmpty()) {
+    public int peekaboo() {
+        if (callCheck()) {
             return EMPTY_POSITION;
         }
         return lastNode.getValue();
@@ -53,10 +52,10 @@ public class IntLinkedList {
 
     /**
      *
-     * @return top value on the list and remove it from list
+     * @return peekaboo value on the list and remove it from list
      */
-    public int pop() {
-        if (isEmpty()) {
+    public int countOut() {
+        if (callCheck()) {
             return EMPTY_POSITION;
         }
         int lastValueOnList = lastNode.getValue();
