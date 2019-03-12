@@ -1,69 +1,40 @@
 package edu.kis.vh.nursery;
 
 /**
- *  class of own queue impl
+ * class of own queue impl
  */
 public class DefaultCountingOutRhymer {
+    private IntArrayStack intArrayStack;
 
-    private static final int MAX_SIZE_OF_QUEUE = 12;
-    private static final int EMPTY_POSITION = -1;
-    private final int[] queue = new int[MAX_SIZE_OF_QUEUE];
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-    private int currentIndex = EMPTY_POSITION;
+    public DefaultCountingOutRhymer() {
+        intArrayStack = new IntArrayStack();
+    }
 
-    /**
-     *
-     * @return value of currentIndex field
-     */
     public int getCurrentIndex() {
-        return currentIndex;
+        return intArrayStack.getCurrentIndex();
     }
 
-    /** add passed integer to queue
-     *
-     * @param in - input integer to add it to queue
-     */
     public void countIn(int in) {
-        if (!isFull())
-            queue[++currentIndex] = in;
+        intArrayStack.countIn(in);
     }
 
-    /**check if queue is empty
-     *
-     * @return boolen value from checking if queue is empty
-     */
     public boolean callCheck() {
-        return currentIndex == EMPTY_POSITION;
+        return intArrayStack.callCheck();
     }
 
-    /**check if queue is full
-     *
-     * @return boolen value from checking if queue is full
-     */
     public boolean isFull() {
-        return currentIndex == MAX_SIZE_OF_QUEUE - 1;
+        return intArrayStack.isFull();
     }
 
-    /**
-     *
-     * @return value of last queue position
-     */
-    protected int peekaboo() {
-        if (callCheck()) {
-            return EMPTY_POSITION;
-        }
-        return queue[currentIndex];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    /**value of last queue position and decrement current position
-     *
-     * @return value of last queue position
-     */
     public int countOut() {
-        if (callCheck()) {
-            return EMPTY_POSITION;
-        }
-        return queue[currentIndex--];
+        return intArrayStack.countOut();
     }
-
 }
