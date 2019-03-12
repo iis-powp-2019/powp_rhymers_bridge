@@ -19,3 +19,4 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		return ret;
 	}
 }
+// skroty alt + strzałka pozwalaja na przesuwanie sie pomiedzy kartami
