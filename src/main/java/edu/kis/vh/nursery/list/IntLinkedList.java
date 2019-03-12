@@ -5,7 +5,7 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
-    private void push(int i) {
+    private void push(final int i) {
         if (last == null)
             last = new Node(i);
         else {
