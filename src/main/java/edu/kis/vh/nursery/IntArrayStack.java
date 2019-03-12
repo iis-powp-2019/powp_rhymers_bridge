@@ -10,6 +10,10 @@ public class IntArrayStack {
 
     private int total = STARTING_POS;
 
+    public int getTotal() {
+        return total;
+    }
+
     void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
