@@ -27,6 +27,7 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(false, result);
 	}
 
+	//Fails for implementations based on IntLinkedList, because it can't be full
 	@Test
 	public void testIsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -73,6 +74,16 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(testValue, result);
 		result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+
+	@Test
+	public void testGetTotal() {
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		int amountOfValuesToInsert = 5;
+		for(int i = 0; i < amountOfValuesToInsert; i++) {
+			rhymer.countIn(i);
+		}
+		Assert.assertEquals(amountOfValuesToInsert - 1, rhymer.getTotal());
 	}
 
 }
