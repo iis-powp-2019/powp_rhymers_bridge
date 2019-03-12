@@ -6,7 +6,9 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 class RhymersDemo {
 
 	public static void main(String[] args) {
+		IntArrayStack stack = new IntArrayStack();
 		RhymersFactory factory = new DefaultRhymersFactory();
+
 		testRhymers(factory);
 		
 	}
