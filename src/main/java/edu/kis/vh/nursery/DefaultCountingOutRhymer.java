@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Default implementation for in-out rhymer
+ */
 public class DefaultCountingOutRhymer
 {
 	
@@ -11,17 +14,28 @@ public class DefaultCountingOutRhymer
 	
 	private int total = EMPTY_CONSTANT;
 	
+	/**
+	 * @return number of elements in container
+	 */
 	int getTotal()
 	{
 		return total;
 	}
 	
+	/**
+	 * adds a number to the container
+	 * @param in number to add
+	 */
 	public void countIn(int in)
 	{
 		if(!isFull())
 			numbers[++total] = in;
 	}
 	
+	/**
+	 * checks if container is empty
+	 * @return is empty?
+	 */
 	public boolean callCheck()
 	{
 		return total == EMPTY_CONSTANT;
@@ -32,6 +46,10 @@ public class DefaultCountingOutRhymer
 		return total == FULL_CONSTANT;
 	}
 	
+	/**
+	 * checks but does not remove the next number
+	 * @return next number in container
+	 */
 	protected int peekaboo()
 	{
 		if(callCheck())
@@ -39,6 +57,10 @@ public class DefaultCountingOutRhymer
 		return numbers[total];
 	}
 	
+	/**
+	 * checks and remove the next number
+	 * @return next number in container
+	 */
 	public int countOut()
 	{
 		if(callCheck())
