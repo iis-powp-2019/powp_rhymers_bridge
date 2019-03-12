@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStack;
 import org.junit.Assert;
 import org.junit.Test;
 //Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
@@ -45,10 +46,9 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStack.EMPTY_INDEX, result);
 
 		int testValue = 4;
 		rhymer.countIn(testValue);
@@ -62,10 +62,9 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStack.EMPTY_INDEX, result);
 
 		int testValue = 4;
 		rhymer.countIn(testValue);
@@ -73,7 +72,7 @@ public class RhymersJUnitTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(testValue, result);
 		result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStack.EMPTY_INDEX, result);
 	}
 
 	@Test
@@ -83,7 +82,7 @@ public class RhymersJUnitTest {
 		for(int i = 0; i < amountOfValuesToInsert; i++) {
 			rhymer.countIn(i);
 		}
-		Assert.assertEquals(amountOfValuesToInsert - 1, rhymer.getTotal());
+		Assert.assertEquals(amountOfValuesToInsert, rhymer.getTotal());
 	}
 
 }
