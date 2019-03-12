@@ -1,14 +1,18 @@
 package edu.kis.vh.nursery.list;
 
+/*
+ * TODO: needs refactoring to either limit maximum list size and implement isFull() method property,
+ *       or delete members that serve no functionality
+ */
 public class IntLinkedList {
 
     private class Node {
 
-        final int value;
+        final int VALUE;
         Node prev, next;
 
-        Node(int i) {
-            value = i;
+        Node(final int I) {
+            VALUE = I;
         }
 
     }
@@ -17,12 +21,12 @@ public class IntLinkedList {
     private Node last;
     int i;
 
-    public void push(final int i) {
+    public void push(final int I) {
 
         if (last == null)
-            last = new Node(i);
+            last = new Node(I);
         else {
-            last.next = new Node(i);
+            last.next = new Node(I);
             last.next.prev = last;
             last = last.next;
         }
@@ -40,14 +44,14 @@ public class IntLinkedList {
 
         if (isEmpty())
             return EMPTY_VALUE;
-        return last.value;
+        return last.VALUE;
     }
 
     public int pop() {
 
         if (isEmpty())
             return EMPTY_VALUE;
-        final int ret = last.value;
+        final int ret = last.VALUE;
         last = last.prev;
         return ret;
     }

@@ -1,44 +1,87 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Class of default type rhymer
+ */
 public class DefaultCountingOutRhymer {
 
+    /**
+     * Value of {@link #total total} when rhymer stores no numbers
+     */
     private static final int NUMBERS_EMPTY = -1;
+    /**
+     * Value returned by {@link #peekaboo() peekaboo()} or {@link #countOut() countOut()} when rhymer stores no number
+     */
     private static final int NUMBERS_EMPTY_VALUE = -1;
+    /**
+     * Maximum quantity of numbers to store in rhymer
+     */
     private static final int NUMBERS_MAX_SIZE = 12;
-    private final int[] numbers = new int[NUMBERS_MAX_SIZE];
+    // TODO: needs refactoring to use list.IntLinkedList
+    /**
+     * Array of numbers stored in rhymer
+     */
+    private final int[] NUMBERS = new int[NUMBERS_MAX_SIZE];
 
+    /**
+     * Getter to {@link #total total} field
+     * @return value of {@link #total total} field
+     */
     public int getTotal() {
         return total;
     }
 
+    /**
+     * Quantity of numbers stored in rhymer
+     */
     private int total = NUMBERS_EMPTY;
 
-    public void countIn(int in) {
+    /**
+     * Adds number to rhymer
+     * @param IN value to add to the rhymer
+     */
+    public void countIn(final int IN) {
 
         if (!isFull())
-            numbers[++total] = in;
+            NUMBERS[++total] = IN;
     }
 
+    /**
+     * Checks if rhymer number storage is empty
+     * @return true when rhymers stores no numbers
+     */
     boolean callCheck() {
         return total == NUMBERS_EMPTY;
     }
 
+    /**
+     * Checks if rhymer number storage is full
+     * @return true when rhymers can store no more numbers
+     */
     boolean isFull() {
         return total == NUMBERS_MAX_SIZE-1;
     }
 
+    /**
+     * Gets value of last added number
+     * @return last added number
+     */
     int peekaboo() {
 
         if (callCheck())
             return NUMBERS_EMPTY_VALUE;
-        return numbers[total];
+        return NUMBERS[total];
     }
 
+    /**
+     * Gets value of last added number, popping it from rhymer storage
+     * @return last added number
+     */
     public int countOut () {
 
         if (callCheck())
             return NUMBERS_EMPTY_VALUE;
-        return numbers[total--];
+        return NUMBERS[total--];
     }
 
 }
