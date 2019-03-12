@@ -1,10 +1,9 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack {
-    private int CAPACITY = 12;
-    private int MAX_SIZE = CAPACITY - 1;
-    private int STARTING_POS = -1;
-
+    private final int CAPACITY = 12;
+    private final int MAX_SIZE = CAPACITY - 1;
+    private final int STARTING_POS = -1;
 
     private int[] numbers = new int[CAPACITY];
 
