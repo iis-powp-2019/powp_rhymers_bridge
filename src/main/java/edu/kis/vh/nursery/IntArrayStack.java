@@ -8,28 +8,28 @@ public class IntArrayStack {
 
     private int[] numbers = new int[CAPACITY];
 
-    public int total = STARTING_POS;
+    private int total = STARTING_POS;
 
-    public void countIn(int in) {
+    void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    boolean callCheck() {
         return total == STARTING_POS;
     }
 
-    public boolean isFull() {
+    boolean isFull() {
         return total == MAX_SIZE;
     }
 
-    protected int peekaboo() {
+    int peekaboo() {
         if (callCheck())
             return STARTING_POS;
         return numbers[total];
     }
 
-    public int countOut() {
+    int countOut() {
         if (callCheck())
             return STARTING_POS;
         return numbers[total--];
