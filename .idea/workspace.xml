@@ -45,9 +45,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/list/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="8" selection-end-line="33" />
               <folding>
+                <element signature="e#81#82#0" expanded="true" />
+                <element signature="e#109#110#0" expanded="true" />
                 <element signature="e#120#121#0" expanded="true" />
                 <element signature="e#136#137#0" expanded="true" />
                 <element signature="e#164#165#0" expanded="true" />
@@ -66,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/list/IntLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="765">
+              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
               <folding>
                 <element signature="e#173#174#0" expanded="true" />
                 <element signature="e#192#193#0" expanded="true" />
@@ -77,12 +79,8 @@
                 <element signature="e#362#363#0" expanded="true" />
                 <element signature="e#577#578#0" expanded="true" />
                 <element signature="e#595#596#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
                 <element signature="e#675#676#0" expanded="true" />
                 <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,7 +211,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552383842400" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552384173368" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -278,7 +276,7 @@
       <updated>1551981125081</updated>
       <workItem from="1551981129116" duration="609000" />
       <workItem from="1552341723062" duration="27000" />
-      <workItem from="1552382055845" duration="1698000" />
+      <workItem from="1552382055845" duration="2104000" />
     </task>
     <servers />
   </component>
@@ -291,7 +289,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3960000" />
+    <option name="totallyTimeSpent" value="4366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -307,12 +305,12 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3045326" />
@@ -438,9 +436,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/list/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="8" selection-end-line="33" />
           <folding>
+            <element signature="e#81#82#0" expanded="true" />
+            <element signature="e#109#110#0" expanded="true" />
             <element signature="e#120#121#0" expanded="true" />
             <element signature="e#136#137#0" expanded="true" />
             <element signature="e#164#165#0" expanded="true" />
@@ -457,8 +457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/list/IntLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="765">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
           <folding>
             <element signature="e#173#174#0" expanded="true" />
             <element signature="e#192#193#0" expanded="true" />
@@ -468,12 +468,8 @@
             <element signature="e#362#363#0" expanded="true" />
             <element signature="e#577#578#0" expanded="true" />
             <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
             <element signature="e#675#676#0" expanded="true" />
             <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
           </folding>
         </state>
       </provider>
