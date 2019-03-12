@@ -1,13 +1,24 @@
 package edu.kis.vh.nursery;
 
+/**
+ *   class add integer to queue
+ */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
+    /**
+     *
+     * @return how many attempts of adding value to queue was rejected
+     */
     public int reportRejected() {
         return totalRejected;
     }
 
+    /**
+     *
+     * @param in - value which is added to queue
+     */
     @Override
     public void countIn(int in) {
         if (!callCheck() && in > peekaboo()) {

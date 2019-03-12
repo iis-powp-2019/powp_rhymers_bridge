@@ -1,9 +1,16 @@
 package edu.kis.vh.nursery;
 
+/**
+ *  class of specified fifo queue. Pop node from queue
+ */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
 
+    /**
+     *
+     * @return  last value in fifo
+     */
     @Override
     public int countOut() {
 
