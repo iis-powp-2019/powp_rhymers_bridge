@@ -11,5 +11,4 @@ import edu.kis.vh.nursery.defaultCountingOutRhymer;
 		public defaultCountingOutRhymer GetFIFORhymer();
 		
 		public defaultCountingOutRhymer GetHanoiRhymer();
-		
 	}
