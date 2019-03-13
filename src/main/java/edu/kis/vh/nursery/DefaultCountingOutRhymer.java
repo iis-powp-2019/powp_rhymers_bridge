@@ -41,4 +41,16 @@ public class DefaultCountingOutRhymer {
 		return numbers[total--];
 	}
 
+	public static int getInitialStackIndex() {
+		return INITIAL_STACK_INDEX;
+	}
+
+	public static int getReturnDefault() {
+		return RETURN_DEFAULT;
+	}
+
+	public static int getMaxStackSize() {
+		return MAX_STACK_SIZE;
+	}
+
 }

@@ -18,6 +18,14 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 		return ret;
 	}
+
+	public DefaultCountingOutRhymer getTemp() {
+		return temp;
+	}
+
+	public void setTemp(DefaultCountingOutRhymer temp) {
+		this.temp = temp;
+	}
 	
 //	alt ze strzalka w lewo lub w prawo przelacza miedzy otwartymi plikami w kartach
 }
