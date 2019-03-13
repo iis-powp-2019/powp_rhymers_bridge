@@ -15,3 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+//przelaczanie pomiedzy otwartymi plikami
