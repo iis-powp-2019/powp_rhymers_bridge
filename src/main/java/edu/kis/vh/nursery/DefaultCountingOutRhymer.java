@@ -4,9 +4,21 @@ public class DefaultCountingOutRhymer {
 
     private static final int MAX_SIZE = 12;
 
-    private int[] numbers = new int[MAX_SIZE];
+    private int[] numbers = new int[getMaxSize()];
 
-    private int total = DEF_INDEX_STACK;
+    private int total = getDefIndexStack();
+
+    public static int getMaxSize() {
+        return MAX_SIZE;
+    }
+
+    public static int getDefIndexStack() {
+        return DEF_INDEX_STACK;
+    }
+
+    public static int getNotFound() {
+        return NOT_FOUND;
+    }
 
     public int getTotal() {
         return total;
@@ -22,29 +34,37 @@ public class DefaultCountingOutRhymer {
 
     public void countIn(int in) {
         if (!isFull())
-            numbers[++total] = in;
+            getNumbers()[++total] = in;
     }
 
     protected boolean callCheck() {
 
-        return total == DEF_INDEX_STACK;
+        return total == getDefIndexStack();
     }
 
     protected boolean isFull() {
 
-        return total == MAX_SIZE -1;
+        return total == getMaxSize() -1;
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return NOT_FOUND;
-        return numbers[total];
+            return getNotFound();
+        return getNumbers()[total];
     }
 
     protected int countOut() {
         if (callCheck())
             return -1;
-        return numbers[total--];
+        return getNumbers()[total--];
+    }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
     }
     // alt + ->/<- pozwala na przełączanie pomiędzy aktywnymi kartami
 }
