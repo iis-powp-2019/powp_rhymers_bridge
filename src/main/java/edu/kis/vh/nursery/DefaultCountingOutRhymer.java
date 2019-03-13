@@ -24,10 +24,6 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
     private static final int DEF_INDEX_STACK = -1;
 
     private static final int NOT_FOUND = -1;
@@ -63,8 +59,5 @@ public class DefaultCountingOutRhymer {
         return numbers;
     }
 
-    public void setNumbers(int[] numbers) {
-        this.numbers = numbers;
-    }
     // alt + ->/<- pozwala na przełączanie pomiędzy aktywnymi kartami
 }
