@@ -18,3 +18,4 @@ public class FIFORhymer extends defaultCountingOutRhymer {
     }
 }
 
+//alt + strzałka w IntelliJ przechodzi pomiędzy otwartymi plikami
