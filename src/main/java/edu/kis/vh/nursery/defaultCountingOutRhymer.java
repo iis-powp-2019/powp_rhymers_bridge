@@ -12,11 +12,11 @@ public class defaultCountingOutRhymer {
 	}
 
 	public boolean callCheck() {
-return total == -1;
+        return total == -1;
 }
 
 	public boolean isFull() {
-return total == 11;
+        return total == 11;
 }
 
 	protected int peekaboo() {
