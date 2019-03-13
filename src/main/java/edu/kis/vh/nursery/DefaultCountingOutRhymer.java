@@ -4,8 +4,8 @@ public class DefaultCountingOutRhymer {
 
     private static final int MIN = -1;
     private static final int MAX = 11;
-    private static final int SIZE_NUMBERS = 12;
-    private int[] numbers = new int[SIZE_NUMBERS];
+    private static final int MAX_SIZE_NUMBERS = 12;
+    private int[] numbers = new int[MAX_SIZE_NUMBERS];
 
     private int total = -1;
 
