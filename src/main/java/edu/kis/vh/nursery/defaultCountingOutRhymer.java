@@ -14,17 +14,17 @@ public class defaultCountingOutRhymer {
 	public boolean callCheck() {
 		return total == -1;
 	}
-		
+
 	public boolean isFull() {
 		return total == 11;
 	}
-		
+
 	protected int peekaboo() {
 		if (callCheck())
 			return -1;
 		return NUMBERS[total];
 	}
-			
+
 	public int countOut() {
 		if (callCheck())
 			return -1;
