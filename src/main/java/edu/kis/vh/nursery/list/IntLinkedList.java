@@ -5,22 +5,22 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
-    private static final int NO_ELEMENTS_LEFT = -1;
-    private Node last;
+    public static final int NO_ELEMENTS_LEFT = -1;
+    Node last;
     int i;
 
     public void push(int i) {
-        if (getLast() == null)
-            setLast(new Node(i));
+        if (last == null)
+            last = new Node(i);
         else {
-            getLast().setNext(new Node(i));
-            getLast().getNext().setPrev(getLast());
-            setLast(getLast().getNext());
+            last.next = new Node(i);
+            last.next.prev = last;
+            last = last.next;
         }
     }
 
     public boolean isEmpty() {
-        return getLast() == null;
+        return last == null;
     }
 
     public boolean isFull() {
@@ -30,22 +30,15 @@ public class IntLinkedList {
     public int top() {
         if (isEmpty())
             return NO_ELEMENTS_LEFT;
-        return getLast().getValue();
+        return last.value;
     }
 
     public int pop() {
         if (isEmpty())
             return NO_ELEMENTS_LEFT;
-        int ret = getLast().getValue();
-        setLast(getLast().getPrev());
+        int ret = last.value;
+        last = last.prev;
         return ret;
     }
 
-    public Node getLast() {
-        return last;
-    }
-
-    public void setLast(Node last) {
-        this.last = last;
-    }
 }
