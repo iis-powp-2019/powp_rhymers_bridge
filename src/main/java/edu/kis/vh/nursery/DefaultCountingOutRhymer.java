@@ -7,6 +7,10 @@ public class DefaultCountingOutRhymer {
     public static final int FULL_INT = 11;
     private int[] numbers = new int[MAX_TAB_SIZE];
 
+    public int getTotal() {
+        return total;
+    }
+
     public int total = STARTING_INT;
 
     public void countIn(int in) {
