@@ -5,22 +5,22 @@ public class DefaultCountingOutRhymer {
     private static final int MAX_STACK_SIZE = 12;
     private int[] numbers = new int[MAX_STACK_SIZE];
 
-    public int total = DEFAULT_RETURN_VALUE;
+    private int total = DEFAULT_RETURN_VALUE;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == DEFAULT_RETURN_VALUE;
     }
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return total == MAX_STACK_SIZE-1;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return DEFAULT_RETURN_VALUE;
         return numbers[total];
