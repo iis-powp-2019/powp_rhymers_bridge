@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     private static final int MAX_SIZE = 12;
 
-    private int[] numbers = new int[getMaxSize()];
+    private final int[] numbers = new int[getMaxSize()];
 
     private int total = getDefIndexStack();
 
