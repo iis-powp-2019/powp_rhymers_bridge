@@ -15,3 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+//Skrót alt + strzałka przechodzi do innego pliku w zakładce.
