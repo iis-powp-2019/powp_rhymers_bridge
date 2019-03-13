@@ -19,3 +19,4 @@ public class FIFORhymer extends defaultCountingOutRhymer {
         return ret;
     }
 }
+//ALT+ STRAŁKA przechodzi miedzy otwartymi plikami
