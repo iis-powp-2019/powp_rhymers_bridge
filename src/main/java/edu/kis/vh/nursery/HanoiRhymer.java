@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     int totalRejected = 0;
 
@@ -14,6 +14,6 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
         else
             super.countIn(in);
     }
-    //    ALT + strzałka pozwala na przełacznie sie między otwartymi plikami w IDE 
+    //    ALT + strzałka pozwala na przełacznie sie między otwartymi plikami w IDE
 }
 
