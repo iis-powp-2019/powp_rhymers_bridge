@@ -20,10 +20,6 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     public DefaultCountingOutRhymer getTemp() {
         return temp;
     }
-
-    public void setTemp(DefaultCountingOutRhymer temp) {
-        this.temp = temp;
-    }
 }
 
 //alt + strzałka w IntelliJ przechodzi pomiędzy otwartymi plikami
