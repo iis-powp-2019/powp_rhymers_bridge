@@ -21,9 +21,6 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		return temp;
 	}
 
-	public void setTemp(DefaultCountingOutRhymer temp) {
-		this.temp = temp;
-	}
 }
 //alt + strzałka w lewo
 //cofa się do poprzedniej edycji w projekcie
