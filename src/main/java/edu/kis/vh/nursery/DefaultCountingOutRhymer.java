@@ -8,6 +8,14 @@ public class DefaultCountingOutRhymer {
 
     private int total = DEF_INDEX_STACK;
 
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
     private static final int DEF_INDEX_STACK = -1;
 
     private static final int NOT_FOUND = -1;
