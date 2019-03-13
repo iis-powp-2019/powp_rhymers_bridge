@@ -6,7 +6,7 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
-    public void push(int i) {
+    public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {
@@ -42,7 +42,7 @@ public class IntLinkedList {
         return last;
     }
 
-    void setLast(Node last) {
+    void setLast(final Node last) {
         this.last = last;
     }
 
