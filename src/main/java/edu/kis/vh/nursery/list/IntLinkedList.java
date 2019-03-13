@@ -6,7 +6,7 @@ public class IntLinkedList {
 	private Node last;
 	int i;
 
-	protected void push(int i) {
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -16,21 +16,21 @@ public class IntLinkedList {
 		}
 	}
 
-	protected boolean isEmpty() {
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	protected boolean isFull() {
+	public boolean isFull() {
 		return false;
 	}
 
-	protected int top() {
+	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK;
 		return last.getValue();
 	}
 
-	protected int pop() {
+	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK;
 		int ret = last.getValue();
