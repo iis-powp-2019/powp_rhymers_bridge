@@ -17,3 +17,6 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		return ret;
 	}
 }
+
+//alt + <- oraz alt + -> zmieniają obecnie otwartą zakładkę 
+//zgodnie z kolejnością edycji
