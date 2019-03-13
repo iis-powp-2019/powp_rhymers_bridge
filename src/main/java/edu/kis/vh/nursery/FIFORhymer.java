@@ -23,8 +23,5 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return temp;
     }
 
-    private void setTemp(DefaultCountingOutRhymer temp) {
-        this.temp = temp;
-    }
 }
 // alt + <- i alt + -> przelaczaja miedzy otwartymi kartami

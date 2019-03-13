@@ -22,15 +22,8 @@ public class Node {
         return prev;
     }
 
-    public void setPrev(edu.kis.vh.nursery.list.Node prev) {
-        this.prev = prev;
-    }
-
     public edu.kis.vh.nursery.list.Node getNext() {
         return next;
     }
 
-    public void setNext(edu.kis.vh.nursery.list.Node next) {
-        this.next = next;
-    }
 }
