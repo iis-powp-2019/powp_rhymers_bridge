@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery.list;
 
+//Alt-strzałka lewo - przejście do pliku znajdującego się na zakładce po lewej od obecnie edytowanego pliku
+//Alt-strzałka prawo - przejście do pliku znajdującego się na zakładce po prawej od obecnie edytowanego pliku
+
 public class IntLinkedList {
 
     Node last;
