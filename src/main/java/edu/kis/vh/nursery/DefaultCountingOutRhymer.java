@@ -9,16 +9,6 @@ public class DefaultCountingOutRhymer
 	private int[] numbers = new int[MAX_SIZE];
 	private int total = ERROR;
 
-	public int getTotal() 
-	{
-		return total;
-	}
-
-	public void setTotal(int total) 
-	{
-		this.total = total;
-	}
-
 	public void countIn(int in) 
 	{
 		if (!isFull())

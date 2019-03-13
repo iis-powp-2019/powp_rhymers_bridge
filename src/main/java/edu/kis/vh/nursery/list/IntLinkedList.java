@@ -4,7 +4,7 @@ public class IntLinkedList
 {
 
 	private Node last;
-	private int i;
+	protected int i;
 
 	public void push(int i) 
 	{
@@ -41,14 +41,6 @@ public class IntLinkedList
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
-	}
-
-	public int getIndex() {
-		return i;
-	}
-
-	public void setIndex(int i) {
-		this.i = i;
 	}
 
 }
