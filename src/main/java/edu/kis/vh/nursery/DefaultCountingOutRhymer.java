@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
 
 	private int[] numbers = new int[BUFFER_SIZE];
 
-	public int total = TOTAL_START;
+	private int total = TOTAL_START;
 
 	public void countIn(int in) {
 		if (!isFull())
@@ -23,7 +23,7 @@ public class DefaultCountingOutRhymer {
 		return total == FULL_COUNT;
 	}
 
-	protected int peekAboo() {
+	public int peekAboo() {
 		if (callCheck())
 			return TOTAL_START;
 		return numbers[total];
