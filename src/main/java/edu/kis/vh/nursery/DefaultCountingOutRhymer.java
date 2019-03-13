@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
     private static final int MAX_STACK_SIZE = 12;
     private int[] numbers = new int[getMaxStackSize()];
 
-    private int total = getDefaultReturnValue();
+    private final int total = getDefaultReturnValue();
 
     public static int getDefaultReturnValue() {
         return DEFAULT_RETURN_VALUE;
@@ -43,7 +43,7 @@ public class DefaultCountingOutRhymer {
     public int getTotal() {
         return total;
     }
-    
+
 
     public int[] getNumbers() {
         return numbers;
