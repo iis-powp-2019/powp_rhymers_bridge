@@ -31,5 +31,5 @@ public class defaultCountingOutRhymer {
             return -1;
         return NUMBERS[total--];
     }
-
+    // alt + ->/<- pozwala na przełączanie pomiędzy aktywnymi kartami
 }
