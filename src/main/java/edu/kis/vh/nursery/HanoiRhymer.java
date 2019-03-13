@@ -15,3 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+
+// skróty alt + strzałki lewo/prawo odpowiada za przełączanie się pomiędzy kartami aktualnie otawrtych plików
