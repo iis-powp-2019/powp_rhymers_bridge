@@ -4,7 +4,7 @@ public class IntLinkedList
 {
 
 	private Node last;
-	protected int i;
+	protected final int i=0;
 
 	public void push(int i) 
 	{

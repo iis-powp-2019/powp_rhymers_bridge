@@ -2,10 +2,9 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer 
 {
-
 	private static final int MAX_SIZE = 12;
 	private static final int ERROR = -1;
-
+	
 	private int[] numbers = new int[MAX_SIZE];
 	private int total = ERROR;
 
