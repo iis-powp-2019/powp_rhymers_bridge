@@ -10,3 +10,4 @@ public class Node {
 	}
 
 }
+//przechodzi między pierwszym i ostatnim otworzonym plikiem, alt+-> do ostatniego pliku otwartego od prawej strony, a alt+<- do ostatniego pliku otwartego od lewej strony
