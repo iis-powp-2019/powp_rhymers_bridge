@@ -30,5 +30,6 @@ class RhymersDemo {
 		System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
 
 	}
-
+	//Skróty Alt + -> oraz Alt + <- slużą do zmiamy plików otwartych w IDE
+	
 }
