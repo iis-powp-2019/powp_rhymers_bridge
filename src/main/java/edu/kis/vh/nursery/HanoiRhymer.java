@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     int totalRejected = 0;
 
@@ -9,11 +9,11 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        if (!callCheck() && in > peekaboo())
+        if (!callCheck() && in > actualNumber()) {
             totalRejected++;
-        else
+        }
+        else {
             super.countIn(in);
+        }
     }
 }
-
-// linia 5,7, 11-16 były źle sformatowane
