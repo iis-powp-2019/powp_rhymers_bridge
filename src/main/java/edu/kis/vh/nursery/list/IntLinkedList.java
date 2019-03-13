@@ -1,5 +1,10 @@
 package edu.kis.vh.nursery.list;
 
+// TODO: Expanding documentation for Node class, checking IntLinkedList documentation
+
+/**
+ * Node class was imported into IntLikedList for commit 3.12
+ */
 class Node {
 
 	public int getValue() {
