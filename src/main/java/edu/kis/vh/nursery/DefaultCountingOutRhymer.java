@@ -40,4 +40,16 @@ public class DefaultCountingOutRhymer {
     public int getTotal() {
         return total;
     }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 }
