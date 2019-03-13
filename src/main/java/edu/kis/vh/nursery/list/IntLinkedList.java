@@ -1,12 +1,10 @@
 package edu.kis.vh.nursery.list;
 
-
- class Node {
+class Node {
 
     public int getValue() {
         return value;
     }
-
 
     private int value;
     private Node prev, next;
@@ -43,6 +41,12 @@ public class IntLinkedList {
         return STACKEMPTY;
     }
 
+    /**
+     * Added value to IntLikedList
+     *
+     * @param i this is the value that will be added to IntLikedList
+     */
+
     public void push(int i) {
         if (last == null)
             last = new Node(i);
@@ -53,6 +57,12 @@ public class IntLinkedList {
         }
     }
 
+    /**
+     * Function of check if IntLikedList is empty
+     *
+     * @return true value if IntLikedList is empty otherwise false
+     */
+
     public boolean isEmpty() {
         return last == null;
     }
@@ -61,11 +71,22 @@ public class IntLinkedList {
         return false;
     }
 
+    /**
+     * This function get a top element of IntLikedList without delete it.
+     *
+     * @return top element of IntLikedList
+     */
     public int top() {
         if (isEmpty())
             return STACKEMPTY;
         return last.getValue();
     }
+
+    /**
+     * This function get top element of IntLikedList and delete that element from IntLinkList
+     *
+     * @return top element of IntLikedList
+     */
 
     public int pop() {
         if (isEmpty())
@@ -75,13 +96,25 @@ public class IntLinkedList {
         return ret;
     }
 
+    /**
+     * Get the last node  of IntLikedList
+     *
+     * @return last node  of IntLikedList
+     */
     public Node getLast() {
         return last;
     }
 
+    /**
+     * @return
+     */
     public int getI() {
         return i;
     }
+
+    /**
+     * @param last
+     */
 
     public void setLast(Node last) {
         this.last = last;
