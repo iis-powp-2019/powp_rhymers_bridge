@@ -2,25 +2,25 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-	private int totalRejected = 0;
+    private int totalRejected = 0;
 
-	protected int reportRejected() {
-		return getTotalRejected();
-	}
-	@Override
-	protected void countIn(int in) {
-		if (!callCheck() && in > peekaboo())
-			setTotalRejected(getTotalRejected() + 1);
-		else
-			super.countIn(in);
-	}
+    protected int reportRejected() {
+        return getTotalRejected();
+    }
 
-	private int getTotalRejected() {
-		return totalRejected;
-	}
+    @Override protected void countIn(int in) {
+        if (!callCheck() && in > peekaboo())
+            setTotalRejected(getTotalRejected() + 1);
+        else
+            super.countIn(in);
+    }
 
-	private void setTotalRejected(int totalRejected) {
-		this.totalRejected = totalRejected;
-	}
-	// a+-> powoduje przełączanie pomiędzy kartami
+    private int getTotalRejected() {
+        return totalRejected;
+    }
+
+    private void setTotalRejected(int totalRejected) {
+        this.totalRejected = totalRejected;
+    }
+
 }
