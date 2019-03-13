@@ -112,7 +112,9 @@ public class IntLinkedList {
         return i;
     }
 
+    //TODO write a meaning of the class getI and getLast
     /**
+     *
      * @param last
      */
 
