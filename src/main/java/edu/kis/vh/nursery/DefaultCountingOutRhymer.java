@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
 	private static final int STACK_SIZE = 12;
     private static final int STACK_VALUE = -1;
 
-    private int[] numbers = new int[STACK_SIZE];
+    private final int[] numbers = new int[STACK_SIZE];
 
     private int total = STACK_VALUE;
 
