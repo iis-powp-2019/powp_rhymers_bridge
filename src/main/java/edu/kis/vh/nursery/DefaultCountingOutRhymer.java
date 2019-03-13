@@ -8,22 +8,22 @@ public class DefaultCountingOutRhymer {
 
 	private int[] numbers = new int[MAXSIZE];
 
-	public int total = INDEX;
+	private int total = INDEX;
 
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	boolean callCheck() {
 		return total == INDEX;
 	}
 
-	public boolean isFull() {
+	boolean isFull() {
 		return total == MAXSIZE-1;
 	}
 
-	protected int peekaboo() {
+	int peekaboo() {
 		if (callCheck())
 			return INDEX;
 		return numbers[total];
