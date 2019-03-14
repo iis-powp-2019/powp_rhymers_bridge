@@ -15,3 +15,5 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+
+//Ctrl + strzałka w lewo wraca po historii otwieranych klas, a ctrl + strzałka w prawo idzie do najnowszej otworzonej karty
