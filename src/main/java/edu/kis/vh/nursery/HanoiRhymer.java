@@ -1,17 +1,20 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-int totalRejected = 0;
+int rejectedTotalCount = 0;
 
 	public int reportRejected() {
-		return totalRejected;
+		return rejectedTotalCount;
 	}
 
-	public void countIn(int in) {
-		if (!callCheck() && in > peekaboo())
-			totalRejected++;
+	public void countIn(int newValue) {
+		if (!isEmpty() && newValue > getPeekaboo())
+			rejectedTotalCount++;
 		else
-			super.countIn(in);
+			super.countIn(newValue);
 	}
 }
+
+// alt-left and alt-right arrow are used to navigate between previously
+// visited places in source code
