@@ -32,7 +32,7 @@ public class DefaultCoutingOutRhymer {
 			return NOT_FOUND_RETURN;
 		return numbers[total];
 	}
-
+	
 	protected boolean isFull() {
 		return total == MAX_STACK_SIZE - 1;
 	}
