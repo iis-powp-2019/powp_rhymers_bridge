@@ -3,9 +3,9 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
     private final int CAPACITY = 12;
-    private final int EMPLTY_VALUE = -1;
+    private final int EMPTY_VALUE = -1;
     private int[] arrayOfRhymers = new int[CAPACITY];
-    private int currentSize = EMPLTY_VALUE;
+    private int currentSize = EMPTY_VALUE;
 
     public int getCurrentSize() {
         return currentSize;
@@ -17,7 +17,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return currentSize == EMPLTY_VALUE;
+        return currentSize == EMPTY_VALUE;
     }
 
     public boolean isFull() {
@@ -26,7 +26,7 @@ public class DefaultCountingOutRhymer {
 
     protected int peekaboo() {
         if (callCheck())
-            return EMPLTY_VALUE;
+            return EMPTY_VALUE;
         return arrayOfRhymers[currentSize];
     }
 
