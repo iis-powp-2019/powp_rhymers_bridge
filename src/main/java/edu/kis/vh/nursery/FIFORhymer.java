@@ -17,3 +17,6 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		return ret;
 	}
 }
+
+
+//Ctrl + strzalka w lewo porusza się po otwartych klasach wedle historii otworzenia wstecz, a ctrl + strzalka w prawo w przód
