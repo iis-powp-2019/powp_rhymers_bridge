@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery.factory;
 
+//inteface Rhymersfactory
 import edu.kis.vh.nursery.defaultCountingOutRhymer;
 
 public interface Rhymersfactory {
