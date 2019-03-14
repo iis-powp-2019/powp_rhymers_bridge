@@ -4,6 +4,10 @@ public class FIFORhymer extends DefaultCoutingOutRhymer {
 
 	public final DefaultCoutingOutRhymer temp = new DefaultCoutingOutRhymer();
 
+    /**
+     * method iterates through stack and returns first element
+     * @return First element in list
+     */
 	@Override
 	protected int countOut() {
 		while (!callCheck())
