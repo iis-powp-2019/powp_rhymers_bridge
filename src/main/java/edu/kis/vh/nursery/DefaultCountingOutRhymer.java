@@ -13,19 +13,19 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[MAX_SIZE];
 
-    public int total = TOTAL_VALUE;
+    private int total = TOTAL_VALUE;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull()) {
             numbers[++total] = in;
         }
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == TOTAL_VALUE;
     }
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return total == TOTAL_FULL_VALUE;
     }
 
@@ -36,7 +36,7 @@ public class DefaultCountingOutRhymer {
         return numbers[total];
     }
 
-    public int countOut() {
+    protected int countOut() {
         if (callCheck()) {
             return TOTAL_VALUE;
         }
