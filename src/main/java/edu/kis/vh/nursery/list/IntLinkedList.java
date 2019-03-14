@@ -33,6 +33,7 @@ public class IntLinkedList {
 		return last == null;
 	}
 
+	// TODO: make linked list have maxCapacity
 	public boolean isFull() {
 		return false;
 	}
