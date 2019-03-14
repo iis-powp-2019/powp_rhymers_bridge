@@ -38,3 +38,6 @@ public class IntLinkedList {
 	}
 
 }
+
+//alt + <- przechodzi do poprzednio edytowanego pliku, za każdym razem o jeden w tył
+//alt + -> przechodzi do wcześniej edytowanego pliku, analogicznie o jeden w przód
