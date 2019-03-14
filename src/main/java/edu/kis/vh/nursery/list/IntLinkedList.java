@@ -38,9 +38,8 @@ class Node {
 public class IntLinkedList {
 
     private Node last;
-    private int i;
 
-    private void push(int i) {
+    public void push(int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {
@@ -80,7 +79,5 @@ public class IntLinkedList {
         this.last = last;
     }
 
-    public int getI() {
-        return i;
-    }
+
 }
