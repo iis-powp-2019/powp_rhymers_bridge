@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+// alt + -> powrót do porzednio modyfikowanego pliku
+// alt + <- przejście do następnego modyfikowanego pliku
 public class RhymersJUnitTest {
 
     @Test
