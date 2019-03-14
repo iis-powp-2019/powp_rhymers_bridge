@@ -2,6 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
+	public static final int STACK_EMPTY = -1;
 	Node last;
 	int i;
 
@@ -25,7 +26,7 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return STACK_EMPTY;
 		return last.value;
 	}
 
