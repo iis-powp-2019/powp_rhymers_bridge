@@ -15,3 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
+//    kombinacje alt + <- i alt + -> sluza do szybkiego przelaczania miedzy otwartymi plikami
