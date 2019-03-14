@@ -7,6 +7,10 @@ public class DefaultCountingOutRhymer {
     private int[] arrayOfRhymers = new int[CAPACITY];
     private int currentSize = EMPLTY_VALUE;
 
+    public int getCurrentSize() {
+        return currentSize;
+    }
+
     public void countIn(int in) {
         if (!isFull())
             arrayOfRhymers[++currentSize] = in;
