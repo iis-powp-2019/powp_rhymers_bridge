@@ -17,3 +17,4 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		return ret;
 	}
 }
+//Kombinacja ctrl+alt+ strzałka w lewo sprawia, że przechodzimy wstecz po histori aktualnie otwartych kart, z kolei ctrl + alt + strzałka w prawo idzie do przodu w kolejości otwartych kart.
