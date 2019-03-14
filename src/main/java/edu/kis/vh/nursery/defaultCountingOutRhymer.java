@@ -2,8 +2,8 @@ package edu.kis.vh.nursery;
 
 public class defaultCountingOutRhymer {
 
-    // ctrl + alt + <- powrót do wcześniej modyfikowanego pliku
-    // ctrl + alt + -> przejście do następnego pliku
+    // alt + <- powrót do wcześniej modyfikowanego pliku
+    // alt + -> przejście do następnego pliku
     private int[] NUMBERS = new int[12];
 
     public int total = -1;
