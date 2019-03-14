@@ -2,3 +2,9 @@
 \.idea/
 
 *.iml
+
+*.class
+
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/
+
+target/
