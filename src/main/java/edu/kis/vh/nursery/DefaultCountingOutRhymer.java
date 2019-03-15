@@ -14,10 +14,6 @@ public class DefaultCountingOutRhymer {
             numbers[++total] = in;
     }
 
-    public int getTotal() {
-        return total;
-    }
-
     boolean callCheck() {
         return total == STACK_START_SIZE;
     }
@@ -36,6 +32,10 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return STACK_START_SIZE;
         return numbers[total--];
+    }
+
+    public int getTotal() {
+        return total;
     }
 
 }
