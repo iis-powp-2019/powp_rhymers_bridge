@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int STACK_CAPACITY = 12;
 
-	private int[] numbers = new int[STACK_CAPACITY];
+	private final int[] numbers = new int[STACK_CAPACITY];
 
 	public int getTotal() {
 		return total;
@@ -13,7 +13,7 @@ public class DefaultCountingOutRhymer {
 
 	private int total = EMPTY_STACK_VALUE;
 
-	public void countIn(int in) {
+	public void countIn(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
