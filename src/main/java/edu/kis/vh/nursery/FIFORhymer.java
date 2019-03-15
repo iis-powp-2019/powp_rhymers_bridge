@@ -21,7 +21,4 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return tempDefaultCountingOutRhymer;
     }
 
-    public void setTempDefaultCountingOutRhymer(DefaultCountingOutRhymer tempDefaultCountingOutRhymer) {
-        this.tempDefaultCountingOutRhymer = tempDefaultCountingOutRhymer;
-    }
 }
