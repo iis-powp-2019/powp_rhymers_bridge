@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Class of default type rhymer
+ */
 public class DefaultCountingOutRhymer {
 
 	private static final int STACK_CAPACITY = 12;
@@ -10,25 +13,45 @@ public class DefaultCountingOutRhymer {
 
 	private int total = EMPTY_STACK_VALUE;
 
+	/**
+	 * Adds number to rhymer
+	 * @param in value to add to the rhymer
+	 */
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
+	/**
+	 * Checks if rhymer number storage is empty
+	 * @return true when rhymers can store no more numbers
+	 */ 
 	boolean callCheck() {
 		return total == EMPTY_STACK_VALUE;
 	}
 
+	/**
+	 * Checks if rhymer number storage is full
+	 * @return true when rhymers can store no more numbers
+	 */
 	boolean isFull() {
 		return total == STACK_CAPACITY-1;
 	}
 
+	/**
+	 * Gets value of last added number
+	 * @return last added number
+	 */
 	int peekaboo() {
 		if (callCheck())
 			return EMPTY_STACK_VALUE;
 		return numbers[total];
 	}
 
+	/**
+	 * Gets value of last added number, popping it from rhymer storage
+	 * @return last added number
+	 */
 	public int countOut() {
 		if (callCheck())
 			return EMPTY_STACK_VALUE;
