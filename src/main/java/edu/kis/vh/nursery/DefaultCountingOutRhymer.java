@@ -20,7 +20,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == STACK_CAPACITY-1;
 	}
 
 	protected int peekaboo() {
