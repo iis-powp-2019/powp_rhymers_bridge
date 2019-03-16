@@ -8,7 +8,11 @@ public class DefaultCountingOutRhymer {
 
     private int[] NUMBERS = new int[CAPACITY];
 
-    private int STACK_EMPTY_INDICATOR = STACK_EMPTY_VALUE; //total wskazuje ostatni element
+    private int STACK_EMPTY_INDICATOR = STACK_EMPTY_VALUE; //STACK_EMPTY_INDICATOR wskazuje ostatni element
+
+    public int getSTACK_EMPTY_INDICATOR() {
+        return STACK_EMPTY_INDICATOR;
+    }
 
     public void countIn(int in) {
         if (!isFull())
