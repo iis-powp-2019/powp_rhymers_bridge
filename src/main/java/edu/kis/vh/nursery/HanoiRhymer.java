@@ -25,3 +25,5 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     }
 }
 
+// W InteliJ IDEA: Kombinacje klawiszy "alt + <-" oraz "alt + ->" umożliwiają poruszanie się po otwartych plikach w edytorze.
+
