@@ -2,10 +2,10 @@ package edu.kis.vh.nursery.list;
 
 public class Node {
 
-    private int value;
+    private final int value;
     public Node prev, next;
 
-    public Node(int i) {
+    public Node(final int i) {
         value = i;
     }
 
