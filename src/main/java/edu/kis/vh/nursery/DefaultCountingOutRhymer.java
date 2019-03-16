@@ -6,13 +6,6 @@ public class DefaultCountingOutRhymer {
 	private static final int DWANASCIE = 12;
 	private int[] NUMBERS = new int[DWANASCIE];
 
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
 
 	private int total = MINUS_JEDEN;
 
