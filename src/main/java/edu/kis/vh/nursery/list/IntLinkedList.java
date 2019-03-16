@@ -43,12 +43,8 @@ public class IntLinkedList {
         return returningValue;
     }
 
-    public int getI() {
+    public int getValue() {
         return value;
-    }
-
-    public void setI(int value) {
-        this.value = value;
     }
 
     public Node getLast() {
