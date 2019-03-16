@@ -1,7 +1,6 @@
 package edu.kis.vh.nursery.list;
 
 class Node {
-
     private int value;
     private Node prev, next;
 
@@ -21,12 +20,12 @@ class Node {
         return prev;
     }
 
-    public void setPrev(Node prev) {
-        this.prev = prev;
-    }
-
     public Node getNext() {
         return next;
+    }
+
+    public void setPrev(Node prev) {
+        this.prev = prev;
     }
 
     public void setNext(Node next) {
@@ -78,6 +77,10 @@ public class IntLinkedList {
 
     public Node getLast() {
         return last;
+    }
+
+    public void setLast(Node last) {
+        this.last = last;
     }
 
     public int getI() {
