@@ -49,15 +49,7 @@ public class DefaultCountingOutRhymer {
         return getNumbers()[total--];
     }
 
-    public int getTotal() {
-        return total;
-    }
-
     public int[] getNumbers() {
         return numbers;
-    }
-
-    public void setNumbers(int[] numbers) {
-        this.numbers = numbers;
     }
 }
