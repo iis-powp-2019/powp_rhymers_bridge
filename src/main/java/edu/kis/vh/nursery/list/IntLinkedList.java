@@ -1,7 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList { //formatowanie kodu: ok
+public class IntLinkedList {
 
+	public static final int MINUS_JEDEN = -1;
 	Node last;
 	int i;
 
@@ -25,13 +26,13 @@ public class IntLinkedList { //formatowanie kodu: ok
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return MINUS_JEDEN;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return MINUS_JEDEN;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

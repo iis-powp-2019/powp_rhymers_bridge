@@ -2,9 +2,11 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	private int[] NUMBERS = new int[12];
+	public static final int MINUS_JEDEN = -1;
+	public static final int DWANASCIE = 12;
+	private int[] NUMBERS = new int[DWANASCIE];
 
-	public int total = -1;
+	public int total = MINUS_JEDEN;
 
 	public void countIn(int in) {
 		if (!isFull())
@@ -12,7 +14,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 		public boolean callCheck() {
-			return total == -1;
+			return total == MINUS_JEDEN;
 		}
 		
 		public boolean isFull() { //formatowanie kodu: za duze wciecie.
@@ -21,13 +23,13 @@ public class DefaultCountingOutRhymer {
 		
 		protected int peekaboo() { //formatowanie kodu: za duze wciecie x2
 			if (callCheck())
-				return -1;
+				return MINUS_JEDEN;
 			return NUMBERS[total];
 		}
 			
 		public int countOut() { //formatowanie kodu: za duze wcięcie x3
 			if (callCheck())
-				return -1;
+				return MINUS_JEDEN;
 			return NUMBERS[total--];
 		}
 
