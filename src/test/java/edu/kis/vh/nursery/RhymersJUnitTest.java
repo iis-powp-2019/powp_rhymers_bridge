@@ -35,12 +35,12 @@ public class RhymersJUnitTest {
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = rhymer.isFull();
-            assertFalse(result);
+            Assert.assertEquals(false, result);
             rhymer.countIn(888);
         }
 
         boolean result = rhymer.isFull();
-        assertTrue(result);
+        Assert.assertEquals(false, result);
     }
 
     @Test
@@ -56,6 +56,7 @@ public class RhymersJUnitTest {
 
         result = rhymer.peekaboo();
         Assert.assertEquals(testValue, result);
+
         result = rhymer.peekaboo();
         Assert.assertEquals(testValue, result);
     }

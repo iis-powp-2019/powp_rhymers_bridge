@@ -1,42 +1,50 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.IStackInt;
 
-	Node last;
-	int i;
+public class IntLinkedList implements IStackInt {
 
-	public void push(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
-	}
+    private static final int EMPTY_RETURN_CODE = -1;
+    private Node lastNode;
 
-	public boolean isEmpty() {
-		return last == null;
-	}
+    @Override
+    public void countIn(int i) {
+        if (lastNode == null)
+            lastNode = new Node(i);
+        else {
+            lastNode.setNext(new Node(i));
+            lastNode.getNext().setPrev(lastNode);
+            lastNode = lastNode.getNext();
+        }
+    }
 
-	public boolean isFull() {
-		return false;
-	}
+    @Override
+    public boolean callCheck() {
+        return lastNode == null;
+    }
 
-	public int top() {
-		if (isEmpty())
-			return -1;
-		return last.value;
-	}
+    @Override
+    public int countOut() {
+        if (callCheck())
+            return EMPTY_RETURN_CODE;
 
-	public int pop() {
-		if (isEmpty())
-			return -1;
+        int ret = lastNode.getValue();
+        lastNode = lastNode.getPrev();
 
-		int ret = last.value;
-		last = last.prev;
+        return ret;
+    }
 
-		return ret;
-	}
+    @Override
+    public boolean isFull() {
+        return false;
+    }
+
+    @Override
+    public int peekaboo() {
+        if (callCheck())
+            return EMPTY_RETURN_CODE;
+        return lastNode.getValue();
+    }
+
 
 }

@@ -1,41 +1,40 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRhymer {
+import edu.kis.vh.nursery.list.IntLinkedList;
 
-    private static final int STACK_INIT_SIZE = 12;
-    private static final int STACK_START_SIZE = -1;
-    private static final int STACK_MAX_SIZE = 11;
-    private int total = STACK_START_SIZE;
+public class DefaultCountingOutRhymer implements IStackInt {
+    IntLinkedList intLinkedList;
 
-    private int[] numbers = new int[STACK_INIT_SIZE];
+    public DefaultCountingOutRhymer() {
+        this.intLinkedList = new IntLinkedList();
+    }
 
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+        this.intLinkedList = intLinkedList;
+    }
+
+    @Override
     public void countIn(int in) {
-        if (!isFull())
-            numbers[++total] = in;
+        intLinkedList.countIn(in);
     }
 
-    boolean callCheck() {
-        return total == STACK_START_SIZE;
+    @Override
+    public boolean callCheck() {
+        return intLinkedList.callCheck();
     }
 
-    boolean isFull() {
-        return total == STACK_MAX_SIZE;
+    @Override
+    public boolean isFull() {
+        return intLinkedList.isFull();
     }
 
-    int peekaboo() {
-        if (callCheck())
-            return STACK_START_SIZE;
-        return numbers[total];
-    }
-
+    @Override
     public int countOut() {
-        if (callCheck())
-            return STACK_START_SIZE;
-        return numbers[total--];
+        return intLinkedList.countOut();
     }
 
-    public int getTotal() {
-        return total;
+    @Override
+    public int peekaboo() {
+        return intLinkedList.peekaboo();
     }
-
 }
