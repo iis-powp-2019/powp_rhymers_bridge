@@ -14,7 +14,7 @@ public class DefaultCountingOutRhymer {
         return STACK_EMPTY_INDICATOR;
     }
 
-    public void countIn(int in) {
+    public void countIn(final int in) {
         if (!isFull())
             NUMBERS[++STACK_EMPTY_INDICATOR] = in;
     }
