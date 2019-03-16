@@ -5,9 +5,9 @@ import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
-class RhymersDemo {
+class RhymersDemo { /*alt -> w inteliJ przerzuca pomiędzy otwartymi oknami plików (klas java)*/
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 
         defaultCountingOutRhymer[] rhymers = { //formatowanie kodu: automat chce inaczej, ja lubię tak...
