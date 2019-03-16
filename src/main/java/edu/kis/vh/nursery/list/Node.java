@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class Node { //formatowanie kodu: ok
+class Node { //formatowanie kodu: ok, modyfikator widocznosci: zmiana na pakietowy/prywatny
 
 	public int value;
 	public Node prev, next;
