@@ -15,20 +15,20 @@ public class defaultCountingOutRhymer {
 			return total == -1;
 		}
 		
-			public boolean isFull() {
-				return total == 11;
-			}
+		public boolean isFull() { //formatowanie kodu: za duze wciecie.
+			return total == 11;
+		}
 		
-				protected int peekaboo() {
-					if (callCheck())
-						return -1;
-					return NUMBERS[total];
-				}
+		protected int peekaboo() { //formatowanie kodu: za duze wciecie x2
+			if (callCheck())
+				return -1;
+			return NUMBERS[total];
+		}
 			
-					public int countOut() {
-						if (callCheck())
-							return -1;
-						return NUMBERS[total--];
-					}
+		public int countOut() { //formatowanie kodu: za duze wcięcie x3
+			if (callCheck())
+				return -1;
+			return NUMBERS[total--];
+		}
 
 }

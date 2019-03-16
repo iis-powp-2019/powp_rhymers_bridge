@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class Node {
+public class Node { //formatowanie kodu: ok
 
 	public int value;
 	public Node prev, next;
