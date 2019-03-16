@@ -2,16 +2,24 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-	int totalRejected = 0; //formatowanie kodu: brak wcięcia
+	private int totalRejected = 0; //formatowanie kodu: brak wcięcia
 
 	public int reportRejected() {
-		return totalRejected;
+		return getTotalRejected();
 	}
 
 	public void countIn(int in) {
 	if (!callCheck() && in > peekaboo())
-		totalRejected++; //formatowanie kodu: za duże wcięcie
+		setTotalRejected(getTotalRejected() + 1); //formatowanie kodu: za duże wcięcie
 	else //formatowanie kodu: za duże wcięcie x2
 		super.countIn(in); //formatowanie kodu: za duże wcięcie x2
+	}
+
+	public int getTotalRejected() {
+		return totalRejected;
+	}
+
+	public void setTotalRejected(int totalRejected) {
+		this.totalRejected = totalRejected;
 	}
 }

@@ -2,8 +2,8 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	public static final int MINUS_JEDEN = -1;
-	public static final int DWANASCIE = 12;
+	private static final int MINUS_JEDEN = -1;
+	private static final int DWANASCIE = 12;
 	private int[] NUMBERS = new int[DWANASCIE];
 
 	public int getTotal() {
@@ -14,7 +14,7 @@ public class DefaultCountingOutRhymer {
 		this.total = total;
 	}
 
-	public int total = MINUS_JEDEN;
+	private int total = MINUS_JEDEN;
 
 	public void countIn(int in) {
 		if (!isFull())
