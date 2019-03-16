@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
-import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
@@ -10,9 +8,9 @@ class RhymersDemo { /*alt -> w inteliJ przerzuca pomiędzy otwartymi oknami plik
     public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 
-        defaultCountingOutRhymer[] rhymers = { //formatowanie kodu: automat chce inaczej, ja lubię tak...
-                factory.GetStandardRhymer(), factory.GetFalseRhymer(),
-                factory.GetFIFORhymer(), factory.GetHanoiRhymer()
+        DefaultCountingOutRhymer[] rhymers = { //formatowanie kodu: automat chce inaczej, ja lubię tak...
+			factory.getStandardRhymer(), factory.getFalseRhymer(),
+			factory.getFIFORhymer(), factory.getHanoiRhymer()
         };
 
 		for (int i = 1; i < 15; i++)
