@@ -1,8 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-/**
- *
- */
 class Node {
 
     private final int value;

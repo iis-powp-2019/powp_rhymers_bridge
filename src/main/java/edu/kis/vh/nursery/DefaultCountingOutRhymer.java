@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer implements IStackInt {
-    IntLinkedList intLinkedList;
+    private IntLinkedList intLinkedList;
 
     public DefaultCountingOutRhymer() {
         this.intLinkedList = new IntLinkedList();
