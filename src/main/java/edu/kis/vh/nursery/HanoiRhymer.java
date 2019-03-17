@@ -1,6 +1,9 @@
 package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
+	/**przyklad dokumentacji
+	 * tu komentarz...
+	 */
 
 	private int totalRejected = 0; //formatowanie kodu: brak wcięcia
 
