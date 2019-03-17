@@ -5,8 +5,8 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
 
-    private static final int MAX_SIZE = 3;
-    private static final int SIZE = 15;
+    public static final int MAX_SIZE = 3;
+    public static final int SIZE = 15;
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
@@ -14,13 +14,13 @@ class RhymersDemo {
         DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(),
                 factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
-        for (int i = 1; i < SIZE; i++)
-            for (int j = 0; j < MAX_SIZE; j++)
+        for (int i = 1; i < getSIZE(); i++)
+            for (int j = 0; j < getMaxSize(); j++)
                 rhymers[j].countIn(i);
 
         java.util.Random rn = new java.util.Random();
-        for (int i = 1; i < SIZE; i++)
-            rhymers[MAX_SIZE].countIn(rn.nextInt(20));
+        for (int i = 1; i < getSIZE(); i++)
+            rhymers[getMaxSize()].countIn(rn.nextInt(20));
 
         for (int i = 0; i < rhymers.length; i++) {
             while (!rhymers[i].callCheck())
@@ -29,8 +29,15 @@ class RhymersDemo {
         }
 
         System.out.println("total rejected is "
-                + ((HanoiRhymer) rhymers[MAX_SIZE]).reportRejected());
+                + ((HanoiRhymer) rhymers[getMaxSize()]).reportRejected());
 
     }
 
+    public static int getMaxSize() {
+        return MAX_SIZE;
+    }
+
+    public static int getSIZE() {
+        return SIZE;
+    }
 }
