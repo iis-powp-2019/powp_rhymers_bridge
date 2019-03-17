@@ -1,17 +1,31 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+/**
+ * Simple Hanoi Rhyme.
+ */
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-int totalRejected = 0;
+    private static final int NUMBER_OF_REJECTED_RHYMES = 0;
 
-	public int reportRejected() {
-		return totalRejected;
-	}
+    int totalRejected = NUMBER_OF_REJECTED_RHYMES;
 
-	public void countIn(int in) {
-	if (!callCheck() && in > peekaboo())
-			totalRejected++;
-			else
-				super.countIn(in);
-	}
+    /**
+     * Method returns number of rejected rhymes.
+     * @return number of rejected rhymes.
+     */
+    public int reportRejected() {
+        return totalRejected;
+    }
+
+    /**
+     * If number in param is less than current number, method add param into rhyme.
+     * @param in number to place into rhyme.
+     */
+    @Override
+    public void countIn(int in) {
+        if (!callCheck() && in > peekaboo())
+            totalRejected++;
+        else
+            super.countIn(in);
+    }
 }
