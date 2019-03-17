@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     public static final int EMPTY_POSITION = -1;
 
     private int total = getEmptyPosition();
-    private int[] NUMBERS = new int[getStackCapacity()];
+    private final int[] NUMBERS = new int[getStackCapacity()];
 
     public static int getStackCapacity() {
         return STACK_CAPACITY;
