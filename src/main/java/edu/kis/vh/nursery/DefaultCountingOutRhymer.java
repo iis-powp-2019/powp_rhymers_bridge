@@ -6,6 +6,9 @@ public class DefaultCountingOutRhymer {
     private static final int ERROR_CODE = -1;
     private static final int MAX_SIZE = 11;
     private static final int EMPTY_POSITION = -1;
+
+
+
     private int total = EMPTY_POSITION;
     private int[] NUMBERS = new int[STACK_CAPACITY];
 
@@ -33,6 +36,10 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return ERROR_CODE;
         return NUMBERS[total--];
+    }
+
+    public int getTotal() {
+        return total;
     }
 
 }
