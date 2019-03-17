@@ -5,8 +5,8 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
 
-    public static final int MAX_SIZE = 3;
-    public static final int SIZE = 15;
+    private static final int MAX_SIZE = 3;
+    private static final int SIZE = 15;
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
