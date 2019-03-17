@@ -12,10 +12,15 @@ class RhymersDemo {
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
 
-        DefaultCountingOutRhymer[] rhymers = { //formatowanie kodu: automat chce inaczej, ja lubię tak...
+		testRhymers(factory);
+
+	}
+
+	private static void testRhymers(Rhymersfactory factory) {
+		DefaultCountingOutRhymer[] rhymers = { //formatowanie kodu: automat chce inaczej, ja lubię tak...
 			factory.getStandardRhymer(), factory.getFalseRhymer(),
 			factory.getFIFORhymer(), factory.getHanoiRhymer()
-        };
+		};
 
 		for (int i = JEDEN; i < PIETNASCIE; i++)
 			for (int j = 0; j < TRZY; j++)
@@ -33,7 +38,7 @@ class RhymersDemo {
 
 		System.out.println("total rejected is "
 				+ ((HanoiRhymer) rhymers[TRZY]).reportRejected());
-
 	}
+
 
 }
