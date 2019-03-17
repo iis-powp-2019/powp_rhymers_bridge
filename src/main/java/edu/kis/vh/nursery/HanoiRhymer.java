@@ -8,6 +8,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return getTotalRejected();
     }
 
+    @Override
     public void countIn(int in) {
         if (!isEmpty() && in > currentNumber()){
             setTotalRejected(getTotalRejected() + 1);
