@@ -8,6 +8,14 @@ public class DefaultCountingOutRhymer {
 
     private int[] NUMBERS = new int[CAPACITY];
 
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
     private int total = DEFAULT_INDEX;
 
     protected void countIn(int in) {
