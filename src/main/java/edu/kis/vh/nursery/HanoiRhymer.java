@@ -15,4 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
             super.countIn(in);
     }
 }
-// kominacja ctr + <- powoduje przełączanie pomiędzy aktywnymi kartami/plikami
+// kominacja alt + <-/-> powoduje przełączanie pomiędzy aktywnymi kartami/plikami
