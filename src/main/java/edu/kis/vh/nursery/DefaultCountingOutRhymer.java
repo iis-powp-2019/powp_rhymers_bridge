@@ -20,10 +20,6 @@ public class DefaultCountingOutRhymer {
         return CAPACITY;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
     public int getTotal() {
         return total;
     }
@@ -59,7 +55,4 @@ public class DefaultCountingOutRhymer {
         return NUMBERS;
     }
 
-    public void setNUMBERS(int[] NUMBERS) {
-        this.NUMBERS = NUMBERS;
-    }
 }
