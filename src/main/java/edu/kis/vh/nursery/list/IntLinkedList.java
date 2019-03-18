@@ -32,7 +32,7 @@ public class IntLinkedList {
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return STACK_EMPTY;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
