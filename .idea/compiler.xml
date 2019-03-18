@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="powp_rhymers_bridge" />
+        <module name="powp_rhymers_bridge4" />
         <module name="powp_rhymers_bridge5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="powp_rhymers_bridge" target="1.8" />
+      <module name="powp_rhymers_bridge4" target="1.8" />
       <module name="powp_rhymers_bridge5" target="1.8" />
     </bytecodeTargetLevel>
   </component>
