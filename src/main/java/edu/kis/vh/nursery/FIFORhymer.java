@@ -1,7 +1,14 @@
 package edu.kis.vh.nursery;
 
+/**
+ * @author Piotr Sitkowski
+ *
+ */
 public class FIFORhymer extends DefaultCountingOutRhymer {
-
+/**
+ * metoda przechodzi przez stos i zwraca pierwszy jego element
+ * @return pierwszy element na stosie
+ */
 	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
 	@Override
