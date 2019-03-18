@@ -5,7 +5,7 @@ class Node {
     int value;
     Node prev, next;
 
-    Node(int i) {
+    Node(final int i) {
         value = i;
     }
 
