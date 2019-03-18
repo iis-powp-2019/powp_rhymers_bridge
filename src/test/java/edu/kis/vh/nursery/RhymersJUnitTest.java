@@ -1,13 +1,20 @@
 package edu.kis.vh.nursery;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
 
+	private DefaultCountingOutRhymer rhymer;
+
+	@Before
+	public void setUp() {
+		rhymer = new DefaultCountingOutRhymer();
+	}
+
 	@Test
 	public void testCountIn() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -17,14 +24,13 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
-		Assert.assertEquals(true, result);
+		Assert.assertTrue(result);
 
 		rhymer.countIn(888);
 
 		result = rhymer.callCheck();
-		Assert.assertEquals(false, result);
+		Assert.assertFalse(result);
 	}
 
 	@Test
@@ -60,7 +66,6 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
