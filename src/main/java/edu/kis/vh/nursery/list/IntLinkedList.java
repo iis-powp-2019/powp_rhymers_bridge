@@ -43,3 +43,12 @@ public class IntLinkedList {
         return ret;
     }
 }
+
+class Node {
+    int value;
+    Node prev, next;
+
+    Node(final int i) {
+        value = i;
+    }
+}
