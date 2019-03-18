@@ -6,7 +6,19 @@ public class DefaultCountingOutRhymer {
     private static final int DEFAULT_INDEX = -1;
     private static final int CAPACITY = 12;
 
-    private int[] NUMBERS = new int[CAPACITY];
+    private int[] NUMBERS = new int[getCAPACITY()];
+
+    public static int getMaxValue() {
+        return MAX_VALUE;
+    }
+
+    public static int getDefaultIndex() {
+        return DEFAULT_INDEX;
+    }
+
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
 
     public void setTotal(int total) {
         this.total = total;
@@ -16,30 +28,38 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
-    private int total = DEFAULT_INDEX;
+    private int total = getDefaultIndex();
 
     protected void countIn(int in) {
         if (!isFull())
-            NUMBERS[++total] = in;
+            getNUMBERS()[++total] = in;
     }
 
     protected boolean callCheck() {
-        return total == DEFAULT_INDEX;
+        return total == getDefaultIndex();
     }
 
     protected boolean isFull() {
-        return total == MAX_VALUE;
+        return total == getMaxValue();
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return DEFAULT_INDEX;
-        return NUMBERS[total];
+            return getDefaultIndex();
+        return getNUMBERS()[total];
     }
 
     protected int countOut() {
         if (callCheck())
-            return DEFAULT_INDEX;
-        return NUMBERS[total--];
+            return getDefaultIndex();
+        return getNUMBERS()[total--];
+    }
+
+    public int[] getNUMBERS() {
+        return NUMBERS;
+    }
+
+    public void setNUMBERS(int[] NUMBERS) {
+        this.NUMBERS = NUMBERS;
     }
 }
