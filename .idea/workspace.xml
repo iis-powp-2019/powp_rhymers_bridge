@@ -239,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552865675420" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552945179309" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -257,7 +257,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RhymersJUnitTest">
+  <component name="RunManager" selected="Application.RhymersDemo">
+    <configuration name="RhymersDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersDemo" />
+      <module name="powp-rhymers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RhymersJUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="powp-rhymers" />
       <extension name="coverage">
@@ -268,22 +281,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
       <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RhymersJUnitTest.testCallCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="powp-rhymers" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
-      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
-      <option name="METHOD_NAME" value="testCallCheck" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -338,11 +335,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RhymersDemo" />
         <item itemvalue="JUnit.RhymersJUnitTest" />
         <item itemvalue="JUnit.RhymersJUnitTest.testCountOut" />
         <item itemvalue="JUnit.RhymersJUnitTest.testPeekaboo" />
         <item itemvalue="JUnit.RhymersJUnitTest.testIsFull" />
-        <item itemvalue="JUnit.RhymersJUnitTest.testCallCheck" />
       </list>
     </recent_temporary>
   </component>
