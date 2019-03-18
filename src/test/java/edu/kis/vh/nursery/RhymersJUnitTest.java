@@ -4,10 +4,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
+	DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+	FirstInFirstOutRhymer FIFORhymer = new FirstInFirstOutRhymer();
+	final int EMPTY_STACK_VALUE = -1;
+	final int STACK_CAPACITY = 12;
 
 	@Test
 	public void testCountIn() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -17,7 +20,6 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -29,8 +31,6 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
-		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
@@ -43,9 +43,6 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
@@ -60,19 +57,30 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		defaultCountingOutRhymer rhymer = new defaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-		int testValue = 4;
+		int testValue = 4, testValue2 = 3;
 		rhymer.countIn(testValue);
 
 		result = rhymer.countOut();
 		Assert.assertEquals(testValue, result);
+
 		result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		result = FIFORhymer.countOut();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		FIFORhymer.countIn(testValue);
+		result = FIFORhymer.countOut();
+		Assert.assertEquals(4,result);
+
+
+		FIFORhymer.countIn(testValue2);
+		result = FIFORhymer.countOut();
+		Assert.assertEquals(3,result);
 	}
 
 }
