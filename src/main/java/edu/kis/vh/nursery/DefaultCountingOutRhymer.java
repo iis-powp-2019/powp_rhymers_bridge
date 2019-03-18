@@ -6,19 +6,19 @@ public class DefaultCountingOutRhymer {
     private static final int STACK_MAX_SIZE = 12;
     private int[] NUMBERS = new int[STACK_MAX_SIZE];
 
-    public int total = STACK_VALUE;
+    private int total = STACK_VALUE;
 
-    public void countIn(int in) {
+    protected void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == STACK_VALUE;
     }
 
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return total == 11;
     }
 
@@ -28,7 +28,7 @@ public class DefaultCountingOutRhymer {
         return NUMBERS[total];
     }
 
-    public int countOut() {
+    protected int countOut() {
         if (callCheck())
             return STACK_VALUE;
         return NUMBERS[total--];
