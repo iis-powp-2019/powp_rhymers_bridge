@@ -1,8 +1,12 @@
 package edu.kis.vh.nursery;
 
+/**
+ *  searching rhymer using FIFO sequence
+ */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 //here is my last edited file
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+
 
     @Override
     protected int countOut() {

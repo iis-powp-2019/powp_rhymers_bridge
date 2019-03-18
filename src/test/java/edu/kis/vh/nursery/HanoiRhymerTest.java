@@ -6,7 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class HanoiRhymerTest {
-
     private HanoiRhymer hanoiRhymer = new HanoiRhymer();
 
     @Test
@@ -16,6 +15,6 @@ public class HanoiRhymerTest {
         int result = hanoiRhymer.peekaboo();
         Assert.assertEquals(testValue, result);
     }
-    
+
 
 }

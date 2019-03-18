@@ -1,8 +1,11 @@
 package edu.kis.vh.nursery;
 
+/**
+ * searching rhymer using Hanoi sequence
+ */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    public int totalRejected = 0;
+    private int totalRejected = 0;
 
     protected int reportRejected() {
         return getTotalRejected();
