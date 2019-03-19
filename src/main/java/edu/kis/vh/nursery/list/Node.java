@@ -2,11 +2,11 @@ package edu.kis.vh.nursery.list;
 
 public class Node {
 
-    private int value;
+    private final int value;
     private Node prev;
 	private Node next;
 
-    protected Node(int i) {
+    protected Node(final int i) {
         value = i;
     }
 
@@ -14,13 +14,11 @@ public class Node {
 		return value;
 	}
 
-
-
 	public Node getPrev() {
 		return prev;
 	}
 
-	public void setPrev(Node prev) {
+	public void setPrev(final Node prev) {
 		this.prev = prev;
 	}
 
@@ -28,7 +26,7 @@ public class Node {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(final Node next) {
 		this.next = next;
 	}
 
