@@ -11,7 +11,8 @@ public class IntLinkedList {
             last = new Node(i);
         } else {
             last.setNext(new Node(i));
-            last.getNext().setPrev(last);
+            last.getNext()
+                .setPrev(last);
             last = last.getNext();
         }
     }
@@ -44,16 +45,8 @@ public class IntLinkedList {
         return i;
     }
 
-    private void setI(int i) {
-        this.i = i;
-    }
-
     private Node getLast() {
         return last;
-    }
-
-    private void setLast(Node last) {
-        this.last = last;
     }
 
 }
