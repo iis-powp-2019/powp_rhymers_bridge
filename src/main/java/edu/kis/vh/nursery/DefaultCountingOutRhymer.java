@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
 
     private int[] numbers = new int[CAPACITY];
 
+    public int getTotal() {
+        return total;
+    }
+
     private int total = EMPTY;
 
     public void countIn(int in) {
