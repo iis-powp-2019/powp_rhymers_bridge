@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
+// TODO: check name.
 	private static final int FULL_STACK_VALUE = 11;
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int STACK_CAPACITY = 12;
