@@ -10,26 +10,26 @@ public class DefaultCountingOutRhymer {
 
     private int total = EMPTY;
 
-    void countIn(int in) {
+    public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    boolean callCheck() {
+    public boolean callCheck() {
         return total == -1;
     }
 
-    boolean isFull() {
+    public boolean isFull() {
         return total == MAX_INDEX;
     }
 
-    int peekaboo() {
+    protected int peekaboo() {
         if (callCheck())
             return -1;
         return numbers[total];
     }
 
-    int countOut() {
+    public int countOut() {
         if (callCheck())
             return -1;
         return numbers[total--];
