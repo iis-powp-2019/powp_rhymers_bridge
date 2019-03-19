@@ -1,16 +1,16 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 
 public interface Rhymersfactory {
 
-	public defaultCountingOutRhymer GetStandardRhymer();
+	public DefaultCountingOutRhymer GetStandardRhymer();
 
-	public defaultCountingOutRhymer GetFalseRhymer();
+	public DefaultCountingOutRhymer GetFalseRhymer();
 
-	public defaultCountingOutRhymer GetFIFORhymer();
+	public DefaultCountingOutRhymer GetFIFORhymer();
 
-	public defaultCountingOutRhymer GetHanoiRhymer();
+	public DefaultCountingOutRhymer GetHanoiRhymer();
 
 }
 //Uzycie alt + <- pozwala nam cofnac sie do poprzedniego otwieranego okna, alt + -> podobnie, jednak przesuwamy sie do przodu w historii
