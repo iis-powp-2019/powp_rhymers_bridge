@@ -6,13 +6,13 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRhymer {
 
-	private static final int BUFFER_SIZE = 12;
+	private static final int STACK_SIZE = 12;
 	private static final int FULL_COUNT = 11;
-	private static final int TOTAL_START = -1;
+	private static final int STACK_EMPTY = -1;
 
-	private int[] numbers = new int[BUFFER_SIZE];
+	private int[] numbers = new int[STACK_SIZE];
 
-	private int total = TOTAL_START;
+	private int total = STACK_EMPTY;
 
 	/**
 	 * @return total elements
@@ -33,7 +33,7 @@ public class DefaultCountingOutRhymer {
 	 * @return true if empty
 	 */
 	public boolean callCheck() {
-		return total == TOTAL_START;
+		return total == STACK_EMPTY;
 	}
 
 	/**
@@ -48,7 +48,7 @@ public class DefaultCountingOutRhymer {
 	 */
 	public int peekAboo() {
 		if (callCheck())
-			return TOTAL_START;
+			return STACK_EMPTY;
 		return numbers[total];
 	}
 
@@ -57,7 +57,7 @@ public class DefaultCountingOutRhymer {
 	 */
 	public int countOut() {
 		if (callCheck())
-			return TOTAL_START;
+			return STACK_EMPTY;
 		return numbers[total--];
 	}
 
