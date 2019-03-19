@@ -4,10 +4,17 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
+    /**
+     * Zwraca całkowitą liczbę odrzuconych wartości
+     * @return int
+     */
     public int reportRejected() {
         return getTotalRejected();
     }
-
+    /**
+     * Dodaje wartość do tablicy jeżeli tablica nie jest pełna w przeciwnym wypadku zwiększa wartość totalRejected
+     ** @param in wartość którą chcemy dodać do listy
+     */
     @Override
     public void countIn(int in) {
         if (!callCheck() && in > peekaboo())
