@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery.list;
 
+// TODO: make usage of that class ;)
 public class IntLinkedList {
 
     class Node {
