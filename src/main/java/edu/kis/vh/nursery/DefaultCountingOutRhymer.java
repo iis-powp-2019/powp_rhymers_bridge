@@ -13,29 +13,48 @@ public class DefaultCountingOutRhymer {
     }
 
     private int total = EMPTY;
+    /**
+     * dodaj na stos
+     * @parm in liczba którą chcesz dodać
+     */
 
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
+    /**
+     *Sprawdz czy stos pusty
+     * @return prawde jesli pusty
+     */
     public boolean callCheck() {
-        return total == -1;
+        return total == EMPTY;
     }
 
+    /**
+     *sprawdz czy stos pełny
+     * @return prawde jeśli pełny
+     *
+     */
     public boolean isFull() {
         return total == MAX_INDEX;
     }
-
+    /**
+     * zwraca najweksza wartość stosu
+     * @return -1 gdy pusty, liczba jeśli nie
+     */
     protected int peekaboo() {
         if (callCheck())
-            return -1;
+            return EMPTY;
         return numbers[total];
     }
-
+    /**
+     *Zwraca koniec stosu
+     * @return -1 gdy pusty, liczba jeśli nie
+     */
     public int countOut() {
         if (callCheck())
-            return -1;
+            return EMPTY;
         return numbers[total--];
     }
 
