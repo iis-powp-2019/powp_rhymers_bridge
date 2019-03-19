@@ -36,4 +36,22 @@ public class IntLinkedList {
 		last = last.prev;
 		return ret;
 	}
+	
+	private class Node {
+		protected int value;
+		protected Node prev;
+		protected Node next;
+
+		protected Node(int i) {
+			value = i;
+		}
+
+		protected Node getNext() {
+			return next;
+		}
+
+		protected void setNext(Node next) {
+			this.next = next;
+		}
+	}
 }
