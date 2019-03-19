@@ -75,4 +75,32 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 
+	@Test
+	public void testFIFOCountOut()
+	{
+		FIFORhymer rhymer = new FIFORhymer();
+		final int EMPTY_STACK_VALUE = -1;
+
+		int result = rhymer.countOut();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+
+		int testValue = 4;
+		rhymer.countIn(testValue);
+
+		result = rhymer.countOut();
+		Assert.assertEquals(testValue, result);
+		result = rhymer.countOut();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+
+	@Test
+	public void testHanoiCountIn()
+	{
+		HanoiRhymer rhymer = new HanoiRhymer();
+		int testValue = 4;
+		rhymer.countIn(testValue);
+
+		int result = rhymer.peekaboo();
+		Assert.assertEquals(testValue, result);
+	}
 }
