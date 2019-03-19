@@ -15,6 +15,7 @@ class RhymersDemo {
 	}
 
 	private static void testRhymers(IRhymersFactory factory) {
+		//TODO: needs refactoring this method, its not a clean code, maybe extract more method
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
 				factory.getFIFORhymer(), factory.getHanoiRhymer() };
 
