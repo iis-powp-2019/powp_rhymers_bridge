@@ -13,3 +13,4 @@ public interface Rhymersfactory {
 	public defaultCountingOutRhymer GetHanoiRhymer();
 
 }
+//Uzycie alt + <- pozwala nam cofnac sie do poprzedniego otwieranego okna, alt + -> podobnie, jednak przesuwamy sie do przodu w historii
