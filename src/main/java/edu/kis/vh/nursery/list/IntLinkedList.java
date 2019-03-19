@@ -4,6 +4,8 @@ public class IntLinkedList {
 
 	private static final int MINUS_ONE = -1;
 	private Node last;
+	
+	//TODO: remove unused variable
 	private int i;
 
 	public void push(int i) {
