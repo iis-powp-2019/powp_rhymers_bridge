@@ -11,7 +11,7 @@ public class DefaultCountingOutRhymer {
     // alt + <- powrót do wcześniej modyfikowanego pliku
     // alt + -> przejście do następnego pliku
 
-    private int[] numbers = new int[MAX_SIZE];
+    private final int[] numbers = new int[MAX_SIZE];
 
     private int total = TOTAL_VALUE;
 
@@ -47,16 +47,8 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
-    private void setTotal(int total) {
-        this.total = total;
-    }
-
     private int[] getNumbers() {
         return numbers;
-    }
-
-    private void setNumbers(int[] numbers) {
-        this.numbers = numbers;
     }
 
     private static int getMaxSize() {
