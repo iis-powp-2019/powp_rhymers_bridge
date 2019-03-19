@@ -4,6 +4,14 @@ public class DefaultCountingOutRhymer {
 
 	private int[] NUMBERS = new int[12];
 
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 	public int total = -1;
 
 	public void countIn(int in) {
@@ -12,7 +20,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public boolean callCheck() {
-		return true;
+		return total == -1;
 	}
 		
 	public boolean isFull() {

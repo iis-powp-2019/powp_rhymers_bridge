@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
 import org.junit.Assert;
-import org.junit.Test;
 
+import org.junit.Test;
 public class RhymersJUnitTest {
 
 	private static final int testValue = 4;
@@ -54,8 +54,7 @@ public class RhymersJUnitTest {
 
 		result = rhymer.peeKaBoo();
 		Assert.assertEquals(testValue, result);
-		result = rhymer.peeKaBoo();
-		Assert.assertEquals(testValue, result);
+		
 	}
 
 	@Test
