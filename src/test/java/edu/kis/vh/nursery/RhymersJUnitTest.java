@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class RhymersJUnitTest {
 
 	@Test
@@ -74,5 +76,53 @@ public class RhymersJUnitTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
+	
+	@Test
+	public void testListIsEmpty() {
+		boolean result;
+		
+		IntLinkedList list = new IntLinkedList();
+		
+		result = list.isEmpty();
+		Assert.assertEquals(true, result);
+		
+		list.push(42);
+		
+		result = list.isEmpty();
+		Assert.assertEquals(false, result);
+	}
+	
+	@Test
+	public void testListIsFull() {
+		boolean result;
+		
+		IntLinkedList list = new IntLinkedList();
+		
+		result = list.isFull();
+		Assert.assertEquals(false, result);
+	}
+	
+	@Test
+	public void testListTop() {
+		IntLinkedList list = new IntLinkedList();
+		
+		list.push(42);
+		list.push(43);
+		
+		Assert.assertEquals(43, list.top());
+	}
+	
+	@Test
+	public void testListpop() {
+		IntLinkedList list = new IntLinkedList();
+		
+		list.push(42);
+		list.push(43);
+		
+		list.pop();
+		
+		Assert.assertEquals(42, list.top());
+	}
+
 
 }
