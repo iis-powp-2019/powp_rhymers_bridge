@@ -35,6 +35,7 @@ public class IntLinkedList {
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
+
     }
 
 }
