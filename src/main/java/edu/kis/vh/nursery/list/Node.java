@@ -22,7 +22,7 @@ public class Node {
         this.next = next;
     }
 
-    private int value;
+    private final int value;
     private Node prev, next;
 
     public Node(int i) {
