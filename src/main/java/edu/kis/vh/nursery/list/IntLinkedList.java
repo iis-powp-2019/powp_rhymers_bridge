@@ -1,5 +1,5 @@
 package edu.kis.vh.nursery.list;
-
+// TODO Unused class, make usage of it.
 public class IntLinkedList {
 
     private static final int RETURN_VALUE = -1;
