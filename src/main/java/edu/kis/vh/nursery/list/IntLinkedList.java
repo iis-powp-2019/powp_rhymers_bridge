@@ -4,7 +4,6 @@ public class IntLinkedList {
 
 	private static final int EMPTY = -1;
 	private Node last;
-	int i;
 
 	public void push(final int i) {
 		if (last == null)
@@ -36,6 +35,38 @@ public class IntLinkedList {
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+
+	private class Node {
+
+		private int value;
+		private Node prev;
+		private Node next;
+
+		public Node(int i) {
+			value = i;
+		}
+
+		public int getValue() {
+			return value;
+		}
+
+		public Node getPrev() {
+			return prev;
+		}
+
+		public void setPrev(final Node prev) {
+			this.prev = prev;
+		}
+
+		public Node getNext() {
+			return next;
+		}
+
+		public void setNext(final Node next) {
+			this.next = next;
+		}
+
 	}
 
 }
