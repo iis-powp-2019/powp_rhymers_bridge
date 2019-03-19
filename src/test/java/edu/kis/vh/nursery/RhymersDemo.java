@@ -7,13 +7,15 @@ import edu.kis.vh.nursery.factory.RhymersFactory;
 
 class RhymersDemo {
 
+	private static final int _15 = 15;
+
 	public static void main(String[] args) {
 		RhymersFactory factory = new DefaultRhymersFactory();
 
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
 				factory.getFIFORhymer(), factory.getHanoiRhymer() };
 
-		for (int i = 1; i < 15; i++)
+		for (int i = 1; i < _15; i++)
 			for (int j = 0; j < 3; j++)
 				rhymers[j].countIn(i);
 

@@ -12,7 +12,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public boolean callCheck() {
-		return total == -1;
+		return true;
 	}
 		
 	public boolean isFull() {
