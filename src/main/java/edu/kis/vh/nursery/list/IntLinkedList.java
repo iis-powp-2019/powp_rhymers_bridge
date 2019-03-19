@@ -1,10 +1,21 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * @author 202247
+ * Lista przechowujaca liczby całkowite.
+ *
+ */
+
 public class IntLinkedList {
 
 	private static final int EMPTY = -1;
 	private Node last;
 
+	/**
+	 * @param i
+	 * Umieszczenie w liscie elementu
+	 *
+	 */
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -15,14 +26,27 @@ public class IntLinkedList {
 		}
 	}
 
+	/**
+	 * 
+	 * @return boolean
+	 * Sprawdza czy lista jest pusta.
+	 */
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	/**
+	 * @return boolean
+	 * Sprawdza czy lista jest pełna.
+	 */
 	public boolean isFull() {
 		return false;
 	}
 
+	/**
+	 * @return int
+	 * Ostatni element z listy jest zwracany i usuwany
+	 */
 	public int top() {
 		if (isEmpty())
 			return EMPTY;
