@@ -47,4 +47,24 @@ public class DefaultCountingOutRhymer {
         return total;
     }
 
+    private void setTotal(int total) {
+        this.total = total;
+    }
+
+    private int[] getNumbers() {
+        return numbers;
+    }
+
+    private void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    private static int getMaxSize() {
+        return MAX_SIZE;
+    }
+
+    private static int getTotalFullValue() {
+        return TOTAL_FULL_VALUE;
+    }
+
 }
