@@ -14,10 +14,6 @@ public class Node {
 		return value;
 	}
 
-	protected void setValue(int value) {
-		this.value = value;
-	}
-
 	protected Node getPrev() {
 		return prev;
 	}
