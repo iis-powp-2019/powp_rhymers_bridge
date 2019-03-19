@@ -1,8 +1,9 @@
 package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
-
+//TODO-Remove uused field
     private Node last;
+
     private int i;
 
     public void push(int i) {

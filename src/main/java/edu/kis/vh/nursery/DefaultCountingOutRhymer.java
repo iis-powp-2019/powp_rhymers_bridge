@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
+//TODO-encapsulation methods
 
     private static final int CAPACITY = 12;
     private static final int MAX_INDEX = 11;
