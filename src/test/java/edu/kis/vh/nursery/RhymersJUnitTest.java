@@ -1,7 +1,6 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
-import edu.kis.vh.nursery.list.Node;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,11 +13,6 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(DefaultCountingOutRhymer.class, rhymersFactory.getFalseRhymer().getClass());
 		Assert.assertEquals(FIFORhymer.class, rhymersFactory.getFIFORhymer().getClass());
 		Assert.assertEquals(HanoiRhymer.class, rhymersFactory.getHanoiRhymer().getClass());
-	}
-
-	@Test
-	public void testNode() {
-		Assert.assertEquals(666, new Node(666).getValue());
 	}
 
 	@Test
