@@ -7,15 +7,11 @@ public class Node {
 	private Node nextNode;
 
 	public Node(int value) {
-		this.setValue(value);
+		this.value = value;
 	}
 
 	public int getValue() {
 		return value;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
 	}
 
 	public Node getPreviousNode() {
