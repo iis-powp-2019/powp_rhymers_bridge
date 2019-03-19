@@ -15,15 +15,15 @@ public class DefaultCountingOutRhymer {
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	boolean callCheck() {
 		return total == STACK_EMPTY;
 	}
 
-	public boolean isFull() {
+	boolean isFull() {
 		return total == STACK_CAPACITY - 1;
 	}
 
-	protected int peekaboo() {
+	int peekaboo() {
 		if (callCheck())
 			return STACK_EMPTY;
 		return numbers[total];
