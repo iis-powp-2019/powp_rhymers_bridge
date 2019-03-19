@@ -23,7 +23,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     /**
      * Metoda odzedziczona z DefaultCountingOutRhymer
      *
-     * @param in
+     * @param in - liczba zgłaszana do wylicznki
      */
     @Override public void countIn(int in) {
         if (!callCheck() && in > peekaboo())
