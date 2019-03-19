@@ -11,6 +11,12 @@ class RhymersDemo {
 	public static void main(String[] args) {
 		RhymersFactory factory = new DefaultRhymersFactory();
 
+		testRhymers(factory);
+
+	}
+	//Skróty Alt + -> oraz Alt + <- slużą do zmiamy plików otwartych w IDE
+
+	private static void testRhymers(RhymersFactory factory) {
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
 				factory.getFIFORhymer(), factory.getHanoiRhymer() };
 
@@ -29,8 +35,6 @@ class RhymersDemo {
 		}
 
 		System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
-
 	}
-	//Skróty Alt + -> oraz Alt + <- slużą do zmiamy plików otwartych w IDE
 	
 }
