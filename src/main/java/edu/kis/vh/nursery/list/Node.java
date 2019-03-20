@@ -15,7 +15,7 @@ public class Node {
 	 * Constructor
 	 * @param i Variable assigned to the field value
 	 */
-	public Node(int i) {
+	protected Node(int i) {
 		value = i;
 	}
 
@@ -23,7 +23,7 @@ public class Node {
 	 * Returns node placed before this node in the stack
 	 * @return Node
 	 */
-	public Node getPrev() {
+	protected Node getPrev() {
 		return prev;
 	}
 
@@ -31,7 +31,7 @@ public class Node {
 	 * Assigns node which is next in the stack to the field prev
 	 * @param prev
 	 */
-	public void setPrev(Node prev) {
+	protected void setPrev(Node prev) {
 		this.prev = prev;
 	}
 
@@ -39,7 +39,7 @@ public class Node {
 	 * Returns node placed after this node in the stack
 	 * @return Node
 	 */
-	public Node getNext() {
+	protected Node getNext() {
 		return next;
 	}
 
@@ -47,7 +47,7 @@ public class Node {
 	 * Assigns node which is next in the stack to the field next
 	 * @param next 
 	 */
-	public void setNext(Node next) {
+	protected void setNext(Node next) {
 		this.next = next;
 	}
 
@@ -55,7 +55,7 @@ public class Node {
 	 * Gets value of the node
 	 * @return int
 	 */
-	public int getValue() {
+	protected int getValue() {
 		return value;
 	}
 
