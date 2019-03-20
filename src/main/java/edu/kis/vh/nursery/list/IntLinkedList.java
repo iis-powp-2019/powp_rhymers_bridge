@@ -33,7 +33,7 @@ public class IntLinkedList {
 
 	}
 
-	private static final int STACK_EMPTY_VALUE = -1;
+	private static final int LIST_EMPTY_VALUE = -1;
 	private Node last;
 	private int i; // TODO: ta zmienna nie jest używana, trzeba usunąć
 
@@ -57,13 +57,13 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return STACK_EMPTY_VALUE;
+			return LIST_EMPTY_VALUE;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return STACK_EMPTY_VALUE;
+			return LIST_EMPTY_VALUE;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
