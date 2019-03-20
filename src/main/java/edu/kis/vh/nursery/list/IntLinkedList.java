@@ -1,10 +1,41 @@
 package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
+	private class Node {
+
+		private int value;
+		private Node prev;
+		private Node next;
+
+		public Node(final int i) {
+			value = i;
+		}
+
+		int getValue() {
+			return value;
+		}
+
+		Node getNext() {
+			return next;
+		}
+
+		void setNext(final Node next) {
+			this.next = next;
+		}
+
+		Node getPrev() {
+			return prev;
+		}
+
+		void setPrev(final Node prev) {
+			this.prev = prev;
+		}
+
+	}
 
 	private static final int STACK_EMPTY_VALUE = -1;
 	private Node last;
-	private int i; //ta zmienna nie jest używana, trzeba usunąć 
+	private int i; // ta zmienna nie jest używana, trzeba usunąć
 
 	public void push(final int i) {
 		if (last == null)
