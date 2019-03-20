@@ -10,7 +10,7 @@ public class DefaultCountingOutRhymer {
 
 	private int[] numbers = new int[STACK_MAX_CAPACITY];
 
-	public int total = STACK_EMPTY_VALUE;
+	private int total = STACK_EMPTY_VALUE;
 
 	public void countIn(int in) {
 		if (!isFull())

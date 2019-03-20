@@ -3,8 +3,8 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
 	private static final int STACK_EMPTY_VALUE = -1;
-	Node last;
-	int i;
+	private Node last;
+	private int i; //ta zmienna nie jest używana, trzeba usunąć 
 
 	public void push(int i) {
 		if (last == null)
