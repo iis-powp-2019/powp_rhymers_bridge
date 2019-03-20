@@ -2,7 +2,6 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-
     private final int SIZE_NUMBER_ARRAY = 12;
     private final int STACK_EMPTY_SIZE = -1;
     private final int STACK_MAX_SIZE = 11;

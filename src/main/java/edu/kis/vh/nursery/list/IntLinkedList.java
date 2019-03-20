@@ -4,14 +4,25 @@ public class IntLinkedList {
 
     final int EMPTY_LIST_VALUE = -1;
 
-    Node lastElement;
-    int i;
+
+    private int value;
+    private IntLinkedList lastElement;
+    private IntLinkedList prevElement;
+    private IntLinkedList nextElement;
+
+    private IntLinkedList(final int i) {
+        value = i;
+    }
+
+    IntLinkedList() {
+    };
+
 
     public void push(final int valueToAdd) {
         if (lastElement == null)
-            lastElement = new Node(valueToAdd);
+            lastElement = new IntLinkedList(valueToAdd);
         else {
-            lastElement.setNextElement(new Node(valueToAdd));
+            lastElement.setNextElement(new IntLinkedList(valueToAdd));
             lastElement.getNextElement().setPrevElement(lastElement);
             lastElement = lastElement.getNextElement();
         }
@@ -37,6 +48,26 @@ public class IntLinkedList {
         final int value = lastElement.getValue();
         lastElement = lastElement.getPrevElement();
         return value;
+    }
+
+    private int getValue() {
+        return value;
+    }
+
+    private IntLinkedList getPrevElement() {
+        return prevElement;
+    }
+
+    private void setPrevElement(IntLinkedList prevElement) {
+        this.prevElement = prevElement;
+    }
+
+    private IntLinkedList getNextElement() {
+        return nextElement;
+    }
+
+    private void setNextElement(IntLinkedList nextElement) {
+        this.nextElement = nextElement;
     }
 
 }
