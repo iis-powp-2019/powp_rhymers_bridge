@@ -2,6 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
+	//TODO: nie wiem czy to dobre rozwiązanie ponieważ użytkownik nie jest w stanie rozpoznać czy ma pustą listę czy wartość -1
 	public static final int EMPTY_VALUE = -1;
 
 	private Node last;
@@ -21,6 +22,7 @@ public class IntLinkedList {
 		return last == null;
 	}
 
+	//TODO: zawsze zwraca false
 	public boolean isFull() {
 		return false;
 	}
