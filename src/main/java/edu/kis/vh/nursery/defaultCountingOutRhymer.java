@@ -4,7 +4,7 @@ public class defaultCountingOutRhymer {
 
 	private static final int MAX_CAPACITY = 12;
 	private static final int STACK_EMPTY_VALUE = -1;
-	private int[] NUMBERS = new int[MAX_CAPACITY];
+	private final int[] NUMBERS = new int[MAX_CAPACITY];
 
 	public int getTotal() {
 		return total;
