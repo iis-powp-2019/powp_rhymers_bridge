@@ -1,13 +1,13 @@
 package edu.kis.vh.nursery.list;
 
-public class IntegerLinkedList {
+class IntegerLinkedList {
 
 	// EMPTY_STACK_VALUE (DefaultCountingOutRhymer) != EMPTY_LIST_VALUE (here)
 	private static final int EMPTY_LIST_VALUE = -1;
 	
-	Node lastNode;
+	private Node lastNode;
 
-	public void push(int value) {
+	private void push(int value) {
 		if (lastNode == null)
 			lastNode = new Node(value);
 		else {
@@ -17,21 +17,21 @@ public class IntegerLinkedList {
 		}
 	}
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		return lastNode == null;
 	}
 
-	public boolean isFull() {
+	private boolean isFull() {
 		return false;
 	}
 
-	public int getTop() {
+	private int getTop() {
 		if (isEmpty())
 			return EMPTY_LIST_VALUE;
 		return lastNode.value;
 	}
 
-	public int pop() {
+	private int pop() {
 		if (isEmpty())
 			return EMPTY_LIST_VALUE;
 		int poppedValue = lastNode.value;
