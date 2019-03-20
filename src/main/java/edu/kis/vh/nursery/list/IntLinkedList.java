@@ -4,7 +4,6 @@ public class IntLinkedList {
 
     final int EMPTY_LIST_VALUE = -1;
 
-
     private int value;
     private IntLinkedList lastElement;
     private IntLinkedList prevElement;
@@ -14,7 +13,7 @@ public class IntLinkedList {
         value = i;
     }
 
-    IntLinkedList() {
+    public IntLinkedList() {
     };
 
 
@@ -30,10 +29,6 @@ public class IntLinkedList {
 
     private boolean isEmpty() {
         return lastElement == null;
-    }
-
-    public boolean isFull() {
-        return false;
     }
 
     public int top() {
