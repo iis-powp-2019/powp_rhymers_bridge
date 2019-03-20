@@ -2,6 +2,9 @@ package edu.kis.vh.nursery.list;
 
 public class IntegerLinkedList {
 
+	// EMPTY_STACK_VALUE (DefaultCountingOutRhymer) != EMPTY_LIST_VALUE (here)
+	private static final int EMPTY_LIST_VALUE = -1;
+	
 	Node lastNode;
 
 	public void push(int value) {
@@ -24,13 +27,13 @@ public class IntegerLinkedList {
 
 	public int getTop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_LIST_VALUE;
 		return lastNode.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_LIST_VALUE;
 		int poppedValue = lastNode.value;
 		lastNode = lastNode.previousNode;
 		return poppedValue;
