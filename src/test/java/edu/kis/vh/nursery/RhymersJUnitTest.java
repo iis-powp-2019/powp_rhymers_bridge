@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -75,4 +76,12 @@ public class RhymersJUnitTest {
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
 
+    @Test
+    public void testRhymersFactory() {
+        DefaultRhymersFactory rhymersFactory = new DefaultRhymersFactory();
+        Assert.assertEquals(DefaultCountingOutRhymer.class, rhymersFactory.getStandardRhymer().getClass());
+        Assert.assertEquals(DefaultCountingOutRhymer.class, rhymersFactory.getFalseRhymer().getClass());
+        Assert.assertEquals(FIFORhymer.class, rhymersFactory.getFIFORhymer().getClass());
+        Assert.assertEquals(HanoiRhymer.class, rhymersFactory.getHanoiRhymer().getClass());
+    }
 }
