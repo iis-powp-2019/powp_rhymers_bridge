@@ -10,6 +10,10 @@ public class DefaultCountingOutRhymer {
 
 	private int totalCount = EMPTY_STACK_VALUE;
 
+	private int getTotalCount() {
+		return totalCount;
+	}
+
 	void countIn(int newValue) {
 		if (!isFull())
 			numbers[++totalCount] = newValue;
