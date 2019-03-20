@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
 
 	private static final int STACK_MAX_CAPACITY = 12;
 
-	private int[] numbers = new int[STACK_MAX_CAPACITY];
+	private final int[] numbers = new int[STACK_MAX_CAPACITY];
 
 	private int total = STACK_EMPTY_VALUE;
 
@@ -16,7 +16,7 @@ public class DefaultCountingOutRhymer {
 		return total;
 	}
 
-	public void countIn(int in) {
+	public void countIn(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
