@@ -51,7 +51,7 @@ public class IntLinkedList {
 	 * Nested class in class IntLinkedList
 	 * @author monik
 	 */
-	class Node {
+	private class Node {
 
 		private final int value;
 		private Node prev;
