@@ -11,9 +11,9 @@ class RhymersDemo {
         final int ARRAY_SIZE = 3;
         final int NUMBER_OF_ELEMENTS_TO_ADD = 15;
 
-        RhymersFactory factory = new DefaultRhymersFactory();
+        final RhymersFactory factory = new DefaultRhymersFactory();
 
-        DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(), factory.getFIFORhymer(),
+        final DefaultCountingOutRhymer[] rhymers = {factory.getStandardRhymer(), factory.getFalseRhymer(), factory.getFIFORhymer(),
                 factory.getHanoiRhymer()};
 
         for (int i = 1; i < NUMBER_OF_ELEMENTS_TO_ADD; i++)

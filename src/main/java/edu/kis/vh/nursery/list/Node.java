@@ -6,7 +6,7 @@ class Node {
 	private Node prevElement;
 	private Node nextElement;
 
-	Node(int i) {
+	Node(final int i) {
 		value = i;
 	}
 
