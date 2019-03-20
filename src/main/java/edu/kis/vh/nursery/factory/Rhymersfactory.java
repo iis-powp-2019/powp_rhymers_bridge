@@ -1,15 +1,15 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 
 public interface Rhymersfactory {
 
-	defaultCountingOutRhymer getStandardRhymer();
+	DefaultCountingOutRhymer getStandardRhymer();
 
-	defaultCountingOutRhymer getFalseRhymer();
+	DefaultCountingOutRhymer getFalseRhymer();
 
-	defaultCountingOutRhymer getFIFORhymer();
+	DefaultCountingOutRhymer getFIFORhymer();
 
-	defaultCountingOutRhymer getHanoiRhymer();
+	DefaultCountingOutRhymer getHanoiRhymer();
 
 }

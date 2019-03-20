@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class defaultCountingOutRhymer {
+public class DefaultCountingOutRhymer {
 
 	private static final int MAX_CAPACITY = 12;
 	private static final int STACK_EMPTY_VALUE = -1;
