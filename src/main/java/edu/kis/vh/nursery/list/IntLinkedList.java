@@ -35,7 +35,7 @@ public class IntLinkedList {
 
 	private static final int STACK_EMPTY_VALUE = -1;
 	private Node last;
-	private int i; // ta zmienna nie jest używana, trzeba usunąć
+	private int i; // TODO: ta zmienna nie jest używana, trzeba usunąć
 
 	public void push(final int i) {
 		if (last == null)
