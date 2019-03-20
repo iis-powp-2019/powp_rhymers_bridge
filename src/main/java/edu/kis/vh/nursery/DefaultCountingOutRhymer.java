@@ -33,7 +33,7 @@ public class DefaultCountingOutRhymer {
             return STACK_EMPTY_SIZE;
         return NUMBERS[total--];
     }
-
+    //TODO: nalezy usunac nieuzywana metode
     public int getTotal() {
         return total;
     }
