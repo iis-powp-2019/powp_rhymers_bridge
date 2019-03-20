@@ -10,7 +10,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
      */
     public int reportRejected() {
         return getTotalRejected();
-    }
+    } //TODO:reportRejected zwraca to samo co getTotalRejected
     /**
      * Dodaje wartość do tablicy jeżeli tablica nie jest pełna w przeciwnym wypadku zwiększa wartość totalRejected
      ** @param in wartość którą chcemy dodać do listy

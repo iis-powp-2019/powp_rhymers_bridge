@@ -5,7 +5,7 @@ public class IntLinkedList {
 	public static final int EMPTY_VALUE = -1;
 
 	private Node last;
-//	private int i;
+//	private int i; //TODO:nigdzie nieużywane oraz nazwa nic nie mówi
 
 	public void push(int i) {
 		if (last == null)
