@@ -33,7 +33,7 @@ public class IntLinkedList {
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK_TOP;
-		int ret = last.getValue();
+		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
@@ -45,11 +45,6 @@ public class IntLinkedList {
 	public int getI() {
 		return i;
 	}
-
-	public void setI(int i) {
-		this.i = i;
-	}
-
 }
 
 //alt + <- przechodzi do poprzednio edytowanego pliku, za każdym razem o jeden w tył
