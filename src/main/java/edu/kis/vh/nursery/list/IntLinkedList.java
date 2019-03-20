@@ -13,7 +13,6 @@ public class IntLinkedList {
 	 * Last node reference
 	 */
 	private Node last;
-	private int i;
 
 	/**
 	 * Adds new element to list, creates new node
