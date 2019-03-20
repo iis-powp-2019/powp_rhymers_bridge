@@ -38,6 +38,22 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	public Node getLast() {
+		return last;
+	}
+
+	public void setLast(Node last) {
+		this.last = last;
+	}
+
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+
 }
 
 //alt + <- przechodzi do poprzednio edytowanego pliku, za każdym razem o jeden w tył
