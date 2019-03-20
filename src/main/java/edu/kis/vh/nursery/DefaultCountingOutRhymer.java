@@ -1,11 +1,13 @@
 package edu.kis.vh.nursery;
 
-public class defaultCountingOutRhymer {
+public class DefaultCountingOutRhymer {
 
-    private int[] NUMBERS = new int[12];
-    private int STACK_EMPTY_SIZE = -1;
-    private int STACK_MAX_SIZE = 11;
 
+    private final int SIZE_NUMBER_ARRAY = 12;
+    private final int STACK_EMPTY_SIZE = -1;
+    private final int STACK_MAX_SIZE = 11;
+
+    private int[] NUMBERS = new int[SIZE_NUMBER_ARRAY];
     public int total = -1;
 
     public void countIn(int in) {
