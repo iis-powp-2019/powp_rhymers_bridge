@@ -1,61 +1,34 @@
 package edu.kis.vh.nursery;
 
-/**
- * Class of default type rhymer
- */
 public class DefaultCountingOutRhymer {
 
-	private static final int STACK_CAPACITY = 12;
+	private IntArrayStack atrybut;
 
-	private static final int EMPTY_STACK_VALUE = -1;
+	public DefaultCountingOutRhymer() {
+	}
+	
+	public DefaultCountingOutRhymer(IntArrayStack atrybut) {
+		super();
+		this.atrybut = atrybut;
+	}
 
-	private int[] numbers = new int[STACK_CAPACITY];
-
-	private int total = EMPTY_STACK_VALUE;
-
-	/**
-	 * Adds number to rhymer
-	 * @param in value to add to the rhymer
-	 */
 	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+		atrybut.countIn(in);
 	}
 
-	/**
-	 * Checks if rhymer number storage is empty
-	 * @return true when rhymers can store no more numbers
-	 */ 
-	boolean callCheck() {
-		return total == EMPTY_STACK_VALUE;
+	public boolean callCheck() {
+		return atrybut.callCheck();
 	}
 
-	/**
-	 * Checks if rhymer number storage is full
-	 * @return true when rhymers can store no more numbers
-	 */
-	boolean isFull() {
-		return total == STACK_CAPACITY-1;
+	public boolean isFull() {
+		return atrybut.isFull();
 	}
 
-	/**
-	 * Gets value of last added number
-	 * @return last added number
-	 */
-	int peekaboo() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total];
+	public int peekaboo() {
+		return atrybut.peekaboo();
 	}
 
-	/**
-	 * Gets value of last added number, popping it from rhymer storage
-	 * @return last added number
-	 */
 	public int countOut() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total--];
+		return atrybut.countOut();
 	}
-
 }
