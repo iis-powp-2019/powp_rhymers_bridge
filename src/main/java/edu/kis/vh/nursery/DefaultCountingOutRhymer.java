@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
     private static final int DEFAULT_STACK_VALUE = -1;
     private static final int MAX_STACK_VALUE = 11;
     private static final int ERROR_NUMBER = -1;
-    private int[] numbers = new int[MAXSIZE];
+    private final int[] numbers = new int[MAXSIZE];
 
     private int total = DEFAULT_STACK_VALUE;
 
