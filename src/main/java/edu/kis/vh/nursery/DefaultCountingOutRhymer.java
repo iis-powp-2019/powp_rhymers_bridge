@@ -1,93 +1,50 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    /**
-     *  Maksymalna pojemność stosu klasy
-     */
-    private static final int capacity = 12;
+    IntArrayStack intArrayStack;
 
-    /**
-     *  Wartość błędu gdy indeks przekracza wielkość tablicy
-     */
-    private static final int indexOutOfArray = -1;
+    public DefaultCountingOutRhymer() {
+        intArrayStack = new IntArrayStack();
+    }
 
-    /**
-     *  Stos klasy
-     */
-    private int[] numbers = new int[capacity];
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-    /**
-     *  Zminna informująca o stanie stosu
-     */
-    private int total = getIndexOutOfArray();
-
-
-    /**
-     * Wprowadzenie nowej wartości do stosu klasy
-     *
-     * @param in liczba, która będzie dodana do stosu jeśli ten nie jest pełen
-     */
     public void countIn(int in) {
-        if (!isFull())
-            numbers[++total] = in;
+        intArrayStack.countIn(in);
     }
 
-    /**
-     *  Sprawdzenie czy stos jest pusty
-     *
-     *  @return True - stos pusty, False - stos pełny
-     */
     public boolean callCheck() {
-        return total == getIndexOutOfArray();
+        return intArrayStack.callCheck();
     }
 
-    /**
-     *  Sprawdzenie czy stos jest pełen
-     *
-     * @return True - stos pełny, False - stos pusty
-     */
     public boolean isFull() {
-        return total == capacity - 1;
+        return intArrayStack.isFull();
     }
 
-    /**
-     *  Odczytanie liczby ze stosu
-     *
-     * @return liczba ze stosu
-     */
-    protected int peekaboo() {
-        if (callCheck())
-            return getIndexOutOfArray();
-        return numbers[total];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    /**
-     *  Odcztanie liczby ze stosu o ineksie o jeden mniejszy od wartości wskaźnika stosu
-     *
-     * @return liczba ze stosu o ineksie o jeden mniejszy od wartości wskaźnika stosu
-     */
     public int countOut() {
-        if (callCheck())
-            return getIndexOutOfArray();
-        return numbers[total--];
+        return intArrayStack.countOut();
     }
-
 
     public static int getCapacity() {
-        return capacity;
+        return IntArrayStack.getCapacity();
     }
 
-
     public static int getIndexOutOfArray() {
-        return indexOutOfArray;
+        return IntArrayStack.getIndexOutOfArray();
     }
 
     public int[] getNumbers() {
-        return numbers;
+        return intArrayStack.getNumbers();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
 
