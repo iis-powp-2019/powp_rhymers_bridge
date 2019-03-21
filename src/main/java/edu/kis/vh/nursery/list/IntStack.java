@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
 * Linked list storing integers
 *
 * */
-public class IntLinkedList {
+public class IntStack implements IntStackInterface {
 
     private static final int EMPTY = -1;
     private Node last;
@@ -15,6 +15,7 @@ public class IntLinkedList {
     *
     * @param i value which will be added to the list
     * */
+    @Override
     public void push(int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -30,6 +31,7 @@ public class IntLinkedList {
      *
      * @return false if list contains any Nodes, otherwise true
     * */
+    @Override
     public boolean isEmpty() {
         return getLast() == null;
     }
@@ -39,6 +41,7 @@ public class IntLinkedList {
      *
      * @return true if list is full, otherwise false
      * */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -48,6 +51,7 @@ public class IntLinkedList {
      *
      * @return value of the last pushed integer
      * */
+    @Override
     public int top() {
         if (isEmpty())
             return EMPTY;
@@ -60,6 +64,7 @@ public class IntLinkedList {
      *
      * @return value of the last pushed integer
      * */
+    @Override
     public int pop() {
         if (isEmpty())
             return -1;
@@ -87,7 +92,8 @@ public class IntLinkedList {
         this.last = last;
     }
 
-    public int getI() {
+    @Override
+    public int getTotal() {
         return i;
     }
 

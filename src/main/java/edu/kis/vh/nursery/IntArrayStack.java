@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.IntStackInterface;
+
+public class IntArrayStack implements IntStackInterface {
 
     private static final int EMPTY_FIFO = -1;
     private static final int FULL_FIFO = 11;
@@ -33,31 +35,37 @@ public class IntArrayStack {
         this.total = total;
     }
 
-    public void countIn(int in) {
+    @Override
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == EMPTY_FIFO;
     }
 
-    boolean isFull() {
+    @Override
+    public boolean isFull() {
         return total == FULL_FIFO;
     }
 
-    int peekaboo() {
-        if (callCheck())
+    @Override
+    public int top() {
+        if (isEmpty())
             return EMPTY_FIFO;
         return numbers[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    @Override
+    public int pop() {
+        if (isEmpty())
             return EMPTY_FIFO;
         return numbers[total--];
     }
 
+    @Override
     public int getTotal() {
         return total;
     }
