@@ -20,29 +20,6 @@ public class DefaultCountingOutRhymer
 		this.ias = ias;
 	}
 
-	
-	/*
-	public void countIn(int in) 
-	{
-		ias.countIn(in);
-	}
-	public boolean callCheck() 
-	{
-		return ias.callCheck();
-	}
-	public boolean isFull() 
-	{
-		return ias.isFull();
-	}
-	public int countOut() 
-	{
-		return ias.countOut();
-	}
-	public int peekaboo() 
-	{
-		return ias.peekaboo();
-	}
-	*/
 	public void countIn(int in) 
 	{
 		ill.push(in);
