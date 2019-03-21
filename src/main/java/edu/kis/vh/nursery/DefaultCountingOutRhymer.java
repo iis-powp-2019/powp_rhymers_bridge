@@ -1,53 +1,41 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class DefaultCountingOutRhymer {
     IntArrayStack intArrayStack = new IntArrayStack();
+    IntLinkedList intLinkedList = new IntLinkedList();
 
     public DefaultCountingOutRhymer(){
 
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intArrayStack = intArrayStack;
-    }
-
-    public static int getEmptyStackHeadIndex() {
-        return IntArrayStack.getEmptyStackHeadIndex();
-    }
-
-    public static int getFullStackHeadIndex() {
-        return IntArrayStack.getFullStackHeadIndex();
-    }
-
-    public static int getCAPACITY() {
-        return IntArrayStack.getCAPACITY();
-    }
-
-    public int getTotal() {
-        return intArrayStack.getTotal();
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+        this.intLinkedList = intLinkedList;
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        //intArrayStack.countIn(in);
+        intLinkedList.push(in);
     }
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        //return intArrayStack.callCheck();
+        return intLinkedList.isEmpty();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        //return intArrayStack.isFull();
+        return intLinkedList.isFull();
     }
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        //return intArrayStack.peekaboo();
+        return intLinkedList.top();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
-    }
-
-    public int[] getNumbers() {
-        return intArrayStack.getNumbers();
+        //return intArrayStack.countOut();
+        return intLinkedList.pop();
     }
 }
