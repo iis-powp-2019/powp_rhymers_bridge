@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
  * Linked list which stores ints.
  */
 //TODO: think about changing methods names (e.g. push to add)
-public class IntLinkedList {
+public class IntLinkedList implements IntStorageInterface {
 
 	private static final int EMPTY = -1;
 	private Node last;
@@ -16,6 +16,7 @@ public class IntLinkedList {
 		return EMPTY;
 	}
 
+	@Override
 	public void push(int i) {
 		if (getLast() == null)
 			setLast(new Node(i));
@@ -26,10 +27,12 @@ public class IntLinkedList {
 		}
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return getLast() == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
@@ -38,12 +41,14 @@ public class IntLinkedList {
 	 * Returns last value added to list. If list is empty returns -1.
 	 * @return last value added or -1 if empty.
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return getEMPTY();
 		return getLast().getValue();
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return getEMPTY();
