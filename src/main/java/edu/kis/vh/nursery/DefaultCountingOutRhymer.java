@@ -1,36 +1,38 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.IntStorageInterface;
 
 //TODO: think about extracting interface and using bridge.
 public class DefaultCountingOutRhymer {
-	private IntLinkedList intLinkedList;
+	private IntStorageInterface intStorage;
 
-	public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-		this.intLinkedList = intLinkedList;
+	public DefaultCountingOutRhymer(IntStorageInterface intStorage) {
+		this.intStorage = intStorage;
 	}
 
 	public DefaultCountingOutRhymer() {
-		this.intLinkedList = new IntLinkedList();
+		this.intStorage = new IntLinkedList();
 	}
 
 	public void countIn(int in) {
-		intLinkedList.push(in);
+		intStorage.push(in);
 	}
 
 	public boolean callCheck() {
-		return intLinkedList.isEmpty();
+		return intStorage.isEmpty();
 	}
 
 	public boolean isFull() {
-		return intLinkedList.isFull();
+		return intStorage.isFull();
 	}
 
 	public int peekaboo() {
-		return intLinkedList.top();
+		return intStorage.top();
 	}
 
 	public int countOut() {
-		return intLinkedList.pop();
+		return intStorage.pop();
 	}
+
 }
