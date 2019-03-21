@@ -8,15 +8,15 @@ public class IntArrayStack {
 
     private int total = getEMPTY();
 
-    public static int getEMPTY() {
+    private static int getEMPTY() {
         return EMPTY;
     }
 
-    public static int getNumbersSize() {
+    private static int getNumbersSize() {
         return NUMBERS_SIZE;
     }
 
-    public static int getFULL() {
+    private static int getFULL() {
         return FULL;
     }
 
@@ -49,15 +49,7 @@ public class IntArrayStack {
         return total;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
-    public int[] getNumbers() {
+    private int[] getNumbers() {
         return numbers;
-    }
-
-    public void setNumbers(int[] numbers) {
-        this.numbers = numbers;
     }
 }
