@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.IntStorageInterface;
+
+public class IntArrayStack implements IntStorageInterface {
 
     //TODO: NEEDS REFACTORING TO THE BRIDGE PATTERN
 
@@ -27,27 +29,30 @@ public class IntArrayStack {
         return total;
     }
 
-    public void countIn(int in) {
+    @Override
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == EMPTY_STACK_HEAD_INDEX;
     }
 
+    @Override
     public boolean isFull() {
         return total == FULL_STACK_HEAD_INDEX;
     }
 
-    protected int peekaboo() {
-        if (callCheck())
+    public int top() {
+        if (isEmpty())
             return EMPTY_STACK_HEAD_INDEX;
         return numbers[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return EMPTY_STACK_HEAD_INDEX;
         return numbers[total--];
     }
