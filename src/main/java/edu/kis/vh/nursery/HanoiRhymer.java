@@ -10,11 +10,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     @Override
     void countIn(final int in) {
-        if (!callCheck() && in > peekaboo()) //źle sformatowana
+        if (!callCheck() && in > peekaboo())
             totalRejected++;
-        else //źle sformatowana
-            super.countIn(in); //źle sformatowana
+        else
+            super.countIn(in);
     }
 }
 
-//klawisze alt + strzałki umożliwiają przemieszczanie się między plikami(kartami), na których operujemy
