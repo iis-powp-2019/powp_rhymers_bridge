@@ -1,11 +1,18 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * Klasa trzymajaca wartosc oraz poprzedni i kolejny obiekt listy
+ */
 public class Node {
 
     private int value;
     private Node prev;
     private Node next;
 
+    /**
+     * konstruktor
+     * @param i wartosc obiektu
+     */
     public Node(int i) {
         value = i;
     }
