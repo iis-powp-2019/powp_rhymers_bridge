@@ -2,57 +2,37 @@ package edu.kis.vh.nursery;
 
 //TODO: think about extracting interface and using bridge.
 public class DefaultCountingOutRhymer {
+	private IntArrayStack intArrayStack;
 
-	private static final int EMPTY = -1;
-	private static final int NUMBERS_SIZE = 12;
-	private static final int FULL = 11;
-	private int[] numbers = new int[getNumbersSize()];
-
-	private int total = getEMPTY();
-
-    private static int getEMPTY() {
-        return EMPTY;
-    }
-
-    private static int getNumbersSize() {
-        return NUMBERS_SIZE;
-    }
-
-    private static int getFULL() {
-        return FULL;
-    }
-
-    public void countIn(int in) {
-		if (!isFull())
-			getNumbers()[++total] = in;
+	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+		this.intArrayStack = intArrayStack;
 	}
 
-	boolean callCheck() {
-		return total == getEMPTY();
+	public DefaultCountingOutRhymer() {
+		this.intArrayStack = new IntArrayStack();
 	}
 
-    boolean isFull() {
-		return total == getFULL();
+	public void countIn(int in) {
+		intArrayStack.countIn(in);
 	}
 
-	int peekaboo() {
-		if (callCheck())
-			return getEMPTY();
-		return getNumbers()[total];
+	public boolean callCheck() {
+		return intArrayStack.callCheck();
+	}
+
+	public boolean isFull() {
+		return intArrayStack.isFull();
+	}
+
+	public int peekaboo() {
+		return intArrayStack.peekaboo();
 	}
 
 	public int countOut() {
-		if (callCheck())
-			return getEMPTY();
-		return getNumbers()[total--];
+		return intArrayStack.countOut();
 	}
 
 	public int getTotal() {
-		return total;
+		return intArrayStack.getTotal();
 	}
-
-	private int[] getNumbers() {
-        return numbers;
-    }
-
 }
