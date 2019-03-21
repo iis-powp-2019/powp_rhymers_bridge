@@ -38,8 +38,6 @@ package edu.kis.vh.nursery.list;
     }
 
 }
-
-
 class Node {
 
     public int value;
@@ -50,3 +48,5 @@ class Node {
     }
 
 }
+
+
