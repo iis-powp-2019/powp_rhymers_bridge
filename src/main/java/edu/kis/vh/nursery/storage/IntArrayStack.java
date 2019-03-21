@@ -1,7 +1,6 @@
 package edu.kis.vh.nursery.storage;
 
 public class IntArrayStack implements IntStorageInterface {
-    private static final int EMPTY = -1;
     private static final int NUMBERS_SIZE = 12;
     private static final int FULL = 11;
     private int[] numbers = new int[getNumbersSize()];

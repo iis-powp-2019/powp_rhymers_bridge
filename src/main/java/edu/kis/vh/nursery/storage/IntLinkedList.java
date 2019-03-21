@@ -5,8 +5,6 @@ package edu.kis.vh.nursery.storage;
  */
 //TODO: think about changing methods names (e.g. push to add)
 public class IntLinkedList implements IntStorageInterface {
-
-	private static final int EMPTY = -1;
 	private Node last;
 
 	//TODO: remove unused variable.
