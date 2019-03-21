@@ -16,7 +16,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     /**
      * Adds values to the array if array isn't full or increment totalRejected if array is full
-     * @param in value to be added to the list
+     * @param in value to be added to the storage
      */
     @Override
     public void countIn(int in) {
