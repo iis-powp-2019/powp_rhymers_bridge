@@ -2,88 +2,49 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private static final int CAPACITY = 12;
-    private static final int MAX_SIZE = 11;
-    private static final int EMPTY = -1;
-    private int[] numbers = new int[getCAPACITY()];
+    IntArrayStack intArrayStack;
 
-    private int total = getEMPTY();
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-    /**
-     * Get capacity
-     * @return
-     */
+    public DefaultCountingOutRhymer() {
+        this.intArrayStack = new IntArrayStack();
+    }
+
     public static int getCAPACITY() {
-        return CAPACITY;
+        return IntArrayStack.getCAPACITY();
     }
 
-    /**
-     * Get max size
-     * @return
-     */
     public static int getMaxSize() {
-        return MAX_SIZE;
+        return IntArrayStack.getMaxSize();
     }
 
-    /**
-     * Get empty
-     * @return
-     */
     public static int getEMPTY() {
-        return EMPTY;
+        return IntArrayStack.getEMPTY();
     }
 
-    /**
-     * Get total
-     * @return
-     */
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
-    /**
-     * countIn
-     * @param in
-     */
     public void countIn(int in) {
-        if (!isFull())
-            numbers[++total] = in;
+        intArrayStack.countIn(in);
     }
 
-    /**
-     * callCheck
-     * @return
-     */
     public boolean callCheck() {
-        return total == getEMPTY();
+        return intArrayStack.callCheck();
     }
 
-    /**
-     * Checks if stack is full
-     * @return
-     */
     public boolean isFull() {
-        return total == getMaxSize();
+        return intArrayStack.isFull();
     }
 
-    /**
-     * peekaboo
-     * @return
-     */
-    protected int peekaboo() {
-        if (callCheck())
-            return getEMPTY();
-        return numbers[total];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    /**
-     * countOut
-     * @return
-     */
     public int countOut() {
-        if (callCheck())
-            return getEMPTY();
-        return numbers[total--];
+        return intArrayStack.countOut();
     }
-
 }
