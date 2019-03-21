@@ -44,7 +44,8 @@ public class DefaultCountingOutRhymerJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-        Assert.assertTrue(result);
+
+        Assert.assertFalse(result);
 	}
 
 	@Test
