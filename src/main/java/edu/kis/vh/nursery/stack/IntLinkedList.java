@@ -1,7 +1,7 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 /**
-* Linked list storing integers
+* Linked stack storing integers
 *
 * */
 public class IntLinkedList implements IntStackInterface {
@@ -11,9 +11,9 @@ public class IntLinkedList implements IntStackInterface {
     private int i;
 
     /**
-    * Method which allows to put value into the list
+    * Method which allows to put value into the stack
     *
-    * @param i value which will be added to the list
+    * @param i value which will be added to the stack
     * */
     @Override
     public void push(int i) {
@@ -27,9 +27,9 @@ public class IntLinkedList implements IntStackInterface {
     }
 
     /**
-     * Method which allows to check if list is empty
+     * Method which allows to check if stack is empty
      *
-     * @return false if list contains any Nodes, otherwise true
+     * @return false if stack contains any Nodes, otherwise true
     * */
     @Override
     public boolean isEmpty() {
@@ -37,9 +37,9 @@ public class IntLinkedList implements IntStackInterface {
     }
 
     /**
-     * Method which allows to check if list is full
+     * Method which allows to check if stack is full
      *
-     * @return true if list is full, otherwise false
+     * @return true if stack is full, otherwise false
      * */
     @Override
     public boolean isFull() {
@@ -47,7 +47,7 @@ public class IntLinkedList implements IntStackInterface {
     }
 
     /**
-     * Method which allows to get last element pushed to list
+     * Method which allows to get last element pushed to stack
      *
      * @return value of the last pushed integer
      * */
@@ -60,7 +60,7 @@ public class IntLinkedList implements IntStackInterface {
 
     /**
      * Method similar to top()
-     * allows to get last element pushed to list and remove it from the list
+     * allows to get last element pushed to stack and remove it from the stack
      *
      * @return value of the last pushed integer
      * */
@@ -75,18 +75,18 @@ public class IntLinkedList implements IntStackInterface {
 
 
     /**
-     * Method allows to get last Node from the list
+     * Method allows to get last Node from the stack
      *
-     * @return the last Node from list
+     * @return the last Node from stack
      * */
     public Node getLast() {
         return last;
     }
 
     /**
-     * Method allows to set given Node as the last in the list
+     * Method allows to set given Node as the last in the stack
      *
-     * @param last Node that will be set as the last one in the list
+     * @param last Node that will be set as the last one in the stack
      * */
     public void setLast(Node last) {
         this.last = last;
