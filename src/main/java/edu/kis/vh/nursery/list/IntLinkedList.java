@@ -1,12 +1,18 @@
 package edu.kis.vh.nursery.list;
 
+/**
+ * Linked list which stores ints.
+ */
+//TODO: think about changing methods names (e.g. push to add)
 public class IntLinkedList {
 
 	private static final int EMPTY = -1;
 	private Node last;
+
+	//TODO: remove unused variable.
 	int i;
 
-	public static int getEMPTY() {
+	private static int getEMPTY() {
 		return EMPTY;
 	}
 
@@ -28,6 +34,10 @@ public class IntLinkedList {
 		return false;
 	}
 
+	/**
+	 * Returns last value added to list. If list is empty returns -1.
+	 * @return last value added or -1 if empty.
+	 */
 	public int top() {
 		if (isEmpty())
 			return getEMPTY();
@@ -42,11 +52,11 @@ public class IntLinkedList {
 		return ret;
 	}
 
-	public Node getLast() {
+	private Node getLast() {
 		return last;
 	}
 
-	public void setLast(Node last) {
+	private void setLast(Node last) {
 		this.last = last;
 	}
 
@@ -54,7 +64,40 @@ public class IntLinkedList {
 		return i;
 	}
 
-	public void setI(int i) {
-		this.i = i;
+
+	class Node {
+
+		int value;
+		Node prev, next;
+
+		Node(int i) {
+			setValue(i);
+		}
+
+		int getValue() {
+			return value;
+		}
+
+		void setValue(int value) {
+			this.value = value;
+		}
+
+		Node getPrev() {
+			return prev;
+		}
+
+		void setPrev(Node prev) {
+			this.prev = prev;
+		}
+
+		Node getNext() {
+			return next;
+		}
+
+		void setNext(Node next) {
+			this.next = next;
+		}
 	}
 }
+
+
