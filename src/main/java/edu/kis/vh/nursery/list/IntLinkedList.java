@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
 * Linked list storing integers
 *
 * */
-public class IntStack implements IntStackInterface {
+public class IntLinkedList implements IntStackInterface {
 
     private static final int EMPTY = -1;
     private Node last;
