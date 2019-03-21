@@ -12,40 +12,12 @@ public class DefaultCountingOutRhymer {
 
     }
 
-    public static int getEmptyFifo() {
-        return IntArrayStack.getEmptyFifo();
-    }
-
-    public static int getFullFifo() {
-        return IntArrayStack.getFullFifo();
-    }
-
-    public static int getCAPACITY() {
-        return IntArrayStack.getCAPACITY();
-    }
-
-    public int[] getNumbers() {
-        return intArrayStack.getNumbers();
-    }
-
-    public void setNumbers(int[] numbers) {
-        intArrayStack.setNumbers(numbers);
-    }
-
-    public void setTotal(int total) {
-        intArrayStack.setTotal(total);
-    }
-
     public void countIn(int in) {
         intArrayStack.countIn(in);
     }
 
     public int countOut() {
         return intArrayStack.countOut();
-    }
-
-    public int getTotal() {
-        return intArrayStack.getTotal();
     }
 
     public boolean callCheck() {
