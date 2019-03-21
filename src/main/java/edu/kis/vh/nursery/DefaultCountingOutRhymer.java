@@ -35,6 +35,6 @@ public class DefaultCountingOutRhymer {
     }
 
     public int getTotal() {
-        return intLinkedList.getI();
+        return intLinkedList.getHead();
     }
 }

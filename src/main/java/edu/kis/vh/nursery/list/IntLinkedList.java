@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.StackInterface;
+
 /**
  *IntLinkedList is Linked List of integers where inner element of this List are nodes which is inner class
  *
  */
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
     /**
      * Inner class of node in Linked List
      * elements of Linked List are nodes
@@ -81,6 +83,7 @@ public class IntLinkedList {
      * add i to the top of Linked List as new element
      * @param i value to add to Linked List as int
      */
+    @Override
     public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -95,6 +98,7 @@ public class IntLinkedList {
      * Return true if Linked List is empty or false if is not
      * @return true if empty false if not as boolean
      */
+    @Override
     public boolean isEmpty() {
         return getLast() == null;
     }
@@ -103,7 +107,7 @@ public class IntLinkedList {
      *
      * @return always false
      */
-    //TODO: needs to add max capacity of list
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -112,6 +116,7 @@ public class IntLinkedList {
      *return head element of the Linked List as int
      * @return top element as int
      */
+    @Override
     public int top() {
         if (isEmpty())
             return EMPTY;
@@ -123,6 +128,7 @@ public class IntLinkedList {
      * Return and delete head element of the Linked List
      * @return value of the head element of -1 if empty as int
      */
+    @Override
     public int pop() {
         if (isEmpty())
             return EMPTY;
@@ -151,7 +157,8 @@ public class IntLinkedList {
      * Return value of i
      * @return value of i as int
      */
-    public int getI() {
+    @Override
+    public int getHead() {
         return i;
     }
 
