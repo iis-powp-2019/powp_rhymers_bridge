@@ -3,7 +3,12 @@ package edu.kis.vh.nursery;
 public class FIFORhymer extends DefaultCountingOutRhymer 
 {
 
-	public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	public FIFORhymer(IntArrayStack ias) {
+		super(ias);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer(new IntArrayStack());
 
 	@Override
 	public int countOut() 

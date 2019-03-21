@@ -18,4 +18,9 @@ public class HanoiRhymer extends DefaultCountingOutRhymer
 		else
 			super.countIn(in);
 	}
+
+	public HanoiRhymer(IntArrayStack ias) {
+		super(ias);
+		// TODO Auto-generated constructor stub
+	}
 }
