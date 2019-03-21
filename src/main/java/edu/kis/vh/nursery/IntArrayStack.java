@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery;
 
 public class IntArrayStack {
 
@@ -8,6 +8,30 @@ public class IntArrayStack {
     private int[] numbers = new int[CAPACITY];
 
     private int total = EMPTY_FIFO;
+
+    public static int getEmptyFifo() {
+        return EMPTY_FIFO;
+    }
+
+    public static int getFullFifo() {
+        return FULL_FIFO;
+    }
+
+    public static int getCAPACITY() {
+        return CAPACITY;
+    }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 
     public void countIn(int in) {
         if (!isFull())

@@ -2,39 +2,61 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private static final int EMPTY_FIFO = -1;
-    private static final int FULL_FIFO = 11;
-    private static final int CAPACITY = 12;
-    private int[] numbers = new int[CAPACITY];
+    private IntArrayStack intArrayStack = new IntArrayStack();
 
-    private int total = EMPTY_FIFO;
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
+
+    public DefaultCountingOutRhymer(){
+
+    }
+
+    public static int getEmptyFifo() {
+        return IntArrayStack.getEmptyFifo();
+    }
+
+    public static int getFullFifo() {
+        return IntArrayStack.getFullFifo();
+    }
+
+    public static int getCAPACITY() {
+        return IntArrayStack.getCAPACITY();
+    }
+
+    public int[] getNumbers() {
+        return intArrayStack.getNumbers();
+    }
+
+    public void setNumbers(int[] numbers) {
+        intArrayStack.setNumbers(numbers);
+    }
+
+    public void setTotal(int total) {
+        intArrayStack.setTotal(total);
+    }
 
     public void countIn(int in) {
-        if (!isFull())
-            numbers[++total] = in;
-    }
-
-    boolean callCheck() {
-        return total == EMPTY_FIFO;
-    }
-
-    boolean isFull() {
-        return total == FULL_FIFO;
-    }
-
-    int peekaboo() {
-        if (callCheck())
-            return EMPTY_FIFO;
-        return numbers[total];
+        intArrayStack.countIn(in);
     }
 
     public int countOut() {
-        if (callCheck())
-            return EMPTY_FIFO;
-        return numbers[total--];
+        return intArrayStack.countOut();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
+    }
+
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
+    }
+
+    public boolean isFull() {
+        return intArrayStack.isFull();
+    }
+
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 }
