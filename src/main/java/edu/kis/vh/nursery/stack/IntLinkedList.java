@@ -6,7 +6,6 @@ package edu.kis.vh.nursery.stack;
 * */
 public class IntLinkedList implements IntStackInterface {
 
-    private static final int EMPTY = -1;
     private Node last;
     private int i;
 

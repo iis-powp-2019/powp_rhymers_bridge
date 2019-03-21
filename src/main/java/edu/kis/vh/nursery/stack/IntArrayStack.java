@@ -2,15 +2,14 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements IntStackInterface {
 
-    private static final int EMPTY_FIFO = -1;
     private static final int FULL_FIFO = 11;
     private static final int CAPACITY = 12;
     private int[] numbers = new int[CAPACITY];
 
-    private int total = EMPTY_FIFO;
+    private int total = EMPTY;
 
-    public static int getEmptyFifo() {
-        return EMPTY_FIFO;
+    public static int getEmpty() {
+        return EMPTY;
     }
 
     public static int getFullFifo() {
@@ -41,7 +40,7 @@ public class IntArrayStack implements IntStackInterface {
 
     @Override
     public boolean isEmpty() {
-        return total == EMPTY_FIFO;
+        return total == EMPTY;
     }
 
     @Override
@@ -52,14 +51,14 @@ public class IntArrayStack implements IntStackInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return EMPTY_FIFO;
+            return EMPTY;
         return numbers[total];
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return EMPTY_FIFO;
+            return EMPTY;
         return numbers[total--];
     }
 
