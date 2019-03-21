@@ -5,7 +5,6 @@ package edu.kis.vh.nursery.stackImplementation;
  */
 public class IntLinkedList implements StackInterface {
 
-    public static final int EMPTY = -1;
     private Node last;
     private int i;
 
