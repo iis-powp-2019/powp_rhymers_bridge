@@ -75,7 +75,7 @@ public class IntLinkedList implements StackInterface {
         }
     }
 
-    private static final int EMPTY = -1;
+    private static final int EMPTY_STACK_HEAD_INDEX = -1;
     private Node last;
     private int i;
 
@@ -119,7 +119,7 @@ public class IntLinkedList implements StackInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return EMPTY;
+            return EMPTY_STACK_HEAD_INDEX;
         return getLast().getValue();
     }
 
@@ -131,7 +131,7 @@ public class IntLinkedList implements StackInterface {
     @Override
     public int pop() {
         if (isEmpty())
-            return EMPTY;
+            return EMPTY_STACK_HEAD_INDEX;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
         return ret;

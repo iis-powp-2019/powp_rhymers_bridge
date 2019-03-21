@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.StackInterface;
 
 public class IntArrayStack implements StackInterface {
 
-    private static final int EMPTY_STACK_HEAD_INDEX = -1;
+
     private static final int CAPACITY = 12;
     private static final int FULL = 11;
     private int[] numbers = new int[CAPACITY];
