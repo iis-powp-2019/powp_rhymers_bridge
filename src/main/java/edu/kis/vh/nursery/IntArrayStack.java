@@ -63,6 +63,7 @@ public class IntArrayStack {
     protected int countOut() {
         if (callCheck())
             return getEmptyPosition();
+
         return NUMBERS[total--];
     }
 
