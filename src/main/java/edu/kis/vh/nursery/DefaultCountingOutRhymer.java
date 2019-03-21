@@ -1,78 +1,59 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * Basic rhymer type implementation
  */
 public class DefaultCountingOutRhymer {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int ERROR_CODE = -1;
-    private static final int MAX_SIZE = 11;
-    private static final int EMPTY_POSITION = -1;
 
-    private int total = getEmptyPosition();
-    private final int[] NUMBERS = new int[getStackCapacity()];
+    private IntArrayStack intArrayStack;
+    private IntLinkedList list;
 
-    public static int getStackCapacity() {
-        return STACK_CAPACITY;
+
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
     }
-
-    public static int getErrorCode() {
-        return ERROR_CODE;
-    }
-
-    public static int getMaxSize() {
-        return MAX_SIZE;
-    }
-
-    public static int getEmptyPosition() {
-        return EMPTY_POSITION;
-    }
-    public int getTotal() {
-        return total;
+    public DefaultCountingOutRhymer() {
+        this.intArrayStack = new IntArrayStack();
+        this.list = new IntLinkedList();
     }
 
 
-    /**
-     * @param in if stack is not full push new element to stack
-     */
-    protected void countIn(int in) {
-        if (!isFull())
-            NUMBERS[++total] = in;
+    public void push(int i) {
+        list.push(i);
     }
 
-    /**
-     * @return check if last element is empty
-     */
-    protected boolean callCheck() {
-        return total == getErrorCode();
+    public boolean isEmpty() {
+        return list.isEmpty();
     }
 
-    /**
-     * @return check if stack is full
-     */
-    protected boolean isFull() {
-        return total == getMaxSize();
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
     }
 
-    /**
-     * @return if last element is not empty returns value of it
-     */
-    protected int peekaboo() {
-        if (callCheck())
-            return getErrorCode();
-        return NUMBERS[total];
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
     }
 
-    /**
-     * @return  pop last element in stack
-     */
-    protected int countOut() {
-        if (callCheck())
-            return getErrorCode();
-        return NUMBERS[total--];
+    public boolean isFull() {
+        return intArrayStack.isFull();
     }
 
+    public int top() {
+        return list.top();
+    }
 
+    public int pop() {
+        return list.pop();
+    }
 
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
+    }
+
+    public int countOut() {
+        return intArrayStack.countOut();
+    }
 }

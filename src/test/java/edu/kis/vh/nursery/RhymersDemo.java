@@ -23,15 +23,15 @@ class RhymersDemo {
 
         for (int i = 1; i < getSIZE(); i++)
             for (int j = 0; j < getMaxSize(); j++)
-                rhymers[j].countIn(i);
+                rhymers[j].push(i);
 
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < getSIZE(); i++)
-            rhymers[getMaxSize()].countIn(rn.nextInt(20));
+            rhymers[getMaxSize()].push(rn.nextInt(20));
 
         for (int i = 0; i < rhymers.length; i++) {
-            while (!rhymers[i].callCheck())
-                System.out.print(rhymers[i].countOut() + "  ");
+            while (!rhymers[i].isEmpty())
+                System.out.print(rhymers[i].pop() + "  ");
             System.out.println();
         }
 

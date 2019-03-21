@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
- class IntLinkedList {
+import edu.kis.vh.nursery.Node;
+
+public class IntLinkedList {
 
     Node last;
     int i;
@@ -38,15 +40,6 @@ package edu.kis.vh.nursery.list;
     }
 
 }
-class Node {
 
-    public int value;
-    public Node prev, next;
-
-    public Node(int i) {
-        value = i;
-    }
-
-}
 
 

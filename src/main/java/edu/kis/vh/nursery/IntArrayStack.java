@@ -1,40 +1,69 @@
 package edu.kis.vh.nursery;
 
-
 public class IntArrayStack {
 
-    Node last;
-    int i;
+    private static final int STACK_CAPACITY = 12;
+    private static final int MAX_SIZE = 11;
+    private static final int EMPTY_POSITION = -1;
 
-    public void push(int i) {
-        if (last == null)
-            last = new Node(i);
-        else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
-        }
+    private int total = getEmptyPosition();
+    private final int[] NUMBERS = new int[getStackCapacity()];
+
+    public static int getStackCapacity() {
+        return STACK_CAPACITY;
     }
 
-    public boolean isEmpty() {
-        return last == null;
+
+    public static int getMaxSize() {
+        return MAX_SIZE;
     }
 
-    public boolean isFull() {
-        return false;
+    public static int getEmptyPosition() {
+        return EMPTY_POSITION;
+    }
+    public int getTotal() {
+        return total;
     }
 
-    public int top() {
-        if (isEmpty())
-            return -1;
-        return last.value;
+
+    /**
+     * @param in if stack is not full push new element to stack
+     */
+    protected void countIn(int in) {
+        if (!isFull())
+            NUMBERS[++total] = in;
     }
 
-    public int pop() {
-        if (isEmpty())
-            return -1;
-        int ret = last.value;
-        last = last.prev;
-        return ret;
+    /**
+     * @return check if last element is empty
+     */
+    protected boolean callCheck() {
+        return total == getEmptyPosition();
     }
+
+    /**
+     * @return check if stack is full
+     */
+    protected boolean isFull() {
+        return total == getMaxSize();
+    }
+
+    /**
+     * @return if last element is not empty returns value of it
+     */
+    protected int peekaboo() {
+        if (callCheck())
+            return getEmptyPosition();
+        return NUMBERS[total];
+    }
+
+    /**
+     * @return  pop last element in stack
+     */
+    protected int countOut() {
+        if (callCheck())
+            return getEmptyPosition();
+        return NUMBERS[total--];
+    }
+
 }

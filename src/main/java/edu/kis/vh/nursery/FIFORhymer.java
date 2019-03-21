@@ -8,8 +8,9 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
 
+    //pop element
     @Override
-    protected int countOut() {
+    public int countOut() {
         while (!callCheck())
             temp.countIn(super.countOut());
 
@@ -19,5 +20,9 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
             countIn(temp.countOut());
 
         return ret;
+    }
+
+    @Override public int pop() {
+        return super.pop();
     }
 }
