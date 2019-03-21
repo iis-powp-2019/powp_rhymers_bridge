@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * Stores integers in linked list
  */
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
 
     public static final int EMPTY = -1;
     private Node last;
@@ -13,7 +13,7 @@ public class IntLinkedList {
      * Puts value into the list
      * @param i value
      */
-    public void push(int i) {
+    @Override public void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -27,7 +27,7 @@ public class IntLinkedList {
      * Checks if list is empty
      * @return true if empty
      */
-    public boolean isEmpty() {
+    @Override public boolean isEmpty() {
         return last == null;
     }
 
@@ -35,7 +35,7 @@ public class IntLinkedList {
      * Checks if list is full
      * @return
      */
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return false;
     }
 
@@ -43,7 +43,7 @@ public class IntLinkedList {
      * Gets last value
      * @return
      */
-    public int top() {
+    @Override public int top() {
         if (isEmpty())
             return EMPTY;
         return last.getValue();
@@ -53,7 +53,7 @@ public class IntLinkedList {
      * Gets last value and removes it
      * @return
      */
-    public int pop() {
+    @Override public int pop() {
         if (isEmpty())
             return EMPTY;
         int ret = last.getValue();
