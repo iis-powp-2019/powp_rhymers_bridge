@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntStorage;
+import edu.kis.vh.nursery.list.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class IntLinkedListTest {
     @Test
     public void isEmptyTest(){
 
-        IntStorage linkedList = new IntStorage();
+        IntLinkedList linkedList = new IntLinkedList();
 
         Boolean result = linkedList.isEmpty();
 
@@ -25,7 +25,7 @@ public class IntLinkedListTest {
     @Test
     public void topTest(){
 
-        IntStorage linkedList = new IntStorage();
+        IntLinkedList linkedList = new IntLinkedList();
 
         final int[] TEST_VALUES = {3,2,1};
 
@@ -41,7 +41,7 @@ public class IntLinkedListTest {
     @Test
     public void popTest(){
 
-        IntStorage linkedList = new IntStorage();
+        IntLinkedList linkedList = new IntLinkedList();
 
         final int TEST_VALUE = 1;
 

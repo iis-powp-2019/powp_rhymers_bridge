@@ -36,7 +36,7 @@ class Node {
 }
 
 
-public class IntStorage implements IntStorageInterface {
+public class IntLinkedList implements IntStorageInterface {
 
     private static final int EMPTY = -1;
     private Node last;
