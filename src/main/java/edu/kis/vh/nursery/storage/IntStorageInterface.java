@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.storage;
 
 public interface IntStorageInterface {
     void push(int i);
