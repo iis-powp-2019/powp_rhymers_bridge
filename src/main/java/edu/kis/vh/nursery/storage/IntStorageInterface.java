@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.storage;
 public interface IntStorageInterface {
 
 
-    int EMPTY = -1;
+    int EMPTY = 0;
 
     void push(int i);
 
