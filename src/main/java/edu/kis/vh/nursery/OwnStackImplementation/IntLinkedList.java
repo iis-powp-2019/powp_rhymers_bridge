@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.OwnStackImplementation;
 
 import edu.kis.vh.nursery.IntStack;
 
@@ -11,7 +11,7 @@ public class IntLinkedList implements IntStack {
     private Node lastNode;
 
     /**
-     * @param i - value for adding to list
+     * @param i - value for adding to OwnStackImplementation
      */
     public void countIn(int i) {
         if (lastNode == null) {
@@ -24,7 +24,7 @@ public class IntLinkedList implements IntStack {
     }
 
     /**
-     * @return boolen value from checking if list is empty
+     * @return boolen value from checking if OwnStackImplementation is empty
      */
     public boolean callCheck() {
         return lastNode == null;
@@ -32,14 +32,14 @@ public class IntLinkedList implements IntStack {
 
 
     /**
-     * @return boolen value from checking if list is full
+     * @return boolen value from checking if OwnStackImplementation is full
      */
     public boolean isFull() {
         return false;
     }
 
     /**
-     * @return peekaboo value on the list
+     * @return peekaboo value on the OwnStackImplementation
      */
     public int peekaboo() {
         if (callCheck()) {
@@ -49,7 +49,7 @@ public class IntLinkedList implements IntStack {
     }
 
     /**
-     * @return peekaboo value on the list and remove it from list
+     * @return peekaboo value on the OwnStackImplementation and remove it from OwnStackImplementation
      */
     public int countOut() {
         if (callCheck()) {

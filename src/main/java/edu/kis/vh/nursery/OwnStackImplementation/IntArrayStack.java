@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.OwnStackImplementation;
 
 import edu.kis.vh.nursery.IntStack;
 
@@ -53,7 +53,7 @@ public class IntArrayStack implements IntStack {
      *
      * @return value of last queue position
      */
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) {
             return EMPTY_POSITION;
         }

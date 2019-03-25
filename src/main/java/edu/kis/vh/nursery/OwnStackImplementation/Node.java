@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.OwnStackImplementation;
 
 /**
  * class which implements element of own linkedList
