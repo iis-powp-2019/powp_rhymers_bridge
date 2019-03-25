@@ -7,7 +7,7 @@ import edu.kis.vh.nursery.IntStack;
  */
 public class IntLinkedList implements IntStack {
 
-    private static final int EMPTY_POSITION = -1;
+    private static final int EMPTY_POSITION = 0;
     private Node lastNode;
 
     /**

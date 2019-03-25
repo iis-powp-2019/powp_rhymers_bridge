@@ -8,7 +8,7 @@ import edu.kis.vh.nursery.IntStack;
 public class IntArrayStack implements IntStack {
 
     private static final int MAX_SIZE_OF_QUEUE = 12;
-    private static final int EMPTY_POSITION = -1;
+    private static final int EMPTY_POSITION = 0;
     private final int[] queue = new int[MAX_SIZE_OF_QUEUE];
 
     private int currentIndex = EMPTY_POSITION;
