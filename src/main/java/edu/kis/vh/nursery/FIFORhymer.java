@@ -5,6 +5,13 @@ package edu.kis.vh.nursery;
  */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
+    public FIFORhymer(IntStack intStack) {
+        super(intStack);
+    }
+
+    public FIFORhymer() {
+    }
+
     private final DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
 
     /**

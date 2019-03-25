@@ -7,33 +7,33 @@ import edu.kis.vh.nursery.OwnStackImplementation.IntLinkedList;
  */
 public class DefaultCountingOutRhymer {
 
-    private IntStack intLinkedList;
+    private IntStack intStack;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(IntStack intStack) {
+        this.intStack = intStack;
     }
 
     public DefaultCountingOutRhymer() {
-        intLinkedList = new IntLinkedList();
+        intStack = new IntLinkedList();
     }
 
     public void countIn(int in) {
-        intLinkedList.countIn(in);
+        intStack.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.callCheck();
+        return intStack.callCheck();
     }
 
     public boolean isFull() {
-        return intLinkedList.isFull();
+        return intStack.isFull();
     }
 
     public int peekaboo() {
-        return intLinkedList.peekaboo();
+        return intStack.peekaboo();
     }
 
     public int countOut() {
-        return intLinkedList.countOut();
+        return intStack.countOut();
     }
 }

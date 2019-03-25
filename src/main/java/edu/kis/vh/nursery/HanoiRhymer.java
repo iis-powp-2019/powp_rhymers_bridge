@@ -5,6 +5,13 @@ package edu.kis.vh.nursery;
  */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
+    public HanoiRhymer(IntStack intStack) {
+        super(intStack);
+    }
+
+    public HanoiRhymer() {
+    }
+
     private int totalRejected = 0;
 
     /**
