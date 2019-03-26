@@ -1,8 +1,18 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntLinkedList;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
+
+    public HanoiRhymer() {
+        super();
+    }
+
+    public HanoiRhymer(IntLinkedList intStorageInterface) {
+        super(intStorageInterface);
+    }
 
     //TODO: DELETE reportRejected, does the same thing as getTotalRejected
 
