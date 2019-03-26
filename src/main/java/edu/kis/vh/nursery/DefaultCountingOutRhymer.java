@@ -4,13 +4,13 @@ import edu.kis.vh.nursery.storage.IntLinkedList;
 import edu.kis.vh.nursery.storage.IntStorageInterface;
 
 public class DefaultCountingOutRhymer {
-    IntStorageInterface intStorageInterface = new IntLinkedList();
+    IntStorageInterface intStorageInterface;
 
     public DefaultCountingOutRhymer(){
-
+        intStorageInterface = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intStorageInterface) {
+    public DefaultCountingOutRhymer(IntStorageInterface intStorageInterface) {
         this.intStorageInterface = intStorageInterface;
     }
 

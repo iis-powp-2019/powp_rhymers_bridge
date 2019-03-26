@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.IntStorageInterface;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
@@ -10,7 +11,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         super();
     }
 
-    public HanoiRhymer(IntLinkedList intStorageInterface) {
+    public HanoiRhymer(IntStorageInterface intStorageInterface) {
         super(intStorageInterface);
     }
 
