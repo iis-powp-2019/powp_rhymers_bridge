@@ -15,3 +15,4 @@ public class HanoiRhymer extends defaultCountingOutRhymer {
 			super.countIn(in);
 	}
 }
+//Alt+ ← umożliwia poruszanie miedzy otwartymi oknami w IDE
