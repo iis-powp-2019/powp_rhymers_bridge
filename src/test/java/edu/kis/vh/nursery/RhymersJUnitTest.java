@@ -75,4 +75,64 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 
+	@Test
+	public void testFIFORhymerCount() {
+		DefaultCountingOutRhymer rhymer = new FIFORhymer();
+		final int DEFAULT_RETURN_VALUE = -1;
+		int testValues[] = { 3, 2, 1 };
+
+		for (int i = 0; i < 3; i++)
+			rhymer.countIn(testValues[i]);
+
+		int result = rhymer.countOut();
+		Assert.assertEquals(testValues[0], result);
+		result = rhymer.countOut();
+		Assert.assertEquals(testValues[1], result);
+		result = rhymer.countOut();
+		Assert.assertEquals(testValues[2], result);
+		result = rhymer.countOut();
+		Assert.assertEquals(DEFAULT_RETURN_VALUE, result);
+	}
+
+	@Test
+	public void testHanoiRhymerCount() {
+		DefaultCountingOutRhymer rhymer = new HanoiRhymer();
+		final int DEFAULT_RETURN_VALUE = -1;
+		final int[][] testValues = { { 1, 33, 33, 4, 33, 33, 33, 3, 33, 2 }, { 5, 33, 33, 33, 33, 33, 6, 33, 8, 7 },
+				{ 8, 33, 33, 11, 33, 33, 9, 33, 10, 33 } };
+
+		final int[][] expectedResult = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 8, 9, 10, 11 } };
+		int result;
+
+		for (int test : testValues[0]) {
+			rhymer.countIn(test);
+		}
+		for (int r : expectedResult[0]) {
+			result = rhymer.countOut();
+			Assert.assertEquals(r, result);
+		}
+		result = rhymer.countOut();
+		Assert.assertEquals(DEFAULT_RETURN_VALUE, result);
+
+		for (int test : testValues[1]) {
+			rhymer.countIn(test);
+		}
+		for (int r : expectedResult[1]) {
+			result = rhymer.countOut();
+			Assert.assertEquals(r, result);
+		}
+		result = rhymer.countOut();
+		Assert.assertEquals(DEFAULT_RETURN_VALUE, result);
+
+		for (int test : testValues[2]) {
+			rhymer.countIn(test);
+		}
+		for (int r : expectedResult[2]) {
+			result = rhymer.countOut();
+			Assert.assertEquals(r, result);
+		}
+		result = rhymer.countOut();
+		Assert.assertEquals(DEFAULT_RETURN_VALUE, result);
+	}
+
 }
