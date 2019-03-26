@@ -4,7 +4,6 @@ public class IntArrayStack implements IntStorageInterface {
 
     //TODO: NEEDS REFACTORING TO THE BRIDGE PATTERN
 
-    private static final int EMPTY_STACK_HEAD_INDEX = -1;
     private static final int FULL_STACK_HEAD_INDEX = 11;
     private static final int CAPACITY = 12;
     private int[] numbers = new int[CAPACITY];

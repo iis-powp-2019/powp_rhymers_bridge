@@ -38,12 +38,11 @@ class Node {
 
 public class IntLinkedList implements IntStorageInterface {
 
-    private static final int EMPTY = -1;
     private Node last;
     private int i;
 
     public static int getEMPTY() {
-        return EMPTY;
+        return EMPTY_STACK_HEAD_INDEX;
     }
 
     @Override
@@ -71,7 +70,7 @@ public class IntLinkedList implements IntStorageInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return EMPTY;
+            return EMPTY_STACK_HEAD_INDEX;
         return last.getValue();
     }
 
@@ -79,7 +78,7 @@ public class IntLinkedList implements IntStorageInterface {
     public int pop() {
 
         if (isEmpty())
-            return EMPTY;
+            return EMPTY_STACK_HEAD_INDEX;
 
         int ret = last.getValue();
 
