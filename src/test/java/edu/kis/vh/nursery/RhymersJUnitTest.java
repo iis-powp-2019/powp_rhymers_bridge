@@ -6,6 +6,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
+
+    final int EMPTY_STACK_VALUE = 0;
+    final int STACK_CAPACITY = 11;
+
+
     //all test are working properly
     @Test
     public void testCountIn() {
@@ -30,7 +35,6 @@ public class RhymersJUnitTest {
 
     @Test
     public void testIsFull() {
-        final int STACK_CAPACITY = 12;
         DataProvider rhymer = new IntArrayStack();
 
         for (int i = 0; i < STACK_CAPACITY; i++) {
@@ -45,7 +49,6 @@ public class RhymersJUnitTest {
 
     @Test
     public void testPeekaboo() {
-        final int EMPTY_STACK_VALUE = -1;
         DataProvider rhymer = new IntArrayStack();
 
         int result = rhymer.peekaboo();
@@ -63,7 +66,6 @@ public class RhymersJUnitTest {
 
     @Test
     public void testCountOut() {
-        final int EMPTY_STACK_VALUE = -1;
         DataProvider rhymer = new IntArrayStack();
 
         int result = rhymer.countOut();

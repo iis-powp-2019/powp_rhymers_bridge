@@ -2,13 +2,10 @@ package edu.kis.vh.nursery.data;
 
 public class IntArrayStack implements DataProvider {
 
-    private static final int EMPTY_POSITION = -1;
-    private int total = getEmptyPosition();
+
+    private int total = EMPTY_POSITION;
     private final int[] NUMBERS = new int[STACK_CAPACITY];
 
-    public static int getEmptyPosition() {
-        return EMPTY_POSITION;
-    }
 
     /**
      * @param in if stack is not full push new element to stack
@@ -21,7 +18,7 @@ public class IntArrayStack implements DataProvider {
      * @return check if last element is empty
      */
     public boolean callCheck() {
-        return total == getEmptyPosition();
+        return total == EMPTY_POSITION;
     }
 
     /**
@@ -36,7 +33,7 @@ public class IntArrayStack implements DataProvider {
      */
     public int peekaboo() {
         if (callCheck())
-            return getEmptyPosition();
+            return EMPTY_POSITION;
 
         return NUMBERS[total];
     }
@@ -46,7 +43,7 @@ public class IntArrayStack implements DataProvider {
      */
     public int countOut() {
         if (callCheck())
-            return getEmptyPosition();
+            return EMPTY_POSITION;
 
         return NUMBERS[total--];
     }

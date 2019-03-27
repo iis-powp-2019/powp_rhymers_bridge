@@ -33,14 +33,14 @@ public class IntLinkedList implements DataProvider {
     @Override
     public int peekaboo() {
         if (callCheck())
-            return -1;
+            return EMPTY_POSITION;
         return last.value;
     }
 
     @Override
     public int countOut() {
         if (callCheck())
-            return -1;
+            return EMPTY_POSITION;
         int ret = last.value;
         last = last.prev;
         return ret;
