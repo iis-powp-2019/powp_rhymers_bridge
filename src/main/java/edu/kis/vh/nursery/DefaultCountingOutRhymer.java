@@ -8,9 +8,9 @@ public class DefaultCountingOutRhymer {
     //IntArrayStack intArrayStack;
     StackInterface stackInterface;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    public DefaultCountingOutRhymer(StackInterface stackInterface) {
         //this.intArrayStack = intArrayStack;
-        this.stackInterface = intLinkedList;
+        this.stackInterface = stackInterface;
 
     }
 

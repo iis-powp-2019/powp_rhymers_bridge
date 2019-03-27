@@ -4,35 +4,10 @@ public class IntArrayStack implements StackInterface {
 
     private static final int CAPACITY = 12;
     private static final int MAX_SIZE = 11;
-    private int[] numbers = new int[getCAPACITY()];
+    private int[] numbers = new int[CAPACITY];
 
-    private int total = getEMPTY();
+    private int total = EMPTY;
 
-
-
-    /**
-     * Get capacity
-     * @return
-     */
-    public static int getCAPACITY() {
-        return CAPACITY;
-    }
-
-    /**
-     * Get max size
-     * @return
-     */
-    public static int getMaxSize() {
-        return MAX_SIZE;
-    }
-
-    /**
-     * Get empty
-     * @return
-     */
-    public static int getEMPTY() {
-        return EMPTY;
-    }
 
     /**
      * Get total
@@ -58,7 +33,7 @@ public class IntArrayStack implements StackInterface {
      */
     @Override
     public boolean isEmpty() {
-        return total == getEMPTY();
+        return total == EMPTY;
     }
 
     /**
@@ -66,7 +41,7 @@ public class IntArrayStack implements StackInterface {
      * @return
      */
     public boolean isFull() {
-        return total == getMaxSize();
+        return total == MAX_SIZE;
     }
 
     /**
@@ -76,7 +51,7 @@ public class IntArrayStack implements StackInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return getEMPTY();
+            return EMPTY;
         return numbers[total];
     }
 
@@ -86,7 +61,7 @@ public class IntArrayStack implements StackInterface {
      */
     public int pop() {
         if (isEmpty())
-            return getEMPTY();
+            return EMPTY;
         return numbers[total--];
     }
 
