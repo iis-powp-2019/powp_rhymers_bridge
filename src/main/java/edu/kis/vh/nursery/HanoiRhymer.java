@@ -19,7 +19,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 	 * @see edu.kis.vh.nursery.DefaultCountingOutRhymer#countIn(int)
 	 */
 	@Override
-	protected void countIn(int in) {
+	public void countIn(int in) {
 		if (!callCheck() && in > peekaboo())
 			totalRejected++;
 		else

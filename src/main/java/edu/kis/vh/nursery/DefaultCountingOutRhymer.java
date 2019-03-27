@@ -1,40 +1,38 @@
 package edu.kis.vh.nursery;
-import edu.kis.vh.nursery.IntArrayStack;
 
 public class DefaultCountingOutRhymer {
-// TODO: check name.
-	private static final int FULL_STACK_VALUE = 11;
-	private static final int EMPTY_STACK_VALUE = -1;
-	private static final int STACK_CAPACITY = 12;
-	private int[] numbers = new int[STACK_CAPACITY];
-	private int total = EMPTY_STACK_VALUE;
+	private IntArrayStack intArrayStack;
 
-	protected int getTotal() {
-		return total;
+	public DefaultCountingOutRhymer(){
+		intArrayStack = new IntArrayStack();
 	}
 
-	protected void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+		super();
+		this.intArrayStack = intArrayStack;
 	}
 
-	protected boolean callCheck() {
-		return total == EMPTY_STACK_VALUE;
+	public int getTotal() {
+		return intArrayStack.getTotal();
 	}
 
-	protected boolean isFull() {
-		return total == FULL_STACK_VALUE;
+	public void countIn(int in) {
+		intArrayStack.countIn(in);
 	}
 
-	protected int peekaboo() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total];
+	public boolean callCheck() {
+		return intArrayStack.callCheck();
 	}
 
-	protected int countOut() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total--];
+	public boolean isFull() {
+		return intArrayStack.isFull();
+	}
+
+	public int peekaboo() {
+		return intArrayStack.peekaboo();
+	}
+
+	public int countOut() {
+		return intArrayStack.countOut();
 	}
 }
