@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.BestInterface;
+
+public class IntArrayStack implements BestInterface {
 
     private static final int COUNTFINISH = -1;
     private static final int MAX = 11;
@@ -23,8 +25,28 @@ public class IntArrayStack {
         return total == COUNTFINISH;
     }
 
+    @Override
+    public void push(int i) {
+        countIn(i);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return !isFull();
+    }
+
     public boolean isFull() {
         return total == MAX;
+    }
+
+    @Override
+    public int top() {
+       return peekaboo();
+    }
+
+    @Override
+    public int pop() {
+        return countOut();
     }
 
     protected int peekaboo() {
@@ -40,5 +62,8 @@ public class IntArrayStack {
         }
         return numbers[total--];
     }
+
+
+
 
 }
