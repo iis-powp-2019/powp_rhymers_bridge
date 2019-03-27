@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class IntArrayStack {
 	private static final int STACK_SIZE = 12;
-	private static final int FULL_COUNT = 11;
+	private static final int FULL_COUNT = STACK_SIZE-1;
 	private static final int STACK_EMPTY = -1;
 
 	private int[] numbers = new int[STACK_SIZE];
