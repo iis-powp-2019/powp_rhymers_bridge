@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * IntLinkedList Class
  */
-public class IntLinkedList {
+public class IntLinkedList implements Stack {
 
     Node last;
     int i;
@@ -12,6 +12,7 @@ public class IntLinkedList {
      * add value to list
      * @param i - value
      */
+    @Override
     public void push(int i) {
         if (last == null)
             last = new Node(i);
@@ -26,6 +27,7 @@ public class IntLinkedList {
      * checking if list is empty
      * @return if list is empty return true else return false
      */
+    @Override
     public boolean isEmpty() {
         return last == null;
     }
@@ -34,6 +36,7 @@ public class IntLinkedList {
      * checking if list is full
      * @return return false
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -42,6 +45,7 @@ public class IntLinkedList {
      * last value
      * @return return last value or if list is empty return -1;
      */
+    @Override
     public int top() {
         if (isEmpty())
             return -1;
@@ -52,6 +56,7 @@ public class IntLinkedList {
      * delete last value
      * @return return last value or if list is empty return -1;
      */
+    @Override
     public int pop() {
         if (isEmpty())
             return -1;

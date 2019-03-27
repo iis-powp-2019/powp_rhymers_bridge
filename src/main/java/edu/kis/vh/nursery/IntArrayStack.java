@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.Stack;
+
+public class IntArrayStack implements Stack {
     private static final int ERROR = -1;
     private static final int MAX_STACK = 12;
     private static final int CAPACITY = 11;
@@ -8,27 +10,27 @@ public class IntArrayStack {
 
     private int total = ERROR;
 
-    protected void countIn(int in) {
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    protected boolean callCheck() {
+    public boolean isEmpty() {
         return total == ERROR;
     }
 
-    protected boolean isFull() {
+    public boolean isFull() {
         return total == CAPACITY;
     }
 
-    protected int peekaboo() {
-        if (callCheck())
+    public int top() {
+        if (isEmpty())
             return ERROR;
         return numbers[total];
     }
 
-    protected int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return ERROR;
         return numbers[total--];
     }
