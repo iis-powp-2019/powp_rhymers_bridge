@@ -64,7 +64,7 @@ public class RhymersJUnitTest {
         Assert.assertEquals(testValue, result);
     }
 
-    //check if gitignore works
+    //check if gitignore works 2
     @Test
     public void testCountOut() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(new IntArrayStack());
