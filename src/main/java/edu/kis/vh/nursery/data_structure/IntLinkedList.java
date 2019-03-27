@@ -1,9 +1,9 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.data_structure;
 
 /**
  * Lista przechowująca liczby całkowite.
  */
-public class IntLinkedList {
+public class IntLinkedList implements DataStructure {
 
     private final int EMPTY = -1;
     private Node last;
@@ -14,7 +14,7 @@ public class IntLinkedList {
      *
      * @param i wartość nowego elementu
      */
-    public void push(final int i) {
+    @Override public void push(final int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -28,7 +28,7 @@ public class IntLinkedList {
      * Sprawdza czy lista jest pusta.
      * @return true jeśli lista jest pusta, false jeśli nie jest
      */
-    public boolean isEmpty() {
+    @Override public boolean isEmpty() {
         return last == null;
     }
 
@@ -36,7 +36,7 @@ public class IntLinkedList {
      * Sprawdza czy lista jest pełna.
      * @return true jeśli lista jest pełna, false jeśli nie
      */
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return false;
     }
 
@@ -44,7 +44,7 @@ public class IntLinkedList {
      * Zwraca wartośc ostatniego elementu na liście.
      * @return ostatni element na liście lub -1 jeśli lista jest pusta
      */
-    public int top() {
+    @Override public int top() {
         if (isEmpty())
             return EMPTY;
         return last.getValue();
@@ -54,7 +54,7 @@ public class IntLinkedList {
      * Zwraca ostatni element z listy i usuwa go.
      * @return ostatni element na liście lub -1 jeśli lista jest pusta
      */
-    public int pop() {
+    @Override public int pop() {
         if (isEmpty())
             return EMPTY;
         final int ret = last.getValue();
