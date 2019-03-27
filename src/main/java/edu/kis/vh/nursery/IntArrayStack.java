@@ -1,17 +1,17 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack {
-    private static final int DEFAULT = 12;
+    private static final int STACK_CAPACITY = 12;
 
-    private static final int STACK_CAPACITY = -1;
+    private static final int ERROR_CODE = -1;
 
-    private final int[] numbers = new int[DEFAULT];
+    private final int[] numbers = new int[STACK_CAPACITY];
 
     public int getTotal() {
         return total;
     }
 
-    private int total = STACK_CAPACITY;
+    private int total = ERROR_CODE;
 
     public void countIn(int in) {
         if (!isFull())
@@ -19,7 +19,7 @@ public class IntArrayStack {
     }
 
     public boolean callCheck() {
-        return total == STACK_CAPACITY;
+        return total == ERROR_CODE;
     }
 
     public boolean isFull() {
@@ -28,13 +28,13 @@ public class IntArrayStack {
 
     protected int peekaboo() {
         if (callCheck())
-            return STACK_CAPACITY;
+            return ERROR_CODE;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return STACK_CAPACITY;
+            return ERROR_CODE;
         return numbers[total--];
     }
 
