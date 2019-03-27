@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.*;
+import edu.kis.vh.nursery.datastructures.*;
 
 public class DefaultCountingOutRhymer {
 

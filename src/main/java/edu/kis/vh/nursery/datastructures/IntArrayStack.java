@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.IIntLinkedList;
+package edu.kis.vh.nursery.datastructures;
 
 public class IntArrayStack implements IIntLinkedList {
 

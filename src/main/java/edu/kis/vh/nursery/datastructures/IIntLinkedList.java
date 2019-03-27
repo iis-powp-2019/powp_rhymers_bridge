@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.datastructures;
 
 public interface IIntLinkedList {
     void push(int i);

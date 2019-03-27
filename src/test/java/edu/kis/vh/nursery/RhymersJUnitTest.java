@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IIntLinkedList;
-import edu.kis.vh.nursery.list.IntArrayStack;
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.datastructures.IIntLinkedList;
+import edu.kis.vh.nursery.datastructures.IntArrayStack;
+import edu.kis.vh.nursery.datastructures.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
