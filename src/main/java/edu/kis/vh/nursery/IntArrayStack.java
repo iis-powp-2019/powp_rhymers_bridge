@@ -14,13 +14,6 @@ public class IntArrayStack {
     private int total = -1;
 
     /**
-     * @return actual number elements of stacks;
-     */
-    public int getTotal() {
-        return total;
-    }
-
-    /**
      * @param IN number which is using to fill the stack.
      */
     public void countIn(final int IN) {
