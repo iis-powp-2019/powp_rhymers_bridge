@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DefaultCountingOutRhymerTest {
@@ -27,7 +28,7 @@ public class DefaultCountingOutRhymerTest {
         Assert.assertEquals(false, result);
     }
 
-    @Test
+    @Test @Ignore
     public void testIsFull() {
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {

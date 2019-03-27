@@ -41,5 +41,4 @@ public class IntArrayStack {
             return -1;
         return numbers[total--];
     }
-
 }
