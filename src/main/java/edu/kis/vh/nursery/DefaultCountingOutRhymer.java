@@ -4,16 +4,13 @@ import edu.kis.vh.nursery.list.LinkedListOfIntegers;
 
 public class DefaultCountingOutRhymer {
 
-    private IntArrayStack intArrayStack;
     private LinkedListOfIntegers linkedListOfIntegers;
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack, LinkedListOfIntegers linkedListOfIntegers) {
-        this.intArrayStack = intArrayStack;
+    public DefaultCountingOutRhymer(LinkedListOfIntegers linkedListOfIntegers) {
         this.linkedListOfIntegers = linkedListOfIntegers;
     }
 
     public DefaultCountingOutRhymer() {
-        this.intArrayStack = new IntArrayStack();
         this.linkedListOfIntegers = new LinkedListOfIntegers();
     }
 
