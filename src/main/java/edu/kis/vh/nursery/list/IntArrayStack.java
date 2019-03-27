@@ -1,10 +1,11 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
+
 
 
 /**
  * Class which counting down, which is working like a stack.
  */
-public class IntArrayStack {
+public class IntArrayStack implements LinkedListInterface {
 
     private static final int MIN = -1;
     private static final int MAX = 11;
@@ -16,7 +17,7 @@ public class IntArrayStack {
     /**
      * @param IN number which is using to fill the stack.
      */
-    public void countIn(final int IN) {
+    public void push(final int IN) {
         if (!isFull())
             numbers[++total] = IN;
     }
@@ -24,7 +25,7 @@ public class IntArrayStack {
     /**
      * @return return true, if stack is empty and false, if it's not.
      */
-    public boolean callCheck() {
+    public boolean isEmpty() {
         return total == MIN;
     }
 
@@ -38,8 +39,8 @@ public class IntArrayStack {
     /**
      * @return return -1, if stack is empty or actual element, if its not.
      */
-    protected int peekaboo() {
-        if (callCheck())
+    public int top() {
+        if (isEmpty())
             return MIN;
         return numbers[total];
     }
@@ -47,8 +48,8 @@ public class IntArrayStack {
     /**
      * @return return -1, if stack is empty or under the top element, if its not.
      */
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return MIN;
         return numbers[total--];
     }
