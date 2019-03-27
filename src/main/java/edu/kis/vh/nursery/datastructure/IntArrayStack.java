@@ -2,11 +2,10 @@ package edu.kis.vh.nursery.datastructure;
 
 public class IntArrayStack implements BestInterface {
 
-    private static final int COUNTFINISH = -1;
     private static final int MAX = 11;
     final private int[] numbers = new int[12];
 
-    private int total = COUNTFINISH;
+    private int total = Empty_value;
 
     public int getTotal() {
         return total;
@@ -20,7 +19,7 @@ public class IntArrayStack implements BestInterface {
     }
 
     public boolean callCheck() {
-        return total == COUNTFINISH;
+        return total == Empty_value;
     }
 
     @Override
@@ -49,14 +48,14 @@ public class IntArrayStack implements BestInterface {
 
     protected int peekaboo() {
         if (callCheck()) {
-            return COUNTFINISH;
+            return Empty_value;
         }
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck()) {
-            return COUNTFINISH;
+            return Empty_value;
         }
         return numbers[total--];
     }

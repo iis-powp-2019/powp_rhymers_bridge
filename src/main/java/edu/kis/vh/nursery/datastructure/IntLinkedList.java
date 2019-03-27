@@ -29,14 +29,14 @@ public class IntLinkedList implements BestInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return Empty_value;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return Empty_value;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
