@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.BestInterface;
+package edu.kis.vh.nursery.datastructure;
 
 public class IntArrayStack implements BestInterface {
 

@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.datastructure;
 
 public interface BestInterface {
     void push(int i);
