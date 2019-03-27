@@ -36,4 +36,7 @@ public class DefaultCountingOutRhymer {
     public int countOut() {
         return dataStorage.countOut();
     }
+    boolean isFull(){
+        return dataStorage.isFull();
+    }
 }
