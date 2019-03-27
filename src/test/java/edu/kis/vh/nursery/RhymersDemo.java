@@ -25,7 +25,7 @@ class RhymersDemo {
     private static void countOutAllRhymers(DefaultCountingOutRhymer[] rhymers) {
         for (DefaultCountingOutRhymer rhymer: rhymers) {
             while (!rhymer.callCheck()) {
-                System.out.println(rhymer.countOut() + "  ");
+                System.out.print(rhymer.countOut() + "  ");
             }
             System.out.println();
         }
