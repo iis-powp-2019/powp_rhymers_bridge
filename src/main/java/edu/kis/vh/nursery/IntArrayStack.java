@@ -12,10 +12,6 @@ public class IntArrayStack {
 
     private int total = -1;
 
-    public int getTotal() {
-        return total;
-    }
-
     public void countIn(final int in) {
         if (!isFull())
             numbers[++total] = in;
