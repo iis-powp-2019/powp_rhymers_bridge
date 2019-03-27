@@ -1,14 +1,16 @@
 package edu.kis.vh.nursery.list;
 
 
+import edu.kis.vh.nursery.IntStack;
+
 /**
  * @param
  * @author Admin
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 
     Node last;
-    private static final int EMPTY_INDEX = -1;
+
     int total = EMPTY_INDEX;
 
     public int getTotal() {
