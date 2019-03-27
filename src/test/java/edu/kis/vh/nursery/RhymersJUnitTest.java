@@ -45,8 +45,8 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testIsFull() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+	public void testIsFullArrayStack() {
+		IntArrayStack rhymer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
