@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.IIntLinkedList;
+
+public class IntArrayStack implements IIntLinkedList {
 
     public static final int DEFAULT = -1;
     public static final int MAX_NUMBER_OF_ELEMENTS = 12;
@@ -22,8 +24,28 @@ public class IntArrayStack {
         return total == DEFAULT;
     }
 
+    @Override
+    public void push(int i) {
+        countIn(i);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return !isFull();
+    }
+
     public boolean isFull() {
         return total == 11;
+    }
+
+    @Override
+    public int top() {
+        return peekaboo();
+    }
+
+    @Override
+    public int pop() {
+        return countOut();
     }
 
     protected int peekaboo() {

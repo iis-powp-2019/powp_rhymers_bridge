@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IIntLinkedList;
 import edu.kis.vh.nursery.list.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
@@ -29,13 +30,13 @@ public class RhymersJUnitTest {
 	}
 
 	@Test
-	public void testIntArrayStackIsFull() {
-		IntArrayStack rhymer = new IntArrayStack();
+	public void testIIntLinkedListIsFull() {
+		IIntLinkedList rhymer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
-			rhymer.countIn(888);
+			rhymer.push(888);
 		}
 
 		boolean result = rhymer.isFull();

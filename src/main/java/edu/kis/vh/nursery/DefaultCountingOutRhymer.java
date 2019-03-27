@@ -1,10 +1,10 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.*;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList = new IntLinkedList();
+    private IIntLinkedList intLinkedList = new IntLinkedList();
 
     public DefaultCountingOutRhymer(){}
 
