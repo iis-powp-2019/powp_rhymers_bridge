@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
-//all test are working properly
+    //all test are working properly
     @Test
     public void testCountIn() {
         DataProvider rhymer = new IntArrayStack();

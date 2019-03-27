@@ -9,31 +9,31 @@ import edu.kis.vh.nursery.data.IntLinkedList;
 public class DefaultCountingOutRhymer {
 
 
-    private DataProvider list;
+    private DataProvider dataStorage;
 
-    public DefaultCountingOutRhymer(IntLinkedList list) {
-        this.list = list;
+    public DefaultCountingOutRhymer(DataProvider list) {
+        this.dataStorage = list;
     }
 
     public DefaultCountingOutRhymer() {
 
-        this.list = new IntLinkedList();
+        this.dataStorage = new IntLinkedList();
     }
 
 
     public void countIn(int in) {
-        list.countIn(in);
+        dataStorage.countIn(in);
     }
 
     public boolean callCheck() {
-        return list.callCheck();
+        return dataStorage.callCheck();
     }
 
     public int peekaboo() {
-        return list.peekaboo();
+        return dataStorage.peekaboo();
     }
 
     public int countOut() {
-        return list.countOut();
+        return dataStorage.countOut();
     }
 }

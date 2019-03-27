@@ -4,8 +4,9 @@ import edu.kis.vh.nursery.Node;
 
 public class IntLinkedList implements DataProvider {
 
-    Node last;
-    int i;
+    private Node last;
+    private int i;
+
 
     @Override
     public void countIn(int i) {

@@ -2,25 +2,13 @@ package edu.kis.vh.nursery.data;
 
 public class IntArrayStack implements DataProvider {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int MAX_SIZE = 11;
     private static final int EMPTY_POSITION = -1;
-
     private int total = getEmptyPosition();
-    private final int[] NUMBERS = new int[getStackCapacity()];
-
-    public static int getStackCapacity() {
-        return STACK_CAPACITY;
-    }
-
-    public static int getMaxSize() {
-        return MAX_SIZE;
-    }
+    private final int[] NUMBERS = new int[STACK_CAPACITY];
 
     public static int getEmptyPosition() {
         return EMPTY_POSITION;
     }
-
 
     /**
      * @param in if stack is not full push new element to stack
@@ -29,7 +17,6 @@ public class IntArrayStack implements DataProvider {
         if (!isFull())
             NUMBERS[++total] = in;
     }
-
     /**
      * @return check if last element is empty
      */
@@ -41,7 +28,7 @@ public class IntArrayStack implements DataProvider {
      * @return check if stack is full
      */
     public boolean isFull() {
-        return total == getMaxSize();
+        return total == STACK_CAPACITY - 1;
     }
 
     /**
