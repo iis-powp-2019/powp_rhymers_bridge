@@ -4,33 +4,33 @@ import edu.kis.vh.nursery.list.LinkedListOfIntegers;
 
 public class DefaultCountingOutRhymer {
 
-    private LinkedListOfIntegers linkedListOfIntegers;
+    private Stack typeOfImplementation;
 
-    public DefaultCountingOutRhymer(LinkedListOfIntegers linkedListOfIntegers) {
-        this.linkedListOfIntegers = linkedListOfIntegers;
+    public DefaultCountingOutRhymer(Stack typeOfImplementation) {
+        this.typeOfImplementation = typeOfImplementation;
     }
 
     public DefaultCountingOutRhymer() {
-        this.linkedListOfIntegers = new LinkedListOfIntegers();
+        this.typeOfImplementation = new LinkedListOfIntegers();
     }
 
     public void countIn(int in) {
-        linkedListOfIntegers.push(in);
+        typeOfImplementation.countIn(in);
     }
 
     public boolean callCheck() {
-        return linkedListOfIntegers.isEmpty();
+        return typeOfImplementation.callCheck();
     }
 
     public boolean isFull() {
-        return linkedListOfIntegers.isFull();
+        return typeOfImplementation.isFull();
     }
 
     public int actualNumber() {
-        return linkedListOfIntegers.top();
+        return typeOfImplementation.actualNumber();
     }
 
     public int countOut() {
-        return linkedListOfIntegers.pop();
+        return typeOfImplementation.countOut();
     }
 }

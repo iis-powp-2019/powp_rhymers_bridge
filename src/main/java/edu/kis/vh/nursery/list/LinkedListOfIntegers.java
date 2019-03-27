@@ -1,40 +1,42 @@
 package edu.kis.vh.nursery.list;
 
-public class LinkedListOfIntegers {
+import edu.kis.vh.nursery.Stack;
+
+public class LinkedListOfIntegers implements Stack {
 
     private static final int EMPTY_STACK_VALUE = -1;
     private Node last;
     private int i;
 
-    public void push(final int i) {
+    @Override public void countIn(int in) {
         if (last == null) {
-            last = new Node(i);
+            last = new Node(in);
         }
         else {
-            last.next = new Node(i);
+            last.next = new Node(in);
             last.next.prev = last;
             last = last.next;
         }
     }
 
-    public boolean isEmpty() {
-        return last == null;
-    }
-
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return false;
     }
 
-    public int top() {
-        if (isEmpty()) {
+    @Override public boolean callCheck() {
+        return last == null;
+    }
+
+    @Override public int actualNumber() {
+        if (callCheck()) {
             return EMPTY_STACK_VALUE;
         }
 
         return last.value;
     }
 
-    public int pop() {
-        if (isEmpty()) {
+    @Override public int countOut() {
+        if (callCheck()) {
             return EMPTY_STACK_VALUE;
         }
 
