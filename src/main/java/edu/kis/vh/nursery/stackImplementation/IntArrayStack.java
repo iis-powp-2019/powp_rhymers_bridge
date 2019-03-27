@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.Stack;
+package edu.kis.vh.nursery.stackImplementation;
 
 public class IntArrayStack implements Stack {
     private static final int ERROR = -1;
