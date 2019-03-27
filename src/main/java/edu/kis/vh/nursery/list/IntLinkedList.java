@@ -69,6 +69,11 @@ public class IntLinkedList implements Rhymer {
     }
 
     @Override
+    public int peekaboo() {
+        return top();
+    }
+
+    @Override
     public int countOut() {
         return pop();
     }

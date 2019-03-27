@@ -8,33 +8,33 @@ import edu.kis.vh.nursery.list.IntLinkedList;
  * It can count in numbers up to pre-defined value, and count them out in stack-similiar way.
  */
 public class DefaultCountingOutRhymer {
-    private IntLinkedList intLinkedList;
+    private Rhymer rhymer;
 
     public DefaultCountingOutRhymer() {
         this(new IntLinkedList());
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(Rhymer rhymer) {
+        this.rhymer = rhymer;
     }
 
     public void countIn(int in) {
-        intLinkedList.push(in);
+        rhymer.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return rhymer.callCheck();
     }
 
     public boolean isFull() {
-        return intLinkedList.isFull();
+        return rhymer.isFull();
     }
 
     public int peekaboo() {
-        return intLinkedList.top();
+        return rhymer.peekaboo();
     }
 
     public int countOut() {
-        return intLinkedList.pop();
+        return rhymer.countOut();
     }
 }

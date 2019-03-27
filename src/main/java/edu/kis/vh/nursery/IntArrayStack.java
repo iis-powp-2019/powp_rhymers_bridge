@@ -52,7 +52,8 @@ public class IntArrayStack implements Rhymer {
      *
      * @return Number at current position in count out
      */
-    protected int peekaboo() {
+    @Override
+    public int peekaboo() {
         if (callCheck())
             return STACK_EMPTY_VALUE;
         return numbers[total];

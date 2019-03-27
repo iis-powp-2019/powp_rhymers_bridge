@@ -8,4 +8,6 @@ public interface Rhymer {
     boolean isFull();
 
     int countOut();
+
+    int peekaboo();
 }
