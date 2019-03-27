@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStackInterface;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +8,7 @@ import org.junit.Test;
 public class DefaultCountingOutRhymerJUnitTest {
 
 	private static final int TEST_VALUE = 4;
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int EMPTY_STACK_VALUE = IntStackInterface.EMPTY;
 	private static final int STACK_CAPACITY = 12;
 	private DefaultCountingOutRhymer rhymer;
 

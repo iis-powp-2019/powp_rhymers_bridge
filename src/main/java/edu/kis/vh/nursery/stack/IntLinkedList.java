@@ -66,7 +66,7 @@ public class IntLinkedList implements IntStackInterface {
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
         return ret;
