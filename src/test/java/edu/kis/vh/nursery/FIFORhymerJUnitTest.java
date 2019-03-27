@@ -1,12 +1,13 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStackInterface;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class FIFORhymerJUnitTest {
 
-    private static final int EMPTY_FIFO_VALUE = -1;
+    private static final int EMPTY_FIFO_VALUE = IntStackInterface.EMPTY;
     private FIFORhymer rhymer;
     private static final int[] VALUES = new int[]{1, 2, 3};
 
