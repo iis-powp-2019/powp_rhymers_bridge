@@ -1,18 +1,21 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
-    public HanoiRhymer(IntLinkedList intStackInterface, int totalRejected) {
+    public HanoiRhymer(IntStackInterface intStackInterface, int totalRejected) {
         super(intStackInterface);
         this.totalRejected = totalRejected;
     }
 
-    public HanoiRhymer(int totalRejected) {
-        this.totalRejected = totalRejected;
+    public HanoiRhymer(IntStackInterface intStackInterface) {
+        super(intStackInterface);
+    }
+
+    public HanoiRhymer() {
     }
 
     int reportRejected() {

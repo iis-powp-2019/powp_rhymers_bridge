@@ -7,7 +7,7 @@ public class DefaultCountingOutRhymer {
 
     private IntStackInterface intStackInterface = new IntLinkedList();
 
-    public DefaultCountingOutRhymer(IntLinkedList intStackInterface) {
+    public DefaultCountingOutRhymer(IntStackInterface intStackInterface) {
         this.intStackInterface = intStackInterface;
     }
 

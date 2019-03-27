@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntStackInterface;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
@@ -8,7 +9,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 /*
 Implementacja LinkedList pozwala przechowywać nieograniczoną ilość elementów
 */
-    public FIFORhymer(IntLinkedList intStackInterface) {
+    public FIFORhymer(IntStackInterface intStackInterface) {
         super(intStackInterface);
     }
 
