@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.factory;
+package edu.kis.vh.nursery;
 
 
 /**
