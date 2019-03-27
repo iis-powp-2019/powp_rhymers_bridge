@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 // TODO: make usage of that class ;)
 public class IntLinkedList implements RhymerStack {

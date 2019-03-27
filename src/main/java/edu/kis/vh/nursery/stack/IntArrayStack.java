@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.RhymerStack;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements RhymerStack
 {
