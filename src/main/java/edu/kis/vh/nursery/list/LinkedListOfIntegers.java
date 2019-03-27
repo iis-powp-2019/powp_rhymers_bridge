@@ -1,13 +1,13 @@
 package edu.kis.vh.nursery.list;
 
-public class LinkedListOfIntegers {
+public class LinkedListOfIntegers implements Stack {
 
     public static final int EMPTY_STACK_VALUE = -1;
 
     private int value;
     private Node last;
 
-    public void push(int newNodeValue) {
+    @Override public void push(int newNodeValue) {
         if (getLast() == null){
             setLast(new Node(newNodeValue));
         } else {
@@ -17,15 +17,15 @@ public class LinkedListOfIntegers {
         }
     }
 
-    public boolean isEmpty() {
+    @Override public boolean isEmpty() {
         return getLast() == null;
     }
 
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return false;
     }
 
-    public int top() {
+    @Override public int top() {
         if (isEmpty()){
             return EMPTY_STACK_VALUE;
         }else{
@@ -33,7 +33,7 @@ public class LinkedListOfIntegers {
         }
     }
 
-    public int pop() {
+    @Override public int pop() {
         if (isEmpty()){
             return EMPTY_STACK_VALUE;
         }
