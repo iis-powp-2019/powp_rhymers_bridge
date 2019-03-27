@@ -2,6 +2,12 @@ package edu.kis.vh.nursery;
 
 public class FifoRhymer extends DefaultCountingOutRhymer {
 
+	public FifoRhymer(IntArrayStack a, IntArrayStack b) {
+		super (a);
+		this.temp = new DefaultCountingOutRhymer(b);
+	}
+	
+	
 	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
 	@Override

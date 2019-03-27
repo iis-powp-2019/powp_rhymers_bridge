@@ -7,6 +7,8 @@ public class IntLinkedList {
 	
 	//TODO: remove unused variable
 	private int i;
+	
+	private int total = 0;
 
 	public void push(int i) {
 		if (last == null)
