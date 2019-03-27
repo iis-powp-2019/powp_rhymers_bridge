@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a225d98-4826-450f-b3ac-aa0540068bc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/DataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/DataProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/DataProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/IntArrayStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/IntArrayStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/IntLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/data/IntLinkedList.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="363">
               <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-994">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="273">
+              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -108,11 +102,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="153">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,9 +159,9 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/DataProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntLinkedList.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java" />
       </list>
     </option>
   </component>
@@ -274,7 +272,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553712968925" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553713299553" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -416,7 +414,7 @@
       <workItem from="1552945078291" duration="2911000" />
       <workItem from="1553174339156" duration="4481000" />
       <workItem from="1553707483398" duration="314000" />
-      <workItem from="1553707826557" duration="5011000" />
+      <workItem from="1553707826557" duration="5278000" />
     </task>
     <servers />
   </component>
@@ -439,9 +437,15 @@
     <history-entry file="RhymersJUnitTest - 2019.03.27 at 19h 15m 16s.xml">
       <configuration name="RhymersJUnitTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RhymersJUnitTest - 2019.03.27 at 19h 54m 08s.xml">
+      <configuration name="RhymersJUnitTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest - 2019.03.27 at 19h 55m 56s.xml">
+      <configuration name="RhymersJUnitTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20726000" />
+    <option name="totallyTimeSpent" value="20993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -457,7 +461,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30441898" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.29459903" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.4140753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -540,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -574,9 +571,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="363">
           <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -584,10 +588,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/data/IntArrayStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-994">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,11 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.data.DataProvider;
+
 /**
  * searching rhymer using Hanoi sequence
  */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
+
+    public HanoiRhymer(DataProvider list) {
+        super(list);
+    }
 
     //push element
     @Override

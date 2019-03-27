@@ -7,6 +7,7 @@ public class IntArrayStack implements DataProvider {
     private final int[] NUMBERS = new int[STACK_CAPACITY];
 
 
+
     /**
      * @param in if stack is not full push new element to stack
      */
