@@ -27,6 +27,7 @@ public class IntLinkedList {
 	public int top() {
 		if (isEmpty())
 			return EMPTY;
+		
 		return last.value;
 	}
 
@@ -35,6 +36,7 @@ public class IntLinkedList {
 			return EMPTY;
 		int ret = last.value;
 		last = last.prev;
+		
 		return ret;
 	}
 

@@ -3,12 +3,14 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		IntArrayStack stack = new IntArrayStack();
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( stack );
+		IntLinkedList list = new IntLinkedList();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -18,8 +20,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		IntArrayStack stack = new IntArrayStack();
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( stack );
+		IntLinkedList list = new IntLinkedList();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -31,8 +33,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		IntArrayStack stack = new IntArrayStack();
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( stack );
+		IntLinkedList list = new IntLinkedList();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -41,13 +43,13 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void testPeekaboo() {
-		IntArrayStack stack = new IntArrayStack();
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( stack );
+		IntLinkedList list = new IntLinkedList();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
@@ -64,8 +66,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		IntArrayStack stack = new IntArrayStack();
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( stack );
+		IntLinkedList list = new IntLinkedList();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
