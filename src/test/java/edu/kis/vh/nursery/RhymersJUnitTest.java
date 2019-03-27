@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
@@ -25,7 +26,9 @@ public class RhymersJUnitTest {
         Assert.assertEquals(false, result);
     }
 
-    @Test public void testIsFull() {
+    @Test
+    @Ignore
+    public void testIsFull() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {

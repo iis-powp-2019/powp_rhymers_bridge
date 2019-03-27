@@ -1,64 +1,54 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.LinkedListOfIntegers;
+
 public class DefaultCountingOutRhymer {
 
+    private IntArrayStack intArrayStack;
+    private LinkedListOfIntegers linkedListOfIntegers;
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int EMPTY_STACK_VALUE = -1;
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack){
+        this.intArrayStack = intArrayStack;
+    }
 
-    private int[] numbers = new int[STACK_CAPACITY];
-    private int total = -1;
+    public DefaultCountingOutRhymer(LinkedListOfIntegers linkedListOfIntegers){
+        this.linkedListOfIntegers = linkedListOfIntegers;
+    }
 
-    /**
-     * @return Current value of total variable
-     */
+    public DefaultCountingOutRhymer(){
+        this.intArrayStack = new IntArrayStack();
+        this.linkedListOfIntegers = new LinkedListOfIntegers();
+    }
+
+    public IntArrayStack getIntArrayStack() {
+        return intArrayStack;
+    }
+
+    public void setIntArrayStack(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
+
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
-    /**
-     *@param in Value which is added to numbers table.
-     */
     public void countIn(int in) {
-        if (!isFull()){
-            numbers[++total] = in;
-        }
+        linkedListOfIntegers.push(in);
     }
 
-    /**
-     * @return {@code true} if stack is empty; {@code false} if stack contains some values
-     */
-    boolean isEmpty() {
-        return total == EMPTY_STACK_VALUE;
+    public boolean isEmpty() {
+        return linkedListOfIntegers.isEmpty();
     }
 
-    /**
-     * @return {@code true} if stack is full; {@code false} if stack is not full
-     */
-    boolean isFull() {
-        return total == STACK_CAPACITY-1;
+    public boolean isFull() {
+        return linkedListOfIntegers.isFull();
     }
 
-    /**
-     * @return {@code int} -1 if stack is empty {@code int} current element from numbers table
-     */
-    int currentNumber() {
-        if (isEmpty()){
-            return EMPTY_STACK_VALUE;
-        }else{
-            return numbers[total];
-        }
+    public int currentNumber() {
+        return linkedListOfIntegers.top();
     }
 
-    /**
-     * @return {@code int} -1 if stack is empty {@code int} element from numbers table until it is empty
-     */
     public int countOut() {
-        if (isEmpty()) {
-            return EMPTY_STACK_VALUE;
-        } else {
-            return numbers[total--];
-        }
+        return linkedListOfIntegers.pop();
     }
-
 }
