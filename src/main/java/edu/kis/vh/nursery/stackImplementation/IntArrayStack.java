@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stackImplementation;
 
 public class IntArrayStack implements Stack {
-    private static final int ERROR = -1;
+    private static final int ERROR = 0;
     private static final int MAX_STACK = 12;
     private static final int CAPACITY = 11;
     private int[] numbers = new int[MAX_STACK];
