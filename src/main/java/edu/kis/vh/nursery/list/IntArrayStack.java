@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
-public class IntArrayStack {
+public class IntArrayStack implements DataProvider {
 
     private static final int STACK_CAPACITY = 12;
     private static final int MAX_SIZE = 11;
@@ -13,7 +13,6 @@ public class IntArrayStack {
         return STACK_CAPACITY;
     }
 
-
     public static int getMaxSize() {
         return MAX_SIZE;
     }
@@ -21,15 +20,12 @@ public class IntArrayStack {
     public static int getEmptyPosition() {
         return EMPTY_POSITION;
     }
-    public int getTotal() {
-        return total;
-    }
 
 
     /**
      * @param in if stack is not full push new element to stack
      */
-    protected void countIn(int in) {
+    public void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
@@ -37,30 +33,31 @@ public class IntArrayStack {
     /**
      * @return check if last element is empty
      */
-    protected boolean callCheck() {
+    public boolean callCheck() {
         return total == getEmptyPosition();
     }
 
     /**
      * @return check if stack is full
      */
-    protected boolean isFull() {
+    public boolean isFull() {
         return total == getMaxSize();
     }
 
     /**
      * @return if last element is not empty returns value of it
      */
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return getEmptyPosition();
+
         return NUMBERS[total];
     }
 
     /**
-     * @return  pop last element in stack
+     * @return pop last element in stack
      */
-    protected int countOut() {
+    public int countOut() {
         if (callCheck())
             return getEmptyPosition();
 

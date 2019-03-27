@@ -2,12 +2,13 @@ package edu.kis.vh.nursery.list;
 
 import edu.kis.vh.nursery.Node;
 
-public class IntLinkedList {
+public class IntLinkedList implements DataProvider {
 
     Node last;
     int i;
 
-    public void push(int i) {
+    @Override
+    public void countIn(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -15,9 +16,12 @@ public class IntLinkedList {
             last.next.prev = last;
             last = last.next;
         }
+
     }
 
-    public boolean isEmpty() {
+    //CHECK IF LAST ELEMENT IS EMPTY
+    @Override
+    public boolean callCheck() {
         return last == null;
     }
 
@@ -25,14 +29,16 @@ public class IntLinkedList {
         return false;
     }
 
-    public int top() {
-        if (isEmpty())
+    @Override
+    public int peekaboo() {
+        if (callCheck())
             return -1;
         return last.value;
     }
 
-    public int pop() {
-        if (isEmpty())
+    @Override
+    public int countOut() {
+        if (callCheck())
             return -1;
         int ret = last.value;
         last = last.prev;
