@@ -38,7 +38,6 @@ public class IntLinkedList implements RhymerStack {
         }
     }
 
-    private static final int EMPTY_REPRESENTATION = -1;
     private Node last;
     private int total = -1;
 

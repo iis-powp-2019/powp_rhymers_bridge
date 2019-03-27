@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements RhymerStack
 {
-    private static final int STARTING_INT = -1;
     private static final int MAX_TAB_SIZE = 12;
     private static final int FULL_INT = 11;
     private int[] numbers = new int[MAX_TAB_SIZE];
@@ -11,7 +10,7 @@ public class IntArrayStack implements RhymerStack
         return total;
     }
 
-    private int total = STARTING_INT;
+    private int total = EMPTY_REPRESENTATION;
 
     public void push(final int in) {
         if (!isFull())
@@ -19,7 +18,7 @@ public class IntArrayStack implements RhymerStack
     }
 
     public boolean isEmpty() {
-        return total == STARTING_INT;
+        return total == EMPTY_REPRESENTATION;
     }
 
     public boolean isFull() {
@@ -28,13 +27,13 @@ public class IntArrayStack implements RhymerStack
 
     public int top() {
         if (isEmpty())
-            return STARTING_INT;
+            return EMPTY_REPRESENTATION;
         return numbers[total];
     }
 
     public int pop() {
         if (isEmpty())
-            return STARTING_INT;
+            return EMPTY_REPRESENTATION;
         return numbers[total--];
     }
 }
