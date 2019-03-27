@@ -5,9 +5,7 @@ package edu.kis.vh.nursery.data_structure;
  */
 public class IntLinkedList implements DataStructure {
 
-    private final int EMPTY = -1;
     private Node last;
-    private int i;
 
     /**
      * Umieszcza w liście element o przekazanej wartości.
