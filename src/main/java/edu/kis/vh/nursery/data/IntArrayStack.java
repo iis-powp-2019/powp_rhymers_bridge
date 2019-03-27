@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.data;
 
 public class IntArrayStack implements DataProvider {
 

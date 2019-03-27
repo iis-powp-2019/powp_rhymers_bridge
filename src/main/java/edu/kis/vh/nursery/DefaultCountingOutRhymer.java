@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.DataProvider;
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.data.DataProvider;
+import edu.kis.vh.nursery.data.IntLinkedList;
 
 /**
  * Basic rhymer type implementation
