@@ -1,14 +1,16 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.BestInterface;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList = new IntLinkedList();
+    private BestInterface intLinkedList = new IntLinkedList();
+
 
     public DefaultCountingOutRhymer(){};
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    public DefaultCountingOutRhymer(BestInterface intLinkedList) {
         this.intLinkedList = intLinkedList;
     }
 
