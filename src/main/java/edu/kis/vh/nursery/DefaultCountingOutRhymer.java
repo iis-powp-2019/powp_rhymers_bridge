@@ -10,10 +10,10 @@ public class DefaultCountingOutRhymer {
 
     private IntLinkedList list;
 
-
     public DefaultCountingOutRhymer(IntLinkedList list) {
-        this.list =  list;
+        this.list = list;
     }
+
     public DefaultCountingOutRhymer() {
 
         this.list = new IntLinkedList();

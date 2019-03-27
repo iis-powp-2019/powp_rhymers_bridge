@@ -22,7 +22,4 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return ret;
     }
 
-    @Override public int pop() {
-        return super.pop();
-    }
 }
