@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.list;
 
 // TODO: make usage of that class ;)
-public class IntLinkedList {
+public class IntLinkedList implements RhymerStack {
 
     class Node {
 
@@ -40,8 +40,9 @@ public class IntLinkedList {
 
     private static final int EMPTY_REPRESENTATION = -1;
     private Node last;
-    private int i;
+    private int total = -1;
 
+    @Override
     public void push(final int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -50,27 +51,34 @@ public class IntLinkedList {
             getLast().getNext().setPrev(getLast());
             setLast(getLast().getNext());
         }
+
+        ++total;
     }
 
+    @Override
     public boolean isEmpty() {
         return getLast() == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int top() {
         if (isEmpty())
             return -1;
         return getLast().getValue();
     }
 
+    @Override
     public int pop() {
         if (isEmpty())
             return EMPTY_REPRESENTATION;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
+        --total;
         return ret;
     }
 
@@ -82,7 +90,8 @@ public class IntLinkedList {
         this.last = last;
     }
 
-    public int getI() {
-        return i;
+    @Override
+    public int getTotal() {
+        return total;
     }
 }

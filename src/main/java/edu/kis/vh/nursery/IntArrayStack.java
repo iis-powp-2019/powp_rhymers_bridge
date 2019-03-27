@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack
+import edu.kis.vh.nursery.list.RhymerStack;
+
+public class IntArrayStack implements RhymerStack
 {
     private static final int STARTING_INT = -1;
     private static final int MAX_TAB_SIZE = 12;
@@ -13,27 +15,27 @@ public class IntArrayStack
 
     private int total = STARTING_INT;
 
-    public void countIn(final int in) {
+    public void push(final int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    boolean callCheck() {
+    public boolean isEmpty() {
         return total == STARTING_INT;
     }
 
-    boolean isFull() {
+    public boolean isFull() {
         return total == FULL_INT;
     }
 
-    int peekaboo() {
-        if (callCheck())
+    public int top() {
+        if (isEmpty())
             return STARTING_INT;
         return numbers[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return STARTING_INT;
         return numbers[total--];
     }
