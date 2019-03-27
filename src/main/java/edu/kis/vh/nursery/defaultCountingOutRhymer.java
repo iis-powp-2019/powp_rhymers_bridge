@@ -2,44 +2,45 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int EMPTY_STACK_VALUE = -1;
+    private IntArrayStack intArrayStack;
 
-    private int[] numbers = new int[STACK_CAPACITY];
-    private int total = -1;
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack){
+        this.intArrayStack = intArrayStack;
+    }
+
+    public DefaultCountingOutRhymer(){
+        this.intArrayStack = new IntArrayStack();
+    }
+
+    public IntArrayStack getIntArrayStack() {
+        return intArrayStack;
+    }
+
+    public void setIntArrayStack(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
     public void countIn(int in) {
-        if (!isFull()){
-            numbers[++total] = in;
-        }
+        intArrayStack.countIn(in);
     }
 
-    boolean isEmpty() {
-        return total == EMPTY_STACK_VALUE;
+    public boolean isEmpty() {
+        return intArrayStack.isEmpty();
     }
 
-    boolean isFull() {
-        return total == STACK_CAPACITY-1;
+    public boolean isFull() {
+        return intArrayStack.isFull();
     }
 
-    int currentNumber() {
-        if (isEmpty()){
-            return EMPTY_STACK_VALUE;
-        }else{
-            return numbers[total];
-        }
+    public int currentNumber() {
+        return intArrayStack.currentNumber();
     }
 
     public int countOut() {
-        if (isEmpty()) {
-            return EMPTY_STACK_VALUE;
-        } else {
-            return numbers[total--];
-        }
+        return intArrayStack.countOut();
     }
-
 }
