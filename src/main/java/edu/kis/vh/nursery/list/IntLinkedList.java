@@ -1,11 +1,11 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.IStackInt;
+import edu.kis.vh.nursery.IntArrayStack;
 
 /**
  * Linked Listy Int type
  */
-public class IntLinkedList implements IStackInt {
+public class IntLinkedList implements IntArrayStack {
 
     private static final int EMPTY_RETURN_CODE = -1;
     private Node lastNode;

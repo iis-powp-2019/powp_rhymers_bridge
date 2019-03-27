@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class StackArray implements IStackInt {
+public class StackArray implements IntArrayStack {
 
     private static final int STACK_MAX_SIZE = 12;
     private static final int STACK_START_SIZE = -1;

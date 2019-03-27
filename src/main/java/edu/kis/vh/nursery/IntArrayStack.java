@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public interface IStackInt {
+public interface IntArrayStack {
 
     void countIn(int in);
 

@@ -1,40 +1,37 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.IntArrayStack;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
-public class DefaultCountingOutRhymer implements IStackInt {
-    private IntLinkedList intLinkedList;
+public class DefaultCountingOutRhymer{
+    private IntArrayStack intArrayStack;  
 
     public DefaultCountingOutRhymer() {
-        this.intLinkedList = new IntLinkedList();
+        // łthis.intArrayStack = new IntLinkedList();
     }
 
     public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+        this.intArrayStack = intLinkedList;
     }
 
-    @Override
-    public void countIn(int in) {
-        intLinkedList.countIn(in);
-    }
+	public void countIn(int in) {
+		intArrayStack.countIn(in);
+	}
 
-    @Override
-    public boolean callCheck() {
-        return intLinkedList.callCheck();
-    }
+	public boolean callCheck() {
+		return intArrayStack.callCheck();
+	}
 
-    @Override
-    public boolean isFull() {
-        return intLinkedList.isFull();
-    }
+	public boolean isFull() {
+		return intArrayStack.isFull();
+	}
 
-    @Override
-    public int countOut() {
-        return intLinkedList.countOut();
-    }
+	public int countOut() {
+		return intArrayStack.countOut();
+	}
 
-    @Override
-    public int peekaboo() {
-        return intLinkedList.peekaboo();
-    }
+	public int peekaboo() {
+		return intArrayStack.peekaboo();
+	}
+
 }
