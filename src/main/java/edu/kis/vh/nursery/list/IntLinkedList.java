@@ -12,7 +12,7 @@ public class IntLinkedList {
      * add value to list
      * @param i - value
      */
-    private void push(int i) {
+    public void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -26,7 +26,7 @@ public class IntLinkedList {
      * checking if list is empty
      * @return if list is empty return true else return false
      */
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return last == null;
     }
 
@@ -34,7 +34,7 @@ public class IntLinkedList {
      * checking if list is full
      * @return return false
      */
-    private boolean isFull() {
+    public boolean isFull() {
         return false;
     }
 
@@ -42,7 +42,7 @@ public class IntLinkedList {
      * last value
      * @return return last value or if list is empty return -1;
      */
-    private int top() {
+    public int top() {
         if (isEmpty())
             return -1;
         return last.getValue();
@@ -52,7 +52,7 @@ public class IntLinkedList {
      * delete last value
      * @return return last value or if list is empty return -1;
      */
-    private int pop() {
+    public int pop() {
         if (isEmpty())
             return -1;
         int ret = last.getValue();
