@@ -1,15 +1,18 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.data.DataProvider;
+import edu.kis.vh.nursery.data.IntLinkedList;
 
 /**
  * searching rhymer using FIFO sequence
  */
 public class FIFORhymer extends DefaultCountingOutRhymer {
     //here is my last edited file
-    private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
-    public FIFORhymer(){
+    //Najlepszym wyborem jest lista ze wzgledu na to,ze nie musimy z góry wiedziec ile danych bedzie
+    private DataProvider dataForTesting = new IntLinkedList();
+
+    public FIFORhymer() {
 
     }
 
@@ -21,12 +24,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override
     public int countOut() {
         while (!callCheck())
-            temp.countIn(super.countOut());
+            dataForTesting.countIn(super.countOut());
 
-        int ret = temp.countOut();
+        int ret = dataForTesting.countOut();
 
-        while (!temp.callCheck())
-            countIn(temp.countOut());
+        while (!dataForTesting.callCheck())
+            countIn(dataForTesting.countOut());
 
         return ret;
     }
