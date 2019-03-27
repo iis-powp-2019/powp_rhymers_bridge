@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 public interface Rhymer {
-    int RHYMER_EMPTY = -1;
+    int RHYMER_EMPTY = 0;
 
     void countIn(int in);
 
