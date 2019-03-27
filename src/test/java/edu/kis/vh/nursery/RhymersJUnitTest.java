@@ -60,7 +60,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		IntArrayStack intArrayStack = new IntArrayStack();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(intArrayStack);
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
