@@ -11,6 +11,16 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		this.totalRejected = totalRejected;
 	}
 
+	public HanoiRhymer(IntStorageInterface intStorage)
+	{
+		super(intStorage);
+	}
+
+	public HanoiRhymer()
+	{
+		super();
+	}
+
 	int reportRejected() {
 		return getTotalRejected();
 	}

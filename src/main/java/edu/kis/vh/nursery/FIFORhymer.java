@@ -8,6 +8,11 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		super(intStorage);
 	}
 
+	public FIFORhymer()
+    {
+        super();
+    }
+
 	private final IntStorageInterface temp = new IntLinkedList();
 	
 	@Override
