@@ -3,7 +3,9 @@ package edu.kis.vh.nursery.list;
 //Alt-strzałka lewo - przejście do pliku znajdującego się na zakładce po lewej od obecnie edytowanego pliku
 //Alt-strzałka prawo - przejście do pliku znajdującego się na zakładce po prawej od obecnie edytowanego pliku
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.Rhymer;
+
+public class IntLinkedList implements Rhymer {
 
     private static final int NO_ELEMENTS_LEFT = -1;
     private Node last;
@@ -23,6 +25,7 @@ public class IntLinkedList {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -55,5 +58,18 @@ public class IntLinkedList {
         }
     }
 
+    @Override
+    public void countIn(int in) {
+        push(in);
+    }
 
+    @Override
+    public boolean callCheck() {
+        return isEmpty();
+    }
+
+    @Override
+    public int countOut() {
+        return pop();
+    }
 }

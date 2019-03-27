@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements Rhymer {
 
     private static final int MAX_NUMBERS_COUNT = 12;
     private static final int STACK_EMPTY_VALUE = -1;
@@ -17,6 +17,7 @@ public class IntArrayStack {
      * @param in number to count in to rhymer
      * @see IntArrayStack#isFull
      */
+    @Override
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
@@ -29,6 +30,7 @@ public class IntArrayStack {
      * @return false if rhymer can still count out numbers.
      * @see IntArrayStack#countOut
      */
+    @Override
     public boolean callCheck() {
         return total == STACK_EMPTY_VALUE;
     }
@@ -40,6 +42,7 @@ public class IntArrayStack {
      * @return false if rhymer is still capable of counting in more numbers.
      * @see IntArrayStack#countIn
      */
+    @Override
     public boolean isFull() {
         return total == MAX_NUMBERS_COUNT - 1;
     }
@@ -60,6 +63,7 @@ public class IntArrayStack {
      *
      * @return Counted out number or -1 if count out has finished.
      */
+    @Override
     public int countOut() {
         if (callCheck())
             return STACK_EMPTY_VALUE;
