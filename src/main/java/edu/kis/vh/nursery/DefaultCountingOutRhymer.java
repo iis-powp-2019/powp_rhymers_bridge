@@ -4,10 +4,10 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList stack;
+    private IntStack stack;
 
 
-    public DefaultCountingOutRhymer(IntLinkedList stack) {
+    public DefaultCountingOutRhymer(IntStack stack) {
         this.stack = stack;
     }
 

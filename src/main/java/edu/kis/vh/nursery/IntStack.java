@@ -12,5 +12,7 @@ public interface IntStack {
 
     boolean isFull();
 
+    int peekaboo();
+
     int countOut();
 }

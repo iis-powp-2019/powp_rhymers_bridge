@@ -32,7 +32,8 @@ public class IntArrayStack implements IntStack {
         return total == FULL_INDEX;
     }
 
-    protected int peekaboo() {
+    @Override
+    public int peekaboo() {
         if (callCheck())
             return EMPTY_INDEX;
         return numbers[total];
