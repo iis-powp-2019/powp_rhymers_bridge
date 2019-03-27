@@ -20,12 +20,12 @@ public class RhymersJUnitTest {
     @Test
     public void testCallCheck() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-        boolean result = rhymer.callCheck();
+        boolean result = rhymer.isFull();
         assertTrue(result);
 
         rhymer.countIn(888);
 
-        result = rhymer.callCheck();
+        result = rhymer.isFull();
         assertFalse(result);
     }
 

@@ -1,11 +1,11 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.IntArrayStack;
+import edu.kis.vh.nursery.IIntStack;
 
 /**
  * Linked Listy Int type
  */
-public class IntLinkedList implements IntArrayStack {
+public class IntLinkedList implements IIntStack {
 
     private static final int EMPTY_RETURN_CODE = -1;
     private Node lastNode;
@@ -16,7 +16,7 @@ public class IntLinkedList implements IntArrayStack {
      * Add node with value to list.
      */
     @Override
-    public void countIn(int i) {
+    public void push(int i) {
         if (lastNode == null)
             lastNode = new Node(i);
         else {
@@ -27,19 +27,11 @@ public class IntLinkedList implements IntArrayStack {
     }
 
     /**
-     * @return checking if lastNode is null.
-     */
-    @Override
-    public boolean callCheck() {
-        return lastNode == null;
-    }
-
-    /**
      * @return last node from list, and pop them.
      */
     @Override
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isFull())
             return EMPTY_RETURN_CODE;
 
         int ret = lastNode.getValue();
@@ -53,15 +45,15 @@ public class IntLinkedList implements IntArrayStack {
      */
     @Override
     public boolean isFull() {
-        return false;
+    	 return lastNode == null;
     }
 
     /**
      * @return if not empty, get value of last node
      */
     @Override
-    public int peekaboo() {
-        if (callCheck())
+    public int peek() {
+        if (isFull())
             return EMPTY_RETURN_CODE;
         return lastNode.getValue();
     }

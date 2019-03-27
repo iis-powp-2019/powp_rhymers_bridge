@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class StackArray implements IntArrayStack {
+public class StackArray implements IIntStack {
 
     private static final int STACK_MAX_SIZE = 12;
     private static final int STACK_START_SIZE = -1;
@@ -9,14 +9,9 @@ public class StackArray implements IntArrayStack {
     private int[] queueNumbers = new int[STACK_MAX_SIZE];
 
     @Override
-    public void countIn(int in) {
+    public void push(int in) {
         if (!isFull())
             queueNumbers[++totalQueueNumbersCount] = in;
-    }
-
-    @Override
-    public boolean callCheck() {
-        return totalQueueNumbersCount == -1;
     }
 
     @Override
@@ -25,15 +20,15 @@ public class StackArray implements IntArrayStack {
     }
 
     @Override
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isFull())
             return STACK_START_SIZE;
         return queueNumbers[totalQueueNumbersCount--];
     }
 
     @Override
-    public int peekaboo() {
-        if (callCheck())
+    public int peek() {
+        if (isFull())
             return STACK_START_SIZE;
         return queueNumbers[totalQueueNumbersCount];
     }

@@ -25,7 +25,7 @@ class RhymersDemo {
             defaultCountingOutRhymers[3].countIn(rn.nextInt(20));
 
         for (int i = 0; i < defaultCountingOutRhymers.length; i++) {
-            while (!defaultCountingOutRhymers[i].callCheck())
+            while (!defaultCountingOutRhymers[i].isFull())
                 System.out.print(defaultCountingOutRhymers[i].countOut() + "  ");
             System.out.println();
         }
