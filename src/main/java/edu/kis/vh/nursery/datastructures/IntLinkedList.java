@@ -7,7 +7,6 @@ import edu.kis.vh.nursery.Rhymer;
 
 public class IntLinkedList implements Rhymer {
 
-    private static final int NO_ELEMENTS_LEFT = -1;
     private Node last;
     int i;
 
@@ -32,13 +31,13 @@ public class IntLinkedList implements Rhymer {
 
     public int top() {
         if (isEmpty())
-            return NO_ELEMENTS_LEFT;
+            return RHYMER_EMPTY;
         return last.getValue();
     }
 
     public int pop() {
         if (isEmpty())
-            return NO_ELEMENTS_LEFT;
+            return RHYMER_EMPTY;
         int ret = last.getValue();
         last = last.prev;
         return ret;

@@ -5,13 +5,12 @@ import edu.kis.vh.nursery.Rhymer;
 public class IntArrayStack implements Rhymer {
 
     private static final int MAX_NUMBERS_COUNT = 12;
-    private static final int STACK_EMPTY_VALUE = -1;
     private int[] numbers = new int[MAX_NUMBERS_COUNT];
 
     /**
      * Total amount of numbers amassed in rhymer.
      */
-    public int total = STACK_EMPTY_VALUE;
+    public int total = RHYMER_EMPTY;
 
     /**
      * Add numbers to rhymer until it is full.
@@ -34,7 +33,7 @@ public class IntArrayStack implements Rhymer {
      */
     @Override
     public boolean callCheck() {
-        return total == STACK_EMPTY_VALUE;
+        return total == RHYMER_EMPTY;
     }
 
     /**
@@ -57,7 +56,7 @@ public class IntArrayStack implements Rhymer {
     @Override
     public int peekaboo() {
         if (callCheck())
-            return STACK_EMPTY_VALUE;
+            return RHYMER_EMPTY;
         return numbers[total];
     }
 
@@ -69,7 +68,7 @@ public class IntArrayStack implements Rhymer {
     @Override
     public int countOut() {
         if (callCheck())
-            return STACK_EMPTY_VALUE;
+            return RHYMER_EMPTY;
         return numbers[total--];
     }
 
