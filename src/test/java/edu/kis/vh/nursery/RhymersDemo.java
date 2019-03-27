@@ -12,7 +12,7 @@ import java.util.Random;
 class RhymersDemo {
 
     public static void main(String[] args) {
-        RhymersFactory factory = new DefaultRhymersFactory();
+
         List<RhymersFactory> rhymersFactories = new ArrayList<>();
         rhymersFactories.add(new DefaultRhymersFactory());
         rhymersFactories.add(new ArrayRhymersFactory());
