@@ -2,12 +2,11 @@ package edu.kis.vh.nursery.datastructures;
 
 public class IntArrayStack implements IIntLinkedList {
 
-    public static final int DEFAULT = -1;
     public static final int MAX_NUMBER_OF_ELEMENTS = 12;
 
     private final int[] numbers = new int[MAX_NUMBER_OF_ELEMENTS];
 
-    private int total = DEFAULT;
+    private int total = EMPTY_VALUE;
 
     public int getTotal() {
         return total;
@@ -19,7 +18,7 @@ public class IntArrayStack implements IIntLinkedList {
     }
 
     public boolean callCheck() {
-        return total == DEFAULT;
+        return total == EMPTY_VALUE;
     }
 
     @Override
@@ -48,14 +47,14 @@ public class IntArrayStack implements IIntLinkedList {
 
     protected int peekaboo() {
         if (callCheck()) {
-            return DEFAULT;
+            return EMPTY_VALUE;
         }
         return numbers[getTotal()];
     }
 
     public int countOut() {
         if (callCheck()) {
-            return DEFAULT;
+            return EMPTY_VALUE;
         }
         return numbers[total--];
     }

@@ -2,9 +2,6 @@ package edu.kis.vh.nursery.datastructures;
 
 public class IntLinkedList implements IIntLinkedList {
 
-	//TODO: nie wiem czy to dobre rozwiązanie ponieważ użytkownik nie jest w stanie rozpoznać czy ma pustą listę czy wartość -1
-	public static final int EMPTY_VALUE = -1;
-
 	private Node last;
 //	private int i; //TODO:nigdzie nieużywane oraz nazwa nic nie mówi
 
