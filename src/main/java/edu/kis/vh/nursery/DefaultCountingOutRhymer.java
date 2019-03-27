@@ -4,11 +4,13 @@ import edu.kis.vh.nursery.list.*;
 
 public class DefaultCountingOutRhymer {
 
-    private IIntLinkedList intLinkedList = new IntLinkedList();
+    private IIntLinkedList intLinkedList;
 
-    public DefaultCountingOutRhymer(){}
+    public DefaultCountingOutRhymer(){
+        this(new IntLinkedList());
+    }
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    public DefaultCountingOutRhymer(IIntLinkedList intLinkedList) {
         this.intLinkedList = intLinkedList;
     }
 
