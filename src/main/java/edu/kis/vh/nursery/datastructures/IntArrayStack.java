@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.datastructures;
 
 import edu.kis.vh.nursery.Rhymer;
 
