@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack {
-	
+
 	/**
 	 * Value to return when there is no numbers
 	 */
@@ -22,6 +22,7 @@ public class IntArrayStack {
 
 	/**
 	 * Getter to variable named "total"
+	 * 
 	 * @return value of total variable
 	 */
 	public int getTotal() {
@@ -30,6 +31,7 @@ public class IntArrayStack {
 
 	/**
 	 * Add number to the rhymer
+	 * 
 	 * @param in - number to add
 	 */
 	public void countIn(int in) {
@@ -62,7 +64,8 @@ public class IntArrayStack {
 
 	/**
 	 * Returns last added number, then removes it from rhymer
-	 * @return 
+	 * 
+	 * @return
 	 */
 	int countOut() {
 		if (callCheck())
