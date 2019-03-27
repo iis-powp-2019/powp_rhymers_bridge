@@ -10,7 +10,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     //here is my last edited file
 
     //Najlepszym wyborem jest lista ze wzgledu na to,ze nie musimy z góry wiedziec ile danych bedzie
-    private DataProvider dataForTesting = new IntLinkedList();
+    private DataProvider someData = new IntLinkedList();
 
     public FIFORhymer() {
 
@@ -24,12 +24,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override
     public int countOut() {
         while (!callCheck())
-            dataForTesting.countIn(super.countOut());
+            someData.countIn(super.countOut());
 
-        int ret = dataForTesting.countOut();
+        int ret = someData.countOut();
 
-        while (!dataForTesting.callCheck())
-            countIn(dataForTesting.countOut());
+        while (!someData.callCheck())
+            countIn(someData.countOut());
 
         return ret;
     }

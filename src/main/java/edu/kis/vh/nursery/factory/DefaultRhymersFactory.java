@@ -20,9 +20,7 @@ public class DefaultRhymersFactory implements RhymersFactory {
     }
 
     @Override
-    public final DefaultCountingOutRhymer getFIFORhymer() {
-        return new FIFORhymer();
-    }
+    public final DefaultCountingOutRhymer getFIFORhymer() { return new FIFORhymer(); }
 
     @Override
     public final DefaultCountingOutRhymer getHanoiRhymer() {
