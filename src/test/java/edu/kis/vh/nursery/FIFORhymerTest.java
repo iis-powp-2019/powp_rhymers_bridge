@@ -11,6 +11,6 @@ public class FIFORhymerTest {
     private FIFORhymer fifo = new FIFORhymer();
     @Test
     public void countOut() {
-        assertEquals(fifo.countOut(),-1);
+        assertEquals(fifo.countOut(),0);
     }
 }

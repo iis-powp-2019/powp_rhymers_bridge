@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.collections;
 
 public interface Collections {
 
-    int EMPTY_VALUE = -1;
+    int EMPTY_VALUE = 0;
 
     int getCurrentSize();
 

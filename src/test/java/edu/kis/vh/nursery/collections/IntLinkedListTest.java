@@ -25,7 +25,7 @@ IntLinkedList list = new IntLinkedList();
 
     @Test
     public void top() {
-        assertEquals(list.top(),-1);
+        assertEquals(list.top(),0);
         final int[] array = {1,2,3,4};
         for (int element: array) {
             list.push(element);
