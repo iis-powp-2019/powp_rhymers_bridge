@@ -811,7 +811,7 @@ function Sizzle( selector, context, results, seed ) {
 						context.setAttribute( "id", (nid = expando) );
 					}
 
-					// Prefix every selector in the list
+					// Prefix every selector in the collections
 					groups = tokenize( selector );
 					i = groups.length;
 					while ( i-- ) {
@@ -897,7 +897,7 @@ function assert( fn ) {
 
 /**
  * Adds the same handler for all of the specified attrs
- * @param {String} attrs Pipe-separated list of attributes
+ * @param {String} attrs Pipe-separated collections of attributes
  * @param {Function} handler The method that will be applied
  */
 function addHandle( attrs, handler ) {
@@ -2621,7 +2621,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 
 	results = results || [];
 
-	// Try to minimize operations if there is only one selector in the list and no seed
+	// Try to minimize operations if there is only one selector in the collections and no seed
 	// (the latter of which guarantees us context)
 	if ( match.length === 1 ) {
 
@@ -3201,23 +3201,23 @@ function createOptions( options ) {
 }
 
 /*
- * Create a callback list using the following parameters:
+ * Create a callback collections using the following parameters:
  *
- *	options: an optional list of space-separated options that will change how
- *			the callback list behaves or a more traditional option object
+ *	options: an optional collections of space-separated options that will change how
+ *			the callback collections behaves or a more traditional option object
  *
- * By default a callback list will act like an event callback list and can be
+ * By default a callback collections will act like an event callback collections and can be
  * "fired" multiple times.
  *
  * Possible options:
  *
- *	once:			will ensure the callback list can only be fired once (like a Deferred)
+ *	once:			will ensure the callback collections can only be fired once (like a Deferred)
  *
  *	memory:			will keep track of previous values and will call any callback added
- *					after the list has been fired right away with the latest "memorized"
+ *					after the collections has been fired right away with the latest "memorized"
  *					values (like a Deferred)
  *
- *	unique:			will ensure a callback can only be added once (no duplicate in the list)
+ *	unique:			will ensure a callback can only be added once (no duplicate in the collections)
  *
  *	stopOnFalse:	interrupt callings when a callback returns false
  *
@@ -3230,19 +3230,19 @@ jQuery.Callbacks = function( options ) {
 		createOptions( options ) :
 		jQuery.extend( {}, options );
 
-	var // Flag to know if list is currently firing
+	var // Flag to know if collections is currently firing
 		firing,
 
 		// Last fire value for non-forgettable lists
 		memory,
 
-		// Flag to know if list was already fired
+		// Flag to know if collections was already fired
 		fired,
 
 		// Flag to prevent firing
 		locked,
 
-		// Actual callback list
+		// Actual callback collections
 		list = [],
 
 		// Queue of execution data for repeatable lists
@@ -3285,7 +3285,7 @@ jQuery.Callbacks = function( options ) {
 			// Clean up if we're done firing for good
 			if ( locked ) {
 
-				// Keep an empty list if we have data for future add calls
+				// Keep an empty collections if we have data for future add calls
 				if ( memory ) {
 					list = [];
 
@@ -3299,7 +3299,7 @@ jQuery.Callbacks = function( options ) {
 		// Actual Callbacks object
 		self = {
 
-			// Add a callback or a collection of callbacks to the list
+			// Add a callback or a collection of callbacks to the collections
 			add: function() {
 				if ( list ) {
 
@@ -3330,7 +3330,7 @@ jQuery.Callbacks = function( options ) {
 				return this;
 			},
 
-			// Remove a callback from the list
+			// Remove a callback from the collections
 			remove: function() {
 				jQuery.each( arguments, function( _, arg ) {
 					var index;
@@ -3346,15 +3346,15 @@ jQuery.Callbacks = function( options ) {
 				return this;
 			},
 
-			// Check if a given callback is in the list.
-			// If no argument is given, return whether or not list has callbacks attached.
+			// Check if a given callback is in the collections.
+			// If no argument is given, return whether or not collections has callbacks attached.
 			has: function( fn ) {
 				return fn ?
 					jQuery.inArray( fn, list ) > -1 :
 					list.length > 0;
 			},
 
-			// Remove all callbacks from the list
+			// Remove all callbacks from the collections
 			empty: function() {
 				if ( list ) {
 					list = [];
@@ -3688,14 +3688,14 @@ jQuery.extend( {
 			},
 			deferred = {};
 
-		// Add list-specific methods
+		// Add collections-specific methods
 		jQuery.each( tuples, function( i, tuple ) {
 			var list = tuple[ 2 ],
 				stateString = tuple[ 5 ];
 
-			// promise.progress = list.add
-			// promise.done = list.add
-			// promise.fail = list.add
+			// promise.progress = collections.add
+			// promise.done = collections.add
+			// promise.fail = collections.add
 			promise[ tuple[ 1 ] ] = list.add;
 
 			// Handle state
@@ -3737,9 +3737,9 @@ jQuery.extend( {
 				return this;
 			};
 
-			// deferred.notifyWith = list.fireWith
-			// deferred.resolveWith = list.fireWith
-			// deferred.rejectWith = list.fireWith
+			// deferred.notifyWith = collections.fireWith
+			// deferred.resolveWith = collections.fireWith
+			// deferred.rejectWith = collections.fireWith
 			deferred[ tuple[ 0 ] + "With" ] = list.fireWith;
 		} );
 
@@ -5049,7 +5049,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add to the element's handler list, delegates in front
+			// Add to the element's handler collections, delegates in front
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
@@ -7913,7 +7913,7 @@ jQuery.fn.extend( {
 
 				while ( ( className = classNames[ i++ ] ) ) {
 
-					// Check each className given, space separated list
+					// Check each className given, space separated collections
 					if ( self.hasClass( className ) ) {
 						self.removeClass( className );
 					} else {
@@ -8204,7 +8204,7 @@ jQuery.extend( jQuery.event, {
 			event.target = elem;
 		}
 
-		// Clone any incoming data and prepend the event, creating the handler arg list
+		// Clone any incoming data and prepend the event, creating the handler arg collections
 		data = data == null ?
 			[ event ] :
 			jQuery.makeArray( data, [ event ] );
@@ -8691,7 +8691,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 	}
 
 	// If we found a dataType
-	// We add the dataType to the list if needed
+	// We add the dataType to the collections if needed
 	// and return the corresponding response
 	if ( finalDataType ) {
 		if ( finalDataType !== dataTypes[ 0 ] ) {
@@ -9042,7 +9042,7 @@ jQuery.extend( {
 		// Alias method option to type as per ticket #12004
 		s.type = options.method || options.type || s.method || s.type;
 
-		// Extract dataTypes list
+		// Extract dataTypes collections
 		s.dataTypes = ( s.dataType || "*" ).toLowerCase().match( rnothtmlwhite ) || [ "" ];
 
 		// A cross-domain request is in order when the origin doesn't match the current origin.

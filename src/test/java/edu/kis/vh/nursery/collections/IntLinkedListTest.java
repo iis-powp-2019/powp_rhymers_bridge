@@ -1,6 +1,5 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collections;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
