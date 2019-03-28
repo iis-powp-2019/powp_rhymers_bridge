@@ -30,6 +30,7 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(false, result);
 	}
 
+	//Test fails, because of implementation based on IntLinkedList
 	@Test
 	public void testIsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();

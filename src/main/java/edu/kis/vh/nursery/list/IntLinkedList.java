@@ -4,9 +4,10 @@ public class IntLinkedList {
 
 	private static final int INDEX_OF_EMPTY_STACK = -1;
 	private Node last;
-	private int i;
+	private int total = INDEX_OF_EMPTY_STACK;
 
-	public void push(int i) {
+	public void countIn(int i) {
+		total++;
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -16,7 +17,7 @@ public class IntLinkedList {
 		}
 	}
 
-	public boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
@@ -24,18 +25,22 @@ public class IntLinkedList {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return INDEX_OF_EMPTY_STACK;
 		return last.getValue();
 	}
 
-	public int pop() {
-		if (isEmpty())
-			return -1;
+	public int countOut() {
+		total--;
+		if (callCheck())
+			return INDEX_OF_EMPTY_STACK;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
 
+	public int getTotal() {
+		return total;
+	}
 }
