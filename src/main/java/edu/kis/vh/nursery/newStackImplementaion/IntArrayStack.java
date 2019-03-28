@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.newStackImplementaion;
 
 public class IntArrayStack implements StackInterface{
 
-	private static final int error = -1;
+	private static final int error = 0;
 
 	private static final int maxArraySize = 12;
 

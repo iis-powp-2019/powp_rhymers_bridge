@@ -50,7 +50,7 @@ public class IntLinkedList implements StackInterface{
 	
 	public int peekaboo() {
 		if (callCheck())
-			return -1;
+			return 0;
 		return last.value;
 	}
 	
@@ -60,7 +60,7 @@ public class IntLinkedList implements StackInterface{
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return -1;
+			return 0;
 		int ret = last.value;
 		last = last.getPrev();
 		size--;
