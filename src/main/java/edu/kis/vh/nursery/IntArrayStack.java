@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack {
+
 	private static final int STACK_FULL_VALUE = 11;
 
 	private static final int STACK_EMPTY_VALUE = -1;
@@ -28,7 +29,7 @@ public class IntArrayStack {
 		return total == STACK_FULL_VALUE;
 	}
 
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return STACK_EMPTY_VALUE;
 		return numbers[total];
@@ -39,6 +40,5 @@ public class IntArrayStack {
 			return STACK_EMPTY_VALUE;
 		return numbers[total--];
 	}
-
 
 }
