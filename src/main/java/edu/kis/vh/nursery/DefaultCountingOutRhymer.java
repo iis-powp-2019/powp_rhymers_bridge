@@ -4,61 +4,37 @@ package edu.kis.vh.nursery;
  * DefaultCountingOutRhymer is counting-out rhyme used to conducting complicated number games
  */
 public class DefaultCountingOutRhymer {
+    private IntArrayStack intArrayStack;
 
-    private static final int CAPACITY = 12;
-    private static final int STACK_EMPTY_VALUE = -1;
-    private static final int STACK_FULL_VALUE = 11;
+    public DefaultCountingOutRhymer() {
+        this.intArrayStack = new IntArrayStack();
+    }
 
-    private int[] NUMBERS = new int[CAPACITY];
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-    private int STACK_EMPTY_INDICATOR = STACK_EMPTY_VALUE; //STACK_EMPTY_INDICATOR wskazuje ostatni element
-
-    /**
-     * @return STACK_EMPTY_INDICATOR
-     */
     public int getSTACK_EMPTY_INDICATOR() {
-        return STACK_EMPTY_INDICATOR;
+        return intArrayStack.getSTACK_EMPTY_INDICATOR();
     }
 
-    /**
-     * @param in value added to stack
-     */
-    public void countIn(final int in) {
-        if (!isFull())
-            NUMBERS[++STACK_EMPTY_INDICATOR] = in;
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
     }
 
-    /**
-     * @return true if stack is empty
-     */
     public boolean callCheck() {
-        return STACK_EMPTY_INDICATOR == STACK_EMPTY_VALUE;
+        return intArrayStack.callCheck();
     }
 
-    /**
-     * @return true if stack is full
-     */
     public boolean isFull() {
-        return STACK_EMPTY_INDICATOR == STACK_FULL_VALUE;
+        return intArrayStack.isFull();
     }
 
-    /**
-     * @return STACK_EMPTY_VALUE if stack is empty, if stack is not empty then returns value pointed by STACK_EMPTY_INDICATOR
-     */
-    protected int peekaboo() {
-        if (callCheck())
-            return STACK_EMPTY_VALUE;
-        return NUMBERS[STACK_EMPTY_INDICATOR];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    /**
-     * @return STACK_EMPTY_VALUE if stack is empty, if stack is not empty then returns value pointed by STACK_EMPTY_INDICATOR
-     * and after that decrements STACK_EMPTY_INDICATOR
-     */
     public int countOut() {
-        if (callCheck())
-            return STACK_EMPTY_VALUE;
-        return NUMBERS[STACK_EMPTY_INDICATOR--];
+        return intArrayStack.countOut();
     }
-
 }
