@@ -7,7 +7,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		IntArrayStack rhymer = new IntArrayStack();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -43,7 +43,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		IntArrayStack rhymer = new IntArrayStack();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
