@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntLinkedList;
 import edu.kis.vh.nursery.stack.Stackable;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private final IntLinkedList temp = new IntLinkedList();
 
 	public FIFORhymer(Stackable stack) {
 		super(stack);
@@ -16,12 +17,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	@Override
 	public int countOut() {
 		while (!callCheck())
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		final int ret = temp.countOut();
+		final int ret = temp.pop();
 
-		while (!temp.callCheck())
-			countIn(temp.countOut());
+		while (!temp.isEmpty())
+			countIn(temp.pop());
 
 		return ret;
 	}
@@ -29,3 +30,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 
 //Ctrl + strzalka w lewo porusza się po otwartych klasach wedle historii otworzenia wstecz, a ctrl + strzalka w prawo w przód
+
+//IntLinkedList będzie najlepszym wyborem, ponieważ temp musi być w stanie pomieścić różną ilość elementów w zależności
+//od wielkości właściwego stosu. Jeżeli temp byłby IntArrayStack, mogłoby dojść do wyjścia poza dopuszczalny
+//obszar pamięci i rzucenia wyjątku ArrayIndexOutOfBoundsException
