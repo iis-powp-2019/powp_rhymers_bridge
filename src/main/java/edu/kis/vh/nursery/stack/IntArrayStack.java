@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.Stackable;
+package edu.kis.vh.nursery.stack;
 
 /**
  * Class implementing default stack functionality

@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.stack;
 
 public interface Stackable {
     void push(int i);
