@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * Stores integers inside linked list, where each item has reference to previous and next one
  */
-class IntegerLinkedList {
+public class IntegerLinkedList {
 
 	// EMPTY_STACK_VALUE (DefaultCountingOutRhymer) != EMPTY_LIST_VALUE (here)
 	private static final int EMPTY_LIST_VALUE = -1;
@@ -14,7 +14,7 @@ class IntegerLinkedList {
 	 * Add integer to a list
 	 * @param value Integer to be added
 	 */
-	private void push(int value) {
+	public void push(int value) {
 		if (lastNode == null)
 			lastNode = new Node(value);
 		else {
@@ -28,7 +28,7 @@ class IntegerLinkedList {
 	 * Check whether list is empty
 	 * @return true if list is empty
 	 */
-	private boolean isEmpty() {
+	public boolean isEmpty() {
 		return lastNode == null;
 	}
 
@@ -36,7 +36,7 @@ class IntegerLinkedList {
 	 * Check whether list is full
 	 * @return true if list is full
 	 */
-	private boolean isFull() {
+	public boolean isFull() {
 		return false;
 	}
 
@@ -45,7 +45,7 @@ class IntegerLinkedList {
 	 * @return Firstly added integer, or EMPTY_LIST_VALUE if list is empty
 	 * @see #pop()
 	 */
-	private int getTop() {
+	public int getTop() {
 		if (isEmpty())
 			return EMPTY_LIST_VALUE;
 		return lastNode.getValue();
@@ -56,7 +56,7 @@ class IntegerLinkedList {
 	 * @return Recently added integer, or EMPTY_LIST_VALUE if list is empty
 	 * @see #getTop()
 	 */
-	private int pop() {
+	public int pop() {
 		if (isEmpty())
 			return EMPTY_LIST_VALUE;
 		int poppedValue = lastNode.getValue();
