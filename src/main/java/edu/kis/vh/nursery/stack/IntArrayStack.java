@@ -16,7 +16,7 @@ public class IntArrayStack implements Stackable {
 	@Override
 	public int getTotal() { return total; }
 
-	private int total = EMPTY_STACK_VALUE;
+	private int total = EMPTY_STACK_VALUE-1;
 
 	/**
 	 * Places passed argument onto stack
@@ -34,7 +34,7 @@ public class IntArrayStack implements Stackable {
 	 */
 	@Override
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return total == EMPTY_STACK_VALUE-1;
 	}
 
 	/**

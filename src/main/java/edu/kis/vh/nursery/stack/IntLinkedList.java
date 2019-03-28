@@ -36,7 +36,7 @@ public class IntLinkedList implements Stackable {
 
 	private Node last;
 	private final int i=0;
-	private int total = EMPTY_STACK_VALUE;
+	private int total = EMPTY_STACK_VALUE-1;
 
 	@Override
 	public void push(final int i) {
