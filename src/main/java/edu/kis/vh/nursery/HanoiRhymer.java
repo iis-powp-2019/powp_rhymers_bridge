@@ -10,9 +10,11 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalOfRejected;
     }
 
-    public HanoiRhymer(){super();}
+    public HanoiRhymer() {
+        super();
+    }
 
-    public HanoiRhymer(Collections collections){
+    public HanoiRhymer(Collections collections) {
         super(collections);
     }
 

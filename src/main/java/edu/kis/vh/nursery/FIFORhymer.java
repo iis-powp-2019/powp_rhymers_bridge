@@ -1,23 +1,28 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.collections.Collections;
+import edu.kis.vh.nursery.collections.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRhymer countingOfRhymer = new DefaultCountingOutRhymer();
+    //Najlepsza będzie linkedList ponieważ w liście zawsze bez przechodzenia mamy dostęp do jej ogona
+    private final DefaultCountingOutRhymer TEMP = new DefaultCountingOutRhymer(new IntLinkedList());
 
-    public FIFORhymer(){ super();}
+    public FIFORhymer() {
+        super();
+    }
 
-    public FIFORhymer(Collections collections){
+    public FIFORhymer(Collections collections) {
         super(collections);
     }
+
     @Override
     public int countOut() {
         while (!callCheck())
-            countingOfRhymer.countIn(super.countOut());
-        int ret = countingOfRhymer.countOut();
-        while (!countingOfRhymer.callCheck())
-            countIn(countingOfRhymer.countOut());
+            TEMP.countIn(super.countOut());
+        int ret = TEMP.countOut();
+        while (!TEMP.callCheck())
+            countIn(TEMP.countOut());
         return ret;
     }
 }

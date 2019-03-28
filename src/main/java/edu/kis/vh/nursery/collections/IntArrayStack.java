@@ -31,7 +31,7 @@ public class IntArrayStack implements Collections {
 
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY_VALUE;
         return arrayOfRhymers[currentSize--];
     }
 
