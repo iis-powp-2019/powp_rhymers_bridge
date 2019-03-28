@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRhymer {
+public class IntArrayStack {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int FULL_STACK_VALUE = 11;
@@ -22,17 +22,17 @@ public class DefaultCountingOutRhymer {
 	boolean isEmpty() {
 		return totalCount == EMPTY_STACK_VALUE;
 	}
-
+		
 	boolean isFull() {
 		return totalCount == FULL_STACK_VALUE;
 	}
-
+		
 	int getPeekaboo() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return numbers[totalCount];
 	}
-
+			
 	int countOut() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
