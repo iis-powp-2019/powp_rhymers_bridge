@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	private static final int STACK_CAPACITY = 12;
+	/*private static final int STACK_CAPACITY = 12;
 
 	private static final int EMPTY_STACK_TOP = -1;
 
@@ -37,6 +37,6 @@ public class DefaultCountingOutRhymer {
 		if (callCheck())
 			return EMPTY_STACK_TOP;
 		return numbers[total--];
-	}
+	}*/
 
 }
