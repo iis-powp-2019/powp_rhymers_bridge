@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.Stack;
-
 /**
  * @author Dominik Class implementing int doulby linked list
  */
