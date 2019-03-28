@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * Stack of integers
  */
-public class IntLinkedList {
+public class IntLinkedList implements Stackable {
 
 	private static final int STACK_EMPTY = -1;
 	/**
@@ -14,14 +14,14 @@ public class IntLinkedList {
 	private int total = STACK_EMPTY;
 	//int i;
 
-	public int getTotal() {
+	@Override public int getTotal() {
 		return total;
 	}
 
 	/**
 	 * @param i element to be pushed
 	 */
-	public void countIn(int i) {
+	@Override public void countIn(int i) {
 		total++;
 		if (last == null)
 			last = new Node(i);
@@ -36,21 +36,21 @@ public class IntLinkedList {
 	/**
 	 * @return returns true if the stack is empty, false if stack is not empty
 	 */
-	public boolean callCheck() {
+	@Override public boolean callCheck() {
 		return last == null;
 	}
 
 	/**
 	 * @return returns true if the stack is full, false if stack is not full
 	 */
-	public boolean isFull() {
+	@Override public boolean isFull() {
 		return false;
 	}
 
 	/**
 	 * @return returns the value of the value at the top of the stack if the stack is not empty. If the stack is empty it returns -1
 	 */
-	public int peekaboo() {
+	@Override public int peekaboo() {
 		if (callCheck())
 			return STACK_EMPTY;
 		return last.getValue();
@@ -59,7 +59,7 @@ public class IntLinkedList {
 	/**
 	 * @return returns the value of the top of the stack and cuts it our of the stack. If the stack is empty it returns -1
 	 */
-	public int countOut() {
+	@Override public int countOut() {
 		total--;
 		if (callCheck())
 			return STACK_EMPTY;

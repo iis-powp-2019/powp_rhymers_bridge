@@ -1,38 +1,40 @@
 package edu.kis.vh.nursery.stack;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.Stackable;
+
+public class IntArrayStack implements Stackable {
 
     private static final int STACK_EMPTY = -1;
     private static final int STACK_FULL = 11;
     private static final int STACK_CAPACITY = 12;
     private int[] NUMBERS = new int[STACK_CAPACITY];
 
-    public int getTotal() {
+    @Override public int getTotal() {
         return total;
     }
 
     private int total = STACK_EMPTY;
 
-    public void countIn(int in) {
+    @Override public void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
-    public boolean callCheck() {
+    @Override public boolean callCheck() {
         return total == STACK_EMPTY;
     }
 
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return total == STACK_FULL;
     }
 
-    protected int peekaboo() {
+    @Override public int peekaboo() {
         if (callCheck())
             return STACK_EMPTY;
         return NUMBERS[total];
     }
 
-    protected int countOut() {
+    @Override public int countOut() {
         if (callCheck())
             return STACK_EMPTY;
         return NUMBERS[total--];
