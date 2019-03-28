@@ -1,14 +1,21 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.ListRhymerFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
+import edu.kis.vh.nursery.factory.StackRhymerFactory;
 
 class RhymersDemo {
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
+        Rhymersfactory stackFactory= new StackRhymerFactory();
+        Rhymersfactory listFactory= new ListRhymerFactory();
+
 
         testRhymers(factory);
+        testRhymers(stackFactory);
+        testRhymers(listFactory);
 
     }
 
