@@ -3,6 +3,8 @@ package edu.kis.vh.nursery.list;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.nursery.newStackImplementaion.IntLinkedList;
+
 public class IntLinkedListTest {
 
 	@Test

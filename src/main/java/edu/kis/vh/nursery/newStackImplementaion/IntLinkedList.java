@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.newStackImplementaion;
 
 /**
  * @author modyfikował Piotr Marczewski 
