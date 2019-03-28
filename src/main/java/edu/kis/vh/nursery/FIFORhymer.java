@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.newStackImplementaion.IntLinkedList;
+import edu.kis.vh.nursery.newStackImplementaion.StackInterface;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
@@ -25,8 +26,8 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		super();
 	}
 
-	public FIFORhymer(IntLinkedList linkedList) {
-		super(linkedList);
+	public FIFORhymer(StackInterface stackInterface) {
+		super(stackInterface);
 	}
 }
 // alt + " strzałka " przełączanie kart 

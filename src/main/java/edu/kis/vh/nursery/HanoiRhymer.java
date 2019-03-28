@@ -4,6 +4,8 @@ import edu.kis.vh.nursery.newStackImplementaion.StackInterface;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
+	private int totalRejected = 0;
+	
 	public HanoiRhymer() {
 		super();
 	}
@@ -11,8 +13,6 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 	public HanoiRhymer(StackInterface stackinterface) {
 		super(stackinterface);
 	}
-
-	private int totalRejected = 0;
 	
 	protected int reportRejected() {
 		return totalRejected;

@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.newStackImplementaion.StackInterface;
 
 public class DefaultCountingOutRhymer {
 	
-	private StackInterface linkedList;
+	protected StackInterface linkedList;
 
 	public DefaultCountingOutRhymer(StackInterface linkedList) { 
 		super();
