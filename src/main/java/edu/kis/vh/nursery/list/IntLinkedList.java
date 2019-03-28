@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.Stackable;
+
 class Node {
 
 	private final int value;
@@ -32,13 +34,14 @@ class Node {
 }
 
 
-public class IntLinkedList {
+public class IntLinkedList implements Stackable {
 
 	private static final int EMPTY_VALUE = -1;
 	private Node last;
 	private final int i=0;
 	private int total = EMPTY_VALUE;
 
+	@Override
 	public void push(final int i) {
 		if (last == null)
 			last = new Node(i);
@@ -50,25 +53,30 @@ public class IntLinkedList {
 		total++;
 	}
 
+	@Override
 	public int getTotal() {
 		return total;
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
 
+	@Override
 	public int top() {
 		if (isEmpty())
 			return EMPTY_VALUE;
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_VALUE;

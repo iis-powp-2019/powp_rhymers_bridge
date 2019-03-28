@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 /**
  * Class implementing default stack functionality
  */
-public class IntArrayStack {
+public class IntArrayStack implements Stackable  {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int STACK_CAPACITY = 12;
@@ -14,6 +14,7 @@ public class IntArrayStack {
 	 * Gets total amount of numbers placed on stack minus 1
 	 * @return total amount of numbers placed on stack minus 1
 	 */
+	@Override
 	public int getTotal() { return total; }
 
 	private int total = EMPTY_STACK_VALUE;
@@ -22,7 +23,8 @@ public class IntArrayStack {
 	 * Places passed argument onto stack
 	 * @param in argument passed onto stack
 	 */
-	public void countIn(final int in) {
+	@Override
+	public void push(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
@@ -31,7 +33,8 @@ public class IntArrayStack {
 	 * Checks if stack is empty
 	 * @return true if stack is empty, false otherwise
 	 */
-	public boolean callCheck() {
+	@Override
+	public boolean isEmpty() {
 		return total == EMPTY_STACK_VALUE;
 	}
 
@@ -39,6 +42,7 @@ public class IntArrayStack {
 	 * Checks if stack is full
 	 * @return true if stack is full, false otherwise
 	 */
+	@Override
 	public boolean isFull() {
 		return total == STACK_CAPACITY -1;
 	}
@@ -47,8 +51,9 @@ public class IntArrayStack {
 	 * Peeks last value on stack
 	 * @return -1 if stack is empty, last value placed on stack otherwise
 	 */
-	protected int peekaboo() {
-		if (callCheck())
+	@Override
+	 public int top() {
+		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return numbers[total];
 	}
@@ -57,8 +62,9 @@ public class IntArrayStack {
 	 * Removes last value on stack
 	 * @return -1 if stack is empty, last value placed on stack otherwise
 	 */
-	public int countOut() {
-		if (callCheck())
+	@Override
+	public int pop() {
+		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return numbers[total--];
 	}
