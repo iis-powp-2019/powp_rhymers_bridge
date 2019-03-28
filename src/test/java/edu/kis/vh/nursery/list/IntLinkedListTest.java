@@ -10,13 +10,13 @@ public class IntLinkedListTest {
 	{
 		IntLinkedList lList = new IntLinkedList();
 		
-		lList.push(5);
-		lList.push(7);
+		lList.countIn(5);
+		lList.countIn(7);
 		
-		Assert.assertEquals(7, lList.top());
-		lList.pop();
+		Assert.assertEquals(7, lList.peekaboo());
+		lList.countOut();
 		
-		Assert.assertEquals(5, lList.top());
+		Assert.assertEquals(5, lList.peekaboo());
 	}
 	
 	@Test
@@ -24,12 +24,12 @@ public class IntLinkedListTest {
 	{
 		IntLinkedList lList = new IntLinkedList();
 		
-		lList.push(5);
-		lList.push(7);
+		lList.countIn(5);
+		lList.countIn(7);
 		
-		lList.pop();
+		lList.peekaboo();
 		
-		Assert.assertEquals(5, lList.top());
+		Assert.assertEquals(5, lList.peekaboo());
 	}
 	
 	@Test
@@ -37,10 +37,10 @@ public class IntLinkedListTest {
 	{
 		IntLinkedList lList = new IntLinkedList();
 		
-		Assert.assertEquals(true, lList.isEmpty());
+		Assert.assertEquals(true, lList.callCheck());
 		
-		lList.push(5);
-		Assert.assertEquals(false, lList.isEmpty());
+		lList.countIn(5);
+		Assert.assertEquals(false, lList.callCheck());
 	}
 	
 	/**
@@ -51,10 +51,10 @@ public class IntLinkedListTest {
 	{
 		IntLinkedList lList = new IntLinkedList();
 		
-		lList.push(5);
-		lList.push(7);
+		lList.countIn(5);
+		lList.countIn(7);
 		
-		Assert.assertEquals(7, lList.top());
+		Assert.assertEquals(7, lList.peekaboo());
 	}
 	
 	/**
@@ -65,14 +65,14 @@ public class IntLinkedListTest {
 	{
 		IntLinkedList lList = new IntLinkedList();
 		
-		lList.push(5);
-		lList.push(7);
+		lList.countIn(5);
+		lList.countIn(7);
 		
 		Assert.assertEquals(false, lList.isFull());
 		
 		for(int i = 0; i < 10; i++)
 		{
-			lList.push(5);
+			lList.countIn(5);
 		}
 		
 		Assert.assertEquals(true, lList.isFull());

@@ -12,7 +12,7 @@ public class IntLinkedList {
 	/**
 	 * @param i Parametr stosowany w metodzie push, jest to wartość jaka jest dodawana do listy.
 	 */
-	protected void push(int i) {
+	public void countIn(int i) {
 		if (last == null){
 			last = new Node(i);
 			size++;
@@ -29,7 +29,7 @@ public class IntLinkedList {
 	 * @return Zwraca wartość boolean true jeśli lista jest pusta.
 	 */
 	
-	protected boolean isEmpty() {
+	public boolean callCheck() {
 		if(last == null) return true;
 		else return false;
 	}
@@ -38,7 +38,7 @@ public class IntLinkedList {
 	 * @return Zwraca wartość boolean true jeśli lista jest zapełniona.
 	 */
 	
-	protected boolean isFull() {
+	public boolean isFull() {
 		if(size == 12) return true;
 		else return false;
 	}
@@ -47,8 +47,8 @@ public class IntLinkedList {
 	 * @return Metoda zwraca ostatnio dodaną wartość do listy.
 	 */
 	
-	protected int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return -1;
 		return last.value;
 	}
@@ -57,8 +57,8 @@ public class IntLinkedList {
 	 * @return Metoda zdejmuje jeden element z listy.
 	 */
 	
-	protected int pop() {
-		if (isEmpty())
+	public int countOut() {
+		if (callCheck())
 			return -1;
 		int ret = last.value;
 		last = last.getPrev();
