@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 /**
  * @author Maciek Implementing a stack of integers with pointer on last added element.
  */
-public class IntArrayStack {
+public class IntArrayStack implements Collections {
 
     /**
      * Index indicating that stack has no elements
@@ -25,35 +25,36 @@ public class IntArrayStack {
      */
     private int total = -1;
 
-    /**
-     * Add new element to stack and increase index of stack last element
-     *
-     * @param in
-     *            value added to stack
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#countIn(int)
      */
+    @Override
     public void countIn(final int in) {
         if (!isFull()) {
             numbers[++total] = in;
         }
     }
 
-    /**
-     * @return true if stack is empty
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#callCheck()
      */
+    @Override
     public boolean callCheck() {
         return total == STACK_EMPTY_INDEX;
     }
 
-    /**
-     * @return true if stack is full, check the overflow
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#isFull()
      */
+    @Override
     public boolean isFull() {
         return total == STACK_MAX_SIZE - 1;
     }
 
-    /**
-     * @return -1 if stack is empty or value in stack last element index
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#peekaboo()
      */
+    @Override
     public int peekaboo() {
         if (callCheck()) {
             return -1;
@@ -61,9 +62,10 @@ public class IntArrayStack {
         return numbers[total];
     }
 
-    /**
-     * @return -1 if stack is empty or value in last element index of collector and decrease last element index by 1
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#countOut()
      */
+    @Override
     public int countOut() {
         if (callCheck()) {
             return -1;
@@ -71,9 +73,10 @@ public class IntArrayStack {
         return numbers[total--];
     }
 
-    /**
-     * @return last element index of stack
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Collections#getTotal()
      */
+    @Override
     public int getTotal() {
         return total;
     }

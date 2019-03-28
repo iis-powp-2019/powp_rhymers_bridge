@@ -1,13 +1,16 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.Collections;
+
+public class IntLinkedList implements Collections {
 
     private static final int EMPTY_LIST_VALUE = 0;
     private Node last;
     private int i;
     private int total = 0;
 
-    public void push(int i) {
+    @Override
+    public void countIn(int i) {
         if (last == null) {
             last = new Node(i);
         } else {
@@ -19,23 +22,27 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    @Override
+    public boolean callCheck() {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
-    public int top() {
-        if (isEmpty()) {
+    @Override
+    public int peekaboo() {
+        if (callCheck()) {
             return EMPTY_LIST_VALUE;
         }
         return last.getValue();
     }
 
-    public int pop() {
-        if (isEmpty()) {
+    @Override
+    public int countOut() {
+        if (callCheck()) {
             return EMPTY_LIST_VALUE;
         }
         total--;
@@ -44,6 +51,7 @@ public class IntLinkedList {
         return ret;
     }
 
+    @Override
     public int getTotal() {
         return total;
     }

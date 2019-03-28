@@ -19,11 +19,11 @@ public class DefaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        intLinkedList.push(in);
+        intLinkedList.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return intLinkedList.callCheck();
     }
 
     public boolean isFull() {
@@ -31,8 +31,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public int countOut() {
-        return intLinkedList.pop();
-        // return intArrayStack.countOut();
+        return intLinkedList.countOut();
     }
 
     public int getTotal() {
@@ -40,7 +39,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        return intLinkedList.top();
+        return intLinkedList.peekaboo();
     }
 
 }
