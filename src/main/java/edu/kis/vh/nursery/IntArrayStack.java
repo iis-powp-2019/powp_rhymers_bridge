@@ -15,28 +15,28 @@ public class IntArrayStack {
 
     private int total = TOTAL_VALUE;
 
-    protected void countIn(int in) {
+    public void countIn(int in) {
         if (!isFull()) {
             numbers[++total] = in;
         }
     }
 
-    protected boolean callCheck() {
+    public boolean callCheck() {
         return total == TOTAL_VALUE;
     }
 
-    protected boolean isFull() {
+    public boolean isFull() {
         return total == TOTAL_FULL_VALUE;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) {
             return TOTAL_VALUE;
         }
         return numbers[total];
     }
 
-    protected int countOut() {
+    public int countOut() {
         if (callCheck()) {
             return TOTAL_VALUE;
         }
@@ -47,15 +47,15 @@ public class IntArrayStack {
         return total;
     }
 
-    private int[] getNumbers() {
+    public int[] getNumbers() {
         return numbers;
     }
 
-    private static int getMaxSize() {
+    public static int getMaxSize() {
         return MAX_SIZE;
     }
 
-    private static int getTotalFullValue() {
+    public static int getTotalFullValue() {
         return TOTAL_FULL_VALUE;
     }
 }
