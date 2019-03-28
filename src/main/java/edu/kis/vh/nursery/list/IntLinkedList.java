@@ -4,6 +4,11 @@ public class IntLinkedList {
 
     private final int EMPTY_NODE_VALUE = -1;
     private Node last;
+    private int currentSize = 0;
+
+    public int getCurrentSize() {
+        return currentSize;
+    }
 
     public void push(int numberElement) {
         if (last == null)
@@ -13,6 +18,7 @@ public class IntLinkedList {
             last.getNext().setPrev(last);
             last = last.getNext();
         }
+        currentSize++;
     }
 
     public boolean isEmpty() {
@@ -34,7 +40,9 @@ public class IntLinkedList {
             return EMPTY_NODE_VALUE;
         int ret = last.getValue();
         last = last.getPrev();
+        currentSize--;
         return ret;
+
     }
 
     class Node {

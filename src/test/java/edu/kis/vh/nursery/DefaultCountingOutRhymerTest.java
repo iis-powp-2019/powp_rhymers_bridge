@@ -9,7 +9,7 @@ public class DefaultCountingOutRhymerTest {
     private DefaultCountingOutRhymer testObject = new DefaultCountingOutRhymer();
     @Test
     public void getCurrentSize() {
-        assertEquals(testObject.getCurrentSize(),-1);
+        assertEquals(testObject.getCurrentSize(),0);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class DefaultCountingOutRhymerTest {
         for (int element: array) {
             testObject.countIn(element);
         }
-        assertEquals(testObject.getCurrentSize(),3);
+        assertEquals(testObject.getCurrentSize(),4);
     }
 
     @Test
