@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class DefaultRhymersFactoryTest {
 
-    DefaultRhymersFactory defaultFactory = new DefaultRhymersFactory();
+    private DefaultRhymersFactory defaultFactory = new DefaultRhymersFactory();
     @Test
     public void getStandardRhymer() {
         assertNotNull(defaultFactory.getStandardRhymer());

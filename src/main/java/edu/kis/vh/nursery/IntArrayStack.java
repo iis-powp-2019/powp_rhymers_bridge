@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+class IntArrayStack {
 
     private final int CAPACITY = 12;
     private final int EMPTY_VALUE = -1;
@@ -24,7 +24,7 @@ public class IntArrayStack {
         return currentSize == 11;
     }
 
-    protected int peekaboo() {
+    int peekaboo() {
         if (callCheck())
             return EMPTY_VALUE;
         return arrayOfRhymers[currentSize];
