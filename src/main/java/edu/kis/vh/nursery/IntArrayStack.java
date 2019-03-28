@@ -6,11 +6,11 @@ public class IntArrayStack {
     private static final int STACK_VALUE_ON_STARTING_POSITION = -1;
     private int[] numbers = new int[12];
 
+    private int total = STACK_STARTING_POSITION;
+
     public int getTotal() {
         return total;
     }
-
-    private int total = STACK_STARTING_POSITION;
 
     public void countIn(int in) {
         if (!isFull())
