@@ -34,10 +34,9 @@ class Node {
 
 public class IntLinkedList implements Stackable {
 
-	private static final int EMPTY_VALUE = -1;
 	private Node last;
 	private final int i=0;
-	private int total = EMPTY_VALUE;
+	private int total = EMPTY_STACK_VALUE;
 
 	@Override
 	public void push(final int i) {
@@ -70,14 +69,14 @@ public class IntLinkedList implements Stackable {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_VALUE;
+			return EMPTY_STACK_VALUE;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_VALUE;
+			return EMPTY_STACK_VALUE;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		total--;
