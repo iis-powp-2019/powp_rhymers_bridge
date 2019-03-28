@@ -10,12 +10,19 @@ public class IntLinkedList {
 	 * Last value of the stack
 	 */
 	private Node last;
+
+	private int total = STACK_EMPTY;
 	//int i;
+
+	public int getTotal() {
+		return total;
+	}
 
 	/**
 	 * @param i element to be pushed
 	 */
-	private void push(int i) {
+	public void countIn(int i) {
+		total++;
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -29,22 +36,22 @@ public class IntLinkedList {
 	/**
 	 * @return returns true if the stack is empty, false if stack is not empty
 	 */
-	private boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
 	/**
 	 * @return returns true if the stack is full, false if stack is not full
 	 */
-	private boolean isFull() {
+	public boolean isFull() {
 		return false;
 	}
 
 	/**
 	 * @return returns the value of the value at the top of the stack if the stack is not empty. If the stack is empty it returns -1
 	 */
-	private int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return STACK_EMPTY;
 		return last.getValue();
 	}
@@ -52,8 +59,9 @@ public class IntLinkedList {
 	/**
 	 * @return returns the value of the top of the stack and cuts it our of the stack. If the stack is empty it returns -1
 	 */
-	private int pop() {
-		if (isEmpty())
+	public int countOut() {
+		total--;
+		if (callCheck())
 			return STACK_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
