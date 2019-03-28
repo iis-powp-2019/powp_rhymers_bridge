@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * @author modyfikował Piotr Marczewski 
  */
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface{
 
 	public Node last;
 	private int i;
@@ -12,6 +12,7 @@ public class IntLinkedList {
 	/**
 	 * @param i Parametr stosowany w metodzie push, jest to wartość jaka jest dodawana do listy.
 	 */
+	@Override
 	public void countIn(int i) {
 		if (last == null){
 			last = new Node(i);
@@ -28,7 +29,7 @@ public class IntLinkedList {
 	/**
 	 * @return Zwraca wartość boolean true jeśli lista jest pusta.
 	 */
-	
+	@Override
 	public boolean callCheck() {
 		if(last == null) return true;
 		else return false;
@@ -37,7 +38,7 @@ public class IntLinkedList {
 	/**
 	 * @return Zwraca wartość boolean true jeśli lista jest zapełniona.
 	 */
-	
+	@Override
 	public boolean isFull() {
 		if(size == 12) return true;
 		else return false;
@@ -56,7 +57,7 @@ public class IntLinkedList {
 	/**
 	 * @return Metoda zdejmuje jeden element z listy.
 	 */
-	
+	@Override
 	public int countOut() {
 		if (callCheck())
 			return -1;

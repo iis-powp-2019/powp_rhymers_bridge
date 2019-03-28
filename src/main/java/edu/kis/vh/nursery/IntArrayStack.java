@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
+import edu.kis.vh.nursery.list.StackInterface;
 
-public class IntArrayStack {
+public class IntArrayStack implements StackInterface{
 
 	private static final int error = -1;
 
@@ -10,15 +11,18 @@ public class IntArrayStack {
 
 	private int total = error;
 
+	@Override
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 	
+	@Override
 	public boolean callCheck() {
 		return total == error;
 	}
 	
+	@Override
 	public boolean isFull() {
 		return total == 11;
 	}
@@ -33,6 +37,7 @@ public class IntArrayStack {
 		return numbers[total];
 	}
 	
+	@Override
 	public int countOut() {
 		if (callCheck())
 			return error;
