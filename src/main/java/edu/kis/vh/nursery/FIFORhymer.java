@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.IntArrayStack;
 import edu.kis.vh.nursery.storage.IntStorageInterface;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
@@ -13,7 +13,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         super();
     }
 
-	private final IntStorageInterface temp = new IntLinkedList();
+	private final IntStorageInterface temp = new IntArrayStack();
 	
 	@Override
 	public int countOut() {
