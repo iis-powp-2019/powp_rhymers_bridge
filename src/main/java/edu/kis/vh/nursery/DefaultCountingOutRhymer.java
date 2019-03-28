@@ -9,7 +9,7 @@ public class DefaultCountingOutRhymer {
 
     private Collections intLinkedList;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    public DefaultCountingOutRhymer(Collections intLinkedList) {
         super();
         this.intLinkedList = intLinkedList;
     }

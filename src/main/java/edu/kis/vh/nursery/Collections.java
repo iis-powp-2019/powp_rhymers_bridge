@@ -8,6 +8,12 @@ public interface Collections {
      * @param in
      *            value added to stack
      */
+
+    /**
+     * Index indicating that stack has no elements
+     */
+    public static final int STACK_COLLECTION_INDEX = -1;
+
     void countIn(int in);
 
     /**

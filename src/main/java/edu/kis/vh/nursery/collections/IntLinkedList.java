@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.Collections;
 
 public class IntLinkedList implements Collections {
 
-    private static final int EMPTY_LIST_VALUE = 0;
     private Node last;
     private int i;
     private int total = 0;
@@ -35,7 +34,7 @@ public class IntLinkedList implements Collections {
     @Override
     public int peekaboo() {
         if (callCheck()) {
-            return EMPTY_LIST_VALUE;
+            return STACK_COLLECTION_INDEX;
         }
         return last.getValue();
     }
@@ -43,7 +42,7 @@ public class IntLinkedList implements Collections {
     @Override
     public int countOut() {
         if (callCheck()) {
-            return EMPTY_LIST_VALUE;
+            return STACK_COLLECTION_INDEX;
         }
         total--;
         int ret = last.getValue();

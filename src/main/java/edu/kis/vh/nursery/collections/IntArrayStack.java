@@ -8,11 +8,6 @@ import edu.kis.vh.nursery.Collections;
 public class IntArrayStack implements Collections {
 
     /**
-     * Index indicating that stack has no elements
-     */
-    private static final int STACK_EMPTY_INDEX = -1;
-
-    /**
      * Index of stack overflow
      */
     private static final int STACK_MAX_SIZE = 12;
@@ -27,7 +22,9 @@ public class IntArrayStack implements Collections {
      */
     private int total = -1;
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#countIn(int)
      */
     @Override
@@ -37,15 +34,19 @@ public class IntArrayStack implements Collections {
         }
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#callCheck()
      */
     @Override
     public boolean callCheck() {
-        return total == STACK_EMPTY_INDEX;
+        return total == STACK_COLLECTION_INDEX;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#isFull()
      */
     @Override
@@ -53,7 +54,9 @@ public class IntArrayStack implements Collections {
         return total == STACK_MAX_SIZE - 1;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#peekaboo()
      */
     @Override
@@ -64,7 +67,9 @@ public class IntArrayStack implements Collections {
         return numbers[total];
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#countOut()
      */
     @Override
@@ -75,7 +80,9 @@ public class IntArrayStack implements Collections {
         return numbers[total--];
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     *
      * @see edu.kis.vh.nursery.Collections#getTotal()
      */
     @Override
