@@ -1,43 +1,46 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * @author Maciek Implementing a stack of integers with pointer on last added element.
  */
 public class DefaultCountingOutRhymer {
 
-    private IntArrayStack intArrayStack;
+    private IntLinkedList intLinkedList;
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         super();
-        this.intArrayStack = intArrayStack;
+        this.intLinkedList = intLinkedList;
     }
 
     public DefaultCountingOutRhymer() {
-        this.intArrayStack = new IntArrayStack();
+        this.intLinkedList = new IntLinkedList();
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        intLinkedList.push(in);
     }
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return intLinkedList.isEmpty();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return intLinkedList.isFull();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return intLinkedList.pop();
+        // return intArrayStack.countOut();
     }
 
     public int getTotal() {
-        return intArrayStack.getTotal();
+        return intLinkedList.getTotal();
     }
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        return intLinkedList.top();
     }
 
 }
