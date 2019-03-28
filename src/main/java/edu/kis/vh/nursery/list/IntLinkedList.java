@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.Stackable;
+
+public class IntLinkedList implements Stackable {
 
     final int EMPTY_LIST_VALUE = -1;
 
@@ -15,7 +17,7 @@ public class IntLinkedList {
 
     public IntLinkedList() {
     };
-    public void push(final int valueToAdd) {
+    @Override public void push(final int valueToAdd) {
         if (lastElement == null)
             lastElement = new IntLinkedList(valueToAdd);
         else {
@@ -25,17 +27,21 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    @Override public boolean isEmpty() {
         return lastElement == null;
     }
 
-    public int top() {
+    @Override public boolean isFull() {
+        return false;
+    }
+
+    @Override public int top() {
         if (isEmpty())
             return EMPTY_LIST_VALUE;
         return lastElement.getValue();
     }
 
-    public int pop() {
+    @Override public int pop() {
         if (isEmpty())
             return EMPTY_LIST_VALUE;
         final int value = lastElement.getValue();
