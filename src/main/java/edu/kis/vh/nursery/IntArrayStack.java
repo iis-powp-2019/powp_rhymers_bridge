@@ -31,7 +31,7 @@ public class IntArrayStack implements StackInterface{
 		return total;
 	}
 	
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return error;
 		return numbers[total];

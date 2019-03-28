@@ -10,4 +10,6 @@ public interface StackInterface {
 
 	int countOut();
 
+	int peekaboo();
+
 }
