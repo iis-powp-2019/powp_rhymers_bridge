@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.Collections;
-
 public class IntLinkedList implements Collections {
 
     private final int EMPTY_NODE_VALUE = -1;
