@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.collections;
 
 public class IntLinkedList implements Collections {
 
-    private final int EMPTY_NODE_VALUE = -1;
     private Node last;
     private int currentSize = 0;
 
@@ -31,13 +30,13 @@ public class IntLinkedList implements Collections {
 
     public int top() {
         if (isEmpty())
-            return EMPTY_NODE_VALUE;
+            return EMPTY_VALUE;
         return last.getValue();
     }
 
     public int pop() {
         if (isEmpty())
-            return EMPTY_NODE_VALUE;
+            return EMPTY_VALUE;
         int ret = last.getValue();
         last = last.getPrev();
         currentSize--;

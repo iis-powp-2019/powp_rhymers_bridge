@@ -1,9 +1,8 @@
 package edu.kis.vh.nursery.collections;
 
-class IntArrayStack implements Collections {
+public class IntArrayStack implements Collections {
 
     private final int CAPACITY = 12;
-    private final int EMPTY_VALUE = -1;
     private int[] arrayOfRhymers = new int[CAPACITY];
     private int currentSize = 0;
 
