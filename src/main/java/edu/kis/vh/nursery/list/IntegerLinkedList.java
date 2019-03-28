@@ -4,6 +4,7 @@ public class IntegerLinkedList {
 
     private static final int EMPTY_LIST_VALUE = -1;
     private Node lastNode;
+    private int total = EMPTY_LIST_VALUE;
 
     public void push(final int value) {
         if (lastNode == null)
@@ -13,6 +14,7 @@ public class IntegerLinkedList {
             lastNode.getNextNode().setPreviousNode(lastNode);
             lastNode = lastNode.getNextNode();
         }
+        total++;
     }
 
     public boolean isEmpty() {
@@ -34,7 +36,12 @@ public class IntegerLinkedList {
             return EMPTY_LIST_VALUE;
         int returningValue = lastNode.getValue();
         lastNode = lastNode.getPreviousNode();
+        total--;
         return returningValue;
+    }
+
+    public int getTotal() {
+        return total;
     }
 
 }
