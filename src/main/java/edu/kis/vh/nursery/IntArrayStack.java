@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-class IntArrayStack {
+class IntArrayStack implements Collections {
 
     private final int CAPACITY = 12;
     private final int EMPTY_VALUE = -1;
@@ -24,7 +24,7 @@ class IntArrayStack {
         return currentSize == 11;
     }
 
-    int top() {
+    public int top() {
         if (isEmpty())
             return EMPTY_VALUE;
         return arrayOfRhymers[currentSize];
