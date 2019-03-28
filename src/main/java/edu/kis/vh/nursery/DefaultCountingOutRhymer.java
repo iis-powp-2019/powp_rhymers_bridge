@@ -10,17 +10,17 @@ public class DefaultCountingOutRhymer {
         this.intLinkedList = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+    public DefaultCountingOutRhymer(Collections intArrayStack) {
         super();
         this.intLinkedList = intLinkedList;
     }
 
     public void countIn(int in) {
-        intLinkedList.push(in);
+        intLinkedList.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return intLinkedList.callCheck();
     }
 
     public boolean isFull() {
@@ -32,7 +32,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public int countOut() {
-        return intLinkedList.pop();
+        return intLinkedList.countOut();
     }
 
     public int getTotal() {
