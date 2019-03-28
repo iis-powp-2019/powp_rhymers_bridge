@@ -67,4 +67,5 @@ public class IntArrayStack implements IntStorage{
             return array_initial_index;
         return numbers[total--];
     }
+    
 }
