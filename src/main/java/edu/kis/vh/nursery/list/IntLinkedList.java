@@ -4,7 +4,6 @@ public class IntLinkedList {
 
 	private static final int EMPTY_STACK_TOP = -1;
 	private Node last;
-	private int i;
 
 	public void push(int i) {
 		if (last == null)
@@ -41,17 +40,12 @@ public class IntLinkedList {
 	public Node getLast() {
 		return last;
 	}
-
-	public int getI() {
-		return i;
-	}
-	
 	
 	/**
 	 * Nested class in class IntLinkedList
 	 * @author monik
 	 */
-	private class Node {
+	public class Node {
 
 		private final int value;
 		private Node prev;
@@ -61,7 +55,7 @@ public class IntLinkedList {
 		 * Constructor
 		 * @param i Variable assigned to the field value
 		 */
-		protected Node(int i) {
+		public Node(int i) {
 			value = i;
 		}
 
@@ -69,7 +63,7 @@ public class IntLinkedList {
 		 * Returns node placed before this node in the stack
 		 * @return Node
 		 */
-		protected Node getPrev() {
+		public Node getPrev() {
 			return prev;
 		}
 
@@ -77,7 +71,7 @@ public class IntLinkedList {
 		 * Assigns node which is next in the stack to the field prev
 		 * @param prev
 		 */
-		protected void setPrev(Node prev) {
+		public void setPrev(Node prev) {
 			this.prev = prev;
 		}
 
@@ -85,7 +79,7 @@ public class IntLinkedList {
 		 * Returns node placed after this node in the stack
 		 * @return Node
 		 */
-		protected Node getNext() {
+		public Node getNext() {
 			return next;
 		}
 
@@ -93,7 +87,7 @@ public class IntLinkedList {
 		 * Assigns node which is next in the stack to the field next
 		 * @param next 
 		 */
-		protected void setNext(Node next) {
+		public void setNext(Node next) {
 			this.next = next;
 		}
 
@@ -101,7 +95,7 @@ public class IntLinkedList {
 		 * Gets value of the node
 		 * @return int
 		 */
-		protected int getValue() {
+		public int getValue() {
 			return value;
 		}
 
