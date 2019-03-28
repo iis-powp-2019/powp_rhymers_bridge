@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.IntStorage;
+
+public class IntArrayStack implements IntStorage{
 
     private static final int capacity = 12;
     private static final int array_initial_index = -1;
@@ -22,7 +24,8 @@ public class IntArrayStack {
      * Inserts a number into stack if the stack is not full
      * @param in number you want to add to stack
      */
-    public void countIn(final int in) {
+    @Override
+    public void push(final int in) {
         if (!isFull())
             numbers[++total] = in;
     }
@@ -31,7 +34,8 @@ public class IntArrayStack {
      * Checks if the stack is empty
      * @return true if the stack empty, false if not
      */
-    boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == array_initial_index;
     }
 
@@ -39,7 +43,8 @@ public class IntArrayStack {
      * Checks if the stack is full
      * @return true if the stack is full, false if not
      */
-    boolean isFull() {
+    @Override
+    public boolean isFull() {
         return total == max_size;
     }
 
@@ -47,8 +52,9 @@ public class IntArrayStack {
      * Returns the top value of stack
      * @return -1 if stack is empty, number if not empty
      */
-    int peekaboo() {
-        if (callCheck())
+    @Override
+    public int top() {
+        if (isEmpty())
             return array_initial_index;
         return numbers[total];
     }
@@ -57,8 +63,9 @@ public class IntArrayStack {
      * Returns and deletes the top value of stack
      * @return -1 if stack is empty, number if not empty
      */
-    public int countOut() {
-        if (callCheck())
+    @Override
+    public int pop() {
+        if (isEmpty())
             return array_initial_index;
         return numbers[total--];
     }
