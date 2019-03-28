@@ -5,64 +5,38 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRhymer {
 
-	private static final int EMPTY_STACK_VALUE = -1;
-	private static final int STACK_CAPACITY = 12;
+	private IntArrayStack stack = new IntArrayStack();
 
-	private final int[] numbers = new int[STACK_CAPACITY];
 
-	/**
-	 * Gets total amount of numbers placed on stack minus 1
-	 * @return total amount of numbers placed on stack minus 1
-	 */
+	public DefaultCountingOutRhymer(IntArrayStack stack) {
+		this.stack = stack;
+	}
+
+	public DefaultCountingOutRhymer() {
+		stack = new IntArrayStack();
+	}
+
 	public int getTotal() {
-		return total;
+		return stack.getTotal();
 	}
 
-	private int total = EMPTY_STACK_VALUE;
-
-	/**
-	 * Places passed argument onto stack
-	 * @param in argument passed onto stack
-	 */
-	public void countIn(final int in) {
-		if (!isFull())
-			numbers[++total] = in;
+	public void countIn(int in) {
+		stack.countIn(in);
 	}
 
-	/**
-	 * Checks if stack is empty
-	 * @return true if stack is empty, false otherwise
-	 */
 	public boolean callCheck() {
-		return total == EMPTY_STACK_VALUE;
+		return stack.callCheck();
 	}
 
-	/**
-	 * Checks if stack is full
-	 * @return true if stack is full, false otherwise
-	 */
 	public boolean isFull() {
-		return total == STACK_CAPACITY -1;
+		return stack.isFull();
 	}
 
-	/**
-	 * Peeks last value on stack
-	 * @return -1 if stack is empty, last value placed on stack otherwise
-	 */
-	protected int peekaboo() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total];
+	public int peekaboo() {
+		return stack.peekaboo();
 	}
 
-	/**
-	 * Removes last value on stack
-	 * @return -1 if stack is empty, last value placed on stack otherwise
-	 */
 	public int countOut() {
-		if (callCheck())
-			return EMPTY_STACK_VALUE;
-		return numbers[total--];
+		return stack.countOut();
 	}
-
 }

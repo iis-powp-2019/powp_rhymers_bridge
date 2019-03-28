@@ -14,9 +14,7 @@ public class IntArrayStack {
 	 * Gets total amount of numbers placed on stack minus 1
 	 * @return total amount of numbers placed on stack minus 1
 	 */
-	public int getTotal() {
-		return total;
-	}
+	public int getTotal() { return total; }
 
 	private int total = EMPTY_STACK_VALUE;
 
