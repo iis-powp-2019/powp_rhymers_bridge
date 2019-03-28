@@ -1,9 +1,11 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
+
+import edu.kis.vh.nursery.Stackable;
 
 /**
  * Class implementing default stack functionality
  */
-public class IntArrayStack implements Stackable  {
+public class IntArrayStack implements Stackable {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int STACK_CAPACITY = 12;
