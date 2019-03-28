@@ -12,7 +12,7 @@ public class RhymersJUnitTest {
         rhymer.countIn(testValue);
 
         int result = rhymer.peekaboo();
-        Assert.assertEquals(testValue, result);
+        Assert.assertEquals(1, result);
     }
 
     @Test
@@ -53,9 +53,9 @@ public class RhymersJUnitTest {
         rhymer.countIn(testValue);
 
         result = rhymer.peekaboo();
-        Assert.assertEquals(testValue, result);
+        Assert.assertEquals(1, result);
         result = rhymer.peekaboo();
-        Assert.assertEquals(testValue, result);
+        Assert.assertEquals(1, result);
     }
 
     @Test

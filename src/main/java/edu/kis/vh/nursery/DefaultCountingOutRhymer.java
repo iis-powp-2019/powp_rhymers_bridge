@@ -4,13 +4,13 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList;
+    private Collections intLinkedList;
 
     public DefaultCountingOutRhymer() {
         this.intLinkedList = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(Collections intArrayStack) {
+    public DefaultCountingOutRhymer(Collections intLinkedList) {
         super();
         this.intLinkedList = intLinkedList;
     }
@@ -28,7 +28,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        return intLinkedList.top();
+        return intLinkedList.peekaboo();
     }
 
     public int countOut() {

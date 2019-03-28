@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.Collections;
 public class IntLinkedList implements Collections {
 
     private static final int EMPTY = 0;
-    private int total = EMPTY;
+    private int total = 0;
     private Node last;
     private int i;
 
@@ -13,10 +13,13 @@ public class IntLinkedList implements Collections {
     public void countIn(int i) {
         if (last == null) {
             last = new Node(i);
+            total++;
         } else {
             last.setNext(new Node(i));
+            total++;
             last.getNext()
                 .setPrev(last);
+
             last = last.getNext();
         }
     }
@@ -50,6 +53,7 @@ public class IntLinkedList implements Collections {
         }
         int ret = last.getValue();
         last = last.getPrev();
+        total--;
         return ret;
     }
 
