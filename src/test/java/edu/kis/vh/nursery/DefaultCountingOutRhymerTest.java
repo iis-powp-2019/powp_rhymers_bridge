@@ -38,7 +38,7 @@ public class DefaultCountingOutRhymerTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
