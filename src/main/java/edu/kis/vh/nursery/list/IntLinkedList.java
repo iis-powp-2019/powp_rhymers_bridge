@@ -1,11 +1,14 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.stack.Stackable;
 
-	private static final int INDEX_OF_EMPTY_STACK = -1;
+public class IntLinkedList implements Stackable {
+
+	static final int INDEX_OF_EMPTY_STACK = -1;
 	private Node last;
 	private int total = INDEX_OF_EMPTY_STACK;
 
+	@Override
 	public void countIn(int i) {
 		total++;
 		if (last == null)
@@ -17,20 +20,24 @@ public class IntLinkedList {
 		}
 	}
 
+	@Override
 	public boolean callCheck() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int peekaboo() {
 		if (callCheck())
 			return INDEX_OF_EMPTY_STACK;
 		return last.getValue();
 	}
 
+	@Override
 	public int countOut() {
 		total--;
 		if (callCheck())
@@ -40,6 +47,7 @@ public class IntLinkedList {
 		return ret;
 	}
 
+	@Override
 	public int getTotal() {
 		return total;
 	}
