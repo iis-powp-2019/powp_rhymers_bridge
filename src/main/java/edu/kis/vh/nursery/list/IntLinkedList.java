@@ -1,9 +1,11 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.Stack;
+
 /**
  * Class implementing linked list
  */
-public class IntLinkedList {
+public class IntLinkedList implements Stack {
 
     /**
      * Empty list indicator
@@ -16,6 +18,7 @@ public class IntLinkedList {
 
     private int total = EMPTY;
 
+    @Override
     public int getTotal() {
         return total;
     }
@@ -26,7 +29,8 @@ public class IntLinkedList {
      * @param i
      *            value to put on list
      */
-    public void push(final int i) {
+    @Override
+    public void countIn(final int i) {
         total++;
         if (last == null) {
             last = new Node(i);
@@ -43,7 +47,8 @@ public class IntLinkedList {
      *
      * @return true if list empty, else false
      */
-    public boolean isEmpty() {
+    @Override
+    public boolean callCheck() {
         return last == null;
     }
 
@@ -52,6 +57,7 @@ public class IntLinkedList {
      *
      * @return true if list full, else false
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -61,8 +67,9 @@ public class IntLinkedList {
      *
      * @return value of last pushed value
      */
-    public int top() {
-        if (isEmpty()) {
+    @Override
+    public int peekaboo() {
+        if (callCheck()) {
             return EMPTY;
         }
         return last.getValue();
@@ -73,8 +80,9 @@ public class IntLinkedList {
      *
      * @return value of last pushed value
      */
-    public int pop() {
-        if (isEmpty()) {
+    @Override
+    public int countOut() {
+        if (callCheck()) {
             return EMPTY;
         }
         int ret = last.getValue();
