@@ -14,28 +14,28 @@ public class IntArrayStack {
         return total;
     }
 
-    protected void countIn(final int in) {
+    public void countIn(final int in) {
         if (!isFull()) {
             numbers[++total] = in;
         }
     }
 
-    protected boolean callCheck() {
+    public boolean callCheck() {
         return total == TOTAL_VALUE;
     }
 
-    protected boolean isFull() {
+    public boolean isFull() {
         return total == 11;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) {
             return TOTAL_VALUE;
         }
         return numbers[total];
     }
 
-    protected int countOut() {
+    public int countOut() {
         if (callCheck()) {
             return TOTAL_VALUE;
         }
