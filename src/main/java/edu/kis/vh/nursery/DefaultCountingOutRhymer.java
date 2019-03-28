@@ -7,7 +7,7 @@ import edu.kis.vh.nursery.list.IntLinkedList;
  */
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList;
+    private Collections intLinkedList;
 
     public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         super();
