@@ -1,12 +1,20 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stacks.IntLinkedList;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private static final int ZERO = 0;
     private int totalRejected = ZERO;
 
+
+
     protected int reportRejected() {
         return getTotalRejected();
+    }
+
+    public HanoiRhymer() {
+        super();
     }
 
     @Override
