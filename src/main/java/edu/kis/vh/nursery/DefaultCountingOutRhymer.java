@@ -1,40 +1,40 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
+import java.util.LinkedList;
+
 /**
  * DefaultCountingOutRhymer is counting-out rhyme used to conducting complicated number games
  */
 public class DefaultCountingOutRhymer {
-    private IntArrayStack intArrayStack;
+    private IntLinkedList intlinkedList;
 
     public DefaultCountingOutRhymer() {
-        this.intArrayStack = new IntArrayStack();
+        this.intlinkedList = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intArrayStack = intArrayStack;
-    }
-
-    public int getSTACK_EMPTY_INDICATOR() {
-        return intArrayStack.getSTACK_EMPTY_INDICATOR();
+    public DefaultCountingOutRhymer(IntLinkedList intlinkedList) {
+        this.intlinkedList = intlinkedList;
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        intlinkedList.push(in);
     }
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return intlinkedList.isEmpty();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return intlinkedList.isFull();
     }
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        return intlinkedList.top();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return intlinkedList.pop();
     }
 }
