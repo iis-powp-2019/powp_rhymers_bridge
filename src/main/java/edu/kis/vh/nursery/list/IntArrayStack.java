@@ -1,4 +1,6 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
+
+import edu.kis.vh.nursery.Collections;
 
 /**
  * @author Maciek Implementing a stack of integers with pointer on last added element.
