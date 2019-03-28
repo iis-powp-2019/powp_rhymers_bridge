@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.collections.IntLinkedList;
 
 /**
  * @author Maciek Implementing a stack of integers with pointer on last added element.
