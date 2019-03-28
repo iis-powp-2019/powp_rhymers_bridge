@@ -29,7 +29,7 @@ public class IntArrayStack {
         return total == STACK_CAPACITY - 1;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) {
             return EMPTY_STACK_VALUE;
         }
