@@ -15,8 +15,6 @@ public class IntLinkedList {
 
     public IntLinkedList() {
     };
-
-
     public void push(final int valueToAdd) {
         if (lastElement == null)
             lastElement = new IntLinkedList(valueToAdd);
