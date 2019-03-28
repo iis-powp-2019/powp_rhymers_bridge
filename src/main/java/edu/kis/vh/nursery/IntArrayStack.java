@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements Stack {
 
     private static final int EMPTY_STACK_VALUE = -1;
 
@@ -10,10 +10,18 @@ public class IntArrayStack {
 
     private int total = EMPTY_STACK_VALUE;
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#getTotal()
+     */
+    @Override
     public int getTotal() {
         return total;
     }
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#countIn(int)
+     */
+    @Override
     public void countIn(final int in) {
         if (!isFull()) {
             numbers[++total] = in;
@@ -21,14 +29,26 @@ public class IntArrayStack {
 
     }
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#callCheck()
+     */
+    @Override
     public boolean callCheck() {
         return total == EMPTY_STACK_VALUE;
     }
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#isFull()
+     */
+    @Override
     public boolean isFull() {
         return total == STACK_CAPACITY - 1;
     }
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#peekaboo()
+     */
+    @Override
     public int peekaboo() {
         if (callCheck()) {
             return EMPTY_STACK_VALUE;
@@ -36,6 +56,10 @@ public class IntArrayStack {
         return numbers[total];
     }
 
+    /* (non-Javadoc)
+     * @see edu.kis.vh.nursery.Stack#countOut()
+     */
+    @Override
     public int countOut() {
         if (callCheck()) {
             return EMPTY_STACK_VALUE;

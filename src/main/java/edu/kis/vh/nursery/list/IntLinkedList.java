@@ -1,9 +1,11 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.Stack;
+
 /**
  * @author Dominik Class implementing int doulby linked list
  */
-public class IntLinkedList {
+public class IntLinkedList implements Stack {
 
     /**
      * Constant int field holding value of index in list when list is empty
@@ -21,11 +23,13 @@ public class IntLinkedList {
      * @param i
      *            int value assigned to Node
      */
+    @Override
     public int getTotal() {
         return total;
     }
 
-    public void push(final int i) {
+    @Override
+    public void countIn(final int i) {
         total++;
         if (last == null) {
             last = new Node(i);
@@ -40,13 +44,15 @@ public class IntLinkedList {
     /**
      * @return true if list is empty, otherwise false
      */
-    public boolean isEmpty() {
+    @Override
+    public boolean callCheck() {
         return last == null;
     }
 
     /**
      * @return true if list is full, otherwise false
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -54,8 +60,9 @@ public class IntLinkedList {
     /**
      * @return value of the node lastly added to list
      */
-    public int top() {
-        if (isEmpty()) {
+    @Override
+    public int peekaboo() {
+        if (callCheck()) {
             return EMPTY_LIST_VALUE;
         }
         return last.getValue();
@@ -66,8 +73,9 @@ public class IntLinkedList {
      *
      * @return value of the node lastly added to list
      */
-    public int pop() {
-        if (isEmpty()) {
+    @Override
+    public int countOut() {
+        if (callCheck()) {
             return EMPTY_LIST_VALUE;
         }
         int ret = last.getValue();

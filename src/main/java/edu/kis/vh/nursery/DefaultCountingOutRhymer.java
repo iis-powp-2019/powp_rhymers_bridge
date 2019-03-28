@@ -16,17 +16,15 @@ public class DefaultCountingOutRhymer {
     }
 
     public int getTotal() {
-
         return intLinkedList.getTotal();
     }
 
-    public void countIn(int in) {
-
-        intLinkedList.push(in);
+    public void countIn(int i) {
+        intLinkedList.countIn(i);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return intLinkedList.callCheck();
     }
 
     public boolean isFull() {
@@ -34,11 +32,11 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        return intLinkedList.top();
+        return intLinkedList.peekaboo();
     }
 
     public int countOut() {
-        return intLinkedList.pop();
+        return intLinkedList.countOut();
     }
 
 }
