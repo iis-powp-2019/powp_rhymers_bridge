@@ -2,57 +2,55 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    private static final int MAX_VALUE = 11;
-    private static final int DEFAULT_INDEX = -1;
-    private static final int CAPACITY = 12;
-
-    private final int[] NUMBERS = new int[getCAPACITY()];
-
     public static int getMaxValue() {
-        return MAX_VALUE;
+        return IntArrayStack.getMaxValue();
     }
 
     public static int getDefaultIndex() {
-        return DEFAULT_INDEX;
+        return IntArrayStack.getDefaultIndex();
     }
 
     public static int getCAPACITY() {
-        return CAPACITY;
+        return IntArrayStack.getCAPACITY();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
 
-    private int total = getDefaultIndex();
-
-    protected void countIn(int in) {
-        if (!isFull())
-            getNUMBERS()[++total] = in;
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
     }
 
-    protected boolean callCheck() {
-        return total == getDefaultIndex();
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
     }
 
-    protected boolean isFull() {
-        return total == getMaxValue();
+    public boolean isFull() {
+        return intArrayStack.isFull();
     }
 
-    protected int peekaboo() {
-        if (callCheck())
-            return getDefaultIndex();
-        return getNUMBERS()[total];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    protected int countOut() {
-        if (callCheck())
-            return getDefaultIndex();
-        return getNUMBERS()[total--];
+    public int countOut() {
+        return intArrayStack.countOut();
     }
 
     public int[] getNUMBERS() {
-        return NUMBERS;
+        return intArrayStack.getNUMBERS();
     }
+
+    private IntArrayStack intArrayStack;
+
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
+
+    public DefaultCountingOutRhymer(){
+        this.intArrayStack = new IntArrayStack();
+    }
+
 
 }
