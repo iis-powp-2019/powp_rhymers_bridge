@@ -2,10 +2,9 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
 
-public class DefaultCountingOutRhymer {
+public class DefaultCountingOutRhymer implements Stackable{
 
-    IntLinkedList intLinkedList;
-    private static final int NO_ANY_ELEMENTS = -1;
+    private IntLinkedList intLinkedList;
 
     public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         this.intLinkedList = intLinkedList;
