@@ -7,6 +7,9 @@ import edu.kis.vh.nursery.StackInterface;
  *
  */
 public class IntLinkedList implements StackInterface {
+
+    public static final int ZERO = 0;
+
     /**
      * Inner class of node in Linked List
      * elements of Linked List are nodes
@@ -77,7 +80,7 @@ public class IntLinkedList implements StackInterface {
 
     private static final int EMPTY_STACK_HEAD_INDEX = -1;
     private Node last;
-    private int i;
+    private int head;
 
     /**
      * add i to the top of Linked List as new element
@@ -85,12 +88,15 @@ public class IntLinkedList implements StackInterface {
      */
     @Override
     public void push(final int i) {
-        if (getLast() == null)
+        if (getLast() == null) {
             setLast(new Node(i));
+            head= ZERO;
+        }
         else {
             getLast().setNext(new Node(i));
             getLast().getNext().setPrev(getLast());
             setLast(getLast().getNext());
+            head++;
         }
     }
 
@@ -134,6 +140,7 @@ public class IntLinkedList implements StackInterface {
             return EMPTY_STACK_HEAD_INDEX;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
+        head--;
         return ret;
     }
 
@@ -159,7 +166,7 @@ public class IntLinkedList implements StackInterface {
      */
     @Override
     public int getHead() {
-        return i;
+        return head;
     }
 
 
