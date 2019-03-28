@@ -5,138 +5,154 @@ package edu.kis.vh.nursery.list;
  */
 public class IntLinkedList {
 
-	/**
-	 * Empty list indicator
-	 */
-	private static final int EMPTY = -1;
-	/**
-	 * Last node reference
-	 */
-	private Node last;
+    /**
+     * Empty list indicator
+     */
+    private static final int EMPTY = 0;
+    /**
+     * Last node reference
+     */
+    private Node last;
 
-	/**
-	 * Adds new element to list, creates new node
-	 * 
-	 * @param i value to put on list
-	 */
-	protected void push(final int i) {
-		if (last == null) {
-			last = new Node(i);
-		} else {
-			last.setNext(new Node(i));
-			last.getNext().setPrev(last);
-			last = last.getNext();
-		}
-	}
+    private int total = EMPTY;
 
-	/**
-	 * Check if list is empty
-	 * 
-	 * @return true if list empty, else false
-	 */
-	protected boolean isEmpty() {
-		return last == null;
-	}
+    public int getTotal() {
+        return total;
+    }
 
-	/**
-	 * Check if list is full
-	 * 
-	 * @return true if list full, else false
-	 */
-	protected boolean isFull() {
-		return false;
-	}
+    /**
+     * Adds new element to list, creates new node
+     *
+     * @param i
+     *            value to put on list
+     */
+    public void push(final int i) {
+        total++;
+        if (last == null) {
+            last = new Node(i);
+        } else {
+            last.setNext(new Node(i));
+            last.getNext()
+                .setPrev(last);
+            last = last.getNext();
+        }
+    }
 
-	/**
-	 * Returns value of last pushed value
-	 * 
-	 * @return value of last pushed value
-	 */
-	protected int top() {
-		if (isEmpty()) {
-			return EMPTY;
-		}
-		return last.getValue();
-	}
+    /**
+     * Check if list is empty
+     *
+     * @return true if list empty, else false
+     */
+    public boolean isEmpty() {
+        return last == null;
+    }
 
-	/**
-	 * Removes last pushed value
-	 * 
-	 * @return value of last pushed value
-	 */
-	protected int pop() {
-		if (isEmpty()) {
-			return EMPTY;
-		}
-		int ret = last.getValue();
-		last = last.getPrev();
-		return ret;
-	}
+    /**
+     * Check if list is full
+     *
+     * @return true if list full, else false
+     */
+    public boolean isFull() {
+        return false;
+    }
 
-	/**
-	 * Class representing node of list
-	 *
-	 */
-	private class Node {
+    /**
+     * Returns value of last pushed value
+     *
+     * @return value of last pushed value
+     */
+    public int top() {
+        if (isEmpty()) {
+            return EMPTY;
+        }
+        return last.getValue();
+    }
 
-		/**
-		 * Value stored in node
-		 */
-		private final int value;
-		/**
-		 * Reference to previous value
-		 */
-		private Node prev;
-		/**
-		 * Reference to next value
-		 */
-		private Node next;
+    /**
+     * Removes last pushed value
+     *
+     * @return value of last pushed value
+     */
+    public int pop() {
+        if (isEmpty()) {
+            return EMPTY;
+        }
+        int ret = last.getValue();
+        last = last.getPrev();
+        return ret;
+    }
 
-		/**
-		 * Class constructor
-		 * @param i value to be stored in node
-		 */
-		protected Node(final int i) {
-			value = i;
-		}
+    /**
+     * Class representing node of list
+     *
+     */
+    private class Node {
 
-		/**
-		 * Returns value assigned to node
-		 * @return value of node
-		 */
-		public int getValue() {
-			return value;
-		}
+        /**
+         * Value stored in node
+         */
+        private final int value;
+        /**
+         * Reference to previous value
+         */
+        private Node prev;
+        /**
+         * Reference to next value
+         */
+        private Node next;
 
-		/**
-		 * @return reference to previous node
-		 */
-		public Node getPrev() {
-			return prev;
-		}
+        /**
+         * Class constructor
+         *
+         * @param i
+         *            value to be stored in node
+         */
+        protected Node(final int i) {
+            value = i;
+        }
 
-		/**
-		 * Sets reference to previous node 
-		 * @param prev previous node to be set
-		 */
-		public void setPrev(final Node prev) {
-			this.prev = prev;
-		}
+        /**
+         * Returns value assigned to node
+         *
+         * @return value of node
+         */
+        public int getValue() {
+            return value;
+        }
 
-		/**
-		 * @return reference to next node
-		 */
-		public Node getNext() {
-			return next;
-		}
+        /**
+         * @return reference to previous node
+         */
+        public Node getPrev() {
+            return prev;
+        }
 
-		/**
-		 * Sets reference to next node 
-		 * @param next next node to be set
-		 */
-		public void setNext(final Node next) {
-			this.next = next;
-		}
+        /**
+         * Sets reference to previous node
+         *
+         * @param prev
+         *            previous node to be set
+         */
+        public void setPrev(final Node prev) {
+            this.prev = prev;
+        }
 
-	}
+        /**
+         * @return reference to next node
+         */
+        public Node getNext() {
+            return next;
+        }
+
+        /**
+         * Sets reference to next node
+         *
+         * @param next
+         *            next node to be set
+         */
+        public void setNext(final Node next) {
+            this.next = next;
+        }
+
+    }
 }
