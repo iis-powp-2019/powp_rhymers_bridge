@@ -9,6 +9,10 @@ public class DefaultCountingOutRhymer {
     private IntArrayStack stack;
     private Stack list;
 
+    public DefaultCountingOutRhymer(IntArrayStack stack) {
+        this.stack = stack;
+    }
+
     public DefaultCountingOutRhymer(IntLinkedList list) {
         this.list = list;
     }
