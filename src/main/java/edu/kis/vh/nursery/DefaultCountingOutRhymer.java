@@ -7,7 +7,7 @@ public class DefaultCountingOutRhymer {
 	
 	private StackInterface linkedList;
 
-	public DefaultCountingOutRhymer(IntLinkedList linkedList) { 
+	public DefaultCountingOutRhymer(StackInterface linkedList) { 
 		super();
 		this.linkedList = linkedList;
 	}
