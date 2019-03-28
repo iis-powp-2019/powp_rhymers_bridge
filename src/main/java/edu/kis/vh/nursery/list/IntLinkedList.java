@@ -3,17 +3,20 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
     private Node last;
-    private int i;
+    private int i = 0;
 
     /**
      *
      * @param i
      * Add i to linkedList
      */
-    private void push(int i) {
-        if (last == null)
+    public void push(int i) {
+        if (last == null){
             last = new Node(i);
+            this.i++;
+            }
         else {
+            this.i++;
             last.next = new Node(i);
             last.next.prev = last;
             last = last.next;
@@ -26,7 +29,7 @@ public class IntLinkedList {
      * True if last == null
      * false if last !=null
      */
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return last == null;
     }
 
@@ -35,7 +38,7 @@ public class IntLinkedList {
      * @return
      * Always return false :)
      */
-    private boolean isFull() {
+    public boolean isFull() {
         return false;
     }
 
@@ -45,7 +48,7 @@ public class IntLinkedList {
      * last value from linkedList
      * if linkedList is empty return -1
      */
-    private int top() {
+    public int top() {
         if (isEmpty())
             return -1;
         return last.value;
@@ -56,12 +59,17 @@ public class IntLinkedList {
      * @return
      * Last added value from linkedList and delete this value form list
      */
-    private int pop() {
+    public int pop() {
         if (isEmpty())
             return -1;
         int ret = last.value;
         last = last.prev;
+        this.i--;
         return ret;
+    }
+
+    public int getTotal(){
+        return this.i;
     }
 
 }

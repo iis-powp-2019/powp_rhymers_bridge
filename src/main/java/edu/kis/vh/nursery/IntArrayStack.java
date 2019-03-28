@@ -12,12 +12,12 @@ public class IntArrayStack {
         return total;
     }
 
-    public void countIn(int in) {
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    boolean callCheck() {
+    boolean isEmpty() {
         return total == STACK_STARTING_POSITION;
     }
 
@@ -25,14 +25,14 @@ public class IntArrayStack {
         return total == STACK_LAST_POSITION;
     }
 
-    int peekaboo() {
-        if (callCheck())
+    int top() {
+        if (isEmpty())
             return STACK_VALUE_ON_STARTING_POSITION;
         return numbers[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return STACK_VALUE_ON_STARTING_POSITION;
         return numbers[total--];
     }
