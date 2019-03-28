@@ -54,7 +54,7 @@ public class IntArrayStack {
     /**
      * @return -1 if stack is empty or value in stack last element index
      */
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck()) {
             return -1;
         }
