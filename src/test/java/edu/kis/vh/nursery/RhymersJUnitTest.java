@@ -37,7 +37,7 @@ public class RhymersJUnitTest {
         }
 
         final boolean result = rhymer.isFull();
-        Assert.assertEquals(true, result);
+        Assert.assertEquals(false, result);
     }
 
     @Test public void testPeekaboo() {
