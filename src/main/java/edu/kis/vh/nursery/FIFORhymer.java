@@ -7,10 +7,9 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private IntStorage temp; //Lepszy niż IntArrayStack ponieważ nie ma narzuconej z pojemności
 
-    public FIFORhymer(IntStorage intStorage, IntStorage temp)
+    public FIFORhymer(IntStorage intStorage)
     {
         super(intStorage);
-        this.temp = temp;
     }
 
     public FIFORhymer()
