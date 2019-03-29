@@ -1,5 +1,9 @@
 package edu.kis.vh.nursery;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -74,5 +78,28 @@ public class RhymersJUnitTest {
         result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
+    
+    @Test
+	public void shouldReturnElementAddedAsFirstInFIFORhymer() {
+		int firstElement=1000;
+		FIFORhymer rhymer= new FIFORhymer();
+		rhymer.countIn(firstElement);
+		for(int i = 0;i<10;i++) {
+			rhymer.countIn(i);
+		}
+		assertThat(rhymer.countOut(),is(equalTo(firstElement)));
+	}
+    
+    @Test
+	public void shouldReturnCorrectAmountOfRejectedItemsInHanoiRhymer() {
+		HanoiRhymer hanoi= new HanoiRhymer();
+		int item=1;
+		hanoi.countIn(item);
+		int itemsToReject=10;
+		for(int i=0;i<itemsToReject;i++) {
+			hanoi.countIn(item+1);
+		}
+		assertThat(hanoi.reportRejected(),is(equalTo(itemsToReject)));
+	}
 
 }
