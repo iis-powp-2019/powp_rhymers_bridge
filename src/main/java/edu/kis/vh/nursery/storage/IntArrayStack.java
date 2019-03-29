@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.storage;
 public class IntArrayStack implements IntStorage{
 
     private static final int capacity = 12;
-    private static final int array_initial_index = -1;
+    private static final int array_initial_index = 0;
     private static final int max_size = capacity-1;
 
     private int[] numbers = new int[capacity];
@@ -67,5 +67,5 @@ public class IntArrayStack implements IntStorage{
             return array_initial_index;
         return numbers[total--];
     }
-    
+
 }
