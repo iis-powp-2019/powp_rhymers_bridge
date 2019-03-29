@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.StackInterface;
 
 public class RhymersJUnitTest {
 
@@ -145,7 +146,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIntLinkedListpush() {
-		IntLinkedList list = new IntLinkedList();
+		StackInterface list = new IntLinkedList();
 		final int testValue = 5;
 		list.push(testValue);
 
@@ -155,7 +156,7 @@ public class RhymersJUnitTest {
 	
 	@Test
 	public void testIntLinkedListisEmpty() {
-		IntLinkedList list = new IntLinkedList();
+		StackInterface list = new IntLinkedList();
 		boolean result = list.isEmpty();
 		Assert.assertEquals(true, result);
 
@@ -167,7 +168,7 @@ public class RhymersJUnitTest {
 	
 	@Test
 	public void testIntLinkedListtop() {
-		IntLinkedList list = new IntLinkedList();
+		StackInterface list = new IntLinkedList();
 		final int EMPTY_LIST_VALUE = -1;
 
 		int result = list.top();
@@ -184,7 +185,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIntLinkedListpop() {
-		IntLinkedList list = new IntLinkedList();
+		StackInterface list = new IntLinkedList();
 		final int EMPTY_LIST_VALUE = -1;
 
 		int result = list.pop();
