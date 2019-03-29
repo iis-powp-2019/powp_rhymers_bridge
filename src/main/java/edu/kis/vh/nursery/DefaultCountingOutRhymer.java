@@ -5,8 +5,6 @@ package edu.kis.vh.nursery;
  * 
  */
 public class DefaultCountingOutRhymer {
-	
-	//int stack
 	private IntArrayStack stack;
 
 	public DefaultCountingOutRhymer(IntArrayStack stack) {
@@ -16,7 +14,7 @@ public class DefaultCountingOutRhymer {
 
 	public DefaultCountingOutRhymer() {
 		super();
-		this.stack = new IntArrayStack();
+		this.stack = new IntArrayStack();;
 	}
 	
 	public int getTotal() {
