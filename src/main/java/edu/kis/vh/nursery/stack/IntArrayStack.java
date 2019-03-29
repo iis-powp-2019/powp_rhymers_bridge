@@ -2,13 +2,11 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stack {
 
-    private static final int EMPTY_STACK_VALUE = -1;
-
     private static final int STACK_CAPACITY = 12;
 
     private final int[] numbers = new int[STACK_CAPACITY];
 
-    private int total = EMPTY_STACK_VALUE;
+    private int total = Stack.EMPTY_STACK_VALUE;
 
     /* (non-Javadoc)
      * @see edu.kis.vh.nursery.Stack#getTotal()
@@ -34,7 +32,7 @@ public class IntArrayStack implements Stack {
      */
     @Override
     public boolean callCheck() {
-        return total == EMPTY_STACK_VALUE;
+        return total == Stack.EMPTY_STACK_VALUE;
     }
 
     /* (non-Javadoc)
@@ -51,7 +49,7 @@ public class IntArrayStack implements Stack {
     @Override
     public int peekaboo() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return Stack.EMPTY_STACK_VALUE;
         }
         return numbers[total];
     }
@@ -62,7 +60,7 @@ public class IntArrayStack implements Stack {
     @Override
     public int countOut() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return Stack.EMPTY_STACK_VALUE;
         }
         return numbers[total--];
     }

@@ -6,14 +6,10 @@ package edu.kis.vh.nursery.stack;
 public class IntLinkedList implements Stack {
 
     /**
-     * Constant int field holding value of index in list when list is empty
-     */
-    private static final int EMPTY_LIST_VALUE = 0;
-    /**
      * reference to last node in the list
      */
     private Node last;
-    private int total = EMPTY_LIST_VALUE;
+    private int total =Stack.EMPTY_STACK_VALUE;
 
     /**
      * adds new Node to the list
@@ -61,7 +57,7 @@ public class IntLinkedList implements Stack {
     @Override
     public int peekaboo() {
         if (callCheck()) {
-            return EMPTY_LIST_VALUE;
+            return Stack.EMPTY_STACK_VALUE;
         }
         return last.getValue();
     }
@@ -74,7 +70,7 @@ public class IntLinkedList implements Stack {
     @Override
     public int countOut() {
         if (callCheck()) {
-            return EMPTY_LIST_VALUE;
+            return Stack.EMPTY_STACK_VALUE;
         }
         int ret = last.getValue();
         last = last.getPrev();
