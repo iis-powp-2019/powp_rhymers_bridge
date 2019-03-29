@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.FIFORhymersFactory;
+import edu.kis.vh.nursery.factory.HanoiRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
 // alt + <-- goes back to latest edited file, alt + --> reverse of previous one
@@ -8,7 +10,11 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
+        RhymersFactory FIFOFactory = new FIFORhymersFactory();
+        RhymersFactory hanoiFactory = new HanoiRhymersFactory();
         testRhymers(factory);
+        testRhymers(FIFOFactory);
+        testRhymers(hanoiFactory);
     }
 
     public static void testRhymers(RhymersFactory factory) {
