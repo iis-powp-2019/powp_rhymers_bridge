@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.Stackable;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -64,7 +65,7 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertTrue(result);
+		Assert.assertFalse(result);
 
 		//------------------------------------------
 
@@ -79,7 +80,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE  = Stackable.EMPTY_STACK_VALUE;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -96,7 +97,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE  = Stackable.EMPTY_STACK_VALUE;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -143,7 +144,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPop() {
 		IntLinkedList list = new IntLinkedList();
-		final int EMPTY_VALUE = -1;
+		final int EMPTY_VALUE = Stackable.EMPTY_STACK_VALUE;
 		Assert.assertEquals(EMPTY_VALUE,list.pop());
 		int testValue = 4;
 		list.push(testValue);
@@ -158,7 +159,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testTop() {
 		IntLinkedList list = new IntLinkedList();
-		final int EMPTY_VALUE = -1;
+		final int EMPTY_VALUE = Stackable.EMPTY_STACK_VALUE;
 		Assert.assertEquals(EMPTY_VALUE,list.top());
 		int testValue = 4;
 		list.push(testValue);
