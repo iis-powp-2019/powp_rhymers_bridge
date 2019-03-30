@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.StackableInterface;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -44,10 +45,9 @@ public class DefaultCountingOutRhymerTest {
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(StackableInterface.EMPTY_STACK_HEAD_INDEX, result);
 
 		int testValue = 4;
 		rhymer.countIn(testValue);
@@ -61,10 +61,9 @@ public class DefaultCountingOutRhymerTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(StackableInterface.EMPTY_STACK_HEAD_INDEX, result);
 
 		int testValue = 4;
 		rhymer.countIn(testValue);
@@ -72,7 +71,7 @@ public class DefaultCountingOutRhymerTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(testValue, result);
 		result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(StackableInterface.EMPTY_STACK_HEAD_INDEX, result);
 	}
 
 }
