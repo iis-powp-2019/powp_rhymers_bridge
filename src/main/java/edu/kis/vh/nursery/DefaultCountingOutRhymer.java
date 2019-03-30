@@ -7,19 +7,19 @@ import edu.kis.vh.nursery.stack.stacks.LinkedListOfIntegers;
 public class DefaultCountingOutRhymer {
 
     private IntArrayStack intArrayStack;
-    private Stack stack;
+    private LinkedListOfIntegers linkedListOfIntegers;
 
     public DefaultCountingOutRhymer(IntArrayStack intArrayStack){
         this.intArrayStack = intArrayStack;
     }
 
-    public DefaultCountingOutRhymer(Stack stack){
-        this.stack = stack;
+    public DefaultCountingOutRhymer(LinkedListOfIntegers linkedListOfIntegers){
+        this.linkedListOfIntegers = linkedListOfIntegers;
     }
 
     public DefaultCountingOutRhymer(){
         this.intArrayStack = new IntArrayStack();
-        this.stack = new LinkedListOfIntegers();
+        this.linkedListOfIntegers = new LinkedListOfIntegers();
     }
 
     public IntArrayStack getIntArrayStack() {
@@ -35,22 +35,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        stack.push(in);
+        linkedListOfIntegers.push(in);
     }
 
     public boolean isEmpty() {
-        return stack.isEmpty();
+        return linkedListOfIntegers.isEmpty();
     }
 
     public boolean isFull() {
-        return stack.isFull();
+        return linkedListOfIntegers.isFull();
     }
 
     public int currentNumber() {
-        return stack.top();
+        return linkedListOfIntegers.top();
     }
 
     public int countOut() {
-        return stack.pop();
+        return linkedListOfIntegers.pop();
     }
 }

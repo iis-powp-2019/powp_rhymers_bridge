@@ -1,8 +1,15 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.stacks.IntArrayStack;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-    private int totalRejected = 0;
+    private int totalRejected;
+
+    public HanoiRhymer(IntArrayStack intArrayStack, int totalRejected) {
+        super(intArrayStack);
+        this.totalRejected = totalRejected;
+    }
 
     int reportRejected() {
         return getTotalRejected();
@@ -16,6 +23,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
         }
     }
+
+
 
     public int getTotalRejected() {
         return totalRejected;
