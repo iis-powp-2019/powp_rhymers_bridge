@@ -6,9 +6,14 @@ import edu.kis.vh.nursery.storage.StackInterface;
 
 public class DefaultCountingOutRhymer {
 
+	private IntArrayStack intArrayStack;
 	private StackInterface intLinkedList = new IntLinkedList();
 
 	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+		this.intArrayStack = intArrayStack;
+	}
+	
+	public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
 		this.intLinkedList = intLinkedList;
 	}
 

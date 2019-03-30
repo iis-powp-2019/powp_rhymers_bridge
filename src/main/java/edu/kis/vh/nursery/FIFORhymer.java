@@ -21,14 +21,15 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 		return ret;
 	}
-
+	
 	public FIFORhymer() {
-		super();
-		// TODO Auto-generated constructor stub
+    }
+
+	public FIFORhymer(IntLinkedList intLinkedList) {
+		super(intLinkedList);
 	}
 
 	public FIFORhymer(IntArrayStack intArrayStack) {
 		super(intArrayStack);
-		// TODO Auto-generated constructor stub
 	}
 }
