@@ -33,7 +33,7 @@ class Node {
     }
 }
 
-public class LinkedListOfIntegers implements Stack {
+public class IntLinkedList implements Stack {
 
     private Node last;
 

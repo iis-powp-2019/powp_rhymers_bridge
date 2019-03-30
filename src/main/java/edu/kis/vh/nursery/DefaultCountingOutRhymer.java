@@ -1,25 +1,25 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.stacks.IntArrayStack;
 import edu.kis.vh.nursery.stack.Stack;
-import edu.kis.vh.nursery.stack.stacks.LinkedListOfIntegers;
+import edu.kis.vh.nursery.stack.stacks.IntArrayStack;
+import edu.kis.vh.nursery.stack.stacks.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
     private IntArrayStack intArrayStack;
-    private LinkedListOfIntegers linkedListOfIntegers;
+    private Stack stack = new IntLinkedList();
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack){
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
         this.intArrayStack = intArrayStack;
     }
 
-    public DefaultCountingOutRhymer(LinkedListOfIntegers linkedListOfIntegers){
-        this.linkedListOfIntegers = linkedListOfIntegers;
+    public DefaultCountingOutRhymer(Stack stack) {
+        this.setStack(stack);
     }
 
-    public DefaultCountingOutRhymer(){
+    public DefaultCountingOutRhymer() {
         this.intArrayStack = new IntArrayStack();
-        this.linkedListOfIntegers = new LinkedListOfIntegers();
+        this.stack = new IntLinkedList();
     }
 
     public IntArrayStack getIntArrayStack() {
@@ -35,22 +35,30 @@ public class DefaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        linkedListOfIntegers.push(in);
+        stack.push(in);
     }
 
     public boolean isEmpty() {
-        return linkedListOfIntegers.isEmpty();
+        return stack.isEmpty();
     }
 
     public boolean isFull() {
-        return linkedListOfIntegers.isFull();
+        return stack.isFull();
     }
 
     public int currentNumber() {
-        return linkedListOfIntegers.top();
+        return stack.top();
     }
 
     public int countOut() {
-        return linkedListOfIntegers.pop();
+        return stack.pop();
+    }
+
+    public Stack getStack() {
+        return stack;
+    }
+
+    public void setStack(Stack stack) {
+        this.stack = stack;
     }
 }

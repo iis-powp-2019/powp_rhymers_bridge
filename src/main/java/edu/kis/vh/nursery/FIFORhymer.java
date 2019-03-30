@@ -1,13 +1,14 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.stacks.LinkedListOfIntegers;
+import edu.kis.vh.nursery.stack.Stack;
+import edu.kis.vh.nursery.stack.stacks.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private LinkedListOfIntegers linkedListOfIntegers = new LinkedListOfIntegers();
+    private IntLinkedList intLinkedList = new IntLinkedList();
 
-    public FIFORhymer(LinkedListOfIntegers linkedListOfIntegers) {
-        super(linkedListOfIntegers);
+    public FIFORhymer(Stack stack) {
+        super(stack);
     }
 
     public FIFORhymer(){
@@ -17,12 +18,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override public int countOut() {
         while (!isEmpty())
 
-            linkedListOfIntegers.push(super.countOut());
+            intLinkedList.push(super.countOut());
 
-        int returningValue = linkedListOfIntegers.pop();
+        int returningValue = intLinkedList.pop();
 
-        while (!linkedListOfIntegers.isEmpty()){
-            countIn(linkedListOfIntegers.pop());
+        while (!intLinkedList.isEmpty()){
+            countIn(intLinkedList.pop());
         }
 
         return returningValue;
