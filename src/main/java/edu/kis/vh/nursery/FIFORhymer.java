@@ -4,29 +4,29 @@ import edu.kis.vh.nursery.stack.stacks.LinkedListOfIntegers;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
+    private LinkedListOfIntegers linkedListOfIntegers = new LinkedListOfIntegers();
 
-    public FIFORhymer(LinkedListOfIntegers linkedListOfIntegers, DefaultCountingOutRhymer defaultCountingOutRhymer) {
+    public FIFORhymer(LinkedListOfIntegers linkedListOfIntegers) {
         super(linkedListOfIntegers);
-        this.defaultCountingOutRhymer = defaultCountingOutRhymer;
+    }
+
+    public FIFORhymer(){
+
     }
 
     @Override public int countOut() {
         while (!isEmpty())
 
-            getDefaultCountingOutRhymer().countIn(super.countOut());
+            linkedListOfIntegers.push(super.countOut());
 
-        int returningValue = getDefaultCountingOutRhymer().countOut();
+        int returningValue = linkedListOfIntegers.pop();
 
-        while (!getDefaultCountingOutRhymer().isEmpty()){
-            countIn(getDefaultCountingOutRhymer().countOut());
+        while (!linkedListOfIntegers.isEmpty()){
+            countIn(linkedListOfIntegers.pop());
         }
 
         return returningValue;
     }
 
-    public DefaultCountingOutRhymer getDefaultCountingOutRhymer() {
-        return defaultCountingOutRhymer;
-    }
 
 }
