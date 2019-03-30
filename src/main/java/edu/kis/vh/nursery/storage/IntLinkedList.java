@@ -1,8 +1,6 @@
 package edu.kis.vh.nursery.storage;
 
 public class IntLinkedList implements StackInterface {
-
-	private static final int EMPTY_STACK_VALUE = -1;
 	
 	private class Node {
 

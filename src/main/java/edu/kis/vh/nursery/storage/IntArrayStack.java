@@ -3,11 +3,9 @@ package edu.kis.vh.nursery.storage;
 /**
  * Class of default type rhymer
  */
-public class IntArrayStack {
+public class IntArrayStack implements StackInterface{
 
-	private static final int STACK_CAPACITY = 12;
-
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int STACK_CAPACITY = 11;
 
 	private int[] numbers = new int[STACK_CAPACITY];
 
@@ -56,6 +54,31 @@ public class IntArrayStack {
 		if (callCheck())
 			return EMPTY_STACK_VALUE;
 		return numbers[total--];
+	}
+
+	@Override
+	public void push(int i) {
+		if (!isFull())
+            numbers[++total] = i;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return total == EMPTY_STACK_VALUE;
+	}
+
+	@Override
+	public int top() {
+		if (isEmpty())
+            return EMPTY_STACK_VALUE;
+        return numbers[total];
+	}
+
+	@Override
+	public int pop() {
+		if (isEmpty())
+            return EMPTY_STACK_VALUE;
+        return numbers[total--];
 	}
 
 }
