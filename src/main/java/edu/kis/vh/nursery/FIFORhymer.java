@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntArrayStack;
 import edu.kis.vh.nursery.storage.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer TEMP = new DefaultCountingOutRhymer();
+    private final IntArrayStack TEMP = new IntArrayStack();
 
     public FIFORhymer(){
         super();
@@ -17,17 +18,17 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     @Override public int countOut() {
         while (!callCheck())
-            getTemp().countIn(super.countOut());
+            getTemp().push(super.countOut());
 
-        int ret = getTemp().countOut();
+        int ret = getTemp().pop();
 
-        while (!getTemp().callCheck())
-            countIn(getTemp().countOut());
+        while (!getTemp().isEmpty())
+            countIn(getTemp().pop());
 
         return ret;
     }
 
-    public DefaultCountingOutRhymer getTemp() {
+    public IntArrayStack getTemp() {
         return TEMP;
     }
 }
