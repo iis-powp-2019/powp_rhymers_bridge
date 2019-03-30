@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntStackInterface{
     private final int CAPACITY = 12;
     private final int MAX_SIZE = CAPACITY - 1;
     private final int STARTING_POS = -1;
@@ -17,7 +17,8 @@ public class IntArrayStack {
      * If stack is not full add param 'in' to stack
      * @param in number to add
      */
-    void countIn(int in) {
+    @Override
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
@@ -26,7 +27,8 @@ public class IntArrayStack {
      * Check if stack empty
      * @return 1 when is empty, 0 otherwise
      */
-    boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == STARTING_POS;
     }
 
@@ -34,7 +36,8 @@ public class IntArrayStack {
      * Check if stack is full
      * @return 1 when is full, 0 otherwise
      */
-    boolean isFull() {
+    @Override
+    public boolean isFull() {
         return total == MAX_SIZE;
     }
 
@@ -42,8 +45,9 @@ public class IntArrayStack {
      * Returns last added number to stack
      * @return -1 when if stack is empty and number otherwise
      */
-    int peekaboo() {
-        if (callCheck())
+    @Override
+    public int top() {
+        if (isEmpty())
             return STARTING_POS;
         return numbers[total];
     }
@@ -52,8 +56,9 @@ public class IntArrayStack {
      * Returns last added number to stack and drop it
      * @return -1 when if stack is empty and number otherwise
      */
-    int countOut() {
-        if (callCheck())
+    @Override
+    public int pop() {
+        if (isEmpty())
             return STARTING_POS;
         return numbers[total--];
     }
