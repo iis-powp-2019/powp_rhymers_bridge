@@ -5,7 +5,7 @@ package edu.kis.vh.nursery.storage;
  */
 public class IntArrayStack implements StackInterface{
 
-	private static final int STACK_CAPACITY = 11;
+	private static final int STACK_CAPACITY = 12;
 
 	private int[] numbers = new int[STACK_CAPACITY];
 
