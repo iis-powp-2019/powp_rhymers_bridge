@@ -42,7 +42,7 @@ public class IntArrayStack implements StackInterface{
 	 */
 	public int peekaboo() {
 		if (callCheck())
-			return EMPTY_STACK_VALUE;
+			return 0;
 		return numbers[total];
 	}
 
@@ -52,7 +52,7 @@ public class IntArrayStack implements StackInterface{
 	 */
 	public int countOut() {
 		if (callCheck())
-			return EMPTY_STACK_VALUE;
+			return 0;
 		return numbers[total--];
 	}
 
