@@ -1,15 +1,25 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStack;
+import edu.kis.vh.nursery.list.Stack;
+import edu.kis.vh.nursery.list.LinkedListOfIntegers;
+
 public class DefaultCountingOutRhymer {
 
     private IntArrayStack intArrayStack;
+    private Stack stack;
 
     public DefaultCountingOutRhymer(IntArrayStack intArrayStack){
         this.intArrayStack = intArrayStack;
     }
 
+    public DefaultCountingOutRhymer(Stack stack){
+        this.stack = stack;
+    }
+
     public DefaultCountingOutRhymer(){
         this.intArrayStack = new IntArrayStack();
+        this.stack = new LinkedListOfIntegers();
     }
 
     public IntArrayStack getIntArrayStack() {
@@ -25,22 +35,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        stack.push(in);
     }
 
     public boolean isEmpty() {
-        return intArrayStack.isEmpty();
+        return stack.isEmpty();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return stack.isFull();
     }
 
     public int currentNumber() {
-        return intArrayStack.currentNumber();
+        return stack.top();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return stack.pop();
     }
 }
