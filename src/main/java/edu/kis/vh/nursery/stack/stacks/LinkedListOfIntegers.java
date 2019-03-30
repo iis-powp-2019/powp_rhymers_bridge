@@ -1,10 +1,42 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack.stacks;
+
+import edu.kis.vh.nursery.stack.Stack;
+
+class Node {
+
+    private final int value;
+    private Node previous;
+    private Node next;
+
+    Node(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public Node getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+}
 
 public class LinkedListOfIntegers implements Stack {
 
     public static final int EMPTY_STACK_VALUE = -1;
 
-    private int value;
     private Node last;
 
     @Override public void push(int newNodeValue) {
@@ -41,10 +73,6 @@ public class LinkedListOfIntegers implements Stack {
         int returningValue = getLast().getValue();
         setLast(getLast().getPrevious());
         return returningValue;
-    }
-
-    public int getValue() {
-        return value;
     }
 
     public Node getLast() {

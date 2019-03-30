@@ -1,6 +1,6 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack.stacks;
 
-import edu.kis.vh.nursery.list.Stack;
+import edu.kis.vh.nursery.stack.Stack;
 
 public class IntArrayStack implements Stack {
 
