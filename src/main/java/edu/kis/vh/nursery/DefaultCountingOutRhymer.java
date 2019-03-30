@@ -6,23 +6,22 @@ import edu.kis.vh.nursery.list.StackableInterface;
 public class DefaultCountingOutRhymer {
 
     private final int STACK_EMPTY_SIZE = -1;
+    StackableInterface stackableInterface = new IntLinkedList();
 
-    private StackableInterface intLinkedList;
-
-    public DefaultCountingOutRhymer(StackableInterface intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(IntLinkedList stackableInterface) {
+        this.stackableInterface = stackableInterface;
     }
 
     public DefaultCountingOutRhymer() {
-        this.intLinkedList = new IntLinkedList();
+
     }
 
     public void countIn(int in) {
-        intLinkedList.push(in);
+        stackableInterface.push(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return stackableInterface.isEmpty();
     }
 
     public boolean isFull() {
@@ -30,13 +29,13 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        if(intLinkedList.isEmpty())
+        if(stackableInterface.isEmpty())
             return STACK_EMPTY_SIZE;
-        return intLinkedList.top();
+        return stackableInterface.top();
     }
 
     public int countOut() {
-        return intLinkedList.pop();
+        return stackableInterface.pop();
     }
 }
 
