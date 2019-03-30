@@ -37,10 +37,9 @@ public class IntLinkedList implements StackableInterface {
 
     private Node last;
     private int i;
-    private static final int EMPTY = -1;
 
     public static int getEMPTY() {
-        return EMPTY;
+        return EMPTY_STACK_HEAD_INDEX;
     }
 
     /**
