@@ -1,14 +1,15 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.StackableInterface;
 
 public class DefaultCountingOutRhymer {
 
     private final int STACK_EMPTY_SIZE = -1;
-    private IntArrayStack intArrayStack;
-    private IntLinkedList intLinkedList;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    private StackableInterface intLinkedList;
+
+    public DefaultCountingOutRhymer(StackableInterface intLinkedList) {
         this.intLinkedList = intLinkedList;
     }
 

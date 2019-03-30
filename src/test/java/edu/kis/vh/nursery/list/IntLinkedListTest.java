@@ -1,6 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
