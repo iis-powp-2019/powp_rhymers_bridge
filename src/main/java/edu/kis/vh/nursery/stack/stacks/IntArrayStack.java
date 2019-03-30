@@ -5,7 +5,6 @@ import edu.kis.vh.nursery.stack.Stack;
 public class IntArrayStack implements Stack {
 
         private static final int STACK_CAPACITY = 12;
-        private static final int EMPTY_STACK_VALUE = -1;
 
         private int[] numbers = new int[STACK_CAPACITY];
         private int total = -1;

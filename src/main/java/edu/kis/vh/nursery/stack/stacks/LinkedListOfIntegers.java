@@ -35,8 +35,6 @@ class Node {
 
 public class LinkedListOfIntegers implements Stack {
 
-    public static final int EMPTY_STACK_VALUE = -1;
-
     private Node last;
 
     @Override public void push(int newNodeValue) {
