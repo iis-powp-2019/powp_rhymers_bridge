@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collections.Collections;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     public HanoiRhymer() {

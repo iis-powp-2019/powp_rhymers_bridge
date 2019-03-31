@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.collections;
 
-import edu.kis.vh.nursery.Collections;
-
 public class IntLinkedList implements Collections {
 
     private Node last;
