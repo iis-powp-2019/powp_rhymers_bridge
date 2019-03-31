@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public interface IntStack {
 
-	public final int EMPTY = -1;
+	public final int EMPTY = 0;
 
 	/**
 	 * @return total elements
