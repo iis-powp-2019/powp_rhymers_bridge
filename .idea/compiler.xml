@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="powp-rhymers" />
         <module name="Lab2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Lab2" target="1.8" />
+      <module name="powp-rhymers" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
