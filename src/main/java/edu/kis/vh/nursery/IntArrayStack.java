@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntStack {
 	private static final int STACK_SIZE = 12;
 	private static final int FULL_COUNT = STACK_SIZE-1;
 	private static final int STACK_EMPTY = -1;
@@ -9,47 +9,53 @@ public class IntArrayStack {
 
 	private int total = STACK_EMPTY;
 
-	/**
-	 * @return total elements
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#getTotal()
 	 */
+	@Override
 	public int getTotal() {
 		return total;
 	}
 
-	/**
-	 * @param in insert in on top of stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#countIn(int)
 	 */
+	@Override
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	/**
-	 * @return true if empty
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#callCheck()
 	 */
+	@Override
 	public boolean callCheck() {
 		return total == STACK_EMPTY;
 	}
 
-	/**
-	 * @return true if full
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#isFull()
 	 */
+	@Override
 	public boolean isFull() {
 		return total == FULL_COUNT;
 	}
 
-	/**
-	 * @return number from top of the stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#peekAboo()
 	 */
+	@Override
 	public int peekAboo() {
 		if (callCheck())
 			return STACK_EMPTY;
 		return numbers[total];
 	}
 
-	/**
-	 * @return number removed from top of the stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.IntStack#countOut()
 	 */
+	@Override
 	public int countOut() {
 		if (callCheck())
 			return STACK_EMPTY;

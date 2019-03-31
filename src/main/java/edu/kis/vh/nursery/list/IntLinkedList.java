@@ -1,13 +1,15 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.IntStack;
+
+public class IntLinkedList  implements IntStack {
 
 	private static final int EMPTY = -1;
 	private Node last;
 	
 	//TODO: remove unused variable
 	private int i;
-
+	
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -38,6 +40,36 @@ public class IntLinkedList {
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+	
+	private int total = EMPTY;
+	
+	@Override
+	public int getTotal() {
+		// TODO Auto-generated method stub
+		return total;
+	}
+
+	@Override
+	public void countIn(int in) {
+		push(in);
+		total++;
+	}
+
+	@Override
+	public boolean callCheck() {
+		return isEmpty();
+	}
+
+	@Override
+	public int peekAboo() {
+		return top();
+	}
+
+	@Override
+	public int countOut() {
+		total--;
+		return pop();
 	}
 	
 }
