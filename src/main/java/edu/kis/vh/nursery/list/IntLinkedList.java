@@ -1,11 +1,12 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList 
+public class IntLinkedList  implements IntStorageInterface 
 {
 
 	private Node last;
 	protected final int i=0;
 
+	@Override
 	public void push(int i) 
 	{
 		if (last == null)
@@ -17,16 +18,19 @@ public class IntLinkedList
 		}
 	}
 
+	@Override
 	public boolean isEmpty() 
 	{
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() 
 	{
 		return false;
 	}
 
+	@Override
 	public int top() 
 	{
 		if (isEmpty())
@@ -34,6 +38,7 @@ public class IntLinkedList
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() 
 	{
 		if (isEmpty())
