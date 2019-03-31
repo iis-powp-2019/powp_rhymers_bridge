@@ -2,6 +2,14 @@ package edu.kis.vh.nursery;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
+    public FIFORhymer() {
+        super();
+    }
+
+    public FIFORhymer(Collections intLinkedList) {
+        super(intLinkedList);
+    }
+
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
     @Override

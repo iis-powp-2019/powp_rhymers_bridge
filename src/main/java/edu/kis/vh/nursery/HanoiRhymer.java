@@ -2,6 +2,14 @@ package edu.kis.vh.nursery;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
+    public HanoiRhymer() {
+        super();
+    }
+
+    public HanoiRhymer(Collections intLinkedList) {
+        super(intLinkedList);
+    }
+
     private int totalRejected = 0;
 
     public int reportRejected() {
