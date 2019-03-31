@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.containers.IntLinkedList;
 
 public class RhymersJUnitTest {
 
