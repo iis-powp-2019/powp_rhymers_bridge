@@ -7,7 +7,7 @@ public class IntArrayStack implements  Stackable{
 
     private int total = NO_ANY_ELEMENTS;
 
-    public void countIn(int in) {
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
@@ -20,13 +20,13 @@ public class IntArrayStack implements  Stackable{
         return total == MAX_STACK_SIZE - 1;
     }
 
-    public int peekaboo() {
+    public int top() {
         if (callCheck())
             return NO_ANY_ELEMENTS;
         return numbers[total];
     }
 
-    public int countOut() {
+    public int pop() {
         if (callCheck())
             return NO_ANY_ELEMENTS;
         return numbers[total--];

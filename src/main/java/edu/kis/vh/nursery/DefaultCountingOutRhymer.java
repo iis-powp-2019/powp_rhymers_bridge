@@ -14,7 +14,7 @@ public class DefaultCountingOutRhymer implements Stackable{
         this.intLinkedList = new IntLinkedList();
     }
 
-    public void countIn(int in) {
+    public void push(int in) {
         intLinkedList.push(in);
     }
 
@@ -26,13 +26,13 @@ public class DefaultCountingOutRhymer implements Stackable{
         return false;
     }
 
-    public int peekaboo() {
+    public int top() {
         if (callCheck())
             return NO_ANY_ELEMENTS;
         return intLinkedList.top();
     }
 
-    public int countOut() {
+    public int pop() {
         if (callCheck())
             return NO_ANY_ELEMENTS;
         return intLinkedList.pop();
