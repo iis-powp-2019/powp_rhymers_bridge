@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.IntStackInterface;
-
 public class IntLinkedList implements IntStackInterface {
 
 	Node last;
@@ -30,14 +28,14 @@ public class IntLinkedList implements IntStackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return STARTING_POS;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return STARTING_POS;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

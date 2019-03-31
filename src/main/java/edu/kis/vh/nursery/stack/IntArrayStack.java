@@ -1,11 +1,8 @@
 package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.IntStackInterface;
-
 public class IntArrayStack implements IntStackInterface {
     private final int CAPACITY = 12;
     private final int MAX_SIZE = CAPACITY - 1;
-    private final int STARTING_POS = -1;
 
     private int[] numbers = new int[CAPACITY];
 

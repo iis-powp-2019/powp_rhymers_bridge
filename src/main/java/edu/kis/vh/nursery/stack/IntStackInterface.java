@@ -1,6 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.stack;
 
 public interface IntStackInterface {
+
+    int STARTING_POS = -1;
 
     void push(int i);
 
