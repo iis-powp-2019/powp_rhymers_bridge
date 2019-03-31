@@ -4,7 +4,6 @@ public class IntLinkedList  implements IntStorageInterface
 {
 
 	private Node last;
-	protected final int i=0;
 
 	@Override
 	public void push(int i) 
