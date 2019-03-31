@@ -4,18 +4,17 @@ import edu.kis.vh.nursery.containers.IntArrayStack;
 
 public class FifoRhymer extends DefaultCountingOutRhymer {
 
-	private final DefaultCountingOutRhymer temp;
+	private final IntStack temp;
 
 	public FifoRhymer() {
 		super();
-		temp = new DefaultCountingOutRhymer(new IntArrayStack());
+		temp = new IntArrayStack();
 	}
 	
 	public FifoRhymer(IntStack in, IntStack in2) {
 		super(in);
-		temp =  new DefaultCountingOutRhymer(in2);
+		temp = in2;
 	}
-	
 	
 	@Override
 	public int countOut() {
