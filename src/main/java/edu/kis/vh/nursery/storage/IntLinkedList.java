@@ -29,14 +29,14 @@ public class IntLinkedList implements Stack {
     @Override
     public int top() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_SIZE;
         return last.value;
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_SIZE;
         int ret = last.value;
         last = last.prev;
         return ret;

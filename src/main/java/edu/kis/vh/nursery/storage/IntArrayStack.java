@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.storage;
 public class IntArrayStack implements Stack {
 
     private static final int STACK_CAPACITY = 12;
-    private static final int EMPTY_STACK_SIZE = -1;
 
     private int[] numbers = new int[STACK_CAPACITY];
     private int total = EMPTY_STACK_SIZE;
@@ -24,7 +23,7 @@ public class IntArrayStack implements Stack {
 
     @Override
     public boolean isEmpty() {
-        return total == -1;
+        return total == EMPTY_STACK_SIZE;
     }
 
 
@@ -36,14 +35,14 @@ public class IntArrayStack implements Stack {
     @Override
     public int top() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_SIZE;
         return numbers[total];
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_SIZE;
         return numbers[total--];
     }
 }
