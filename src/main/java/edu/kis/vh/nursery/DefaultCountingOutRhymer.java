@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.IntStorageInterface;
 
 /**
  * @author modyfikacji Damian Golema
@@ -8,25 +9,20 @@ import edu.kis.vh.nursery.list.IntLinkedList;
  */
 public class DefaultCountingOutRhymer 
 {
-	private IntArrayStack ias;
-	private IntLinkedList ill = new IntLinkedList();
+	private IntStorageInterface isi = new IntLinkedList();
 	
 	public DefaultCountingOutRhymer() 
 	{
-		this.ias = null;
-	}
-	public DefaultCountingOutRhymer(IntArrayStack ias) 
-	{
-		this.ias = ias;
+		
 	}
 
 	public void countIn(int in) 
 	{
-		ill.push(in);
+		isi.push(in);
 	}
 	public boolean callCheck() 
 	{
-		return ill.isEmpty();
+		return isi.isEmpty();
 	}
 	public boolean isFull() 
 	{
@@ -34,11 +30,11 @@ public class DefaultCountingOutRhymer
 	}
 	public int countOut() 
 	{
-		return ill.pop();
+		return isi.pop();
 	}
 	public int peekaboo() 
 	{
-		return ill.top();
+		return isi.top();
 	}	
 
 }
