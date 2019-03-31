@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.IntStorageInterface;
 
 public class FIFORhymer extends DefaultCountingOutRhymer 
 {
@@ -25,5 +26,10 @@ public class FIFORhymer extends DefaultCountingOutRhymer
 			countIn(temp.pop());
 
 		return ret;
+	}
+
+	public FIFORhymer(IntStorageInterface i) {
+		super(i);
+		// TODO Auto-generated constructor stub
 	}
 }

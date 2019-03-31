@@ -9,11 +9,15 @@ import edu.kis.vh.nursery.storage.IntStorageInterface;
  */
 public class DefaultCountingOutRhymer 
 {
-	private IntStorageInterface isi = new IntLinkedList();
-	
+	private IntStorageInterface isi = null;
+
 	public DefaultCountingOutRhymer() 
 	{
 		
+	}
+	public DefaultCountingOutRhymer(IntStorageInterface i) 
+	{
+		isi = i;
 	}
 
 	public void countIn(int in) 

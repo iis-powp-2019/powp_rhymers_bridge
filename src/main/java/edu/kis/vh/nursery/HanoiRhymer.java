@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntStorageInterface;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer 
 {
 
@@ -22,6 +24,11 @@ public class HanoiRhymer extends DefaultCountingOutRhymer
 	public HanoiRhymer() 
 	{
 		super();
+	}
+
+	public HanoiRhymer(IntStorageInterface i) {
+		super(i);
+		// TODO Auto-generated constructor stub
 	}
 
 }
