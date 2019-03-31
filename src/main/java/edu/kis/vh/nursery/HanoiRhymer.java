@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.Stack;
 
 /**
  * Simple Hanoi Rhyme.
@@ -14,8 +14,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     public HanoiRhymer() {
     }
 
-    public HanoiRhymer(IntLinkedList intLinkedList) {
-        super(intLinkedList);
+    public HanoiRhymer(Stack stack) {
+        super(stack);
     }
 
     /**
