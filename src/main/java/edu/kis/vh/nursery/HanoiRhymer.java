@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntLinkedList;
+
 /**
  * Simple Hanoi Rhyme.
  */
@@ -8,6 +10,13 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     private static final int NUMBER_OF_REJECTED_RHYMES = 0;
 
     int totalRejected = NUMBER_OF_REJECTED_RHYMES;
+
+    public HanoiRhymer() {
+    }
+
+    public HanoiRhymer(IntLinkedList intLinkedList) {
+        super(intLinkedList);
+    }
 
     /**
      * Method returns number of rejected rhymes.
