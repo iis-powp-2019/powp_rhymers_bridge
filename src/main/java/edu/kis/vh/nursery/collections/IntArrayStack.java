@@ -20,7 +20,7 @@ public class IntArrayStack implements Collections {
     /**
      * index of stack last element
      */
-    private int total = -1;
+    private int total = COLLECTION_EMPTY_INDEX;
 
     /*
      * (non-Javadoc)

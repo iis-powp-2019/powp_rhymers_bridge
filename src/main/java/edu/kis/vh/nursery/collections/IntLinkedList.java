@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.Collections;
 public class IntLinkedList implements Collections {
 
     private Node last;
-    private int total = 0;
+    private int total = COLLECTION_EMPTY_INDEX;
 
     @Override
     public void countIn(int i) {
