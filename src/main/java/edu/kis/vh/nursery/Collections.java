@@ -12,7 +12,7 @@ public interface Collections {
     /**
      * Index indicating that stack has no elements
      */
-    public static final int STACK_COLLECTION_INDEX = -1;
+    public static final int COLLECTION_EMPTY_INDEX = 0;
 
     void countIn(int in);
 

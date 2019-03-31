@@ -41,7 +41,7 @@ public class IntArrayStack implements Collections {
      */
     @Override
     public boolean callCheck() {
-        return total == STACK_COLLECTION_INDEX;
+        return total == COLLECTION_EMPTY_INDEX;
     }
 
     /*
@@ -62,7 +62,7 @@ public class IntArrayStack implements Collections {
     @Override
     public int peekaboo() {
         if (callCheck()) {
-            return -1;
+            return COLLECTION_EMPTY_INDEX;
         }
         return numbers[total];
     }
@@ -75,7 +75,7 @@ public class IntArrayStack implements Collections {
     @Override
     public int countOut() {
         if (callCheck()) {
-            return -1;
+            return COLLECTION_EMPTY_INDEX;
         }
         return numbers[total--];
     }
