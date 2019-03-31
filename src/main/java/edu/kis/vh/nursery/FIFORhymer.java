@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntLinkedList;
+
 public class FIFORhymer extends DefaultCountingOutRhymer 
 {
 
@@ -9,18 +11,18 @@ public class FIFORhymer extends DefaultCountingOutRhymer
 		// TODO Auto-generated constructor stub
 	}
 
-	public DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	public IntLinkedList temp = new IntLinkedList();
 
 	@Override
 	public int countOut() 
 	{
 		while (!callCheck())
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		int ret = temp.countOut();
+		int ret = temp.pop();
 
-		while (!temp.callCheck())
-			countIn(temp.countOut());
+		while (!temp.isEmpty())
+			countIn(temp.pop());
 
 		return ret;
 	}
