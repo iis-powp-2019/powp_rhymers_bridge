@@ -28,7 +28,7 @@ public class IntArrayStack implements Stack {
     @Override
     public void countIn(final int in) {
         if (!isFull()) {
-            numbers[++total] = in;
+            numbers[total++] = in;
         }
     }
 
@@ -49,7 +49,7 @@ public class IntArrayStack implements Stack {
      */
     @Override
     public boolean isFull() {
-        return total == 11;
+        return total == MAX_SIZE;
     }
 
     /*
@@ -62,7 +62,7 @@ public class IntArrayStack implements Stack {
         if (callCheck()) {
             return Stack.EMPTY_STACK_VALUE;
         }
-        return numbers[total];
+        return numbers[total - 1];
     }
 
     /*
@@ -75,6 +75,6 @@ public class IntArrayStack implements Stack {
         if (callCheck()) {
             return Stack.EMPTY_STACK_VALUE;
         }
-        return numbers[total--];
+        return numbers[--total];
     }
 }
