@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.storage;
 
 public interface Stack {
-    int EMPTY_STACK_SIZE = -1;
+    int EMPTY_STACK_SIZE = 0;
 
     void push(int i);
 
