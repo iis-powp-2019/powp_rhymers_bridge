@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
     private int[] stack = new int[STACK_MAX_CAPACITY];
     private int currIndex = EMPTY_INDEX_VALUE;
 
+    public int getCurrIndex() {
+        return currIndex;
+    }
+    
     public void countIn(int in) {
         if (!isFull())
             stack[++currIndex] = in;
