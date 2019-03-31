@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+// W Intellij Alt + <- oraz Alt + -> przeskakuje pomiędzy otwartymi plikami
+
 public class HanoiRhymer extends defaultCountingOutRhymer {
 
     int totalRejected = 0;
