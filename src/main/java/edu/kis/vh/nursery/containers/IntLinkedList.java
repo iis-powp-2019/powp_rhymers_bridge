@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.IntStack;
 
 public class IntLinkedList  implements IntStack {
 
-	private static final int EMPTY = -1;
 	private Node last;
 	
 	//TODO: remove unused variable
@@ -30,19 +29,19 @@ public class IntLinkedList  implements IntStack {
 
 	public int top() {
 		if (isEmpty())
-			return EMPTY;
+			return IntStack.EMPTY;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return EMPTY;
+			return IntStack.EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
 	}
 	
-	private int total = EMPTY;
+	private int total = IntStack.EMPTY;
 	
 	@Override
 	public int getTotal() {

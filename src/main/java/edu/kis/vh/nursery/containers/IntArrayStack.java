@@ -5,11 +5,9 @@ import edu.kis.vh.nursery.IntStack;
 public class IntArrayStack implements IntStack {
 	private static final int STACK_SIZE = 12;
 	private static final int FULL_COUNT = STACK_SIZE-1;
-	private static final int STACK_EMPTY = -1;
-
 	private int[] numbers = new int[STACK_SIZE];
 
-	private int total = STACK_EMPTY;
+	private int total = IntStack.EMPTY;
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.nursery.IntStack#getTotal()
@@ -33,7 +31,7 @@ public class IntArrayStack implements IntStack {
 	 */
 	@Override
 	public boolean callCheck() {
-		return total == STACK_EMPTY;
+		return total == IntStack.EMPTY;
 	}
 
 	/* (non-Javadoc)
@@ -50,7 +48,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int peekAboo() {
 		if (callCheck())
-			return STACK_EMPTY;
+			return IntStack.EMPTY;
 		return numbers[total];
 	}
 
@@ -60,7 +58,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return STACK_EMPTY;
+			return IntStack.EMPTY;
 		return numbers[total--];
 	}
 }

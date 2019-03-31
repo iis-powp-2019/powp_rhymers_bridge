@@ -2,6 +2,8 @@ package edu.kis.vh.nursery;
 
 public interface IntStack {
 
+	public final int EMPTY = -1;
+
 	/**
 	 * @return total elements
 	 */
