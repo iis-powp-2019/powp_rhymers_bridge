@@ -3,8 +3,8 @@ package edu.kis.vh.nursery.storage;
 public class IntArrayStack  implements IntStorageInterface 
 {
 	private static final int MAX_SIZE = 12;
-	private static final int ERROR = -1;
-	private int[] numbers = new int[MAX_SIZE];
+	private static final int ERROR = 0;
+	private int[] numbers = new int[MAX_SIZE+1];
 	private int total = ERROR;
 	
 	public boolean callCheck() 
@@ -15,7 +15,7 @@ public class IntArrayStack  implements IntStorageInterface
 	@Override
 	public boolean isFull() 
 	{
-		return total == MAX_SIZE-1;
+		return total == MAX_SIZE;
 	}
 
 
