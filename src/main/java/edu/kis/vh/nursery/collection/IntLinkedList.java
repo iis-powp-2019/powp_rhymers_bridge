@@ -3,7 +3,6 @@ package edu.kis.vh.nursery.collection;
 public class IntLinkedList implements Stack{
 
     private Node last;
-    private int i;
 
     public void push(int i) {
         if (last == null)
@@ -25,20 +24,16 @@ public class IntLinkedList implements Stack{
 
     public int top() {
         if (isEmpty())
-            return -1;
+            return EMPTY;
         return last.getValue();
     }
 
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
-    }
-
-    public int getI() {
-        return i;
     }
 
 
