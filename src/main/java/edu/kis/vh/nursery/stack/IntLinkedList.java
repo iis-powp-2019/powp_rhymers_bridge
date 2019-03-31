@@ -28,14 +28,14 @@ public class IntLinkedList implements IntStackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return STARTING_POS;
+			return EMPTY_STACK_INDEX;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return STARTING_POS;
+			return EMPTY_STACK_INDEX;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

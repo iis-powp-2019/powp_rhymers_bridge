@@ -6,7 +6,7 @@ public class IntArrayStack implements IntStackInterface {
 
     private int[] numbers = new int[CAPACITY];
 
-    private int total = STARTING_POS;
+    private int total = EMPTY_STACK_INDEX;
 
     public int getTotal() {
         return total;
@@ -28,7 +28,7 @@ public class IntArrayStack implements IntStackInterface {
      */
     @Override
     public boolean isEmpty() {
-        return total == STARTING_POS;
+        return total == EMPTY_STACK_INDEX;
     }
 
     /**
@@ -47,7 +47,7 @@ public class IntArrayStack implements IntStackInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return STARTING_POS;
+            return EMPTY_STACK_INDEX;
         return numbers[total];
     }
 
@@ -58,7 +58,7 @@ public class IntArrayStack implements IntStackInterface {
     @Override
     public int pop() {
         if (isEmpty())
-            return STARTING_POS;
+            return EMPTY_STACK_INDEX;
         return numbers[total--];
     }
 }
