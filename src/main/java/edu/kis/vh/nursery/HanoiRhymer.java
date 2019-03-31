@@ -19,7 +19,9 @@ public class HanoiRhymer extends DefaultCountingOutRhymer
 			super.countIn(in);
 	}
 
-	public HanoiRhymer() {
-		// TODO Auto-generated constructor stub
+	public HanoiRhymer() 
+	{
+		super();
 	}
+
 }

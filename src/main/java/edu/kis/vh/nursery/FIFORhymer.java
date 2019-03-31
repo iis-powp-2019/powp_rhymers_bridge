@@ -3,7 +3,9 @@ package edu.kis.vh.nursery;
 public class FIFORhymer extends DefaultCountingOutRhymer 
 {
 
-	public FIFORhymer() {
+	public FIFORhymer() 
+	{
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
