@@ -1,10 +1,10 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntArrayStack;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final IntLinkedList temp = new IntLinkedList();
+    private final IntArrayStack temp = new IntArrayStack();
 
     public FIFORhymer() {
         super();
