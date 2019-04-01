@@ -38,7 +38,6 @@ public class IntLinkedList implements IntStack {
     }
 
 
-    public static final int EMPTY_VALUE = -1;
     private Node lastNode;
 
     @Override
@@ -65,7 +64,7 @@ public class IntLinkedList implements IntStack {
     @Override
     public int peekaboo() {
         if (callCheck())
-            return EMPTY_VALUE;
+            return STACK_EMPTY_INDEX;
 
         return lastNode.getValue();
     }
@@ -73,7 +72,7 @@ public class IntLinkedList implements IntStack {
     @Override
     public int countOut() {
         if (callCheck())
-            return EMPTY_VALUE;
+            return STACK_EMPTY_INDEX;
 
         int ret = lastNode.getValue();
         lastNode = lastNode.getPrevNode();

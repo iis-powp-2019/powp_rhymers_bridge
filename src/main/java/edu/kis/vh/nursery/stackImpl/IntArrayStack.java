@@ -3,10 +3,9 @@ package edu.kis.vh.nursery.stackImpl;
 public class IntArrayStack implements IntStack {
 
     public static final int STACK_MAX_CAPACITY = 12;
-    public static final int EMPTY_INDEX_VALUE = -1;
 
     private final int[] stack = new int[STACK_MAX_CAPACITY];
-    private int currIndex = EMPTY_INDEX_VALUE;
+    private int currIndex = STACK_EMPTY_INDEX;
 
     /**
      * Add integer value to the stack
@@ -24,7 +23,7 @@ public class IntArrayStack implements IntStack {
      */
     @Override
     public boolean callCheck() {
-        return currIndex == EMPTY_INDEX_VALUE;
+        return currIndex == STACK_EMPTY_INDEX;
     }
 
     /**
@@ -43,7 +42,7 @@ public class IntArrayStack implements IntStack {
     @Override
     public int peekaboo() {
         if (callCheck())
-            return EMPTY_INDEX_VALUE;
+            return STACK_EMPTY_INDEX;
 
         return stack[currIndex];
     }
@@ -56,7 +55,7 @@ public class IntArrayStack implements IntStack {
     @Override
     public int countOut() {
         if (callCheck())
-            return EMPTY_INDEX_VALUE;
+            return STACK_EMPTY_INDEX;
 
         return stack[currIndex--];
     }
