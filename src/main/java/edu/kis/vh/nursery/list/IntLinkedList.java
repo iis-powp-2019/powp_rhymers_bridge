@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStack {
 
     private class Node {
 
@@ -41,6 +41,7 @@ public class IntLinkedList {
     public static final int EMPTY_VALUE = -1;
     private Node lastNode;
 
+    @Override
     public void countIn(int i) {
         if (lastNode == null)
             lastNode = new Node(i);
@@ -51,14 +52,17 @@ public class IntLinkedList {
         }
     }
 
+    @Override
     public boolean callCheck() {
         return lastNode == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int peekaboo() {
         if (callCheck())
             return EMPTY_VALUE;
@@ -66,6 +70,7 @@ public class IntLinkedList {
         return lastNode.getValue();
     }
 
+    @Override
     public int countOut() {
         if (callCheck())
             return EMPTY_VALUE;
