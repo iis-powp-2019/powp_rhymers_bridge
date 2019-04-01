@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FIFORhymerTest {
     FIFORhymer rhymer = new FIFORhymer();
-    final int IS_EMPTY_INDICATOR = -1;
+    final int IS_EMPTY_INDICATOR = 0;
 
     @Test
     public void testCountOut() {
@@ -22,6 +22,7 @@ public class FIFORhymerTest {
         Assert.assertEquals(firstTestValue, result);
 
         rhymer.countOut();
+        result = rhymer.countOut();
         Assert.assertEquals(IS_EMPTY_INDICATOR, result);
     }
 }

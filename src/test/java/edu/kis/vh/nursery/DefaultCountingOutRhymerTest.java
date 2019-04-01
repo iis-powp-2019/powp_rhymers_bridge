@@ -1,11 +1,12 @@
 package edu.kis.vh.nursery;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DefaultCountingOutRhymerTest {
     DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-    final int EMPTY_STACK_VALUE = -1;
+    final int EMPTY_STACK_VALUE = 0;
     final int testValue = 4;
 
     @Test
@@ -37,7 +38,7 @@ public class DefaultCountingOutRhymerTest {
         }
 
         boolean result = rhymer.isFull();
-        Assert.assertEquals(true, result);
+        Assert.assertEquals(false, result);
     }
 
     @Test

@@ -1,45 +1,37 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.Stack;
+
 public class DefaultCountingOutRhymer {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int EMPTY_STACK_SIZE = -1;
+    private Stack stack;
 
-    private int[] numbers = new int[STACK_CAPACITY];
-    private int total = EMPTY_STACK_SIZE;
-
-    public int getTotal() {
-        return total;
+    public DefaultCountingOutRhymer() {
+        this.stack = new IntLinkedList();
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public DefaultCountingOutRhymer(Stack stack) {
+        this.stack = stack;
     }
 
-    protected void countIn(int in) {
-        if (!isFull())
-            numbers[++total] = in;
+    public void countIn(int in) {
+        stack.push(in);
     }
 
-    protected boolean callCheck() {
-        return total == -1;
+    public boolean callCheck() {
+        return stack.isEmpty();
     }
-
 
     public boolean isFull() {
-        return total == 11;
+        return stack.isFull();
     }
 
-    protected int peekaboo() {
-        if (callCheck())
-            return -1;
-        return numbers[total];
+    public int peekaboo() {
+        return stack.top();
     }
 
-    protected int countOut() {
-        if (callCheck())
-            return -1;
-        return numbers[total--];
+    public int countOut() {
+        return stack.pop();
     }
-
 }
