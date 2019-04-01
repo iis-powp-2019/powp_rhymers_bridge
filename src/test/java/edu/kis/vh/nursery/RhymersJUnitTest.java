@@ -36,9 +36,6 @@ public class RhymersJUnitTest {
 			Assert.assertEquals(false, result);
 			rhymer.countIn(888);
 		}
-
-		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
 	}
 
 	@Test
@@ -61,7 +58,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -79,7 +76,7 @@ public class RhymersJUnitTest {
 	public void testFIFOCountOut()
 	{
 		FIFORhymer rhymer = new FIFORhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
