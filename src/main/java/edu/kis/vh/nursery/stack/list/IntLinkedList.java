@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stack.list;
 
 
-import edu.kis.vh.nursery.IntStack;
+import edu.kis.vh.nursery.stack.IntStack;
 
 /**
  * @param
