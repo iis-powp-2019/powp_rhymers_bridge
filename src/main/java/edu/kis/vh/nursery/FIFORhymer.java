@@ -8,9 +8,16 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     // Według mnie najlepsza będzie implementacja oparta na liście ponieważ :
     // 1. Może przechowywać nieograniczoną ilość elementów
     // 2. Wstawianie jak i usuwanie z początku listy jest wykonywanie w stałym czasie
-    private final IntStack defaultRhymer = new IntLinkedList();
+    private IntStack defaultRhymer;
+
     public FIFORhymer() {
         super();
+        defaultRhymer = new IntLinkedList();
+    }
+
+    public FIFORhymer(IntStack intStack) {
+        super(intStack);
+        defaultRhymer = intStack;
     }
 
     @Override
