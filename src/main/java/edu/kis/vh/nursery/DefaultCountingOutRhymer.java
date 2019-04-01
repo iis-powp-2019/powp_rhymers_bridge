@@ -1,66 +1,60 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStack;
+
 public class DefaultCountingOutRhymer {
 
-    public static final int STACK_MAX_CAPACITY = 12;
-    public static final int EMPTY_INDEX_VALUE = -1;
+    private IntArrayStack intArrayStack = new IntArrayStack();
 
-    private final int[] stack = new int[STACK_MAX_CAPACITY];
-    private int currIndex = EMPTY_INDEX_VALUE;
+    public DefaultCountingOutRhymer() {
+    }
 
-    /**
-     * Get index which indicative top of the stack
-     * @return this index
-     */
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
+
     public int getCurrIndex() {
-        return currIndex;
+        return intArrayStack.getCurrIndex();
     }
 
     /**
      * Add integer value to the stack
+     *
      * @param in the value that will be added to the stack
      */
     public void countIn(int in) {
-        if (!isFull())
-            stack[++currIndex] = in;
+        intArrayStack.countIn(in);
     }
 
     /**
-     *
      * @return true, if the stack is empty, otherwise false
      */
     public boolean callCheck() {
-        return currIndex == EMPTY_INDEX_VALUE;
+        return intArrayStack.callCheck();
     }
 
     /**
-     *
      * @return true, if the stack is full, otherwise false
      */
     public boolean isFull() {
-        return currIndex == (STACK_MAX_CAPACITY - 1);
+        return intArrayStack.isFull();
     }
 
     /**
      * Get value from the top of the stack WITHOUT decrease stack pointer
+     *
      * @return EMPTY_INDEX_VALUE if stack is empty, otherwise value from the top of stack
      */
     protected int peekaboo() {
-        if (callCheck())
-            return EMPTY_INDEX_VALUE;
-
-        return stack[currIndex];
+        return intArrayStack.peekaboo();
     }
 
     /**
      * Get value from the top of the stack WITH decrease stack pointer
+     *
      * @return EMPTY_INDEX_VALUE if stack is empty, otherwise value from the top of stack
      */
     public int countOut() {
-        if (callCheck())
-            return EMPTY_INDEX_VALUE;
-
-        return stack[currIndex--];
+        return intArrayStack.countOut();
     }
-
 }

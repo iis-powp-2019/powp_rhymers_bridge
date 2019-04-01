@@ -46,7 +46,7 @@ public class IntArrayStack {
      *
      * @return EMPTY_INDEX_VALUE if stack is empty, otherwise value from the top of stack
      */
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return EMPTY_INDEX_VALUE;
 
