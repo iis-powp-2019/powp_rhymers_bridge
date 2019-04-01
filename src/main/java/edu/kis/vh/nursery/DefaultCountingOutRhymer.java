@@ -5,7 +5,7 @@ public class DefaultCountingOutRhymer {
     public static final int STACK_MAX_CAPACITY = 12;
     public static final int EMPTY_INDEX_VALUE = -1;
 
-    private int[] stack = new int[STACK_MAX_CAPACITY];
+    private final int[] stack = new int[STACK_MAX_CAPACITY];
     private int currIndex = EMPTY_INDEX_VALUE;
 
     public int getCurrIndex() {
