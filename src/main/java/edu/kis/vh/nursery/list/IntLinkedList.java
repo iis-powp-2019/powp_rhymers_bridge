@@ -41,7 +41,7 @@ public class IntLinkedList {
     public static final int EMPTY_VALUE = -1;
     private Node lastNode;
 
-    public void push(int i) {
+    public void countIn(int i) {
         if (lastNode == null)
             lastNode = new Node(i);
         else {
@@ -51,7 +51,7 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    public boolean callCheck() {
         return lastNode == null;
     }
 
@@ -59,15 +59,15 @@ public class IntLinkedList {
         return false;
     }
 
-    public int top() {
-        if (isEmpty())
+    public int peekaboo() {
+        if (callCheck())
             return EMPTY_VALUE;
 
         return lastNode.getValue();
     }
 
-    public int pop() {
-        if (isEmpty())
+    public int countOut() {
+        if (callCheck())
             return EMPTY_VALUE;
 
         int ret = lastNode.getValue();

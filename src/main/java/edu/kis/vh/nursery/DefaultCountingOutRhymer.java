@@ -1,20 +1,16 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntArrayStack;
+import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntArrayStack intArrayStack = new IntArrayStack();
+    private IntLinkedList intLinkedListStack = new IntLinkedList();
 
     public DefaultCountingOutRhymer() {
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intArrayStack = intArrayStack;
-    }
-
-    public int getCurrIndex() {
-        return intArrayStack.getCurrIndex();
+    public DefaultCountingOutRhymer(IntLinkedList intArrayStack) {
+        this.intLinkedListStack = intArrayStack;
     }
 
     /**
@@ -23,21 +19,21 @@ public class DefaultCountingOutRhymer {
      * @param in the value that will be added to the stack
      */
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        intLinkedListStack.countIn(in);
     }
 
     /**
      * @return true, if the stack is empty, otherwise false
      */
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return intLinkedListStack.callCheck();
     }
 
     /**
      * @return true, if the stack is full, otherwise false
      */
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return intLinkedListStack.isFull();
     }
 
     /**
@@ -46,7 +42,7 @@ public class DefaultCountingOutRhymer {
      * @return EMPTY_INDEX_VALUE if stack is empty, otherwise value from the top of stack
      */
     protected int peekaboo() {
-        return intArrayStack.peekaboo();
+        return intLinkedListStack.peekaboo();
     }
 
     /**
@@ -55,6 +51,6 @@ public class DefaultCountingOutRhymer {
      * @return EMPTY_INDEX_VALUE if stack is empty, otherwise value from the top of stack
      */
     public int countOut() {
-        return intArrayStack.countOut();
+        return intLinkedListStack.countOut();
     }
 }
