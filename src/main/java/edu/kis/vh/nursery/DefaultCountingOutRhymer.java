@@ -11,7 +11,7 @@ public class DefaultCountingOutRhymer {
     public int getCurrIndex() {
         return currIndex;
     }
-    
+
     public void countIn(int in) {
         if (!isFull())
             stack[++currIndex] = in;
