@@ -12,6 +12,11 @@ public class DefaultCountingOutRhymer {
         stack = new IntLinkedList();
     }
 
+    public DefaultCountingOutRhymer(RhymerStack stack)
+    {
+        this.stack = stack;
+    }
+
     public void countIn(int in) {
         stack.push(in);
     }

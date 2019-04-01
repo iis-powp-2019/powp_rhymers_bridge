@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.RhymerStack;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private static final int STARTING_TOTAL = 0;
@@ -11,6 +13,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     public HanoiRhymer() {
         super();
+    }
+
+    public HanoiRhymer(RhymerStack stack) {
+        super(stack);
     }
 
     @Override
