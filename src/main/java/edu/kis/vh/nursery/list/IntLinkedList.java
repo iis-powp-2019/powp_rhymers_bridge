@@ -2,6 +2,42 @@ package edu.kis.vh.nursery.list;
 
 public class IntLinkedList {
 
+    private class Node {
+
+        private int value;
+        private Node prevNode;
+        private Node nextNode;
+
+        Node(int i) {
+            setValue(i);
+        }
+
+        int getValue() {
+            return value;
+        }
+
+        void setValue(int value) {
+            this.value = value;
+        }
+
+        Node getPrevNode() {
+            return prevNode;
+        }
+
+        void setPrevNode(Node prevNode) {
+            this.prevNode = prevNode;
+        }
+
+        Node getNextNode() {
+            return nextNode;
+        }
+
+        void setNextNode(Node nextNode) {
+            this.nextNode = nextNode;
+        }
+    }
+
+
     public static final int EMPTY_VALUE = -1;
     private Node lastNode;
 
