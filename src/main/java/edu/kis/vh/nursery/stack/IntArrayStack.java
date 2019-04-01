@@ -61,4 +61,8 @@ public class IntArrayStack implements IntStackInterface {
             return EMPTY_STACK_INDEX;
         return numbers[total--];
     }
+
+    public int getCAPACITY() {
+        return CAPACITY;
+    }
 }
