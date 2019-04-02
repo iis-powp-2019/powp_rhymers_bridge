@@ -9,10 +9,9 @@ public class IntLinkedList implements IIntStack {
 
     private Node lastNode;
 
-
     /**
      * @param i value to add to list.
-     * Add node with value to list.
+     *          Add node with value to list.
      */
     @Override
     public void push(int i) {
@@ -44,7 +43,7 @@ public class IntLinkedList implements IIntStack {
      */
     @Override
     public boolean isFull() {
-    	 return lastNode == null;
+        return lastNode == null;
     }
 
     /**
