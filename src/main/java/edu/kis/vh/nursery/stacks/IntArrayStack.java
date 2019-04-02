@@ -4,11 +4,8 @@ import edu.kis.vh.nursery.Stack;
 
 public class IntArrayStack implements Stack {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int EMPTY_STACK_VALUE = -1;
-
-    private int[] numbers = new int[STACK_CAPACITY];
-    private int total = EMPTY_STACK_VALUE;
+    private int[] numbers = new int[StackValues.STACK_CAPACITY.getValue()];
+    private int total = StackValues.EMPTY_STACK_VALUE.getValue();
 
     @Override
     public void countIn(int in) {
@@ -19,18 +16,18 @@ public class IntArrayStack implements Stack {
 
     @Override
     public boolean callCheck() {
-        return total == EMPTY_STACK_VALUE;
+        return total == StackValues.EMPTY_STACK_VALUE.getValue();
     }
 
     @Override
     public boolean isFull() {
-        return total == STACK_CAPACITY - 1;
+        return total == StackValues.STACK_CAPACITY.getValue() - 1;
     }
 
     @Override
     public int actualNumber() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return StackValues.EMPTY_STACK_VALUE.getValue();
         }
 
         return numbers[total];
@@ -39,7 +36,7 @@ public class IntArrayStack implements Stack {
     @Override
     public int countOut() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return StackValues.EMPTY_STACK_VALUE.getValue();
         }
         return numbers[total--];
     }

@@ -4,9 +4,7 @@ import edu.kis.vh.nursery.Stack;
 
 public class LinkedListOfIntegers implements Stack {
 
-    private static final int EMPTY_STACK_VALUE = -1;
     private Node last;
-    private int i;
 
     @Override public void countIn(int in) {
         if (last == null) {
@@ -29,7 +27,7 @@ public class LinkedListOfIntegers implements Stack {
 
     @Override public int actualNumber() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return StackValues.EMPTY_STACK_VALUE.getValue();
         }
 
         return last.value;
@@ -37,7 +35,7 @@ public class LinkedListOfIntegers implements Stack {
 
     @Override public int countOut() {
         if (callCheck()) {
-            return EMPTY_STACK_VALUE;
+            return StackValues.EMPTY_STACK_VALUE.getValue();
         }
 
         int ret = last.value;
