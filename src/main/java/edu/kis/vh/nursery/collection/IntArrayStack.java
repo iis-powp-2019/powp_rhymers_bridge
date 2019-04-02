@@ -5,11 +5,10 @@ import edu.kis.vh.nursery.Stackable;
 public class IntArrayStack implements Stackable {
 
     private final int SIZE_NUMBER_ARRAY = 12;
-    private final int STACK_EMPTY_SIZE = -1;
     private final int STACK_MAX_SIZE = 11;
 
     private int[] numbers = new int[SIZE_NUMBER_ARRAY];
-    private int total = -1;
+    private int total = EMPTY_SIZE;
 
     @Override public void push(int in) {
         if (!isFull())
@@ -17,7 +16,7 @@ public class IntArrayStack implements Stackable {
     }
 
     @Override public boolean isEmpty() {
-        return total == STACK_EMPTY_SIZE;
+        return total == EMPTY_SIZE;
     }
 
     @Override public boolean isFull() {
@@ -26,13 +25,13 @@ public class IntArrayStack implements Stackable {
 
     @Override public int top() {
         if (isEmpty())
-            return STACK_EMPTY_SIZE;
+            return EMPTY_SIZE;
         return numbers[total];
     }
 
     @Override public int pop() {
         if (isEmpty())
-            return STACK_EMPTY_SIZE;
+            return EMPTY_SIZE;
         return numbers[total--];
     }
     //TODO: nalezy usunac nieuzywana metode

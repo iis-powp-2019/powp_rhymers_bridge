@@ -4,8 +4,6 @@ import edu.kis.vh.nursery.Stackable;
 
 public class IntLinkedList implements Stackable {
 
-    final int EMPTY_LIST_VALUE = -1;
-
     private int value;
     private IntLinkedList lastElement;
     private IntLinkedList prevElement;
@@ -37,13 +35,13 @@ public class IntLinkedList implements Stackable {
 
     @Override public int top() {
         if (isEmpty())
-            return EMPTY_LIST_VALUE;
+            return EMPTY_SIZE;
         return lastElement.getValue();
     }
 
     @Override public int pop() {
         if (isEmpty())
-            return EMPTY_LIST_VALUE;
+            return EMPTY_SIZE;
         final int value = lastElement.getValue();
         lastElement = lastElement.getPrevElement();
         return value;
