@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public interface Stackable {
 
-    int EMPTY_SIZE = -1;
+    int EMPTY_SIZE = 0;
 
     void push(int in);
     int pop();

@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.collection.IntLinkedList;
 public class DefaultCountingOutRhymer {
     private Stackable stackable;
 
-    private final int COLLECTION_EMPTY_SIZE=-1;
+    private final int COLLECTION_EMPTY_SIZE=0;
 
     public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         this.stackable = new IntLinkedList();
