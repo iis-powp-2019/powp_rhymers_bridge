@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.collection;
 
-import edu.kis.vh.nursery.Stackable;
-
 public class IntLinkedList implements Stackable {
 
     private int value;
