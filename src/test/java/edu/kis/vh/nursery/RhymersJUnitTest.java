@@ -4,8 +4,8 @@ import org.junit.Assert;
 
 import org.junit.Test;
 
-import edu.kis.vh.nursery.list.IntArrayStack;
-import edu.kis.vh.nursery.list.IntArrayStackInterface;
+import edu.kis.vh.nursery.stack.IntArrayStack;
+import edu.kis.vh.nursery.stack.IntArrayStackInterface;
 public class RhymersJUnitTest {
 
 	private static final int testValue = 4;
