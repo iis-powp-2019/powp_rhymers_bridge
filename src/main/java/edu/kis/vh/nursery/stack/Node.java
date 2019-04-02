@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 /**
  * The Node class implements attributes and methods to properly operate on the them in the list
