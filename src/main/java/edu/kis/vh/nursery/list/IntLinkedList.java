@@ -72,7 +72,7 @@ public class IntLinkedList {
 	 * Checks if list is empty
 	 * @return true if list is empty; false if list isn't empty
 	 */
-	private boolean isEmpty() {
+    public boolean isEmpty() {
 		return last == null;
 	}
 
