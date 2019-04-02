@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d554ad-1adb-4712-9f17-3eed9f24a56b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/FIFORhymer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/FIFORhymer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/DefaultCountingOutRhymer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/DefaultCountingOutRhymer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/FIFORhymer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/FIFORhymer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/HanoiRhymer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/HanoiRhymer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/IntArrayStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/kis/vh/nursery/IntArrayStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/kis/vh/nursery/RhymersDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/kis/vh/nursery/RhymersDemo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/kis/vh/nursery/RhymersJUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/kis/vh/nursery/RhymersJUnitTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="28d554ad-1adb-4712-9f17-3eed9f24a56b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="321">
+              <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -65,17 +50,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#244#245#0" expanded="true" />
                 <element signature="e#294#295#0" expanded="true" />
@@ -83,8 +68,6 @@
                 <element signature="e#391#392#0" expanded="true" />
                 <element signature="e#423#424#0" expanded="true" />
                 <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
                 <element signature="e#572#573#0" expanded="true" />
                 <element signature="e#600#601#0" expanded="true" />
                 <element signature="e#900#901#0" expanded="true" />
@@ -94,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -169,10 +152,10 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/FIFORhymer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java" />
       </list>
     </option>
   </component>
@@ -250,7 +233,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554238188515" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554238395858" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -272,7 +255,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RhymersJUnitTest.testRhymersFactory">
+  <component name="RunManager" selected="JUnit.RhymersJUnitTest.testCountOut">
+    <configuration name="RhymersDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersDemo" />
+      <module name="powp-rhymers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RhymersJUnitTest.testCallCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="powp-rhymers" />
       <extension name="coverage">
@@ -284,6 +280,22 @@
       <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
       <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
       <option name="METHOD_NAME" value="testCallCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RhymersJUnitTest.testCountIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="powp-rhymers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
+      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
+      <option name="METHOD_NAME" value="testCountIn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -305,22 +317,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RhymersJUnitTest.testIsFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="powp-rhymers" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
-      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
-      <option name="METHOD_NAME" value="testIsFull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RhymersJUnitTest.testPeekaboo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="powp-rhymers" />
       <extension name="coverage">
@@ -332,22 +328,6 @@
       <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
       <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
       <option name="METHOD_NAME" value="testPeekaboo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RhymersJUnitTest.testRhymersFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="powp-rhymers" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.kis.vh.nursery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.kis.vh.nursery" />
-      <option name="MAIN_CLASS_NAME" value="edu.kis.vh.nursery.RhymersJUnitTest" />
-      <option name="METHOD_NAME" value="testRhymersFactory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -402,11 +382,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RhymersJUnitTest.testRhymersFactory" />
         <item itemvalue="JUnit.RhymersJUnitTest.testCountOut" />
         <item itemvalue="JUnit.RhymersJUnitTest.testPeekaboo" />
-        <item itemvalue="JUnit.RhymersJUnitTest.testIsFull" />
         <item itemvalue="JUnit.RhymersJUnitTest.testCallCheck" />
+        <item itemvalue="JUnit.RhymersJUnitTest.testCountIn" />
+        <item itemvalue="Application.RhymersDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -423,29 +403,11 @@
       <workItem from="1552943854106" duration="9379000" />
       <workItem from="1553779812908" duration="3813000" />
       <workItem from="1554061417108" duration="2512000" />
-      <workItem from="1554237559629" duration="495000" />
+      <workItem from="1554237559629" duration="749000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RhymersJUnitTest_testPeekaboo - 2019.03.28 at 15h 21m 28s.xml">
-      <configuration name="RhymersJUnitTest.testPeekaboo" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RhymersJUnitTest_testCountOut - 2019.03.28 at 15h 21m 32s.xml">
-      <configuration name="RhymersJUnitTest.testCountOut" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RhymersJUnitTest_testCountIn - 2019.03.28 at 15h 22m 57s.xml">
-      <configuration name="RhymersJUnitTest.testCountIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RhymersJUnitTest_testCountIn - 2019.03.28 at 15h 24m 16s.xml">
-      <configuration name="RhymersJUnitTest.testCountIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RhymersJUnitTest_testCallCheck - 2019.03.28 at 15h 24m 22s.xml">
-      <configuration name="RhymersJUnitTest.testCallCheck" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RhymersJUnitTest_testIsFull - 2019.03.28 at 15h 24m 25s.xml">
-      <configuration name="RhymersJUnitTest.testIsFull" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RhymersJUnitTest_testPeekaboo - 2019.03.28 at 15h 24m 31s.xml">
       <configuration name="RhymersJUnitTest.testPeekaboo" configurationId="JUnit" />
     </history-entry>
@@ -458,9 +420,27 @@
     <history-entry file="RhymersJUnitTest_testCountIn - 2019.04.02 at 22h 44m 15s.xml">
       <configuration name="RhymersJUnitTest.testCountIn" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RhymersJUnitTest_testCountIn - 2019.04.02 at 22h 48m 36s.xml">
+      <configuration name="RhymersJUnitTest.testCountIn" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest_testCallCheck - 2019.04.02 at 22h 48m 44s.xml">
+      <configuration name="RhymersJUnitTest.testCallCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest_testIsFull - 2019.04.02 at 22h 48m 52s.xml">
+      <configuration name="RhymersJUnitTest.testIsFull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest_testPeekaboo - 2019.04.02 at 22h 48m 58s.xml">
+      <configuration name="RhymersJUnitTest.testPeekaboo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest_testCountOut - 2019.04.02 at 22h 49m 04s.xml">
+      <configuration name="RhymersJUnitTest.testCountOut" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RhymersJUnitTest_testRhymersFactory - 2019.04.02 at 22h 49m 11s.xml">
+      <configuration name="RhymersJUnitTest.testRhymersFactory" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16199000" />
+    <option name="totallyTimeSpent" value="16453000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -593,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -610,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/FIFORhymer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -624,27 +590,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/kis/vh/nursery/RhymersJUnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="321">
+          <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/HanoiRhymer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/Stackable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/DefaultCountingOutRhymer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#244#245#0" expanded="true" />
             <element signature="e#294#295#0" expanded="true" />
@@ -652,13 +625,18 @@
             <element signature="e#391#392#0" expanded="true" />
             <element signature="e#423#424#0" expanded="true" />
             <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
             <element signature="e#572#573#0" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
             <element signature="e#900#901#0" expanded="true" />
             <element signature="e#928#929#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/kis/vh/nursery/IntArrayStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
