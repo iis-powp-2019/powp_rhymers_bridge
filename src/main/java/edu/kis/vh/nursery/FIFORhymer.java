@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.stack.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+    private final IntLinkedList temp = new IntLinkedList();
 
     public FIFORhymer(IntLinkedList intLinkedList) {
         super(intLinkedList);
