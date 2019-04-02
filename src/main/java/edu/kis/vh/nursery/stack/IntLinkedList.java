@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.stack.Stackable;
 
 public class IntLinkedList implements Stackable {
 
-	static final int INDEX_OF_EMPTY_STACK = -1;
 	private Node last;
 	private int total = INDEX_OF_EMPTY_STACK;
 

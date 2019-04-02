@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Stackable {
 
-    static final int INDEX_OF_EMPTY_STACK = -1;
     private static final int STACK_CAPACITY = 12;
     private static final int INDEX_OF_FULL_STACK = 11;
 
