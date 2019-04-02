@@ -1,9 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.ownStackImplementations.IntLinkedList;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
-
+    // Lepiej użyc listy niż tablicy, FIFO -first in, first out, iteruje od początku, tak samo jak lista
+    private final IntLinkedList intLinkedList = new IntLinkedList();
     public FIFORhymer() {
         super();
     }
@@ -15,13 +17,13 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override
     public int countOut() {
         while (!isFull()) {
-            defaultCountingOutRhymer.countIn(super.countOut());
+            intLinkedList.push(super.countOut());
         }
 
-        int returnDefaultCountingOutRhymerCount = defaultCountingOutRhymer.countOut();
+        int returnDefaultCountingOutRhymerCount = intLinkedList.pop();
 
-        while (!defaultCountingOutRhymer.isFull()) {
-            countIn(defaultCountingOutRhymer.countOut());
+        while (!intLinkedList.isFull()) {
+            countIn(intLinkedList.pop());
         }
 
         return returnDefaultCountingOutRhymerCount;
