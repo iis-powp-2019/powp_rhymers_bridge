@@ -1,8 +1,12 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class IntArrayStack {
 	private int[] NUMBERS = new int[12];
 
+
+	
 	public int getTotal() {
 		return total;
 	}

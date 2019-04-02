@@ -4,34 +4,41 @@ public class IntLinkedList {
 
 	Node last;
 	private int i;
-	
-	public void push(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
-	}
+	private static final int EMPTY_INDEX = -1;
+    int total = EMPTY_INDEX;
 
-	public boolean isEmpty() {
+	public int getTotal() {
+	   return total;
+	}
+	
+	public void countIn(int i) {
+	
+			total++;
+			if (last == null)
+				last = new Node(i);
+			else {
+				last.next = new Node(i);
+				last.next.prev = last;
+				last = last.next;
+			}
+		}
+
+	public boolean callCheck() {
 		return last == null;
 	}
 
 	public boolean isFull() {
 		return false;
 	}
-
-	public int top() {
-		if (isEmpty())
-			return -1;
+	
+	public int peeKaBoo() {
+		if(callCheck()) return EMPTY_INDEX;
 		return last.getValue();
 	}
 
-	public int pop() {
-		if (isEmpty())
-			return -1;
+	public int countOut() {
+		total--;
+		if(callCheck()) return EMPTY_INDEX;
 		int ret = last.getValue();
 		last = last.prev;
 		return ret;
@@ -44,5 +51,7 @@ public class IntLinkedList {
 	void setI(int i) {
 		this.i = i;
 	}
+
+	
 
 }

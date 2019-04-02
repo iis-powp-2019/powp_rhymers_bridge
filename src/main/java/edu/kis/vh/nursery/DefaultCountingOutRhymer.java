@@ -1,10 +1,13 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class DefaultCountingOutRhymer {
 	
-	private IntArrayStack stack;
 
-	public DefaultCountingOutRhymer(IntArrayStack stack) {
+	private IntLinkedList stack;
+
+	public DefaultCountingOutRhymer(IntLinkedList stack) {
 		super();
 		this.stack = stack;
 	}
@@ -13,9 +16,6 @@ public class DefaultCountingOutRhymer {
 		return stack.getTotal();
 	}
 
-	public void setTotal(int total) {
-		stack.setTotal(total);
-	}
 
 	public void countIn(int in) {
 		stack.countIn(in);
@@ -34,14 +34,11 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public DefaultCountingOutRhymer() {
-		this.stack = new IntArrayStack();
+		this.stack = new IntLinkedList();
 	}
 
-	public IntArrayStack getStack() {
-		return stack;
-	}
-
-	public void setStack(IntArrayStack stack) {
+	
+	public void setStack(IntLinkedList stack) {
 		this.stack = stack;
 	}
 	
