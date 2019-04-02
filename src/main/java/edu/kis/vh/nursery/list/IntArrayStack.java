@@ -1,7 +1,4 @@
-package edu.kis.vh.nursery;
-
-import edu.kis.vh.nursery.list.IntArrayStackInterface;
-import edu.kis.vh.nursery.list.IntLinkedList;
+package edu.kis.vh.nursery.list;
 
 public class IntArrayStack implements IntArrayStackInterface {
 	private int[] NUMBERS = new int[12];
