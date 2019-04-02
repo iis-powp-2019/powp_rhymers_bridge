@@ -6,6 +6,19 @@ package edu.kis.vh.nursery;
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
+    private Stack stack;
+
+    public HanoiRhymer(Stack typeOfImplementation, Stack stack) {
+        super(typeOfImplementation);
+        this.stack = stack;
+    }
+
+    public HanoiRhymer(Stack stack) {
+        this.stack = stack;
+    }
+
+    public HanoiRhymer() {
+    }
 
     /**
      * Metoda reportuje całkowitą liczbę odrzuconych liczb.
