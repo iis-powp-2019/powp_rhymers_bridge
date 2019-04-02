@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 /**
  * Class representing doubly-linked list containing values of type int
  */
-public class IntLinkedList {
+public class IntLinkedList implements DataStructure{
 
 	/**
 	 * Class representing single element of the list
@@ -58,7 +58,7 @@ public class IntLinkedList {
 	 * Adds element to the end of the list with value "i"
 	 * @param i Value to be added
 	 */
-	public void push(int i) {
+	public void countIn(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -72,7 +72,7 @@ public class IntLinkedList {
 	 * Checks if list is empty
 	 * @return true if list is empty; false if list isn't empty
 	 */
-    public boolean isEmpty() {
+    public boolean callCheck() {
 		return last == null;
 	}
 
@@ -88,8 +88,8 @@ public class IntLinkedList {
 	 * Returns value of the last element in a list, without removing it
 	 * @return value of the last element or -1 if the list is empty
 	 */
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return EMPTY_INDEX;
 		return last.getValue();
 	}
@@ -98,8 +98,8 @@ public class IntLinkedList {
 	 * Returns value of the last element in a list and removes that element
 	 * @return value of the last element or -1 if the list is empty
 	 */
-	public int pop() {
-		if (isEmpty())
+	public int countOut() {
+		if (callCheck())
 			return EMPTY_INDEX;
 		int ret = last.getValue();
 		last = last.getPrev();
