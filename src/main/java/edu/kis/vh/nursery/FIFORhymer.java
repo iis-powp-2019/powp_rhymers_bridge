@@ -1,10 +1,15 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.data_structure.DataStructure;
+import edu.kis.vh.nursery.data_structure.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+
+    // Szybdze będzie użycie InrArrayStack, ponieważ działamy tam na tablicy i nie tworzymy kolejnych obiektów.
+    // Jednak IntLinkedList nie ograniacza nas co do ilości elementów.
+
+    private final DataStructure temp = new IntLinkedList();
 
     public FIFORhymer() {
         super();
@@ -17,13 +22,13 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override public int countOut() {
         while (!callCheck())
 
-            temp.countIn(super.countOut());
+            temp.push(super.countOut());
 
-        final int ret = temp.countOut();
+        final int ret = temp.pop();
 
-        while (!temp.callCheck())
+        while (!temp.isEmpty())
 
-            countIn(temp.countOut());
+            countIn(temp.pop());
 
         return ret;
     }
