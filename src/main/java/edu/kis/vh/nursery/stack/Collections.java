@@ -15,4 +15,5 @@ public interface Collections {
     int getTotal();
 
     int TOTAL = 0;
+
 }
