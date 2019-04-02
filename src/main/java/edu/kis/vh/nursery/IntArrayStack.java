@@ -7,27 +7,32 @@ public class IntArrayStack implements  Stackable{
 
     private int total = NO_ANY_ELEMENTS;
 
+    @Override
     public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == NO_ANY_ELEMENTS;
     }
 
+    @Override
     public boolean isFull() {
         return total == MAX_STACK_SIZE - 1;
     }
 
+    @Override
     public int top() {
-        if (callCheck())
+        if (isEmpty())
             return NO_ANY_ELEMENTS;
         return numbers[total];
     }
 
+    @Override
     public int pop() {
-        if (callCheck())
+        if (isEmpty())
             return NO_ANY_ELEMENTS;
         return numbers[total--];
     }

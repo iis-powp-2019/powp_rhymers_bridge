@@ -10,31 +10,37 @@ public class DefaultCountingOutRhymer implements Stackable{
         this.intLinkedList = intLinkedList;
     }
 
+
     public DefaultCountingOutRhymer() {
         this.intLinkedList = new IntLinkedList();
     }
 
+    @Override
     public void push(int in) {
         intLinkedList.push(in);
     }
 
-    public boolean callCheck() {
-        return intLinkedList.isEmpty();
-    }
-
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int top() {
-        if (callCheck())
+        if (isEmpty())
             return NO_ANY_ELEMENTS;
         return intLinkedList.top();
     }
 
+    @Override
     public int pop() {
-        if (callCheck())
+        if (isEmpty())
             return NO_ANY_ELEMENTS;
         return intLinkedList.pop();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return intLinkedList.isEmpty();
     }
 }
