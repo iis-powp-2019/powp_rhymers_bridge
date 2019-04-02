@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.stack;
 
 public interface Collections {
 
@@ -14,4 +14,5 @@ public interface Collections {
 
     int getTotal();
 
+    int TOTAL = 0;
 }

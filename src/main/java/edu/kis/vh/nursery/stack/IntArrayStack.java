@@ -1,12 +1,10 @@
 package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.Collections;
-
 public class IntArrayStack implements Collections {
 
     private static final int TOTAL_FULL_VALUE = 11;
 
-    private static final int TOTAL_VALUE = -1;
+    private static final int TOTAL_VALUE = Collections.TOTAL;
 
     private static final int MAX_SIZE = 12;
 
@@ -19,19 +17,19 @@ public class IntArrayStack implements Collections {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#countIn(int)
      */
     @Override
     public void countIn(int in) {
         if (!isFull()) {
-            numbers[++total] = in;
+            numbers[total++] = in;
         }
     }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#callCheck()
      */
     @Override
@@ -41,7 +39,7 @@ public class IntArrayStack implements Collections {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#isFull()
      */
     @Override
@@ -51,7 +49,7 @@ public class IntArrayStack implements Collections {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#peekaboo()
      */
     @Override
@@ -64,7 +62,7 @@ public class IntArrayStack implements Collections {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#countOut()
      */
     @Override
@@ -77,7 +75,7 @@ public class IntArrayStack implements Collections {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see edu.kis.vh.nursery.Collections#getTotal()
      */
     @Override

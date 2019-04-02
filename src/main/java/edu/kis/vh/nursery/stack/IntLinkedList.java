@@ -1,11 +1,9 @@
 package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.Collections;
-
 public class IntLinkedList implements Collections {
 
     private static final int EMPTY = 0;
-    private int total = 0;
+    private int total = Collections.TOTAL;
     private Node last;
     private int i;
 
