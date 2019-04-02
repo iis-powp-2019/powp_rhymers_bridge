@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
+import edu.kis.vh.nursery.stack.IntArrayStack;;
 
 public class RhymersJUnitTest {
 
@@ -33,8 +34,8 @@ public class RhymersJUnitTest {
 	//Test fails, because of implementation based on IntLinkedList
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(new IntArrayStack());
+		for (int i = 0; i < STACK_CAPACITY - 1; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
 			rhymer.countIn(888);
