@@ -1,6 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
-public class StackArray implements IIntStack {
+import edu.kis.vh.nursery.IIntStack;
+
+public class IntArrayStack implements IIntStack {
 
     private static final int STACK_MAX_SIZE = 12;
     private static final int STACK_START_SIZE = -1;
