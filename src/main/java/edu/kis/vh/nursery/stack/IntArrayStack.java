@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements StackInterface {
 		private static final int FULL_STACK_VALUE = 11;
