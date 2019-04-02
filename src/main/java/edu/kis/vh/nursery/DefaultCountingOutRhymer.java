@@ -1,46 +1,38 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.IntArrayStack;
 import edu.kis.vh.nursery.stack.IntLinkedList;
 
-public class DefaultCountingOutRhymer implements Stackable{
+public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList;
+    private Stackable stackable;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(Stackable stackable) {
+        this.stackable = stackable;
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intLinkedList = new IntLinkedList();
+    public DefaultCountingOutRhymer() {
+        this.stackable = new IntLinkedList();
     }
 
-    @Override
+
     public void push(int in) {
-        intLinkedList.push(in);
+        stackable.push(in);
     }
 
-    @Override
     public boolean isFull() {
-        return false;
+        return stackable.isFull();
     }
 
-    @Override
+
     public int top() {
-        if (isEmpty())
-            return NO_ANY_ELEMENTS;
-        return intLinkedList.top();
+        return stackable.top();
     }
 
-    @Override
     public int pop() {
-        if (isEmpty())
-            return NO_ANY_ELEMENTS;
-        return intLinkedList.pop();
+        return stackable.pop();
     }
 
-    @Override
     public boolean isEmpty() {
-        return intLinkedList.isEmpty();
+        return stackable.isEmpty();
     }
 }

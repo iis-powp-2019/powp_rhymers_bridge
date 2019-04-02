@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery.stack;
 
+import edu.kis.vh.nursery.Stackable;
+
 class Node {
 
     private int value;
@@ -34,7 +36,7 @@ class Node {
     }
 }
 
-public class IntLinkedList {
+public class IntLinkedList implements Stackable {
 
     private static final int NO_ANY_ELEMENTS = -1;
     private Node last;
