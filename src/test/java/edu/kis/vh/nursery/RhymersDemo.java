@@ -1,13 +1,17 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.ListRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
+import edu.kis.vh.nursery.factory.StackRhymersFactory;
 
 class RhymersDemo {
 
 	public static void main(String[] args) {
 
 		testRhymers(new DefaultRhymersFactory());
+		testRhymers(new ListRhymersFactory());
+		testRhymers(new StackRhymersFactory());
 
 	}
 
@@ -31,6 +35,8 @@ class RhymersDemo {
 
 		System.out.println("total rejected is "
 				+ ((HanoiRhymer) rhymers[3]).reportRejected());
+
+		System.out.println();
 	}
 
 }
