@@ -9,10 +9,6 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		super();
 	}
 
-	public FIFORhymer(StackInterface IntArrayStack) {
-		super(IntArrayStack);
-	}
-
 	//private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 	private final StackInterface temp = new IntArrayStack();
 

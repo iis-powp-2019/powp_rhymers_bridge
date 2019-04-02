@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.stack.StackInterface;
-
 /**
  * @author Piotr
  * Class extends default stack functionality
@@ -10,10 +8,6 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 	
 	public HanoiRhymer() {
 		super();
-	}
-
-	public HanoiRhymer(StackInterface intLinkedList) {
-		super(intLinkedList);
 	}
 
 	private static final int DEFAULT_VALUE = 0;
