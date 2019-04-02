@@ -6,7 +6,6 @@ public class IntArrayStack implements IIntStack {
 
     private static final int STACK_MAX_SIZE = 12;
     private int totalQueueNumbersCount = EMPTY_RETURN_CODE;
-
     private int[] queueNumbers = new int[STACK_MAX_SIZE];
 
     @Override
@@ -23,14 +22,14 @@ public class IntArrayStack implements IIntStack {
     @Override
     public int pop() {
         if (isFull())
-            return EMPTY_RETURN_CODE;
+            return EMPTY_RETURN_CODE + 1;
         return queueNumbers[totalQueueNumbersCount--];
     }
 
     @Override
     public int peek() {
         if (isFull())
-            return EMPTY_RETURN_CODE;
+            return EMPTY_RETURN_CODE + 1;
         return queueNumbers[totalQueueNumbersCount];
     }
 }

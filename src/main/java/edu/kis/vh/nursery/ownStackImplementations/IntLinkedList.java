@@ -6,7 +6,7 @@ import edu.kis.vh.nursery.IIntStack;
  * Linked Listy Int type
  */
 public class IntLinkedList implements IIntStack {
-    
+
     private Node lastNode;
 
 
