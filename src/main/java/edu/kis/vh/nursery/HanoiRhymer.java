@@ -1,6 +1,16 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Stackable;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
+
+	public HanoiRhymer() {
+		super();
+	}
+
+	public HanoiRhymer(Stackable stack) {
+		super(stack);
+	}
 
 	private int totalRejected = 0;
 
