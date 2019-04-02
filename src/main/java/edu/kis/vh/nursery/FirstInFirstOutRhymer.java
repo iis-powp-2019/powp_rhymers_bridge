@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.Stackable;
+import edu.kis.vh.nursery.stack.IntArrayStack;
 
 public class FirstInFirstOutRhymer extends DefaultCountingOutRhymer {
 
@@ -12,7 +13,7 @@ public class FirstInFirstOutRhymer extends DefaultCountingOutRhymer {
 		super(stack);
 	}
 
-	private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private IntArrayStack  temp = new IntArrayStack();
 
 	@Override
 	public int countOut() {
@@ -27,3 +28,6 @@ public class FirstInFirstOutRhymer extends DefaultCountingOutRhymer {
 		return ret;
 	}
 }
+
+
+//I choose Array, because it is faster than stack
