@@ -4,6 +4,14 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer defaultCountingOutRhymer = new DefaultCountingOutRhymer();
 
+    public FIFORhymer() {
+        super();
+    }
+
+    public FIFORhymer(IIntStack iIntStack) {
+        super(iIntStack);
+    }
+
     @Override
     public int countOut() {
         while (!isFull()) {
