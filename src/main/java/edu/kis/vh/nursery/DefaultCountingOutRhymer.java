@@ -4,7 +4,7 @@ public class DefaultCountingOutRhymer {
 
     private static final int EMPTY_INDEX = -1;
     private static final int STACK_MAX = 12;
-    private int[] numbers = new int[STACK_MAX];
+    private final int[] numbers = new int[STACK_MAX];
 
     private int total = EMPTY_INDEX;
 
