@@ -6,8 +6,7 @@ import edu.kis.vh.nursery.IIntStack;
  * Linked Listy Int type
  */
 public class IntLinkedList implements IIntStack {
-
-    private static final int EMPTY_RETURN_CODE = -1;
+    
     private Node lastNode;
 
 

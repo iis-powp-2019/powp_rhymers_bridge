@@ -5,8 +5,7 @@ import edu.kis.vh.nursery.IIntStack;
 public class IntArrayStack implements IIntStack {
 
     private static final int STACK_MAX_SIZE = 12;
-    private static final int STACK_START_SIZE = -1;
-    private int totalQueueNumbersCount = STACK_START_SIZE;
+    private int totalQueueNumbersCount = EMPTY_RETURN_CODE;
 
     private int[] queueNumbers = new int[STACK_MAX_SIZE];
 
@@ -24,14 +23,14 @@ public class IntArrayStack implements IIntStack {
     @Override
     public int pop() {
         if (isFull())
-            return STACK_START_SIZE;
+            return EMPTY_RETURN_CODE;
         return queueNumbers[totalQueueNumbersCount--];
     }
 
     @Override
     public int peek() {
         if (isFull())
-            return STACK_START_SIZE;
+            return EMPTY_RETURN_CODE;
         return queueNumbers[totalQueueNumbersCount];
     }
 }
