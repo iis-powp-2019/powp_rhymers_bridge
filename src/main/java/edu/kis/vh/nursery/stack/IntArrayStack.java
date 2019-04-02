@@ -50,7 +50,7 @@ public class IntArrayStack implements IntArrayStackInterface {
 		
 	public int peeKaBoo() {
 		if (callCheck())
-			return -1;
+			return -0;
 		return NUMBERS[total];
 	}
 			
@@ -60,7 +60,7 @@ public class IntArrayStack implements IntArrayStackInterface {
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return -1;
+			return 0;
 		return NUMBERS[total--];
 	}
 
