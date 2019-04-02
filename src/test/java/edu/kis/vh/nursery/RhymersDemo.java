@@ -1,18 +1,25 @@
 package edu.kis.vh.nursery;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
+import edu.kis.vh.nursery.factory.ArrayImplementsRhymersFactory;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.ListImplementsRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 class RhymersDemo {
 
 	private static final int stat = 15;
 
 	public static void main(String[] args) {
-		RhymersFactory factory = new DefaultRhymersFactory();
-		
-		testRhymers(factory);
+		List<RhymersFactory> rhymersFactories = new ArrayList<>();
+        rhymersFactories.add(new DefaultRhymersFactory());
+        rhymersFactories.add(new ArrayImplementsRhymersFactory());
+        rhymersFactories.add(new ListImplementsRhymersFactory());
 
+        rhymersFactories.forEach(RhymersDemo::testRhymers);
 	}
 	//Skróty Alt + -> oraz Alt + <- slużą do zmiamy plików otwartych w IDE
 
@@ -33,8 +40,12 @@ class RhymersDemo {
 				System.out.print(rhymers[i].countOut() + "  ");
 			System.out.println();
 		}
-
-		System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
+		if (rhymers[3] instanceof HanoiRhymer)
+		{
+			System.out.println("total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
+		}
+		
 	}
+	
 	
 }
