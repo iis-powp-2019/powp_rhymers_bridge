@@ -1,16 +1,32 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+
+
+public class IntLinkedList implements IntArrayStackInterface{
 
 	Node last;
 	private int i;
 	private static final int EMPTY_INDEX = -1;
     int total = EMPTY_INDEX;
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#getTotal()
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#getTotal()
+	 */
+	@Override
 	public int getTotal() {
 	   return total;
 	}
 	
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#countIn(int)
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#countIn(int)
+	 */
+	@Override
 	public void countIn(int i) {
 	
 			total++;
@@ -23,19 +39,47 @@ public class IntLinkedList {
 			}
 		}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#callCheck()
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#callCheck()
+	 */
+	@Override
 	public boolean callCheck() {
 		return last == null;
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#isFull()
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#isFull()
+	 */
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 	
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#peeKaBoo()
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#peeKaBoo()
+	 */
+	@Override
 	public int peeKaBoo() {
 		if(callCheck()) return EMPTY_INDEX;
 		return last.getValue();
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#countOut()
+	 */
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.nursery.list.IntArrayStackInterface#countOut()
+	 */
+	@Override
 	public int countOut() {
 		total--;
 		if(callCheck()) return EMPTY_INDEX;
@@ -50,6 +94,12 @@ public class IntLinkedList {
 
 	void setI(int i) {
 		this.i = i;
+	}
+
+	@Override
+	public void setTotal(int total) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

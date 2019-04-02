@@ -1,13 +1,14 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStackInterface;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 	
 
-	private IntLinkedList stack;
+	private IntArrayStackInterface stack;
 
-	public DefaultCountingOutRhymer(IntLinkedList stack) {
+	public DefaultCountingOutRhymer(IntArrayStackInterface stack) {
 		super();
 		this.stack = stack;
 	}
@@ -38,7 +39,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	
-	public void setStack(IntLinkedList stack) {
+	public void setStack(IntArrayStackInterface stack) {
 		this.stack = stack;
 	}
 	

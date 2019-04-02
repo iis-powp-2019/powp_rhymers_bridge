@@ -3,6 +3,8 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 
 import org.junit.Test;
+
+import edu.kis.vh.nursery.list.IntArrayStackInterface;
 public class RhymersJUnitTest {
 
 	private static final int testValue = 4;
@@ -19,7 +21,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		IntArrayStack rhymer = new IntArrayStack();
+		IntArrayStackInterface rhymer = new IntArrayStack();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -31,7 +33,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		IntArrayStack rhymer = new IntArrayStack();
+		IntArrayStackInterface rhymer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -59,7 +61,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		IntArrayStack rhymer = new IntArrayStack();
+		IntArrayStackInterface rhymer = new IntArrayStack();
 		
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
