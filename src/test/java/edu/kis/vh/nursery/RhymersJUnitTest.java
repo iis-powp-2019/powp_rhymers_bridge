@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RhymersJUnitTest {
 
 	private static final int TEST_VALUE = 4;
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int EMPTY_STACK_VALUE = 0;
 	private static final int STACK_CAPACITY = 12;
 
 	@Test
@@ -84,7 +84,7 @@ public class RhymersJUnitTest {
 		{
 			rhymer.countIn(TEST_VALUE);
 			result = rhymer.getTotal();
-			Assert.assertEquals(i, result);
+			Assert.assertEquals(i+1, result);
 		}
 	}
 
