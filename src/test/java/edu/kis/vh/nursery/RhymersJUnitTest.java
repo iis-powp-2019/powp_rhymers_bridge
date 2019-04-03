@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.stack.IntArrayStack;
 import edu.kis.vh.nursery.stack.IntegerLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
@@ -148,5 +149,53 @@ public class RhymersJUnitTest {
 		result = rhymerFIFO.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
+
+	@Test
+    public void testHanoiReportRejected() {
+        HanoiRhymer hanoiRhymer = new HanoiRhymer();
+        int rejectedNumber = 1;
+
+        int testValue = 4;
+        hanoiRhymer.countIn(testValue);
+
+        testValue = 5;
+        hanoiRhymer.countIn(testValue);
+
+        testValue = 3;
+        hanoiRhymer.countIn(testValue);
+
+        int result = hanoiRhymer.reportRejected();
+        Assert.assertEquals(rejectedNumber, result);
+    }
+
+    @Test
+    public void testStackTotal() {
+        IntArrayStack intArrayStack = new IntArrayStack();
+        int elementsAmount = 3;
+
+        intArrayStack.push(6);
+        intArrayStack.push(8);
+        intArrayStack.push(9);
+
+        Assert.assertEquals(elementsAmount, intArrayStack.getTotal());
+
+        intArrayStack.pop();
+        Assert.assertEquals(elementsAmount - 1, intArrayStack.getTotal());
+    }
+
+    @Test
+    public void testListTotal() {
+        IntegerLinkedList integerLinkedList = new IntegerLinkedList();
+        int elementsAmount = 3;
+
+        integerLinkedList.push(6);
+        integerLinkedList.push(8);
+        integerLinkedList.push(9);
+
+        Assert.assertEquals(elementsAmount, integerLinkedList.getTotal());
+
+        integerLinkedList.pop();
+        Assert.assertEquals(elementsAmount - 1, integerLinkedList.getTotal());
+    }
 
 }
