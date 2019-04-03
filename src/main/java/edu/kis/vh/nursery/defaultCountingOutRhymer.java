@@ -4,19 +4,35 @@ package edu.kis.vh.nursery;
  * Stack Class
  */
 public class DefaultCountingOutRhymer {
-    private int IntArrayStack;
+    IntArrayStack stack;
 
-    public DefaultCountingOutRhymer(int intArrayStack) {
-        IntArrayStack = intArrayStack;
+    public DefaultCountingOutRhymer(IntArrayStack stack) {
+        this.stack = stack;
     }
     public DefaultCountingOutRhymer() {
     }
 
-    public int getIntArrayStack() {
-        return IntArrayStack;
+    public int getTotal() {
+        return stack.getTotal();
     }
 
-    public void setIntArrayStack(int intArrayStack) {
-        IntArrayStack = intArrayStack;
+    public void countIn(int in) {
+        stack.countIn(in);
+    }
+
+    public boolean callCheck() {
+        return stack.callCheck();
+    }
+
+    public boolean isFull() {
+        return stack.isFull();
+    }
+
+    public int peekaboo() {
+        return stack.peekaboo();
+    }
+
+    public int countOut() {
+        return stack.countOut();
     }
 }
