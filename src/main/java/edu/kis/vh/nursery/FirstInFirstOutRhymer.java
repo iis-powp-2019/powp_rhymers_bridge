@@ -1,8 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Stackable;
+
 public class FirstInFirstOutRhymer extends DefaultCountingOutRhymer {
 
 	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+
+	public FirstInFirstOutRhymer(Stackable stack) {
+		super(stack);
+	}
+
+	public FirstInFirstOutRhymer() {
+	}
 
 	@Override
 	public int countOut() {
