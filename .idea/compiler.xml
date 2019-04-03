@@ -9,5 +9,8 @@
         <module name="powp-rhymers" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="powp-rhymers" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
