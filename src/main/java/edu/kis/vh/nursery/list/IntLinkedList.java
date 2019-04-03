@@ -10,13 +10,16 @@ public class IntLinkedList {
 
 	private static final int EMPTY = -1;
 	private Node last;
+	private int total = EMPTY;
+
 
 	/**
 	 * @param i
 	 * Umieszczenie w liscie elementu
 	 *
 	 */
-	public void push(final int i) {
+	public void countIn(int i) {
+		total++;
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -59,6 +62,10 @@ public class IntLinkedList {
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+	
+	public int getTotal() {
+		return total;
 	}
 
 	private class Node {
