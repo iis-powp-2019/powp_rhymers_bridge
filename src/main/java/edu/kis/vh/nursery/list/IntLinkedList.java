@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.list;
 public class IntLinkedList {
 
     Node last;
-    int i;
+    int count=0;
 
     public void push(int i) {
         if (last == null)
@@ -13,6 +13,7 @@ public class IntLinkedList {
             last.next.prev = last;
             last = last.next;
         }
+        count++;
     }
 
     public boolean isEmpty() {
@@ -34,7 +35,23 @@ public class IntLinkedList {
             return -1;
         int ret = last.value;
         last = last.prev;
+        count--;
         return ret;
     }
+    public int countOut(){
+        return pop();
+    }
+    public void countIn(int i){
+        push(i);
+    }
+    public boolean callCheck(){
+        if(count  > 0)
+            return false;
+        return true;
+    }
+    public int peekaboo(){
+        return top();
+    }
+
 
 }
