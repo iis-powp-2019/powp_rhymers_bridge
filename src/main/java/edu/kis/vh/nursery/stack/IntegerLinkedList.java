@@ -5,9 +5,7 @@ package edu.kis.vh.nursery.stack;
  */
 public class IntegerLinkedList implements StackCollection {
 
-	// EMPTY_STACK_VALUE (DefaultCountingOutRhymer) != EMPTY_LIST_VALUE (here)
-	private static final int EMPTY_LIST_VALUE = -1;
-	
+	// EMPTY_STACK_VALUE (DefaultCountingOutRhymer) != EMPTY_VALUE (here)
 	private Node lastNode;
 
 	/**
@@ -45,25 +43,25 @@ public class IntegerLinkedList implements StackCollection {
 
 	/**
 	 * Returns firstly added integer, stack will not be modified
-	 * @return Firstly added integer, or EMPTY_LIST_VALUE if stack is empty
+	 * @return Firstly added integer, or EMPTY_VALUE if stack is empty
 	 * @see #pop()
 	 */
 	@Override
 	public int getTop() {
 		if (isEmpty())
-			return EMPTY_LIST_VALUE;
+			return EMPTY_VALUE;
 		return lastNode.getValue();
 	}
 
 	/**
 	 * Removes and returns recently added integer
-	 * @return Recently added integer, or EMPTY_LIST_VALUE if stack is empty
+	 * @return Recently added integer, or EMPTY_VALUE if stack is empty
 	 * @see #getTop()
 	 */
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_LIST_VALUE;
+			return EMPTY_VALUE;
 		int poppedValue = lastNode.getValue();
 		lastNode = lastNode.getPreviousNode();
 		return poppedValue;
