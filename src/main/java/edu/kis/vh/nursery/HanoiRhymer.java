@@ -1,8 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.StackCollection;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 	private int rejectedTotalCount = 0;
+
+	public HanoiRhymer() {
+	}
+
+	public HanoiRhymer(StackCollection collection) {
+		super(collection);
+	}
 
 	int reportRejected() {
 		return rejectedTotalCount;
