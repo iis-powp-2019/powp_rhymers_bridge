@@ -15,12 +15,12 @@ public class IntArrayStack
         this.total = total;
     }
 
-    public void countIn(int in) {
+    public void push(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
-    public boolean callCheck() {
+    public boolean isEmpty() {
         return total == EMPTY_STACK_INDEX;
     }
 
@@ -28,14 +28,14 @@ public class IntArrayStack
         return total == STACK_MAX_SIZE - 1;
     }
 
-    protected int peekaboo() {
-        if (callCheck())
+    protected int top() {
+        if (isEmpty())
             return EMPTY_STACK_INDEX;
         return NUMBERS[total];
     }
 
-    public int countOut() {
-        if (callCheck())
+    public int pop() {
+        if (isEmpty())
             return EMPTY_STACK_INDEX;
         return NUMBERS[total--];
     }
