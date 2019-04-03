@@ -1,10 +1,12 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.datastructure.BestInterface;
+import edu.kis.vh.nursery.datastructure.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    final private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+    final private IntLinkedList temp = new IntLinkedList();
+    //wybrana została linkedlist'a gdyż bardzije pasuje do kodu FIFO. zawiera pola które są potrzebne w FIFO(last).
 
     public FIFORhymer() {
     }
