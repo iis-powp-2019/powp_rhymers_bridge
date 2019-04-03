@@ -1,95 +1,54 @@
 package edu.kis.vh.nursery;
 
-class Node {  //in case of problems
-
-    public int getValue() {
-        return value;
-    }
-
-
-    private int value;
-    private Node prev, next;
-
-    public Node(int i) {
-        value = i;
-    }
-
-    public Node getPrev() {
-        return prev;
-    }
-
-    public void setPrev(Node prev) {
-        this.prev = prev;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-
-}
-
 public class DefaultCountingOutRhymer {
 
-    private static final int MAX_SIZE = 12;
+    private IntArrayStack intArrayStack = new IntArrayStack();
 
-    private final int[] numbers = new int[getMaxSize()];
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-    private int total = getDefIndexStack();
+    public DefaultCountingOutRhymer(){
+        this.intArrayStack = null;
+    }
 
     public static int getMaxSize() {
-        return MAX_SIZE;
+        return IntArrayStack.getMaxSize();
     }
 
     public static int getDefIndexStack() {
-        return DEF_INDEX_STACK;
+        return IntArrayStack.getDefIndexStack();
     }
 
     public static int getNotFound() {
-        return NOT_FOUND;
+        return IntArrayStack.getNotFound();
     }
 
     public int getTotal() {
-        return total;
+        return intArrayStack.getTotal();
     }
-
-    private static final int DEF_INDEX_STACK = -1;
-
-    private static final int NOT_FOUND = -1;
 
     public void countIn(int in) {
-        if (!isFull())
-            getNumbers()[++total] = in;
+        intArrayStack.countIn(in);
     }
 
-    protected boolean callCheck() {
-
-        return total == getDefIndexStack();
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
     }
 
-    protected boolean isFull() {
-
-        return total == getMaxSize() -1;
+    public boolean isFull() {
+        return intArrayStack.isFull();
     }
 
-    protected int peekaboo() {
-        if (callCheck())
-            return getNotFound();
-        return getNumbers()[total];
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
     }
 
-    protected int countOut() {
-        if (callCheck())
-            return -1;
-        return getNumbers()[total--];
+    public int countOut() {
+        return intArrayStack.countOut();
     }
 
     public int[] getNumbers() {
-        return numbers;
+        return intArrayStack.getNumbers();
     }
-
-    // alt + ->/<- pozwala na przełączanie pomiędzy aktywnymi kartami
 }

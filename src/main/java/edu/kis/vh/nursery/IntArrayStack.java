@@ -56,6 +56,7 @@ public class IntArrayStack {
     }
 
     public int[] getNumbers() {
+
         return numbers;
     }
 }
