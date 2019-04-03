@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.stack;
 
-import edu.kis.vh.nursery.IntStack;
-
 public class IntArrayStack implements IntStack {
 
 	private static final int STACK_CAPACITY = 12;
@@ -48,7 +46,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int peekaboo() {
 		if (callCheck())
-			return EMPTY_STACK_TOP;
+			return 0;
 		return numbers[total];
 	}
 			
@@ -58,7 +56,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return EMPTY_STACK_TOP;
+			return 0;
 		return numbers[total--];
 	}
 }

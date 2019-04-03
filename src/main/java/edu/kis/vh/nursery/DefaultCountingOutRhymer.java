@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stack.IntLinkedList;
 import edu.kis.vh.nursery.stack.IntLinkedListAdapter;
+import edu.kis.vh.nursery.stack.IntStack;
 
 public class DefaultCountingOutRhymer {
 	
