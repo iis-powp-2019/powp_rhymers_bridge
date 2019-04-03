@@ -6,7 +6,7 @@ import org.junit.Test;
 public class RhymersJUnitTest {
 	DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 	FirstInFirstOutRhymer FIFORhymer = new FirstInFirstOutRhymer();
-	final int EMPTY_STACK_VALUE = -1;
+	final int EMPTY_STACK_VALUE = 0;
 	final int STACK_CAPACITY = 12;
 
 	@Test
@@ -38,7 +38,7 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
