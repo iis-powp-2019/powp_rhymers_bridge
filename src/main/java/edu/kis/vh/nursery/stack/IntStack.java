@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public interface IntStack {
 	
-	static final int EMPTY_STACK_TOP = -1;
+	static final int EMPTY_STACK_TOP = 0;
 
 	int getTotal();
 

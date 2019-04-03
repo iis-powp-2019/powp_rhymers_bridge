@@ -46,7 +46,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int peekaboo() {
 		if (callCheck())
-			return 0;
+			return EMPTY_STACK_TOP;
 		return numbers[total];
 	}
 			
@@ -56,7 +56,7 @@ public class IntArrayStack implements IntStack {
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return 0;
+			return EMPTY_STACK_TOP;
 		return numbers[total--];
 	}
 }
