@@ -35,6 +35,7 @@ public class IntLinkedList {
 
     private Node last;
     private static final int STACKEMPTY = -1;
+    private int size = 0;
 
     public static int getEMPTY() {
         return STACKEMPTY;
@@ -50,6 +51,7 @@ public class IntLinkedList {
         if (last == null)
             last = new Node(i);
         else {
+            size ++;
             last.setNext(new Node(i));
             last.getNext().setPrev(last);
             last = last.getNext();
@@ -90,6 +92,7 @@ public class IntLinkedList {
     public int pop() {
         if (isEmpty())
             return STACKEMPTY;
+        size--;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
@@ -116,5 +119,9 @@ public class IntLinkedList {
 
     public void setLast(Node last) {
         this.last = last;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
