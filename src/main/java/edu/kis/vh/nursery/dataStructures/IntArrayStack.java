@@ -29,13 +29,13 @@ public class IntArrayStack implements IStackAndListSimilarities {
 
     @Override public int peekaboo() {
         if (callCheck())
-            return -1;
+            return StructureValue.getMinTotalValue();
         return getNumbers()[total];
     }
 
     @Override public int countOut() {
         if (callCheck())
-            return -1;
+            return StructureValue.getMinTotalValue();
         return getNumbers()[total--];
     }
 
