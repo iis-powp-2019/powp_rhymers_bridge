@@ -1,6 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
-public class IntArrayStack implements Stackable{
+import edu.kis.vh.nursery.Stackable;
+
+public class IntArrayStack implements Stackable {
 
     private static final int MAX_STACK_SIZE = 12;
     private static final int EMPTY_STACK_VALUE = -1;
