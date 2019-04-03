@@ -13,6 +13,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         super(stackable);
     }
 
+    public HanoiRhymer() {
+
+    }
+
     public int reportRejected() {
         return totalRejected;
     }

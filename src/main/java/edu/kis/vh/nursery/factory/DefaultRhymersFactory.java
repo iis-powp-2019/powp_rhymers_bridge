@@ -16,7 +16,7 @@ public class DefaultRhymersFactory implements RhymersFactory {
      */
     @Override
     public DefaultCountingOutRhymer getStandardRhymer() {
-        return new DefaultCountingOutRhymer(new IntArrayStack());
+        return new DefaultCountingOutRhymer();
     }
 
     /**
@@ -25,7 +25,8 @@ public class DefaultRhymersFactory implements RhymersFactory {
      */
     @Override
     public DefaultCountingOutRhymer getFalseRhymer() {
-        return new DefaultCountingOutRhymer(new IntArrayStack());
+
+        return new DefaultCountingOutRhymer();
     }
 
     /**
@@ -43,6 +44,7 @@ public class DefaultRhymersFactory implements RhymersFactory {
      */
     @Override
     public HanoiRhymer getHanoiRhymer() {
+
         return new HanoiRhymer();
     }
 
