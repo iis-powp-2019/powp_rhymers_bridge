@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack
+public class IntArrayStack implements IIntCounter
 {
     final int STACK_MAX_SIZE = 12;
     final int EMPTY_STACK_INDEX = -1;
@@ -15,25 +15,30 @@ public class IntArrayStack
         this.total = total;
     }
 
+    @Override
     public void push(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
     }
 
+    @Override
     public boolean isEmpty() {
         return total == EMPTY_STACK_INDEX;
     }
 
+    @Override
     public boolean isFull() {
         return total == STACK_MAX_SIZE - 1;
     }
 
-    protected int top() {
+    @Override
+    public int top() {
         if (isEmpty())
             return EMPTY_STACK_INDEX;
         return NUMBERS[total];
     }
 
+    @Override
     public int pop() {
         if (isEmpty())
             return EMPTY_STACK_INDEX;
