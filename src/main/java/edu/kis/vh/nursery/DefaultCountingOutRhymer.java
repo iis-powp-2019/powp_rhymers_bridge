@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer { //All of the tests passed without problem
+    //Checked how open Declaration works - it shows where selected method is used.
 
     private IntArrayStack intArrayStack;
 
