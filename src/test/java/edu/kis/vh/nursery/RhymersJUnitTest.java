@@ -39,7 +39,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, rhymer.peekaboo());
 
@@ -53,7 +53,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -65,5 +65,28 @@ public class RhymersJUnitTest {
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, rhymer.countOut());
 	}
+	
+	   @Test
+		public void testFirstInFIFORhymer() {
+			int firstElement=3;
+			FIFORhymer rhymer= new FIFORhymer();
+			rhymer.countIn(firstElement);
+			for(int i = 0;i<10;i++) {
+				rhymer.countIn(i);
+			}
+			Assert.assertEquals(rhymer.countOut(),firstElement);
+		}
+
+	    @Test
+		public void testRejectedInHanoiRhymer() {
+			HanoiRhymer hanoi= new HanoiRhymer();
+			int item=1;
+			hanoi.countIn(item);
+			int itemsToReject=10;
+			for(int i=0;i<itemsToReject;i++) {
+				hanoi.countIn(item+1);
+			}
+			Assert.assertEquals(hanoi.reportRejected(),itemsToReject);
+		}
 
 }
