@@ -2,6 +2,8 @@ package edu.kis.vh.nursery.stack;
 
 public interface Stackable {
 
+    int STACK_EMPTY = -1;
+
     int getTotal();
 
     void countIn(int i);

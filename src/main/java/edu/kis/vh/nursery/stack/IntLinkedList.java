@@ -5,7 +5,6 @@ package edu.kis.vh.nursery.stack;
  */
 public class IntLinkedList implements Stackable {
 
-	private static final int STACK_EMPTY = -1;
 	/**
 	 * Last value of the stack
 	 */
