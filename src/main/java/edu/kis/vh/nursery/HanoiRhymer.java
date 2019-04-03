@@ -1,8 +1,17 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.datastructures.IIntLinkedList;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
+
+    public HanoiRhymer() {
+    }
+
+    public HanoiRhymer(IIntLinkedList intLinkedList) {
+        super(intLinkedList);
+    }
 
     /**
      * Zwraca całkowitą liczbę odrzuconych wartości
