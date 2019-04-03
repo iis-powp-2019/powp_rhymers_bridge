@@ -37,7 +37,11 @@ public class IntLinkedList {
 	private static final int RETURNED_VALUE = -1;
 	private Node last;
 	private int i;
-	public int size = 0;
+	private int size = 0;
+	
+	public int getSize() {
+		return size;
+	}
 
 	public void push(int i) {
 		if (last == null)
