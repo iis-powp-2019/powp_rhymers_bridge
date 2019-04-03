@@ -1,10 +1,15 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.datastructures.IIntLinkedList;
+import edu.kis.vh.nursery.datastructures.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+//    private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+
+    //IntLinkedList ponieważ countOut() (dla DefaultCountingOutRhymer) zwracało element który jako ostatni został
+    //dodany a IntLinkedList zawiera zmienną last dzięki czemu jest wstanie szybko ten element zwrócić.
+    private final IIntLinkedList temp = new IntLinkedList();
 
     public FIFORhymer() {
     }
@@ -16,17 +21,17 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override
     public int countOut() {
         while (!callCheck()) {
-            getTemp().countIn(super.countOut());
+            getTemp().push(super.countOut());
         }
-        int ret = getTemp().countOut();
+        int ret = getTemp().pop();
 
-        while (!getTemp().callCheck()) {
-            countIn(getTemp().countOut());
+        while (!getTemp().isEmpty()) {
+            countIn(getTemp().pop());
         }
         return ret;
     }
 
-    public DefaultCountingOutRhymer getTemp() {
+    public IIntLinkedList getTemp() {
         return temp;
     }
 }
