@@ -9,6 +9,14 @@ public class IntArrayStack {
 
 	private int[] numbers = new int[MAX_STACK_SIZE];
 
+	public int[] getNumbers() {
+		return numbers;
+	}
+
+	public void setNumbers(int[] numbers) {
+		this.numbers = numbers;
+	}
+
 	private int total = INITIAL_STACK_INDEX;
 
 	public int getTotal() {

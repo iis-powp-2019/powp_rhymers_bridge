@@ -2,55 +2,49 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	private static final int MAX_STACK_SIZE = 12;
-
-	private static final int RETURN_DEFAULT = -1;
+	IntArrayStack intArrayStack = new IntArrayStack();
 	
-	private static final int INITIAL_STACK_INDEX = -1;
-
-	private int[] numbers = new int[MAX_STACK_SIZE];
-
-	private int total = INITIAL_STACK_INDEX;
-
+	public DefaultCountingOutRhymer() {
+		
+	}
+	
+	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+		super();
+		this.intArrayStack = intArrayStack;
+	}
+	
+	public int peekaboo() {
+        return intArrayStack.peekaboo();
+    }
+	
 	public int getTotal() {
-		return total;
+		return intArrayStack.getTotal();
 	}
 
 	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+		intArrayStack.countIn(in);
 	}
 
 	public boolean callCheck() {
-		return total == INITIAL_STACK_INDEX;
+		return intArrayStack.callCheck();
 	}
 
 	public boolean isFull() {
-		return total == MAX_STACK_SIZE - 1;
-	}
-
-	protected int peekaboo() {
-		if (callCheck())
-			return RETURN_DEFAULT;
-		return numbers[total];
+		return intArrayStack.isFull();
 	}
 
 	public int countOut() {
-		if (callCheck())
-			return RETURN_DEFAULT;
-		return numbers[total--];
+		return intArrayStack.countOut();
 	}
 
-	public static int getInitialStackIndex() {
-		return INITIAL_STACK_INDEX;
-	}
 
-	public static int getReturnDefault() {
-		return RETURN_DEFAULT;
-	}
 
-	public static int getMaxStackSize() {
-		return MAX_STACK_SIZE;
-	}
+
+    public int[] getNumbers() {
+        return intArrayStack.getNumbers();
+    }
+	
+	
+
 
 }
