@@ -42,7 +42,7 @@ public class RhymersJUnitTest {
 
         @Test public void testPeekaboo() {
             DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(new IntLinkedList());
-            final int EMPTY_STACK_VALUE = -1;
+            final int EMPTY_STACK_VALUE = StructureValue.getMinTotalValue();
 
             int result = rhymer.peekaboo();
             Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -58,7 +58,7 @@ public class RhymersJUnitTest {
 
         @Test public void testCountOut() {
             DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(new IntLinkedList());
-            final int EMPTY_STACK_VALUE = -1;
+            final int EMPTY_STACK_VALUE = StructureValue.getMinTotalValue();
 
             int result = rhymer.countOut();
             Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -74,7 +74,7 @@ public class RhymersJUnitTest {
 
     @Test public void testFIFORhymerCountOut(){
         FIFORhymer fifoRhymer = new FIFORhymer();
-        final int EMPTY_STACK_VALUE = -1;
+        final int EMPTY_STACK_VALUE = StructureValue.getMinTotalValue();
 
         int result = fifoRhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
