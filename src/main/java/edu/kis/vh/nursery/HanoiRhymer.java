@@ -1,11 +1,20 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Stackable;
+
 /**
  * Class representing stack in which value can't be put if that value is higher than the current top of the stack
  */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
+
+    public HanoiRhymer(Stackable stack) {
+        super(stack);
+    }
+
+    public HanoiRhymer() {
+    }
 
     /**
      * @return amount of rejected numbers
