@@ -1,13 +1,15 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.IStackAndListSimilarities;
+
+public class IntLinkedList implements IStackAndListSimilarities {
 
     private Node last;
     private int i;
 
 
 
-    public void push(int i) {
+    @Override public void countIn(int i) {
         if (getLast() == null)
             setLast(new Node(i));
         else {
@@ -17,22 +19,22 @@ public class IntLinkedList {
         }
     }
 
-    public boolean isEmpty() {
+    @Override public boolean callCheck() {
         return getLast() == null;
     }
 
-    public boolean isFull() {
+    @Override  public boolean isFull() {
         return false;
     }
 
-    public int top() {
-        if (isEmpty())
+    @Override public int peekaboo() {
+        if (callCheck())
             return -1;
         return getLast().getValue();
     }
 
-    public int pop() {
-        if (isEmpty())
+    @Override public int countOut() {
+        if (callCheck())
             return -1;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());

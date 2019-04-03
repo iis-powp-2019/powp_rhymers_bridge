@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements IStackAndListSimilarities {
 
     private static final int STACK_CAPACITY = 12;
     private static final int MIN_TOTAL_VALUE = -1;
@@ -20,26 +20,26 @@ public class IntArrayStack {
 
     private int total = getMinTotalValue();
 
-    public void countIn(int in) {
+    @Override public void countIn(int in) {
         if (!isFull())
             getNumbers()[++total] = in;
     }
 
-    boolean callCheck() {
+    @Override public boolean callCheck() {
         return total == getMinTotalValue();
     }
 
-    boolean isFull() {
+    @Override public boolean isFull() {
         return total == 11;
     }
 
-    int peekaboo() {
+    @Override public int peekaboo() {
         if (callCheck())
             return -1;
         return getNumbers()[total];
     }
 
-    int countOut() {
+    @Override public int countOut() {
         if (callCheck())
             return -1;
         return getNumbers()[total--];

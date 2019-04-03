@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-    private IntLinkedList intLinkedList;
+    private IStackAndListSimilarities intLinkedList;
 
     public DefaultCountingOutRhymer() {
         this.intLinkedList = new IntLinkedList();
@@ -14,24 +14,12 @@ public class DefaultCountingOutRhymer {
         this.intLinkedList = intLinkedList;
     }
 
-    public static int getStackCapacity() {
-        return IntArrayStack.getStackCapacity();
-    }
-
-    public static int getMinTotalValue() {
-        return IntArrayStack.getMinTotalValue();
-    }
-
-//    public int getTotal() {
-//        return intLinkedList.getValue();
-//    }
-
     public void countIn(int in) {
-        intLinkedList.push(in);
+        intLinkedList.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.isEmpty();
+        return intLinkedList.callCheck();
     }
 
     public boolean isFull() {
@@ -39,16 +27,14 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        return intLinkedList.top();
+        return intLinkedList.peekaboo();
     }
 
     public int countOut() {
-        return intLinkedList.pop();
+        return intLinkedList.countOut();
     }
 
-//    public int[] getNumbers() {
-//        return intLinkedList.getNumbers();
-//    }
+
 
 
 }
