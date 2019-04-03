@@ -8,7 +8,11 @@ public class HanoiRhymer
 	
 	private int totalRejected = 0;
 	
-	HanoiRhymer(IntLinkedList linkedList)
+	public HanoiRhymer()
+	{
+	}
+	
+	public HanoiRhymer(IntLinkedList linkedList)
 	{
 		super(linkedList);
 	}
