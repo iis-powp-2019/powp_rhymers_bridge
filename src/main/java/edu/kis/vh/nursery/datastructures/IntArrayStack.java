@@ -47,14 +47,14 @@ public class IntArrayStack implements IIntLinkedList {
 
     protected int peekaboo() {
         if (callCheck()) {
-            return 0;
+            return EMPTY_VALUE;
         }
         return numbers[getTotal()];
     }
 
     public int countOut() {
         if (callCheck()) {
-            return 0;
+            return EMPTY_VALUE;
         }
         return numbers[total--];
     }
