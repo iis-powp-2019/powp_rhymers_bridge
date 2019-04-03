@@ -63,7 +63,7 @@ public class IntLinkedList {
 
 	private class Node {
 
-		private int value;
+		private final int value;
 		private Node prev;
 		private Node next;
 
