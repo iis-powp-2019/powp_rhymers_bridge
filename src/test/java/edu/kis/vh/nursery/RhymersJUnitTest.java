@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class RhymersJUnitTest {
-	static final int EMPTY_STACK_VALUE = -1;
+	static final int EMPTY_STACK_VALUE = 0;
 
 	@Test
 	public void testCountIn() {

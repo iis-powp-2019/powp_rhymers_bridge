@@ -11,7 +11,7 @@ public class IntArrayStack implements Stackable {
     @Override
     public void push(final int input) {
         if (!isFull())
-            numbers[++total] = input;
+            numbers[total++] = input;
     }
 
     @Override
@@ -21,21 +21,21 @@ public class IntArrayStack implements Stackable {
 
     @Override
     public boolean isFull() {
-        return total == MAX_STACK_SIZE - 1;
+        return total == MAX_STACK_SIZE;
     }
 
     @Override
     public int top() {
         if (isEmpty())
             return EMPTY_STACK_VALUE;
-        return numbers[total];
+        return numbers[total - 1];
     }
 
     @Override
     public int pop() {
         if (isEmpty())
             return EMPTY_STACK_VALUE;
-        return numbers[total--];
+        return numbers[--total];
     }
 
     @Override
