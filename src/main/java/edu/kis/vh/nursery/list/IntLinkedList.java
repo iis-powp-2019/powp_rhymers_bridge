@@ -5,6 +5,8 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
+
+
     public void push(int i) {
         if (getLast() == null)
             setLast(new Node(i));
