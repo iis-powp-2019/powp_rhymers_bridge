@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.collection;
 
 public class IntLinkedList implements Stackable {
 
-	private static final int STACK_EMPTY_VALUE = -1;
 	private Node last;
 	private int i;
 

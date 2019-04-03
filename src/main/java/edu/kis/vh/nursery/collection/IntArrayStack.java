@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery.collection;
 
 public class IntArrayStack implements Stackable {
+
     private static final int MAX_CAPACITY = 12;
-    private static final int STACK_EMPTY_VALUE = -1;
     private final int[] NUMBERS = new int[MAX_CAPACITY];
 
     public int getTotal() {
