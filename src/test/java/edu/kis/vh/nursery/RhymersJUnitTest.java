@@ -2,6 +2,8 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.datastructures.IntArrayStack;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.IntArrayStackRhymersFactory;
+import edu.kis.vh.nursery.factory.IntLinkedListRhymersFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,6 +16,19 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(DefaultCountingOutRhymer.class, rhymersFactory.getFalseRhymer().getClass());
 		Assert.assertEquals(FIFORhymer.class, rhymersFactory.getFIFORhymer().getClass());
 		Assert.assertEquals(HanoiRhymer.class, rhymersFactory.getHanoiRhymer().getClass());
+
+		IntArrayStackRhymersFactory intArrayStackRhymersFactory = new IntArrayStackRhymersFactory();
+		Assert.assertEquals(DefaultCountingOutRhymer.class, intArrayStackRhymersFactory.getStandardRhymer().getClass());
+		Assert.assertEquals(DefaultCountingOutRhymer.class, intArrayStackRhymersFactory.getFalseRhymer().getClass());
+		Assert.assertEquals(FIFORhymer.class, intArrayStackRhymersFactory.getFIFORhymer().getClass());
+		Assert.assertEquals(HanoiRhymer.class, intArrayStackRhymersFactory.getHanoiRhymer().getClass());
+
+		IntLinkedListRhymersFactory intLinkedListRhymersFactory = new IntLinkedListRhymersFactory();
+		Assert.assertEquals(DefaultCountingOutRhymer.class, intLinkedListRhymersFactory.getStandardRhymer().getClass());
+		Assert.assertEquals(DefaultCountingOutRhymer.class, intLinkedListRhymersFactory.getFalseRhymer().getClass());
+		Assert.assertEquals(FIFORhymer.class, intLinkedListRhymersFactory.getFIFORhymer().getClass());
+		Assert.assertEquals(HanoiRhymer.class, intLinkedListRhymersFactory.getHanoiRhymer().getClass());
+
 	}
 
 	@Test
