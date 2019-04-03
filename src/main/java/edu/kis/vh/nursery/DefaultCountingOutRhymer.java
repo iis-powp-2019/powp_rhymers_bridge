@@ -1,19 +1,23 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 public class DefaultCountingOutRhymer {
 
     private IntArrayStack intArrayStack = new IntArrayStack();
+    private IntLinkedList intLinkedList = new IntLinkedList();
 
-    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
-        this.intArrayStack = intArrayStack;
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+        this.intLinkedList = intLinkedList;
     }
 
     public DefaultCountingOutRhymer(){
         this.intArrayStack = null;
     }
 
+    /*
     public static int getMaxSize() {
-        return IntArrayStack.getMaxSize();
+        return IntLinkedList.getMaxSize();
     }
 
     public static int getDefIndexStack() {
@@ -21,34 +25,38 @@ public class DefaultCountingOutRhymer {
     }
 
     public static int getNotFound() {
-        return IntArrayStack.getNotFound();
+        return IntLinkedList.getNotFound();
     }
+    */
 
     public int getTotal() {
-        return intArrayStack.getTotal();
+        return intLinkedList.getI();
     }
 
     public void countIn(int in) {
-        intArrayStack.countIn(in);
+        intLinkedList.push(in);
     }
 
     public boolean callCheck() {
-        return intArrayStack.callCheck();
+        return intLinkedList.isEmpty();
     }
 
     public boolean isFull() {
-        return intArrayStack.isFull();
+        return intLinkedList.isFull();
+        //return false;
     }
 
     public int peekaboo() {
-        return intArrayStack.peekaboo();
+        return intLinkedList.top();
     }
 
     public int countOut() {
-        return intArrayStack.countOut();
+        return intLinkedList.pop();
     }
 
+    /*
     public int[] getNumbers() {
-        return intArrayStack.getNumbers();
+        return intLinkedList.pop();
     }
+    */
 }
