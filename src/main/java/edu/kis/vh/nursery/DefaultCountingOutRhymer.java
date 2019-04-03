@@ -5,62 +5,40 @@ package edu.kis.vh.nursery;
  */
 public class DefaultCountingOutRhymer {
 
-	private static final int NUMBERS_QUANTITY = 12;
-	private static final int EMPTY_STACK_INDICATOR = -1;
-	private static final int FULL_STACK_INDICATOR = 11;
+	private IntArrayStack stack;
 
-	private int[] numbers = new int[NUMBERS_QUANTITY];
+	public DefaultCountingOutRhymer(IntArrayStack stack) {
+		super();
+		this.stack = stack;
+	}
+	
+	public DefaultCountingOutRhymer() {
+		this.stack = new IntArrayStack();
+	}
 
-    private int total = EMPTY_STACK_INDICATOR;
+	public int getTotal() {
+		return stack.getTotal();
+	}
 
-    /**
-     * @return amount of values currently on stack
-     */
-    public int getTotal() {
-        return total;
-    }
-
-    /**
-     * Put value on stack
-     * @param in value to put
-     */
 	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+		stack.countIn(in);
 	}
 
-    /**
-     * Checks if stack is empty
-     * @return true if stack is empty
-     */
-	boolean isEmpty() {
-		return total == EMPTY_STACK_INDICATOR;
-	}
-
-    /**
-     * Checks if stack is full
-     * @return true if stack is full
-     */
-	boolean isFull() {
-		return total == FULL_STACK_INDICATOR;
-	}
-
-    /**
-     * @return value from the top of the stack without removing it
-     */
-	protected int peekaboo() {
-		if (isEmpty())
-			return EMPTY_STACK_INDICATOR;
-		return numbers[total];
-	}
-
-    /**
-     * @return value from the top of the stack and remove it
-     */
 	public int countOut() {
-		if (isEmpty())
-			return EMPTY_STACK_INDICATOR;
-		return numbers[total--];
+		return stack.countOut();
 	}
 
+	public boolean isEmpty() {
+		return stack.isEmpty();
+	}
+
+	public boolean isFull() {
+		return stack.isFull();
+	}
+
+	public int peekaboo() {
+		return stack.peekaboo();
+	}
+
+	
 }

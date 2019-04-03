@@ -30,7 +30,7 @@ public class IntArrayStack {
      * Checks if stack is empty
      * @return true if stack is empty
      */
-	boolean isEmpty() {
+	public boolean isEmpty() {
 		return total == EMPTY_STACK_INDICATOR;
 	}
 
@@ -38,14 +38,14 @@ public class IntArrayStack {
      * Checks if stack is full
      * @return true if stack is full
      */
-	boolean isFull() {
+	public boolean isFull() {
 		return total == FULL_STACK_INDICATOR;
 	}
 
     /**
      * @return value from the top of the stack without removing it
      */
-	protected int peekaboo() {
+	public int peekaboo() {
 		if (isEmpty())
 			return EMPTY_STACK_INDICATOR;
 		return numbers[total];
