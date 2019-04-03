@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Class implementing stack
+ */
 public class IntArrayStack {
 	
 	private static final int NUMBERS_QUANTITY = 12;
