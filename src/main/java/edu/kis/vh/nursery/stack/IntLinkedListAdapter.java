@@ -1,7 +1,7 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stack;
 
 import edu.kis.vh.nursery.IntStack;
-import edu.kis.vh.nursery.list.IntLinkedList.Node;
+import edu.kis.vh.nursery.stack.IntLinkedList.Node;
 
 public class IntLinkedListAdapter implements IntStack {
 	
