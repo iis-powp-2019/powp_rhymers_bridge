@@ -7,6 +7,8 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private IntLinkedList temp = new IntLinkedList();
 
+    //Odp: Najlepszy wybór to implementacja listy, ponieważ jest ona bardziej ealastyczna niż stos
+
 
     @Override public int countOut() {
         while (!callCheck())
