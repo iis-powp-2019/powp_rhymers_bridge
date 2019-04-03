@@ -1,9 +1,8 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
 public class IntArrayStack implements IIntCounter
 {
     final int STACK_MAX_SIZE = 12;
-    final int EMPTY_STACK_INDEX = -1;
     private int[] NUMBERS = new int[STACK_MAX_SIZE];
     private int total = EMPTY_STACK_INDEX;
 

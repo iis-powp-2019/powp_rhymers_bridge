@@ -1,7 +1,9 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
 public interface IIntCounter
 {
+    int EMPTY_STACK_INDEX = -1;
+
     void push(int in);
 
     boolean isEmpty();

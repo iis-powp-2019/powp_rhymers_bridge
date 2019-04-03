@@ -1,7 +1,5 @@
 package edu.kis.vh.nursery.list;
 
-import edu.kis.vh.nursery.IIntCounter;
-
 public class IntLinkedList implements IIntCounter
 {
 	Node last;
@@ -31,14 +29,14 @@ public class IntLinkedList implements IIntCounter
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK_INDEX;
 		return last.value;
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK_INDEX;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

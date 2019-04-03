@@ -41,7 +41,11 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		if(rhymer.intCounter.getClass().isInstance(IntLinkedList.class))
+		{
+			Assert.assertEquals(false, result);
+		}
+		else Assert.assertEquals(true, result);
 	}
 
 	@Test
