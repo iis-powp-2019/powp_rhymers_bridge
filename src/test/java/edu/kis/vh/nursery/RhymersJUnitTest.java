@@ -64,7 +64,7 @@ public class RhymersJUnitTest {
 	public void testIsFullArrayStack() {
 		IntArrayStack rhymer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < STACK_CAPACITY - 1; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertFalse(result);
 			rhymer.countIn(888);
