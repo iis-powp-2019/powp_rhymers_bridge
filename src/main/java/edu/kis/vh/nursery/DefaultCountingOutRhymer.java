@@ -5,7 +5,9 @@ import edu.kis.vh.nursery.list.IntArrayStack;
 public class DefaultCountingOutRhymer {
     IntArrayStack intArrayStack;
 
-    public DefaultCountingOutRhymer(){}
+    public DefaultCountingOutRhymer(){
+        intArrayStack = new IntArrayStack();
+    }
 
     public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
         this.intArrayStack = intArrayStack;
