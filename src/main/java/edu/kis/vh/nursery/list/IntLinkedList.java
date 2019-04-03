@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
 
+import edu.kis.vh.nursery.IStack;
+
 class Node
 {
 	
@@ -44,6 +46,7 @@ class Node
 }
 
 public class IntLinkedList
+		implements IStack
 {
 	
 	private static final int EMPTY_STACK_VALUE = -1;
@@ -51,6 +54,7 @@ public class IntLinkedList
 	int i;
 	private int total = 0;
 	
+	@Override
 	public void push(int i)
 	{
 		if(last == null)
@@ -65,16 +69,19 @@ public class IntLinkedList
 		++total;
 	}
 	
+	@Override
 	public boolean isEmpty()
 	{
 		return last == null;
 	}
 	
+	@Override
 	public boolean isFull()
 	{
 		return false;
 	}
 	
+	@Override
 	public int top()
 	{
 		if(isEmpty())
@@ -82,6 +89,7 @@ public class IntLinkedList
 		return last.getValue();
 	}
 	
+	@Override
 	public int pop()
 	{
 		if(isEmpty())
@@ -97,6 +105,7 @@ public class IntLinkedList
 		return i;
 	}
 	
+	@Override
 	public int getTotal()
 	{
 		return total;

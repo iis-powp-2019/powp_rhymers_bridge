@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 public class IntArrayStack
+		implements IStack
 {
 	
 	private static final int FULL_CONSTANT = 11;
@@ -14,7 +15,7 @@ public class IntArrayStack
 	/**
 	 * @return number of elements in container
 	 */
-	int getTotal()
+	public int getTotal()
 	{
 		return total;
 	}
@@ -38,9 +39,34 @@ public class IntArrayStack
 		return total == EMPTY_CONSTANT;
 	}
 	
+	@Override
+	public void push(int i)
+	{
+		countIn(i);
+	}
+	
+	@Override
+	public boolean isEmpty()
+	{
+		return callCheck();
+	}
+	
+	@Override
 	public boolean isFull()
 	{
 		return total == FULL_CONSTANT;
+	}
+	
+	@Override
+	public int top()
+	{
+		return peekaboo();
+	}
+	
+	@Override
+	public int pop()
+	{
+		return countOut();
 	}
 	
 	/**
