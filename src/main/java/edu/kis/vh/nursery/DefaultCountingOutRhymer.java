@@ -1,13 +1,14 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.containers.IStack;
+import edu.kis.vh.nursery.containers.IntLinkedList;
 
 /**
  * Default implementation for in-out rhymer
  */
 public class DefaultCountingOutRhymer
 {
-	private IntLinkedList linkedList;
+	private IStack linkedList;
 	
 	public DefaultCountingOutRhymer()
 	{
