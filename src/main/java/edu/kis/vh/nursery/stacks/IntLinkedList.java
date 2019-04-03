@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stacks;
 
 public class IntLinkedList implements IIntStack {
 
