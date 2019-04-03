@@ -37,6 +37,7 @@ public class IntLinkedList {
 	private static final int RETURNED_VALUE = -1;
 	private Node last;
 	private int i;
+	public int size = 0;
 
 	public void push(int i) {
 		if (last == null)
@@ -46,6 +47,7 @@ public class IntLinkedList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		size++;
 	}
 
 	public boolean isEmpty() {
@@ -67,6 +69,7 @@ public class IntLinkedList {
 			return RETURNED_VALUE;
 		int ret = last.getValue();
 		last = last.getPrev();
+		size--;
 		return ret;
 	}
 

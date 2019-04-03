@@ -13,10 +13,6 @@ public class IntArrayStack {
 		return numbers;
 	}
 
-	public void setNumbers(int[] numbers) {
-		this.numbers = numbers;
-	}
-
 	private int total = INITIAL_STACK_INDEX;
 
 	public int getTotal() {
