@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
 import edu.kis.vh.nursery.stack.Stackable;
 
 /**
@@ -21,7 +22,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	/**
 	 * Obiekt kolejki
 	 */
-	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private final IntArrayStack temp = new IntArrayStack();
 
 	/**
 	 * Metoda zdejmuje elementy kolejki w kolejności FIFO
