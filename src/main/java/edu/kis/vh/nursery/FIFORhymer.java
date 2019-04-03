@@ -1,10 +1,22 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Stackable;
+
 /**
  * @author Szymon
  * Implentacja koljki FIFO
  */
 public class FIFORhymer extends DefaultCountingOutRhymer {
+
+	public FIFORhymer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public FIFORhymer(Stackable stack) {
+		super(stack);
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * Obiekt kolejki
