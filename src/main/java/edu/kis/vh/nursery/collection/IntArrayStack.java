@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collection;
 
 public class IntArrayStack implements Stackable {
     private static final int MAX_CAPACITY = 12;
