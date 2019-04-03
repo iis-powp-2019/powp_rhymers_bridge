@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
-import edu.kis.vh.nursery.list.IntegerLinkedList;
+import edu.kis.vh.nursery.stack.IntegerLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
