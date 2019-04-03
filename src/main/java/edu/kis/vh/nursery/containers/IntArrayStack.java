@@ -6,7 +6,6 @@ public class IntArrayStack
 	
 	private static final int FULL_CONSTANT = 11;
 	private static final int EMPTY_CONSTANT = -1;
-	private static final int EMPTY_STACK_VALUE = -1;
 	public static final int MAX_SIZE = FULL_CONSTANT + 1;
 	private final int[] numbers = new int[MAX_SIZE];
 	

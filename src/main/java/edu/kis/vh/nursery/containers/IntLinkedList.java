@@ -47,7 +47,6 @@ public class IntLinkedList
 		implements IStack
 {
 	
-	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
 	int i;
 	private int total = 0;
