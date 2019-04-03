@@ -34,7 +34,6 @@ class Node {
 public class IntLinkedList {
 
     private Node last;
-    private int i;
     private static final int STACKEMPTY = -1;
 
     public static int getEMPTY() {
@@ -108,13 +107,10 @@ public class IntLinkedList {
     /**
      * @return
      */
-    public int getI() {
-        return i;
-    }
 
     //TODO write a meaning of the class getI and getLast
+
     /**
-     *
      * @param last
      */
 
