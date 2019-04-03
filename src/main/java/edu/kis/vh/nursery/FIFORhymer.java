@@ -5,7 +5,9 @@ import edu.kis.vh.nursery.stacks.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private IntLinkedList temp = new IntLinkedList();
+	// W przypadku FIFO lepiej uzyc listy, gdyz zawsze przegladamy kolekcje od poczatku, wiec zawsze interesuje nas
+	// pierwszy dodany element, czyli poczatek listy
 
 	public FIFORhymer(IIntStack iIntStack) {
 		super(iIntStack);
@@ -18,12 +20,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	@Override
 	public int countOut() {
 		while (!callCheck())
-			temp.countIn(super.countOut());
+			temp.push(super.countOut());
 
-		int ret = temp.countOut();
+		int ret = temp.pop();
 
-		while (!temp.callCheck())
-			countIn(temp.countOut());
+		while (!temp.isEmpty())
+			countIn(temp.pop());
 
 		return ret;
 	}
