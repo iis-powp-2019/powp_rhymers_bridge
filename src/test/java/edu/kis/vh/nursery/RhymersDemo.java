@@ -10,11 +10,11 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
-        RhymersFactory FIFOFactory = new RhymersListFactory();
-        RhymersFactory hanoiFactory = new RhymersStackFactory();
+        RhymersFactory listFactory = new RhymersListFactory();
+        RhymersFactory stackFactory = new RhymersStackFactory();
         testRhymers(factory);
-        testRhymers(FIFOFactory);
-        testRhymers(hanoiFactory);
+        testRhymers(listFactory);
+        testRhymers(stackFactory);
     }
 
     public static void testRhymers(RhymersFactory factory) {
