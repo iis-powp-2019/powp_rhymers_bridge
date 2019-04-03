@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.datastructure.IntArrayStack;
+import edu.kis.vh.nursery.datastructure.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,7 +31,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		IntArrayStack rhymer = new IntArrayStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();

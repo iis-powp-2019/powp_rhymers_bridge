@@ -2,8 +2,8 @@ package edu.kis.vh.nursery.datastructure;
 
 public class IntArrayStack implements BestInterface {
 
-    private static final int MAX = 11;
-    final private int[] numbers = new int[12];
+    private static final int MAX = 12;
+    final private int[] numbers = new int[13];
 
     private int total = Empty_value;
 
