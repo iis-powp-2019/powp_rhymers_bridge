@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.factory;
 
 import edu.kis.vh.nursery.DefaultCountingOutRhymer;
+import edu.kis.vh.nursery.FIFORhymer;
+import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.stacks.IntArrayStack;
 import edu.kis.vh.nursery.stacks.IntLinkedList;
 
@@ -17,11 +19,11 @@ public class ListRhymersFactory implements IRhymersFactory {
 
     @Override
     public DefaultCountingOutRhymer getFIFORhymer() {
-        return new DefaultCountingOutRhymer(new IntLinkedList());
+        return new FIFORhymer(new IntLinkedList());
     }
 
     @Override
     public DefaultCountingOutRhymer getHanoiRhymer() {
-        return new DefaultCountingOutRhymer(new IntLinkedList());
+        return new HanoiRhymer(new IntLinkedList());
     }
 }
