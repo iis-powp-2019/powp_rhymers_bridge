@@ -26,13 +26,13 @@ public class IntArrayStack implements IIntStack {
 
     public int top() {
         if (isEmpty())
-            return ERROR_CODE;
+            return ERROR_CODE+1;
         return numbers[total];
     }
 
     public int pop() {
         if (isEmpty())
-            return ERROR_CODE;
+            return ERROR_CODE+1;
         return numbers[total--];
     }
 
