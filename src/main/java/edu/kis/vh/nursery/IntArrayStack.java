@@ -4,6 +4,7 @@ package edu.kis.vh.nursery;
  * Class storing array implementation of stack
  */
 
+@Deprecated
 public class IntArrayStack {
 
     /**

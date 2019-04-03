@@ -30,6 +30,8 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(false, result);
 	}
 
+	/// Test nie ma już sensu, ponieważ nowa implementacja stosu ma teoretycznie nieograniczony rozmiar maksymalny
+	/*
 	@Test
 	public void testD_C_O_R_IsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
@@ -42,6 +44,22 @@ public class RhymersJUnitTest {
 
 		boolean result = rhymer.isFull();
 		Assert.assertEquals(true, result);
+	}
+	*/
+
+
+	@Test
+	public void testD_C_O_R_IsFull() {
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		final int STACK_CAPACITY = 12;
+		for (int i = 0; i < STACK_CAPACITY; i++) {
+			boolean result = rhymer.isFull();
+			Assert.assertEquals(false, result);
+			rhymer.countIn(888);
+		}
+
+		boolean result = rhymer.isFull();
+		Assert.assertEquals(false, result);
 	}
 
 	@Test

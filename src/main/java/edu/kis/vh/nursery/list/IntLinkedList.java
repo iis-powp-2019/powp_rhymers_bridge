@@ -11,12 +11,15 @@ public class IntLinkedList {
         final int VALUE;
         Node prev, next;
 
-        Node(final int I) {
-            VALUE = I;
+
+        Node(final int i) {
+            VALUE = i;
         }
 
     }
 
+    private static final int NUMBERS_EMPTY = 0;
+    private int elementCount = NUMBERS_EMPTY;
     private static final int EMPTY_VALUE = -1;
     private Node last;
     int i;
@@ -30,6 +33,7 @@ public class IntLinkedList {
             last.next.prev = last;
             last = last.next;
         }
+        elementCount++;
     }
 
     public boolean isEmpty() {
@@ -53,7 +57,11 @@ public class IntLinkedList {
             return EMPTY_VALUE;
         final int ret = last.VALUE;
         last = last.prev;
+        elementCount--;
         return ret;
     }
 
+    public int getElementCount() {
+        return elementCount;
+    }
 }

@@ -1,30 +1,32 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * Class of default type rhymer
  */
 public class DefaultCountingOutRhymer {
 
-    IntArrayStack stack;
+    IntLinkedList stack;
 
     public DefaultCountingOutRhymer() {
-        this.stack = new IntArrayStack();
+        this.stack = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntArrayStack stack) {
+    public DefaultCountingOutRhymer(IntLinkedList stack) {
         this.stack = stack;
     }
 
     public int getTotal() {
-        return stack.getTotal();
+        return stack.getElementCount();
     }
 
-    public void countIn(int IN) {
-        stack.countIn(IN);
+    public void countIn(int in) {
+        stack.push(in);
     }
 
     public boolean callCheck() {
-        return stack.callCheck();
+        return stack.isEmpty();
     }
 
     public boolean isFull() {
@@ -32,10 +34,10 @@ public class DefaultCountingOutRhymer {
     }
 
     public int peekaboo() {
-        return stack.peekaboo();
+        return stack.top();
     }
 
     public int countOut() {
-        return stack.countOut();
+        return stack.pop();
     }
 }
