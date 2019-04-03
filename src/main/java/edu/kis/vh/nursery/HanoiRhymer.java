@@ -4,6 +4,14 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
+    public HanoiRhymer() {
+        super();
+    }
+
+    public HanoiRhymer(Rhymer rhymer) {
+        super(rhymer);
+    }
+
     public int reportRejected() {
         return totalRejected;
     }
