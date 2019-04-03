@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList{
 
 	private static final int EMPTY_STACK_TOP = -1;
 	private Node last;

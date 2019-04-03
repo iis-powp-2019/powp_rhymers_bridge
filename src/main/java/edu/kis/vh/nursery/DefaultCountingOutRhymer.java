@@ -2,78 +2,51 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
 import edu.kis.vh.nursery.list.IntLinkedList.Node;
+import edu.kis.vh.nursery.list.IntLinkedListAdapter;
 
 public class DefaultCountingOutRhymer {
 	
-	IntArrayStack stack;
-	
-	IntLinkedList list;
+	IntStack stack;
 	
 	public DefaultCountingOutRhymer() {
-		//stack = new IntArrayStack();
-		
-		list = new IntLinkedList();
+
+		stack = new IntLinkedListAdapter(new IntLinkedList());
 	}
 	
 
 	public int getTotal() {
-		//tablica
-		//return stack.getTotal();
 		
-		//lista
-		Node n = list.getLast();
-		if(list.isEmpty()) return 0;
-		int size=1;
-		while(n.getPrev() != null) {
-			n = n.getPrev();
-			size++;
-		}
-		return size;
+		return stack.getTotal();
 	}
 
 	public void countIn(int in) {
-		//tablica
-		//stack.countIn(in);
 		
-		//lista
-		list.push(in);
+		stack.countIn(in);
 	}
 
 	public boolean callCheck() {
-		//tablica
-		//return stack.callCheck();
 		
-		//lista
-		return list.isEmpty();
+		return stack.callCheck();
 	}
 
 	public boolean isFull() {
-		//tablica
-		//return stack.isFull();
 		
-		//lista
-		return list.isFull();
+		return stack.isFull();
 	}
 
 	public int countOut() {
-		//tablica
-		//return stack.countOut();
 		
-		//lista
-		return list.pop();
+		return stack.countOut();
 	}
 
-	public DefaultCountingOutRhymer(IntArrayStack stack) {
+	public DefaultCountingOutRhymer(IntStack stack) {
 		super();
 		this.stack = stack;
 	}
 	
-	protected int peekaboo() {
-		//tablica
-		//return stack.peekaboo();
+	public int peekaboo() {
 		
-		//lista
-		return list.top();
+		return stack.peekaboo();
 	}
 
 }
