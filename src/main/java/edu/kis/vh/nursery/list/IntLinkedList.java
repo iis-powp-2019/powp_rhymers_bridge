@@ -41,7 +41,7 @@ public class IntLinkedList {
 
 class Node {
 
-    private final int value;
+    private int value;
     private Node prev;
     private Node next;
 
