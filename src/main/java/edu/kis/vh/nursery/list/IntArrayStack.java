@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.stack;
+package edu.kis.vh.nursery.list;
 
 import edu.kis.vh.nursery.list.Stackable;
 
