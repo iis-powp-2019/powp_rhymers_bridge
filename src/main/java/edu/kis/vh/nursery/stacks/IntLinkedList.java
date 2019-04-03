@@ -29,14 +29,14 @@ public class IntLinkedList implements IIntStack {
     @Override
     public int top() {
         if (isEmpty())
-            return -1;
+            return ERROR_CODE;
         return last.getValue();
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return ERROR_CODE;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;

@@ -3,8 +3,6 @@ package edu.kis.vh.nursery.stacks;
 public class IntArrayStack implements IIntStack {
     private static final int STACK_CAPACITY = 12;
 
-    private static final int ERROR_CODE = -1;
-
     private final int[] numbers = new int[STACK_CAPACITY];
 
     public int getTotal() {
