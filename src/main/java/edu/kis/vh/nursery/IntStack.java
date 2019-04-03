@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
 public interface IntStack {
+	
+	static final int EMPTY_STACK_TOP = -1;
 
 	int getTotal();
 
@@ -12,6 +14,6 @@ public interface IntStack {
 
 	int countOut();
 	
-	public int peekaboo();
+	int peekaboo();
 
 }

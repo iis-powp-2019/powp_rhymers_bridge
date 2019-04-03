@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public class IntLinkedList{
 
-	private static final int EMPTY_STACK_TOP = -1;
+	//rivate static final int EMPTY_STACK_TOP = -1;
 	private Node last;
 
 	public void push(int i) {
@@ -23,15 +23,15 @@ public class IntLinkedList{
 		return false;
 	}
 
-	public int top() {
+	public int top(int emptyRetVal) {
 		if (isEmpty())
-			return EMPTY_STACK_TOP;
+			return emptyRetVal;
 		return last.getValue();
 	}
 
-	public int pop() {
+	public int pop(int emptyRetVal) {
 		if (isEmpty())
-			return EMPTY_STACK_TOP;
+			return emptyRetVal;
 		final int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
@@ -101,6 +101,3 @@ public class IntLinkedList{
 
 	}
 }
-
-//alt + <- przechodzi do poprzednio edytowanego pliku, za każdym razem o jeden w tył
-//alt + -> przechodzi do wcześniej edytowanego pliku, analogicznie o jeden w przód

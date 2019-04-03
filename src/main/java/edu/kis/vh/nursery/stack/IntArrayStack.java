@@ -6,7 +6,7 @@ public class IntArrayStack implements IntStack {
 
 	private static final int STACK_CAPACITY = 12;
 
-	private static final int EMPTY_STACK_TOP = -1;
+	//private static final int EMPTY_STACK_TOP = -1;
 
 	private int[] numbers = new int[STACK_CAPACITY];
 

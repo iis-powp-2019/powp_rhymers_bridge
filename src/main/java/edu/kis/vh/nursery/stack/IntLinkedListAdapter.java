@@ -41,12 +41,12 @@ public class IntLinkedListAdapter implements IntStack {
 
 	@Override
 	public int countOut() {
-		return list.pop();
+		return list.pop(EMPTY_STACK_TOP);
 	}
 
 	@Override
 	public int peekaboo() {
-		return list.top();
+		return list.top(EMPTY_STACK_TOP);
 	}
 
 }
