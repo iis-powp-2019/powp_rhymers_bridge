@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.datastructure.BestInterface;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
@@ -11,6 +13,13 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
      */
     public int reportRejected() {
         return getTotalRejected();
+    }
+
+    public HanoiRhymer() {
+    }
+
+    public HanoiRhymer(BestInterface intLinkedList) {
+        super(intLinkedList);
     }
 
     /**
