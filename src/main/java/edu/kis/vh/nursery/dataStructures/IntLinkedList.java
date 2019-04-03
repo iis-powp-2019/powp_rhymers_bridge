@@ -1,6 +1,7 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.dataStructures;
 
 import edu.kis.vh.nursery.IStackAndListSimilarities;
+import edu.kis.vh.nursery.StructureValue;
 
 public class IntLinkedList implements IStackAndListSimilarities {
 
@@ -29,13 +30,13 @@ public class IntLinkedList implements IStackAndListSimilarities {
 
     @Override public int peekaboo() {
         if (callCheck())
-            return -1;
+            return StructureValue.getMinTotalValue();
         return getLast().getValue();
     }
 
     @Override public int countOut() {
         if (callCheck())
-            return -1;
+            return StructureValue.getMinTotalValue();
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
         return ret;

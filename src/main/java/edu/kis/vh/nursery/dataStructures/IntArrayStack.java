@@ -1,26 +1,18 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.dataStructures;
 
 import edu.kis.vh.nursery.IStackAndListSimilarities;
+import edu.kis.vh.nursery.StructureValue;
 
 public class IntArrayStack implements IStackAndListSimilarities {
 
-    private static final int STACK_CAPACITY = 12;
-    private static final int MIN_TOTAL_VALUE = -1;
-    private int[] numbers = new int[getStackCapacity()];
-
-    public static int getStackCapacity() {
-        return STACK_CAPACITY;
-    }
-
-    public static int getMinTotalValue() {
-        return MIN_TOTAL_VALUE;
-    }
+    private int[] numbers = new int[StructureValue.getStackCapacity()];
+    private int total = StructureValue.getMinTotalValue();
 
     public int getTotal() {
         return total;
     }
 
-    private int total = getMinTotalValue();
+
 
     @Override public void countIn(int in) {
         if (!isFull())
@@ -28,7 +20,7 @@ public class IntArrayStack implements IStackAndListSimilarities {
     }
 
     @Override public boolean callCheck() {
-        return total == getMinTotalValue();
+        return total == StructureValue.getMinTotalValue();
     }
 
     @Override public boolean isFull() {
