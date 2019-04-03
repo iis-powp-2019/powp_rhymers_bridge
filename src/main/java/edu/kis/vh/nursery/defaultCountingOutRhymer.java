@@ -10,6 +10,7 @@ public class DefaultCountingOutRhymer {
         this.stack = stack;
     }
     public DefaultCountingOutRhymer() {
+        stack = new IntArrayStack();
     }
 
     public int getTotal() {
