@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.StackCollection;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -38,13 +39,13 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = StackCollection.EMPTY_VALUE;
 
 		int result = rhymer.getPeekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -61,7 +62,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = StackCollection.EMPTY_VALUE;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
