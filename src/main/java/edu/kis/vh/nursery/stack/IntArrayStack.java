@@ -22,7 +22,7 @@ public class IntArrayStack implements Stackable {
 
 	@Override
 	public boolean callCheck() {
-		return total == Stackable.STACK_EMPTY_VALUE;
+		return total == Stackable.STACK_EMPTY_VALUE-1;
 	}
 
 	@Override
