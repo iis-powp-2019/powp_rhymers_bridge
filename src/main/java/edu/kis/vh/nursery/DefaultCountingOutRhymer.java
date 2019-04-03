@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class DefaultCountingOutRhymer {
+public class DefaultCountingOutRhymer { //All of the tests passed without problem
 
-   IntArrayStack intArrayStack;
+    private IntArrayStack intArrayStack;
 
     public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
         this.intArrayStack = intArrayStack;
