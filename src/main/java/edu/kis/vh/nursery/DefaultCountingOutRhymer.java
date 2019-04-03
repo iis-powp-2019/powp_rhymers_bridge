@@ -1,91 +1,41 @@
 package edu.kis.vh.nursery;
-class Node {
-
-	public int getValue() {
-		return value;
-	}
-
-
-	private int value;
-	private Node prev, next;
-
-	public Node(int i) {
-		value = i;
-	}
-
-	public Node getPrev() {
-		return prev;
-	}
-
-	public void setPrev(Node prev) {
-		this.prev = prev;
-	}
-
-	public Node getNext() {
-		return next;
-	}
-
-	public void setNext(Node next) {
-		this.next = next;
-	}
-
-}
 
 public class DefaultCountingOutRhymer {
 
-	private static final int DEFAULT_INDEX_STACK = -1;
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-	private static final int NOT_FOUND_RETURN = -1;
+    public DefaultCountingOutRhymer(){
 
-	private static final int MAX_SIZE_STACK = 12;
+    }
 
-	private final int[] numbers = new int[getMaxSizeStack()];
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
+    }
 
-	private int total = getDefaultIndexStack();
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
+    }
 
-	private static int getDefaultIndexStack() {
-		return DEFAULT_INDEX_STACK;
-	}
+    public boolean isFull() {
+        return intArrayStack.isFull();
+    }
 
-	private static int getNotFoundReturn() {
-		return NOT_FOUND_RETURN;
-	}
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
+    }
 
-	private static int getMaxSizeStack() {
-		return MAX_SIZE_STACK;
-	}
+    public int countOut() {
+        return intArrayStack.countOut();
+    }
 
-	protected void countIn(int in) {
-		if (!isFull())
-			getNumbers()[++total] = in;
-	}
+    public int getTotal() {
+        return intArrayStack.getTotal();
+    }
 
-	protected boolean callCheck() {
-		return total == getDefaultIndexStack();
-	}
+    private IntArrayStack intArrayStack = new IntArrayStack();
 
-	protected boolean isFull() {
-		return total == getMaxSizeStack() -1;
-	}
 
-	protected int peekaboo() {
-		if (callCheck())
-			return getNotFoundReturn();
-		return getNumbers()[total];
-	}
-
-	protected int countOut() {
-		if (callCheck())
-			return getNotFoundReturn();
-		return getNumbers()[total--];
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	private int[] getNumbers() {
-		return numbers;
-	}
 
 }
