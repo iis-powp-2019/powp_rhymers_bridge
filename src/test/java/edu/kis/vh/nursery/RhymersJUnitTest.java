@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.stack.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -54,13 +54,13 @@ public class RhymersJUnitTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -77,7 +77,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		int testValue = 4, secondTestValue = 5;
 
 		int result = rhymer.countOut();
@@ -109,58 +109,58 @@ public class RhymersJUnitTest {
 	@Test
 	public void testIsEmpty() {
 		IntLinkedList intLinkedList = new IntLinkedList();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		int testValue = 4;
 
-		boolean result = intLinkedList.isEmpty();
+		boolean result = intLinkedList.callCheck();
 		Assert.assertEquals(true,result);
 
-		intLinkedList.push(testValue);
+		intLinkedList.countIn(testValue);
 
-		result = intLinkedList.isEmpty();
+		result = intLinkedList.callCheck();
 		Assert.assertEquals(false,result);
 
-		intLinkedList.pop();
+		intLinkedList.countOut();
 
-		result = intLinkedList.isEmpty();
+		result = intLinkedList.callCheck();
 		Assert.assertEquals(true,result);
 	}
 
 	@Test
 	public void testPop() {
 		IntLinkedList intLinkedList = new IntLinkedList();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		int testValue = 4;
 
-		int result = intLinkedList.pop();
+		int result = intLinkedList.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE,result);
 
-		intLinkedList.push(testValue);
+		intLinkedList.countIn(testValue);
 
-		result = intLinkedList.pop();
+		result = intLinkedList.countOut();
 		Assert.assertEquals(testValue,result);
 
-		result = intLinkedList.pop();
+		result = intLinkedList.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE,result);
 	}
 
 	@Test
 	public void testTop() {
 		IntLinkedList intLinkedList = new IntLinkedList();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		int testValue = 4;
 
-		int result = intLinkedList.top();
+		int result = intLinkedList.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE,result);
 
-		intLinkedList.push(testValue);
+		intLinkedList.countIn(testValue);
 
-		result = intLinkedList.top();
+		result = intLinkedList.peekaboo();
 		Assert.assertEquals(testValue,result);
 
-		intLinkedList.pop();
+		intLinkedList.countOut();
 
-		result = intLinkedList.top();
+		result = intLinkedList.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE,result);
 	}
 
@@ -168,10 +168,10 @@ public class RhymersJUnitTest {
 	public void testPush() {
 		IntLinkedList intLinkedList = new IntLinkedList();
 		int testValue = 4, secondTestValue = 5;
-		intLinkedList.push(testValue);
-		intLinkedList.push(secondTestValue);
+		intLinkedList.countIn(testValue);
+		intLinkedList.countIn(secondTestValue);
 
-		int result = intLinkedList.top();
+		int result = intLinkedList.peekaboo();
 		Assert.assertEquals(secondTestValue,result);
 	}
 
