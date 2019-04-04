@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
 public class IntArrayStack {
 	
@@ -19,15 +19,15 @@ public class IntArrayStack {
 			numbers[++total] = in;
 	}
 
-	boolean callCheck() {
+	public boolean callCheck() {
 		return total == INDEX;
 	}
 
-	boolean isFull() {
+	public boolean isFull() {
 		return total == MAXSIZE-1;
 	}
 
-	int peekaboo() {
+	public int peekaboo() {
 		if (callCheck())
 			return INDEX;
 		return numbers[total];
