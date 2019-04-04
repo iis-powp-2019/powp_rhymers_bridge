@@ -19,7 +19,7 @@ public class IntLinkedList {
 	Node last;
 	int i;
 
-	public void push(int i) {
+	public void countIn(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -29,7 +29,7 @@ public class IntLinkedList {
 		}
 	}
 
-	public boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
@@ -38,14 +38,14 @@ public class IntLinkedList {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return EMPTY_STACK_RETURN_VALUE;
 		return last.value;
 	}
 	
-	public int pop() {
-		if (isEmpty())
+	public int countOut() {
+		if (callCheck())
 			return EMPTY_STACK_RETURN_VALUE;
 		int ret = last.value;
 		last = last.prev;
