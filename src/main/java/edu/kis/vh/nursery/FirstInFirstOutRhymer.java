@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntLinkedList;
 import edu.kis.vh.nursery.stack.Stackable;
 
 public class FirstInFirstOutRhymer extends DefaultCountingOutRhymer {
 
-	private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private Stackable temp = new IntLinkedList();
 
 	public FirstInFirstOutRhymer() {
 	}
