@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
 
-public class DefaultCountingOutRhymer {
+public class DefaultCountingOutRhymer implements StackInterface {
 
 	private IntLinkedList intLinkedList;
 
@@ -16,22 +16,28 @@ public class DefaultCountingOutRhymer {
 		this.intLinkedList=new IntLinkedList();
 	}
 
+	@Override
 	public void countIn(int in) {
 		intLinkedList.push(in);
 	}
 
+	@Override
 	public int countOut() {
 		return intLinkedList.pop();
 	}
 	
-	boolean isFull() {
+	@Override
+	public boolean isFull() {
 		return intLinkedList.isFull();
 	}
-	boolean callCheck() {
+	
+	@Override
+	public boolean callCheck() {
 		return intLinkedList.isEmpty(); 
 	}
 	
-	int peekaboo() {
+	@Override
+	public int peekaboo() {
 		return intLinkedList.top();
 	}
 	
