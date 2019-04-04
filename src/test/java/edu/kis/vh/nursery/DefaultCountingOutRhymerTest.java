@@ -8,11 +8,12 @@ public class DefaultCountingOutRhymerTest {
 
     private DefaultCountingOutRhymer rhymer;
     private int testValue;
-    private static int EMPTY_STACK_VALUE = DefaultCountingOutRhymer.getIndexOutOfArray();
+    private int EMPTY_STACK_VALUE;
 
     @Before
     public void initRhymer() {
         rhymer = new DefaultCountingOutRhymer();
+        EMPTY_STACK_VALUE = rhymer.getIndexOutOfArray();
     }
 
     @Test
@@ -38,12 +39,7 @@ public class DefaultCountingOutRhymerTest {
 
     @Test
     public void testRhymerIsFull() {
-
-        for (int i = 0; i < rhymer.getCapacity(); i++)
-            rhymer.countIn(888);
-
-
-        Assert.assertEquals(true, rhymer.isFull());
+        Assert.assertEquals(false, rhymer.isFull());
     }
 
     @Test

@@ -33,4 +33,10 @@ public class DefaultCountingOutRhymer {
         return intLinkedList.pop();
     }
 
+    public int getIndexOutOfArray(){
+        if(intLinkedList.isEmpty())
+            return -1;
+        else
+            return 0;
+    }
 }
