@@ -13,7 +13,7 @@ class Node {
 }
 
 
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
 
 	private static final int EMPTY_STACK_RETURN_VALUE = -1;
 	Node last;
