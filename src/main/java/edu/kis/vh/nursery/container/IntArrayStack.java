@@ -6,7 +6,6 @@ public class IntArrayStack implements StackInterface {
     private static final int MAXSIZE = 12;
     private static final int DEFAULT_STACK_VALUE = -1;
     private static final int MAX_STACK_VALUE = 11;
-    private static final int ERROR_NUMBER = -1;
     private final int[] numbers = new int[MAXSIZE];
 
     private int total = DEFAULT_STACK_VALUE;

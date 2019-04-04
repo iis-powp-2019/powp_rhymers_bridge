@@ -36,13 +36,13 @@ public class IntLinkedList implements StackInterface {
 
     public int top() {
         if (isEmpty())
-            return -1;
+            return ERROR_NUMBER;
         return last.getValue();
     }
 
     public int pop() {
         if (isEmpty())
-            return -1;
+            return ERROR_NUMBER;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
