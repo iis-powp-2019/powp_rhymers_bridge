@@ -1,11 +1,8 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.Containers;
 
 public class IntArrayStack implements StackInterface {
-	private static final int NOT_FOUND_RETURN = -1;
 
 	private static final int INITIAL_STACK_SIZE = -1;
-
-	private static final int MAX_STACK_SIZE = 12;
 
 	private int[] numbers = new int[MAX_STACK_SIZE];
 
