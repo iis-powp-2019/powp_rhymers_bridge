@@ -13,5 +13,3 @@ public interface Rhymersfactory {
 	public DefaultCoutingOutRhymer GetHanoiRhymer();
 
 }
-
-//skrot alt + strzalka powoduje przelaczanie miedzy plikami

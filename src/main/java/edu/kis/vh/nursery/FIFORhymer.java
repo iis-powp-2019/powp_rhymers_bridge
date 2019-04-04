@@ -9,7 +9,7 @@ public class FIFORhymer extends DefaultCoutingOutRhymer {
      * @return First element in list
      */
 	@Override
-	protected int countOut() {
+	public int countOut() {
 		while (!callCheck())
 
 			temp.countIn(super.countOut());

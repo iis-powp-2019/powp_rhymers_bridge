@@ -1,40 +1,35 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStack;
+
 public class DefaultCoutingOutRhymer {
-	
-	private static final int NOT_FOUND_RETURN = -1;
-	
-	private static final int INITIAL_STACK_SIZE = -1;
+	private IntArrayStack intArrayStack;
 
-	private static final int MAX_STACK_SIZE = 12;
+	public DefaultCoutingOutRhymer(){
+	    this.intArrayStack = new IntArrayStack();
+    }
 
-	private int[] numbers = new int[MAX_STACK_SIZE];
+    public DefaultCoutingOutRhymer(IntArrayStack intArrayStack) {
+        this.intArrayStack = intArrayStack;
+    }
 
-	private int total = INITIAL_STACK_SIZE;
+    public void countIn(int in) {
+        intArrayStack.countIn(in);
+    }
 
-	protected void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
-	}
-	
-	protected int countOut() {
-		if (callCheck())
-			return NOT_FOUND_RETURN;
-		return numbers[total--];
-	}
+    public int countOut() {
+        return intArrayStack.countOut();
+    }
 
-	protected boolean callCheck() {
-		return total == INITIAL_STACK_SIZE;
-	}
-	
-	protected int peekaboo() {
-		if (callCheck())
-			return NOT_FOUND_RETURN;
-		return numbers[total];
-	}
-	
-	protected boolean isFull() {
-		return total == MAX_STACK_SIZE - 1;
-	}
+    public boolean callCheck() {
+        return intArrayStack.callCheck();
+    }
 
+    public int peekaboo() {
+        return intArrayStack.peekaboo();
+    }
+
+    public boolean isFull() {
+        return intArrayStack.isFull();
+    }
 }
