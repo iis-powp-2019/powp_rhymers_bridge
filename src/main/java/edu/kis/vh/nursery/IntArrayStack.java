@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements StackInterface {
     private static final int MAXSIZE = 12;
     private static final int DEFAULT_STACK_VALUE = -1;
     private static final int MAX_STACK_VALUE = 11;
@@ -9,15 +9,18 @@ public class IntArrayStack {
 
     private int total = DEFAULT_STACK_VALUE;
 
+    @Override
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
+    @Override
     public boolean callCheck() {
         return total == DEFAULT_STACK_VALUE;
     }
 
+    @Override
     public boolean isFull() {
         return total == MAX_STACK_VALUE;
     }
@@ -28,6 +31,7 @@ public class IntArrayStack {
         return numbers[total];
     }
 
+    @Override
     public int countOut() {
         if (callCheck())
             return ERROR_NUMBER;
