@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collections.IntArrayStack;
 import edu.kis.vh.nursery.collections.IntLinkedList;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer{
@@ -13,6 +14,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer{
 
 	public HanoiRhymer(IntLinkedList linkedList) {
 		super(linkedList);
+		// TODO Auto-generated constructor stub
+	}
+
+	public HanoiRhymer(IntArrayStack intArrayStack) {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.collections;
 
 import edu.kis.vh.nursery.StackInterface;
 
-public class IntLinkedList {
+public class IntLinkedList implements StackInterface {
 
 	private Node last;
 	private int i;
@@ -45,6 +45,30 @@ public class IntLinkedList {
 
 	int getI() {
 		return i;
+	}
+
+	@Override
+	public void countIn(int in) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int countOut() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean callCheck() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int peekaboo() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

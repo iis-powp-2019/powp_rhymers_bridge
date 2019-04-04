@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.collections;
 
 import edu.kis.vh.nursery.StackInterface;
 
-public class IntArrayStack {
+public class IntArrayStack implements StackInterface{
 
 	private static final int MAXSIZE = 12;
 
@@ -37,6 +37,24 @@ public class IntArrayStack {
 		if (callCheck())
 			return StackInterface.INDEX+1;
 		return numbers[total--];
+	}
+
+	@Override
+	public void push(int countOut) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 
