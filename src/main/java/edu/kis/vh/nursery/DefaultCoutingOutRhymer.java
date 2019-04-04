@@ -8,11 +8,8 @@ public class DefaultCoutingOutRhymer {
 	    this.stackInterface = new IntLinkedList();
     }
 
-    public DefaultCoutingOutRhymer(IntLinkedList intLinkedList) {
-        this.stackInterface = intLinkedList;
-    }
-    public DefaultCoutingOutRhymer(IntArrayStack intArrayStack) {
-        this.stackInterface = intArrayStack;
+    public DefaultCoutingOutRhymer(StackInterface stack) {
+	    this.stackInterface = stack;
     }
 
     public void countIn(int in) {
