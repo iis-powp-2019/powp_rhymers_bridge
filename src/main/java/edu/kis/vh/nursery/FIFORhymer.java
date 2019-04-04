@@ -1,6 +1,15 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.RhymersStacks.IntLinkedList;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
+
+    public FIFORhymer() {
+    }
+
+    public FIFORhymer(IntLinkedList intLinkedList) {
+        super(intLinkedList);
+    }
 
     /**
      * Obsługa kolejki FIFO
