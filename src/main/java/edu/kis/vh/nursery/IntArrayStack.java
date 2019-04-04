@@ -37,4 +37,8 @@ public class IntArrayStack {
     public int getTotal() {
         return total;
     }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
 }
