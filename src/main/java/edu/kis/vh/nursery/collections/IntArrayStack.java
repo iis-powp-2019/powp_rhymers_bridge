@@ -29,13 +29,13 @@ public class IntArrayStack {
 
 	public int peekaboo() {
 		if (callCheck())
-			return StackInterface.INDEX;
+			return StackInterface.INDEX+1;
 		return numbers[total];
 	}
 
 	public int countOut() {
 		if (callCheck())
-			return StackInterface.INDEX;
+			return StackInterface.INDEX+1;
 		return numbers[total--];
 	}
 

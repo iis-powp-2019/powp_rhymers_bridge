@@ -46,7 +46,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testPeekaboo() {
 		IntArrayStack rhymer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -63,7 +63,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testCountOut() {
 		IntArrayStack rhymer = new IntArrayStack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
