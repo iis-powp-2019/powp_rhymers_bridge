@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.IntLinkedListInterface;
+
+public class IntArrayStack implements IntLinkedListInterface {
     /**
      *  Maksymalna pojemność stosu klasy
      */
@@ -27,7 +29,8 @@ public class IntArrayStack {
      *
      * @param in liczba, która będzie dodana do stosu jeśli ten nie jest pełen
      */
-    public void countIn(int in) {
+    @Override
+    public void push(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
@@ -37,7 +40,8 @@ public class IntArrayStack {
      *
      *  @return True - stos pusty, False - stos pełny
      */
-    public boolean callCheck() {
+    @Override
+    public boolean isEmpty() {
         return total == getIndexOutOfArray();
     }
 
@@ -46,6 +50,7 @@ public class IntArrayStack {
      *
      * @return True - stos pełny, False - stos pusty
      */
+    @Override
     public boolean isFull() {
         return total == capacity - 1;
     }
@@ -55,8 +60,9 @@ public class IntArrayStack {
      *
      * @return liczba ze stosu
      */
-    protected int peekaboo() {
-        if (callCheck())
+    @Override
+    public int top() {
+        if (isEmpty())
             return getIndexOutOfArray();
         return numbers[total];
     }
@@ -66,8 +72,9 @@ public class IntArrayStack {
      *
      * @return liczba ze stosu o ineksie o jeden mniejszy od wartości wskaźnika stosu
      */
-    public int countOut() {
-        if (callCheck())
+    @Override
+    public int pop() {
+        if (isEmpty())
             return getIndexOutOfArray();
         return numbers[total--];
     }
