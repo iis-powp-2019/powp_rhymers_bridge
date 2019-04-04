@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery.collections;
 
+import edu.kis.vh.nursery.StackInterface;
+
 public class IntLinkedList {
 
 	private Node last;
@@ -25,13 +27,13 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return StackInterface.INDEX;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return StackInterface.INDEX;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;

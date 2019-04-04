@@ -1,14 +1,14 @@
 package edu.kis.vh.nursery.collections;
 
+import edu.kis.vh.nursery.StackInterface;
+
 public class IntArrayStack {
-	
-	private static final int INDEX = -1;
 
 	private static final int MAXSIZE = 12;
 
 	private int[] numbers = new int[MAXSIZE];
 
-	private int total = INDEX;
+	private int total = StackInterface.INDEX;
 
 	public int getTotal() {
 		return total;
@@ -20,7 +20,7 @@ public class IntArrayStack {
 	}
 
 	public boolean callCheck() {
-		return total == INDEX;
+		return total == StackInterface.INDEX;
 	}
 
 	public boolean isFull() {
@@ -29,13 +29,13 @@ public class IntArrayStack {
 
 	public int peekaboo() {
 		if (callCheck())
-			return INDEX;
+			return StackInterface.INDEX;
 		return numbers[total];
 	}
 
 	public int countOut() {
 		if (callCheck())
-			return INDEX;
+			return StackInterface.INDEX;
 		return numbers[total--];
 	}
 
