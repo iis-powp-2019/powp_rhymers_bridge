@@ -9,7 +9,7 @@ public class IntArrayStack implements IntLinkedListInterface {
     /**
      *  Wartość błędu gdy indeks przekracza wielkość tablicy
      */
-    private static final int indexOutOfArray = -1;
+    private static final int indexOutOfArray = STACK_EMPTY;
 
     /**
      *  Stos klasy
