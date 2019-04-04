@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.intStack;
+package edu.kis.vh.nursery.stack;
 
 public interface Stackable {
 

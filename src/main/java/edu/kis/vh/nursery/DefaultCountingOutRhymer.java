@@ -1,9 +1,7 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.intStack.Stackable;
-import edu.kis.vh.nursery.list.IntLinkedList;
-
-import java.util.LinkedList;
+import edu.kis.vh.nursery.stack.Stackable;
+import edu.kis.vh.nursery.stack.IntLinkedList;
 
 /**
  * DefaultCountingOutRhymer is counting-out rhyme used to conducting complicated number games
