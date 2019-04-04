@@ -26,7 +26,7 @@ public class IntArrayStack implements StackInterface {
         return total == MAX_STACK_VALUE;
     }
 
-    protected int peekaboo() {
+    public int peekaboo() {
         if (callCheck())
             return ERROR_NUMBER;
         return numbers[total];

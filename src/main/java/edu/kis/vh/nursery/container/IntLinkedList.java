@@ -25,6 +25,7 @@ public class IntLinkedList implements StackInterface {
         return false;
     }
 
+    public int peekaboo(){return top();}
 
     public void countIn(int in) { push(in); }
 

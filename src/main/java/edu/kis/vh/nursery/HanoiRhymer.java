@@ -6,13 +6,12 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
-    public HanoiRhymer(IntLinkedList list, int totalRejected) {
-        super(list);
-        this.totalRejected = totalRejected;
+    public HanoiRhymer() {
+        super();
     }
 
-    public HanoiRhymer(int totalRejected) {
-        this.totalRejected = totalRejected;
+    public HanoiRhymer(StackInterface stackInterface) {
+        super(stackInterface);
     }
 
     public int reportRejected() {
