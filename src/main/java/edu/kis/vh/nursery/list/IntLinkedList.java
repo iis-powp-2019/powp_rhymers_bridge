@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.intStack.Stackable;
+
+public class IntLinkedList implements Stackable {
 
 		private class Node {
 
@@ -39,8 +41,16 @@ public class IntLinkedList {
 
 	Node last;
 	private static final int STACK_EMPTY_VALUE = -1;
+	private int total = STACK_EMPTY_VALUE;
 
-	public void push(final int i) {
+	@Override
+	public int getTotal() {
+		return total;
+	}
+
+	@Override
+	public void countIn(int i) {
+		total++;
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -50,26 +60,40 @@ public class IntLinkedList {
 		}
 	}
 
-	public boolean isEmpty() {
+	/**
+	 * @return true if stack is empty
+	 */
+	@Override public boolean callCheck() {
 		return last == null;
 	}
 
-	public boolean isFull() {
+	/**
+	 * @return true if stack is full
+	 */
+	@Override public boolean isFull() {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	/**
+	 * @return STACK_EMPTY_VALUE if stack is empty, if stack is not empty then returns value pointed by STACK_EMPTY_INDICATOR
+	 */
+	@Override
+	public int peekaboo() {
+		if (callCheck())
 			return STACK_EMPTY_VALUE;
 		return last.getValue();
 	}
 
-	public int pop() {
-		if (isEmpty())
-			return STACK_EMPTY_VALUE;
-		int ret = last.getValue();
-		last = last.getPrev();
-		return ret;
+	/**
+	 * @return STACK_EMPTY_VALUE if stack is empty, if stack is not empty then returns value pointed by STACK_EMPTY_INDICATOR
+	 * and after that decrements STACK_EMPTY_INDICATOR
+	 */
+	@Override public int countOut() {
+			if (callCheck())
+				return STACK_EMPTY_VALUE;
+			final int ret = last.getValue();
+			last = last.getPrev();
+			return ret;
 	}
 
 }

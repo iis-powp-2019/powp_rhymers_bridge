@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.intStack.IntArrayStack;
+import edu.kis.vh.nursery.intStack.Stackable;
 import edu.kis.vh.nursery.list.IntLinkedList;
 
 import java.util.LinkedList;
@@ -8,33 +10,33 @@ import java.util.LinkedList;
  * DefaultCountingOutRhymer is counting-out rhyme used to conducting complicated number games
  */
 public class DefaultCountingOutRhymer {
-    private IntLinkedList intlinkedList;
+    private Stackable stack;
 
     public DefaultCountingOutRhymer() {
-        this.intlinkedList = new IntLinkedList();
+        this.stack = new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intlinkedList) {
-        this.intlinkedList = intlinkedList;
+    public DefaultCountingOutRhymer(Stackable stack) {
+        this.stack = stack;
     }
 
     public void countIn(int in) {
-        intlinkedList.push(in);
+        stack.countIn(in);
     }
 
     public boolean callCheck() {
-        return intlinkedList.isEmpty();
+        return stack.callCheck();
     }
 
     public boolean isFull() {
-        return intlinkedList.isFull();
+        return stack.isFull();
     }
 
     public int peekaboo() {
-        return intlinkedList.top();
+        return stack.peekaboo();
     }
 
     public int countOut() {
-        return intlinkedList.pop();
+        return stack.countOut();
     }
 }
