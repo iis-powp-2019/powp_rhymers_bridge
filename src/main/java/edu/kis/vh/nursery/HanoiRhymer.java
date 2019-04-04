@@ -19,6 +19,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer{
 
 	public HanoiRhymer(IntArrayStack intArrayStack) {
 		// TODO Auto-generated constructor stub
+		super(intArrayStack);
 	}
 
 	int reportRejected() {

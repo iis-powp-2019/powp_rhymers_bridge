@@ -26,6 +26,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 	public FIFORhymer(IntArrayStack intArrayStack) {
 		// TODO Auto-generated constructor stub
+		super(intArrayStack);
 	}
 
 	@Override

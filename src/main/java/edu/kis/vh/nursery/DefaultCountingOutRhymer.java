@@ -19,6 +19,7 @@ public class DefaultCountingOutRhymer implements StackInterface {
 
 	public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
 		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	@Override
