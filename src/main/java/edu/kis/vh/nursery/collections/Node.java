@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collections;
 
 class Node { //formatowanie kodu: ok, modyfikator widocznosci: zmiana na pakietowy/prywatny
 

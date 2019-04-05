@@ -1,18 +1,12 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collections;
+
+import edu.kis.vh.nursery.collections.Stack;
 
 public class IntArrayStack implements Stack {
     static final int STACK_CAPACITY = 12;
-    static final int EMPTY = -1;
     static final int MAX_SIZE = 11;
     int[] NUMBERS = new int[STACK_CAPACITY];
     int total = -1;
-
-    public IntArrayStack() {
-    }
-
-    public int getTotal() {
-        return total;
-    }
 
     public void push(int in) {
         if (!isFull())
