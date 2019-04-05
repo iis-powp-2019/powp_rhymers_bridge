@@ -4,7 +4,7 @@ public class IntArrayStack implements StackListinterface {
     /**
      * Komentarz przykladowy
      */
-    static final int EMPTY = -1;
+    //static final int EMPTY = -1;
     static final int MAX_SIZE = 11;
     public static final int STACK_CAPACITY = 12;
     int[] numbers = new int[STACK_CAPACITY];

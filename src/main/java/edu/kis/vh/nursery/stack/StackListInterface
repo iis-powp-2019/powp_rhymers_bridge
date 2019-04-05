@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
 public interface StackListInterface {
+    int EMPTY=0;
+
     void push(int i);
 
     boolean isEmpty();
