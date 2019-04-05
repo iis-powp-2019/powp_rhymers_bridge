@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements Stack{
 
 	public static final int MINUS_JEDEN = -1;
 	private Node last;
