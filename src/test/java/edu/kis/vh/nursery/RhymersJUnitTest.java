@@ -30,15 +30,15 @@ public class RhymersJUnitTest {
 	@Test
 	public void testIsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		final int NUMBERS_COUNT = 12;
+		for (int i = 0; i < NUMBERS_COUNT; i++) {
 			boolean result = rhymer.isFull();
 			Assert.assertEquals(false, result);
 			rhymer.countIn(888);
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result); //zmieniono na full, ponieważ zmieniliśmy IntArrayAstack na IntLinkedList
 	}
 
 	@Test
