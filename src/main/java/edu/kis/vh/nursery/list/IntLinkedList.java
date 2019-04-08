@@ -1,9 +1,11 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.IntStack;
+
+public class IntLinkedList implements IntStack {
 
     Node last;
-    int count=0;
+    private int count=0;
 
     public void push(int i) {
         if (last == null)
@@ -49,6 +51,12 @@ public class IntLinkedList {
             return false;
         return true;
     }
+
+    @Override
+    public int getTotal() {
+        return count;
+    }
+
     public int peekaboo(){
         return top();
     }

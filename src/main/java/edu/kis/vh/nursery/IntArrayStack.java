@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 /**
  * Stack Class
  */
-public class IntArrayStack {
+public class IntArrayStack implements IntStack {
 
     private final int STACK_MAX_SIZE = 12;
     private final int INITIAL_STACK_INDEX=-1;
@@ -14,6 +14,7 @@ public class IntArrayStack {
      *
      * @return number of elements currently on the stack
      */
+
     public int getTotal() {
         return total;
     }
@@ -22,6 +23,7 @@ public class IntArrayStack {
      * Puts element on  the stack
      * @param in element to put on the stack
      */
+    @Override
     public void countIn(int in) {
         if (!isFull())
             NUMBERS[++total] = in;
@@ -32,7 +34,8 @@ public class IntArrayStack {
      * Checks if stack is empty
      * @return true if empty
      */
-    boolean callCheck() {
+
+    public boolean callCheck() {
         return total == INITIAL_STACK_INDEX;
     }
 
@@ -48,7 +51,8 @@ public class IntArrayStack {
      * returns  element from top of the stack
      * @return element from top of the stack
      */
-    int peekaboo() {
+    @Override
+    public int peekaboo() {
         if (callCheck())
             return INITIAL_STACK_INDEX;
         return NUMBERS[total];
@@ -58,6 +62,7 @@ public class IntArrayStack {
      *returns element from top of  the stack and removes it
      * @return  element from top of  the stack
      */
+    @Override
     public int countOut() {
         if (callCheck())
             return INITIAL_STACK_INDEX;
