@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.Containers.StackInterface;
 public class HanoiRhymer extends DefaultCoutingOutRhymer {
 
 	public HanoiRhymer(){}
-	HanoiRhymer(StackInterface stack) {
+	public HanoiRhymer(StackInterface stack) {
 		super(stack);
 	}
 

@@ -2,21 +2,27 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.DefaultCoutingOutRhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
+import edu.kis.vh.nursery.factory.ArrayRhymersFactory;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.LinkedListRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
+		ArrayRhymersFactory arrayFactory = new ArrayRhymersFactory();
+		LinkedListRhymersFactory linkedListRhymersFactory  = new LinkedListRhymersFactory();
 
 		testRhymes(factory);
+		testRhymes(arrayFactory);
+		testRhymes(linkedListRhymersFactory	);
 
 	}
 
 	private static void testRhymes(Rhymersfactory factory) {
-		DefaultCoutingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
-				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
+		DefaultCoutingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
+				factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
