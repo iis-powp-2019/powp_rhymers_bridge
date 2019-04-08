@@ -43,7 +43,7 @@ public class IntArrayStack implements IntStack {
      *Checks if stack is full
      * @return true if stack is full
      */
-    boolean isFull() {
+    public boolean isFull() {
         return total == STACK_MAX_SIZE-1;
     }
 

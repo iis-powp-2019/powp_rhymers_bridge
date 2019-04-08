@@ -11,4 +11,6 @@ public interface IntStack {
     boolean callCheck();
 
     int getTotal();
+
+    boolean isFull();
 }
