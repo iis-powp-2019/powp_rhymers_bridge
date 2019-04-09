@@ -6,7 +6,7 @@ import edu.kis.vh.nursery.stack.IntLinkedList;
 public class DefaultCountingOutRhymer {
 
 	//private IntArrayStack stack;
-	private IntLinkedList list;
+	private Stack list;
 
 	public DefaultCountingOutRhymer(IntLinkedList list) {
 		super();
@@ -23,15 +23,15 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public void countIn(int in) {
-		list.push(in);
+		list.countIn(in);
 	}
 
 	public int countOut() {
-		return list.pop();
+		return list.countOut();
 	}
 
-	public boolean isEmpty() {
-		return list.isEmpty();
+	public boolean callCheck() {
+		return list.callCheck();
 	}
 
 	public boolean isFull() {
@@ -39,7 +39,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public int peekaboo() {
-		return list.top();
+		return list.peekaboo();
 	}
 
 	
