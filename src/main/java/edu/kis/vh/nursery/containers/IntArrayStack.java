@@ -6,7 +6,7 @@ public class IntArrayStack implements IStackInterface{
 
 	private static final int EMPTY = 0;
 	private static final int SIZE = 12;
-	private static final int FULL = SIZE;
+	private static final int FULL = SIZE -1;
 
 	private int[] numbers = new int[SIZE];
 
