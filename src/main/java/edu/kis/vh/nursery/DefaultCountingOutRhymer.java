@@ -53,7 +53,7 @@ public class DefaultCountingOutRhymer {
 	 * @param list
 	 * Konstruktor inicjalizujacy pole list
 	 */
-	public DefaultCountingOutRhymer(IntLinkedList list) {
+	public DefaultCountingOutRhymer(IStackInterface list) {
 		super();
 		this.list = list;
 	}

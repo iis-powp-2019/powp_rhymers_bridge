@@ -9,7 +9,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public HanoiRhymer(IntLinkedList list) {
+	public HanoiRhymer(IStackInterface list) {
 		super(list);
 		// TODO Auto-generated constructor stub
 	}
