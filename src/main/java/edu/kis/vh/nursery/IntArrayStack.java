@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 /**
  * Class implementing stack
  */
-public class IntArrayStack {
+public class IntArrayStack implements Stack {
 	
 	private static final int NUMBERS_QUANTITY = 12;
 	private static final int EMPTY_STACK_INDICATOR = -1;
@@ -16,7 +16,8 @@ public class IntArrayStack {
     /**
      * @return amount of values currently on stack
      */
-    public int getTotal() {
+    @Override
+	public int getTotal() {
         return total;
     }
 
@@ -24,6 +25,7 @@ public class IntArrayStack {
      * Put value on stack
      * @param in value to put
      */
+	@Override
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
@@ -33,7 +35,8 @@ public class IntArrayStack {
      * Checks if stack is empty
      * @return true if stack is empty
      */
-	public boolean isEmpty() {
+	@Override
+	public boolean callCheck() {
 		return total == EMPTY_STACK_INDICATOR;
 	}
 
@@ -41,6 +44,7 @@ public class IntArrayStack {
      * Checks if stack is full
      * @return true if stack is full
      */
+	@Override
 	public boolean isFull() {
 		return total == FULL_STACK_INDICATOR;
 	}
@@ -48,8 +52,9 @@ public class IntArrayStack {
     /**
      * @return value from the top of the stack without removing it
      */
+	@Override
 	public int peekaboo() {
-		if (isEmpty())
+		if (callCheck())
 			return EMPTY_STACK_INDICATOR;
 		return numbers[total];
 	}
@@ -57,8 +62,9 @@ public class IntArrayStack {
     /**
      * @return value from the top of the stack and remove it
      */
+	@Override
 	public int countOut() {
-		if (isEmpty())
+		if (callCheck())
 			return EMPTY_STACK_INDICATOR;
 		return numbers[total--];
 	}

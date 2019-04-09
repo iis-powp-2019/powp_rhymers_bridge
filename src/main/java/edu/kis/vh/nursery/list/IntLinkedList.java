@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.Stack;
+
+public class IntLinkedList implements Stack {
 
 	private Node last;
 	int i;
@@ -27,6 +29,16 @@ public class IntLinkedList {
 		return false;
 	}
 
+	@Override
+	public int peekaboo() {
+		return top();
+	}
+
+	@Override
+	public int countOut() {
+		return pop();
+	}
+
 	public int top() {
 		if (isEmpty())
 			return -1;
@@ -45,4 +57,16 @@ public class IntLinkedList {
 	public int getTotal(){
 		return total;
 	}
+
+	@Override
+	public void countIn(int in) {
+		push(in);
+	}
+
+	@Override
+	public boolean callCheck() {
+		return isEmpty();
+	}
+
+
 }
