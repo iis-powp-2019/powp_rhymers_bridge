@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements IIntRoot{
 
 	private static final int EMPTY = -1;
 	private static final int SIZE = 12;
@@ -10,19 +10,22 @@ public class IntArrayStack {
 
 	private int total = EMPTY;
 
+	@Override
 	public void countIn(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	private boolean callCheck() {
+	@Override
+	public boolean callCheck() {
 		return total == EMPTY;
 	}
 		
-	private boolean isFull() {
+	public boolean isFull() {
 		return total == FULL;
 	}
 		
+	@Override
 	public int peekaboo() {
 		if (callCheck())
 			return EMPTY;
@@ -30,6 +33,7 @@ public class IntArrayStack {
 		return numbers[total];
 	}
 
+	@Override
 	public int countOut() {
 		if (callCheck())
 			return EMPTY;

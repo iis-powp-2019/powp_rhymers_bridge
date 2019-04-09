@@ -15,7 +15,7 @@ public class DefaultCountingOutRhymer {
 	 * Metoda dodaje element in do listy
 	 */
 	public void countIn(final int in) {
-		list.push(in);
+		list.countIn(in);
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class DefaultCountingOutRhymer {
 	 * Metoda sprawdza czy lista jest pusta
 	 */
 	public boolean callCheck() {
-		return list.isEmpty();
+		return list.callCheck();
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class DefaultCountingOutRhymer {
 	 * Metoda zwraca ostatni element listy
 	 */
 	public int countOut() {
-		return list.pop();
+		return list.countOut();
 	}
 
 	/**
@@ -58,12 +58,8 @@ public class DefaultCountingOutRhymer {
 		this.list = list;
 	}
 
-	/**
-	 * @return
-	 * Zwraca wartosc ostatniego elementu
-	 */
 	public int peekaboo() {
-		return list.top();
+		return list.peekaboo();
 	}
 	
 
