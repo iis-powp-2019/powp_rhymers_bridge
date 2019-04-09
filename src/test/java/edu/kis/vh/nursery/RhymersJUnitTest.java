@@ -12,6 +12,7 @@ public class RhymersJUnitTest {
 		IntLinkedList list = new IntLinkedList();
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer( list );
 		int testValue = 4;
+		
 		rhymer.countIn(testValue);
 
 		int result = rhymer.peekaboo();
