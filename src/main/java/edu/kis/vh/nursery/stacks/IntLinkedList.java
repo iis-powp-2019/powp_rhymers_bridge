@@ -6,6 +6,7 @@ public class IntLinkedList implements IntStack {
 
     Node last;
     private int count=0;
+    private final int EMPTY_STACK_VALUE= 0;
 
     public void push(int i) {
         if (last == null)
@@ -28,13 +29,13 @@ public class IntLinkedList implements IntStack {
 
     public int top() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_VALUE;
         return last.value;
     }
 
     public int pop() {
         if (isEmpty())
-            return -1;
+            return EMPTY_STACK_VALUE;
         int ret = last.value;
         last = last.prev;
         count--;

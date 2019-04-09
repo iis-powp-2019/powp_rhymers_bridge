@@ -9,6 +9,7 @@ public class IntArrayStack implements IntStack {
 
     private final int STACK_MAX_SIZE = 12;
     private final int INITIAL_STACK_INDEX=-1;
+    private final int EMPTY_STACK_VALUE= 0;
     private int[] NUMBERS = new int[STACK_MAX_SIZE];
     private int total = INITIAL_STACK_INDEX;
 
@@ -56,7 +57,7 @@ public class IntArrayStack implements IntStack {
     @Override
     public int peekaboo() {
         if (callCheck())
-            return INITIAL_STACK_INDEX;
+            return EMPTY_STACK_VALUE;
         return NUMBERS[total];
     }
 
@@ -67,7 +68,7 @@ public class IntArrayStack implements IntStack {
     @Override
     public int countOut() {
         if (callCheck())
-            return INITIAL_STACK_INDEX;
+            return EMPTY_STACK_VALUE;
         return NUMBERS[total--];
     }
 
