@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.dataStructures;
 
 public class IntArrayStack implements DataStructure {
 
-    private static final int EMPTY_INDEX = -1;
     private static final int STACK_MAX = 12;
     private final int[] numbers = new int[STACK_MAX];
 

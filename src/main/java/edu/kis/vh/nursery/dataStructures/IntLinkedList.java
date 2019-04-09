@@ -4,6 +4,7 @@ package edu.kis.vh.nursery.dataStructures;
  * Class representing doubly-linked dataStructures containing values of type int
  */
 public class IntLinkedList implements DataStructure{
+    private Node last;
 
 	/**
 	 * Class representing single element of the dataStructures
@@ -49,10 +50,6 @@ public class IntLinkedList implements DataStructure{
 			this.next = next;
 		}
 	}
-
-	private static final int EMPTY_INDEX = -1;
-    private Node last;
-	int i;
 
 	/**
 	 * Adds element to the end of the dataStructures with value "i"

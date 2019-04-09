@@ -1,6 +1,9 @@
 package edu.kis.vh.nursery.dataStructures;
 
 public interface DataStructure {
+
+    int EMPTY_INDEX = -1;
+
     void countIn(int in);
 
     boolean callCheck();
