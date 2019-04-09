@@ -57,6 +57,7 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
 		int testValue = 4;
+		// blad byl w metodzie countIn, ktora dodawala element do kolejnego Node'a
 		rhymer.countIn(testValue);
 
 		result = rhymer.peekaboo();
