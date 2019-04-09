@@ -10,7 +10,7 @@ public class IntArrayStack {
 
 	private int total = EMPTY;
 
-	public void countIn(int in) {
+	public void countIn(final int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}

@@ -6,7 +6,7 @@ public class Node {
 	private Node prev;
 	private Node next;
 
-	public Node(int i) {
+	public Node(final int i) {
 		value = i;
 	}
 

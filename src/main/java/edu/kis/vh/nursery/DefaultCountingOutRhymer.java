@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
 
 	private IntLinkedList list;
 
-	public void countIn(int in) {
+	public void countIn(final int in) {
 		list.push(in);
 	}
 
@@ -26,7 +26,7 @@ public class DefaultCountingOutRhymer {
 		list = new IntLinkedList();
 	}
 	
-	public DefaultCountingOutRhymer(IntLinkedList list) {
+	public DefaultCountingOutRhymer(final IntLinkedList list) {
 		super();
 		this.list = list;
 	}
