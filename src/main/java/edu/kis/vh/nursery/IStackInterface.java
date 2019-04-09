@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public interface IIntRoot {
+public interface IStackInterface {
 
 	void countIn(int in);
 

@@ -8,7 +8,7 @@ import edu.kis.vh.nursery.containers.IntLinkedList;
  */
 public class DefaultCountingOutRhymer {
 
-	private IntLinkedList list;
+	private IStackInterface list;
 
 	/**
 	 * @param in
@@ -31,7 +31,7 @@ public class DefaultCountingOutRhymer {
 	 * Metoda sprawdza czy lista jest pełna
 	 */
 	public boolean isFull() {
-		return list.isFull();
+		return false;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class DefaultCountingOutRhymer {
 	 * @param list
 	 * Konstruktor inicjalizujacy pole list
 	 */
-	public DefaultCountingOutRhymer(final IntLinkedList list) {
+	public DefaultCountingOutRhymer(IntLinkedList list) {
 		super();
 		this.list = list;
 	}

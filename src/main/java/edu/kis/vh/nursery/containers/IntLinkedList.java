@@ -1,13 +1,12 @@
 package edu.kis.vh.nursery.containers;
 
-import edu.kis.vh.nursery.IIntRoot;
+import edu.kis.vh.nursery.IStackInterface;
 
-public class IntLinkedList implements IIntRoot{
+public class IntLinkedList implements IStackInterface{
 
 	//obie klasy posiadają stałą EMPTY
-	private static final int EMPTY = -1;
+	private static final int EMPTY = 0;
 	private Node last;
-	private int i;
 
 	public boolean isFull() {
 		return false;
@@ -15,10 +14,10 @@ public class IntLinkedList implements IIntRoot{
 
 	@Override
 	public void countIn(int in) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.setNext(new Node(i));
+		if (last == null) {
+			last = new Node(in);
+		}else {
+			last.setNext(new Node(in));
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
@@ -28,7 +27,6 @@ public class IntLinkedList implements IIntRoot{
 	public int peekaboo() {
 		if (callCheck())
 			return EMPTY;
-		
 		return last.getValue();
 	}
 

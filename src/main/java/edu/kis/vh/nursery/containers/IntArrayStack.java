@@ -1,12 +1,12 @@
 package edu.kis.vh.nursery.containers;
 
-import edu.kis.vh.nursery.IIntRoot;
+import edu.kis.vh.nursery.IStackInterface;
 
-public class IntArrayStack implements IIntRoot{
+public class IntArrayStack implements IStackInterface{
 
-	private static final int EMPTY = -1;
+	private static final int EMPTY = 0;
 	private static final int SIZE = 12;
-	private static final int FULL = SIZE - 1;
+	private static final int FULL = SIZE;
 
 	private int[] numbers = new int[SIZE];
 
@@ -15,7 +15,7 @@ public class IntArrayStack implements IIntRoot{
 	@Override
 	public void countIn(final int in) {
 		if (!isFull())
-			numbers[++total] = in;
+			numbers[total++] = in;
 	}
 
 	@Override
