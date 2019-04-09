@@ -8,18 +8,18 @@ public class IntArrayStack {
 
 	private int[] numbers = new int[SIZE];
 
-	public int total = EMPTY;
+	private int total = EMPTY;
 
 	public void countIn(int in) {
 		if (!isFull())
 			numbers[++total] = in;
 	}
 
-	public boolean callCheck() {
+	private boolean callCheck() {
 		return total == EMPTY;
 	}
 		
-	public boolean isFull() {
+	private boolean isFull() {
 		return total == FULL;
 	}
 		
