@@ -6,8 +6,12 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 class RhymersDemo {
 
 	public static void main(String[] args) {
-		Rhymersfactory factory = new DefaultRhymersFactory();
-		testRhymers(factory);
+		Rhymersfactory defaultRhymersFactory = new DefaultRhymersFactory();
+		testRhymers(defaultRhymersFactory);
+		Rhymersfactory listFactory = new LinkedListRhymersFactory();
+		testRhymers(listFactory);
+		Rhymersfactory arrayStackFactory = new ArrayStackRhymersFactory();
+		testRhymers(arrayStackFactory);
 	}
 
 	private static void testRhymers(Rhymersfactory factory) {
