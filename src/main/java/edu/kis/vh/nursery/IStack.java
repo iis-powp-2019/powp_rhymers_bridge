@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public interface Stack {
+public interface IStack {
     int EMPTY_STACK_INDICATOR = 0;
 
     int getTotal();
