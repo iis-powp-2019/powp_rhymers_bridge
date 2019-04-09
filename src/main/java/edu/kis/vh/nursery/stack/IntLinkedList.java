@@ -41,13 +41,13 @@ public class IntLinkedList implements Stack {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK_INDICATOR;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK_INDICATOR;
 		int ret = last.getValue();
 		last = last.getPrev();
 		total -= 1;
