@@ -1,12 +1,16 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stacks.IntArrayStack;
+import edu.kis.vh.nursery.stacks.IntLinkedList;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRhymer temp;
+    private IntStack temp;
 
     public FIFORhymer() {
         super();
-        this.temp = new DefaultCountingOutRhymer();
+        //Array Stack powinien być szybszy
+        this.temp = new IntArrayStack();
     }
 
     @Override
