@@ -12,6 +12,10 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         //Array Stack powinien być szybszy
         this.temp = new IntArrayStack();
     }
+    public FIFORhymer(IntStack stack) {
+        super();
+        this.temp = stack;
+    }
 
     @Override
     public int countOut() {
