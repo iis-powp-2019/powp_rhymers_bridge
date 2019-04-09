@@ -4,6 +4,7 @@ import edu.kis.vh.nursery.IIntRoot;
 
 public class IntLinkedList implements IIntRoot{
 
+	//obie klasy posiadają stałą EMPTY
 	private static final int EMPTY = -1;
 	private Node last;
 	private int i;
