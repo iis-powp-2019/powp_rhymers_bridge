@@ -10,7 +10,7 @@ public class IntArrayStack implements DataStructure {
     @Override
     public void countIn(int in) {
         if (!isFull())
-            numbers[++total] = in;
+            numbers[total++] = in;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class IntArrayStack implements DataStructure {
 
     @Override
     public boolean isFull() {
-        return total == (STACK_MAX - 1);
+        return total == STACK_MAX;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class IntArrayStack implements DataStructure {
     public int countOut() {
         if (callCheck())
             return EMPTY_INDEX;
-        return numbers[total--];
+        return numbers[--total];
     }
 
     public int getTotal() {
