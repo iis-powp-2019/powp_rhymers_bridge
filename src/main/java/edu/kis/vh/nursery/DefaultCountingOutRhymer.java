@@ -4,38 +4,31 @@ public class DefaultCountingOutRhymer {
 
 	IntArrayStack stack;
 
-	public DefaultCountingOutRhymer(IntArrayStack stack) {
-		super();
-		this.stack = stack;
-	}
-
 	public DefaultCountingOutRhymer() {
-		super();
 		this.stack = new IntArrayStack();
 	}
 
-	public int getTotal() {
-		return stack.getTotal();
+	public DefaultCountingOutRhymer(IntArrayStack stack) {
+		this.stack = stack;
 	}
 
 	public void countIn(int in) {
 		stack.countIn(in);
 	}
 
-	public boolean callCheck() {
-		return stack.callCheck();
+	public int countOut() {
+		return stack.countOut();
 	}
 
-	public boolean isFull() {
-		return stack.isFull();
+	public boolean callCheck() {
+		return stack.callCheck();
 	}
 
 	public int peekaboo() {
 		return stack.peekaboo();
 	}
 
-	public int countOut() {
-		return stack.countOut();
+	public boolean isFull() {
+		return stack.isFull();
 	}
-
 }
