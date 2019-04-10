@@ -28,6 +28,7 @@ public class RhymersJUnitTest {
 		Assert.assertEquals(false, result);
 	}
 
+	@Ignore("Linked list dont have max capacity")
 	@Test
 	public void testIsFull() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
