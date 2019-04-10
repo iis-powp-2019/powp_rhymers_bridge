@@ -5,10 +5,6 @@ import edu.kis.vh.nursery.StackInterface;
 public class IntArrayStack implements StackInterface {
 
 	/**
-	 * Value to return when there is no numbers
-	 */
-	private static final int DEFAULT_RETURN_VALUE = -1;
-	/**
 	 * Maximum amount of numbers to store
 	 */
 	private static final int STACK_SIZE = 12;
