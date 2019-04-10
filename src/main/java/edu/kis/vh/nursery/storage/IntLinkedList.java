@@ -34,7 +34,6 @@ class Node {
 public class IntLinkedList implements IntStorageInterface {
 
     private Node last;
-    public static final int STACKEMPTY = -1;
     private int size = 0;
 
     /**
