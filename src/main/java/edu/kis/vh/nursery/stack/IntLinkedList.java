@@ -11,13 +11,13 @@ public class IntLinkedList implements IStack {
 	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
-			total = 1;
+			this.total = STACK_TOTAL_INITIAL_VALUE+1;
 		}
 		else {
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();
-			total += 1;
+			this.total += 1;
 		}
 	}
 
@@ -26,7 +26,7 @@ public class IntLinkedList implements IStack {
 	}
 
 	public boolean isFull() {
-		return false;
+		return total == FULL_STACK_INDICATOR;
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class IntLinkedList implements IStack {
 			return EMPTY_STACK_INDICATOR;
 		int ret = last.getValue();
 		last = last.getPrev();
-		total -= 1;
+		this.total -= 1;
 		return ret;
 	}
 	

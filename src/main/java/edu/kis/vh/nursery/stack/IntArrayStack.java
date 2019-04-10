@@ -6,13 +6,10 @@ import edu.kis.vh.nursery.IStack;
  * Class implementing stack
  */
 public class IntArrayStack implements IStack {
-	
-	private static final int NUMBERS_QUANTITY = 12;
-	private static final int FULL_STACK_INDICATOR = 11;
 
 	private int[] numbers = new int[NUMBERS_QUANTITY];
 
-    private int total = EMPTY_STACK_INDICATOR;
+    private int total = STACK_TOTAL_INITIAL_VALUE;
 
     /**
      * @return amount of values currently on stack
