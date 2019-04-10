@@ -2,126 +2,126 @@ package edu.kis.vh.nursery.list;
 
 class Node {
 
-    protected int value;
-    protected Node prev, next;
-
-    /**
-     * Getting value of Node
-     *
-     * @return value of Node
-     */
     public int getValue() {
         return value;
     }
 
-    /**
-     * Constructor of Node with 1 param
-     *
-     * @param i - value to add
-     */
+    private int value;
+    private Node prev, next;
+
     public Node(int i) {
         value = i;
     }
 
-    /**
-     * Getting previous Node
-     *
-     * @return previous Node
-     */
     public Node getPrev() {
         return prev;
     }
 
-    /**
-     * Setting previous Node
-     *
-     * @param prev - Node to set as previous
-     */
     public void setPrev(Node prev) {
         this.prev = prev;
     }
 
-    /**
-     * Getting next Node
-     *
-     * @return next Node
-     */
     public Node getNext() {
         return next;
     }
 
-    /**
-     * Setting next Node
-     *
-     * @param next - Node to set as next
-     */
     public void setNext(Node next) {
         this.next = next;
     }
+
 }
 
 public class IntLinkedList {
 
-    private static final int DEFAULT_INDEX = -1;
-    Node last;
-    int i;
+    private Node last;
+    private static final int STACKEMPTY = -1;
+    private int size = 0;
+
+    public static int getEMPTY() {
+        return STACKEMPTY;
+    }
 
     /**
-     * Add value to the Node
+     * Added value to IntLikedList
      *
-     * @param i - will be added to the Node
+     * @param i this is the value that will be added to IntLikedList
      */
+
     public void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
-            last.next = new Node(i);
-            last.next.prev = last;
-            last = last.next;
+            size ++;
+            last.setNext(new Node(i));
+            last.getNext().setPrev(last);
+            last = last.getNext();
         }
     }
 
     /**
-     * Checking whether LinkedList is empty or not
+     * Function of check if IntLikedList is empty
      *
-     * @return true if empty
+     * @return true value if IntLikedList is empty otherwise false
      */
+
     public boolean isEmpty() {
         return last == null;
     }
 
-    /**
-     * Checking whether LinkedList is full
-     *
-     * @return false if is full
-     */
     public boolean isFull() {
         return false;
     }
 
     /**
-     * Getting top element form the LinkedList
+     * This function get a top element of IntLikedList without delete it.
      *
-     * @return top element of Linkedlist
+     * @return top element of IntLikedList
      */
     public int top() {
         if (isEmpty())
-            return DEFAULT_INDEX;
-        return last.value;
+            return STACKEMPTY;
+        return last.getValue();
     }
 
     /**
-     * Getting and deleting top element from the LinkedList
+     * This function get top element of IntLikedList and delete that element from IntLinkList
      *
-     * @return top element of LinkedList
+     * @return top element of IntLikedList
      */
+
     public int pop() {
         if (isEmpty())
-            return DEFAULT_INDEX;
-        int ret = last.value;
-        last = last.prev;
+            return STACKEMPTY;
+        size--;
+        int ret = last.getValue();
+        last = last.getPrev();
         return ret;
     }
 
+    /**
+     * Get the last node  of IntLikedList
+     *
+     * @return last node  of IntLikedList
+     */
+    public Node getLast() {
+        return last;
+    }
 
+    /**
+     * @return
+     */
+
+    //TODO write a meaning of the class getI and getLast
+
+    /**
+     * @param last
+     */
+
+    public void setLast(Node last) {
+        this.last = last;
+    }
+
+    public int getSize() {
+        return size;
+    }
 }
