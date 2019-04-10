@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements StackInterface {
 
 	/**
 	 * Value to return when there is no numbers
@@ -34,6 +34,7 @@ public class IntArrayStack {
 	 * 
 	 * @param in - number to add
 	 */
+	@Override
 	public void countIn(int in) {
 		if (!isFull())
 			NUMBERS[++total] = in;
@@ -42,21 +43,25 @@ public class IntArrayStack {
 	/**
 	 * @return true if there is no numbers in rhymer
 	 */
-	boolean callCheck() {
+
+	@Override
+	public boolean callCheck() {
 		return total == DEFAULT_RETURN_VALUE;
 	}
 
 	/**
 	 * @return true if rhymer cant store more numbers
 	 */
-	boolean isFull() {
+	@Override
+	public boolean isFull() {
 		return total == STACK_SIZE - 1;
 	}
 
 	/**
 	 * @return last added number
 	 */
-	int peekaboo() {
+	@Override
+	public int peekaboo() {
 		if (callCheck())
 			return DEFAULT_RETURN_VALUE;
 		return NUMBERS[total];
@@ -67,7 +72,8 @@ public class IntArrayStack {
 	 * 
 	 * @return
 	 */
-	int countOut() {
+	@Override
+	public int countOut() {
 		if (callCheck())
 			return DEFAULT_RETURN_VALUE;
 		return NUMBERS[total--];

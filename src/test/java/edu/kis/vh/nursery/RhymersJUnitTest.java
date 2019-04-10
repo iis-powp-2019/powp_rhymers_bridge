@@ -8,7 +8,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		StackInterface rhymer = new DefaultCountingOutRhymer();
 		final int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -18,7 +18,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		StackInterface rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -31,7 +31,7 @@ public class RhymersJUnitTest {
 	@Ignore("Linked list dont have max capacity")
 	@Test
 	public void testIsFull() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		StackInterface rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -45,7 +45,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		StackInterface rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
@@ -62,7 +62,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		StackInterface rhymer = new DefaultCountingOutRhymer();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
@@ -79,7 +79,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testFIFORhymerCount() {
-		DefaultCountingOutRhymer rhymer = new FIFORhymer();
+		StackInterface rhymer = new FIFORhymer();
 		final int DEFAULT_RETURN_VALUE = -1;
 		int testValues[] = { 1, 2, 3 };
 
@@ -99,7 +99,7 @@ public class RhymersJUnitTest {
 	@Ignore("Test is ignored coz of failure")
 	@Test
 	public void testHanoiRhymerCount() {
-		DefaultCountingOutRhymer rhymer = new HanoiRhymer();
+		StackInterface rhymer = new HanoiRhymer();
 		final int DEFAULT_RETURN_VALUE = -1;
 		final int[][] testValues = { { 1, 33, 33, 4, 33, 33, 33, 3, 33, 2 }, { 5, 33, 33, 33, 33, 33, 6, 33, 8, 7 },
 				{ 8, 33, 33, 11, 33, 33, 9, 33, 10, 33 } };

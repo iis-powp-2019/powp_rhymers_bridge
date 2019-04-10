@@ -1,12 +1,14 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+import edu.kis.vh.nursery.StackInterface;
+
+public class IntLinkedList implements StackInterface {
 
 	private static final int EMPTY_VALUE = -1;
 	private Node last;
 	int i;
 
-	public void push(final int i) {
+	public void countIn(final int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -16,7 +18,7 @@ public class IntLinkedList {
 		}
 	}
 
-	public boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
@@ -24,14 +26,14 @@ public class IntLinkedList {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return EMPTY_VALUE;
 		return last.value;
 	}
 
-	public int pop() {
-		if (isEmpty())
+	public int countOut() {
+		if (callCheck())
 			return EMPTY_VALUE;
 		int ret = last.value;
 		last = last.prev;
