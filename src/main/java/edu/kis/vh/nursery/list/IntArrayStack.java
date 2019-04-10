@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.list;
 
 public class IntArrayStack {
     private static final int DEFAULT_INDEX_STACK = -1;
