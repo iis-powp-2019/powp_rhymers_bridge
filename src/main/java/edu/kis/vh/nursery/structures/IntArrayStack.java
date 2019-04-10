@@ -7,7 +7,6 @@ package edu.kis.vh.nursery.structures;
  */
 public class IntArrayStack implements LinkedListInterface {
 
-    private static final int MIN = -1;
     private static final int MAX = 11;
     private static final int MAX_SIZE_NUMBERS = 12;
     private int[] numbers = new int[MAX_SIZE_NUMBERS];
@@ -26,7 +25,7 @@ public class IntArrayStack implements LinkedListInterface {
      * @return return true, if stack is empty and false, if it's not.
      */
     public boolean isEmpty() {
-        return total == MIN;
+        return total == LAST_INDEX;
     }
 
     /**
@@ -41,7 +40,7 @@ public class IntArrayStack implements LinkedListInterface {
      */
     public int top() {
         if (isEmpty())
-            return MIN;
+            return LAST_INDEX;
         return numbers[total];
     }
 
@@ -50,7 +49,7 @@ public class IntArrayStack implements LinkedListInterface {
      */
     public int pop() {
         if (isEmpty())
-            return MIN;
+            return LAST_INDEX;
         return numbers[total--];
     }
 
