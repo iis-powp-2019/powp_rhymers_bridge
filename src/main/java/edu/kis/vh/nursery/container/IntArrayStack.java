@@ -16,7 +16,7 @@ public class IntArrayStack implements StackInterface {
 	/**
 	 * Amount of stored numbers
 	 */
-	private int total = DEFAULT_RETURN_VALUE;
+	private int total = EMPTY_VALUE;
 
 	/**
 	 * Getter to variable named "total"
@@ -44,7 +44,7 @@ public class IntArrayStack implements StackInterface {
 
 	@Override
 	public boolean callCheck() {
-		return total == DEFAULT_RETURN_VALUE;
+		return total == EMPTY_VALUE;
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class IntArrayStack implements StackInterface {
 	@Override
 	public int peekaboo() {
 		if (callCheck())
-			return DEFAULT_RETURN_VALUE;
+			return EMPTY_VALUE;
 		return NUMBERS[total];
 	}
 
@@ -73,7 +73,7 @@ public class IntArrayStack implements StackInterface {
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return DEFAULT_RETURN_VALUE;
+			return EMPTY_VALUE;
 		return NUMBERS[total--];
 	}
 }

@@ -4,7 +4,6 @@ import edu.kis.vh.nursery.StackInterface;
 
 public class IntLinkedList implements StackInterface {
 
-	private static final int DEFAULT_RETURN_VALUE = -1;
 	private Node last;
 	int i;
 
@@ -28,13 +27,13 @@ public class IntLinkedList implements StackInterface {
 
 	public int peekaboo() {
 		if (callCheck())
-			return DEFAULT_RETURN_VALUE;
+			return EMPTY_VALUE;
 		return last.value;
 	}
 
 	public int countOut() {
 		if (callCheck())
-			return DEFAULT_RETURN_VALUE;
+			return EMPTY_VALUE;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
