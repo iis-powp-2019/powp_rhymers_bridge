@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.storage;
 
 public interface IntStorageInterface {
 
-    int STACKEMPTY = -1;
+    int STACKEMPTY = 0;
 
     static int getEMPTY() {
         return IntLinkedList.STACKEMPTY;
