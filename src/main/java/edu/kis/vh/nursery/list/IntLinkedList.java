@@ -31,15 +31,11 @@ class Node {
 
 }
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStorageInterface {
 
     private Node last;
-    private static final int STACKEMPTY = -1;
+    public static final int STACKEMPTY = -1;
     private int size = 0;
-
-    public static int getEMPTY() {
-        return STACKEMPTY;
-    }
 
     /**
      * Added value to IntLikedList
@@ -47,7 +43,7 @@ public class IntLinkedList {
      * @param i this is the value that will be added to IntLikedList
      */
 
-    public void push(int i) {
+    @Override public void push(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -64,11 +60,11 @@ public class IntLinkedList {
      * @return true value if IntLikedList is empty otherwise false
      */
 
-    public boolean isEmpty() {
+    @Override public boolean isEmpty() {
         return last == null;
     }
 
-    public boolean isFull() {
+    @Override public boolean isFull() {
         return false;
     }
 
@@ -77,7 +73,7 @@ public class IntLinkedList {
      *
      * @return top element of IntLikedList
      */
-    public int top() {
+    @Override public int top() {
         if (isEmpty())
             return STACKEMPTY;
         return last.getValue();
@@ -89,7 +85,7 @@ public class IntLinkedList {
      * @return top element of IntLikedList
      */
 
-    public int pop() {
+    @Override public int pop() {
         if (isEmpty())
             return STACKEMPTY;
         size--;
@@ -103,7 +99,7 @@ public class IntLinkedList {
      *
      * @return last node  of IntLikedList
      */
-    public Node getLast() {
+    @Override public Node getLast() {
         return last;
     }
 
@@ -117,11 +113,11 @@ public class IntLinkedList {
      * @param last
      */
 
-    public void setLast(Node last) {
+    @Override public void setLast(Node last) {
         this.last = last;
     }
 
-    public int getSize() {
+    @Override public int getSize() {
         return size;
     }
 }
