@@ -25,7 +25,7 @@ public class IntArrayStack implements LinkedListInterface {
      * @return return true, if stack is empty and false, if it's not.
      */
     public boolean isEmpty() {
-        return total == EMPTY_STRUCTURE_INDEX;
+        return total <= EMPTY_STRUCTURE_INDEX;
     }
 
     /**
