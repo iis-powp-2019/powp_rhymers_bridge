@@ -1,6 +1,15 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.structures.LinkedListInterface;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
+    public FIFORhymer() {
+        super();
+    }
+
+    public FIFORhymer(LinkedListInterface intLinkedList) {
+        super(intLinkedList);
+    }
 
     final private DefaultCountingOutRhymer TEMP = new DefaultCountingOutRhymer();
 
