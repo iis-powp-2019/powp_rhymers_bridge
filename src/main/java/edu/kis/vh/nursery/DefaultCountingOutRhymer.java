@@ -4,38 +4,38 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer implements StackInterface {
 
-	IntLinkedList linkedList;
+	StackInterface stackInterface;
 
 	public DefaultCountingOutRhymer() {
-		this.linkedList = new IntLinkedList();
+		this.stackInterface = new IntLinkedList();
 	}
 
 	public DefaultCountingOutRhymer(IntLinkedList linkedList) {
-		this.linkedList = linkedList;
+		this.stackInterface = linkedList;
 	}
 
 	@Override
 	public void countIn(int in) {
-		linkedList.countIn(in);
+		stackInterface.countIn(in);
 	}
 
 	@Override
 	public int countOut() {
-		return linkedList.countOut();
+		return stackInterface.countOut();
 	}
 
 	@Override
 	public boolean callCheck() {
-		return linkedList.callCheck();
+		return stackInterface.callCheck();
 	}
 
 	@Override
 	public int peekaboo() {
-		return linkedList.peekaboo();
+		return stackInterface.peekaboo();
 	}
 
 	@Override
 	public boolean isFull() {
-		return linkedList.isFull();
+		return stackInterface.isFull();
 	}
 }
