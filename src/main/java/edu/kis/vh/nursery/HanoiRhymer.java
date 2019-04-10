@@ -1,6 +1,7 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.collection.IntLinkedList;
+import edu.kis.vh.nursery.collection.Stackable;
 
 /**
  * Klasa zarządzająca dodawaniem wartości do listy
@@ -12,8 +13,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 	public HanoiRhymer() {
 	}
 
-	public HanoiRhymer(IntLinkedList intLinkedList) {
-		super(intLinkedList);
+	public HanoiRhymer(Stackable stackable) {
+		super(stackable);
 	}
 
 	/**

@@ -10,8 +10,8 @@ public class DefaultCountingOutRhymer {
 		stackable = new IntLinkedList();
 	}
 
-	public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-		stackable = intLinkedList;
+	public DefaultCountingOutRhymer(Stackable stackable) {
+		this.stackable = stackable;
 	}
 
 	public void countIn(int in) {
