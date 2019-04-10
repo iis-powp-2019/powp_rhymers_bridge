@@ -35,6 +35,10 @@ public class IntArrayStack {
     protected boolean isFull() {
         return total == getMaxSizeStack() -1;
     }
+    protected int isEmpty() {
+        return IntStorageInterface.STACKEMPTY;
+    }
+
 
     protected int peekaboo() {
         if (callCheck())
