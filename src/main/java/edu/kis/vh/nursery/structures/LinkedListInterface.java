@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.structures;
 
 public interface LinkedListInterface {
     void push(int i);
