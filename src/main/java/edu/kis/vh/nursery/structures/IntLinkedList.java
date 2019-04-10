@@ -28,14 +28,14 @@ public class IntLinkedList implements LinkedListInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return LAST_INDEX;
+            return EMPTY_STRUCTURE_INDEX;
         return getLast().getValue();
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return LAST_INDEX;
+            return EMPTY_STRUCTURE_INDEX;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
         return ret;

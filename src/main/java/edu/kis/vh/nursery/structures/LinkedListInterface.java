@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.structures;
 
 public interface LinkedListInterface {
 
-    int LAST_INDEX = -1;
+    int EMPTY_STRUCTURE_INDEX = 0;
 
     void push(int i);
 
