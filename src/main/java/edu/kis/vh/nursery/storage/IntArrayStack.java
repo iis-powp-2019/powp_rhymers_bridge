@@ -1,58 +1,63 @@
 package edu.kis.vh.nursery.storage;
 
 public class IntArrayStack {
+    private static final int DEFAULT_INDEX_STACK = -1;
 
-    private static final int MAX_VALUE = 11;
-    private static final int DEFAULT_INDEX = -1;
-    private static final int CAPACITY = 12;
+    private static final int NOT_FOUND_RETURN = -1;
 
-    private final int[] NUMBERS = new int[getCAPACITY()];
+    private static final int MAX_SIZE_STACK = 12;
 
-    public static int getMaxValue() {
-        return MAX_VALUE;
+    private final int[] numbers = new int[getMaxSizeStack()];
+
+    private int total = getDefaultIndexStack();
+
+    private static int getDefaultIndexStack() {
+        return DEFAULT_INDEX_STACK;
     }
 
-    public static int getDefaultIndex() {
-        return DEFAULT_INDEX;
+    private static int getNotFoundReturn() {
+        return NOT_FOUND_RETURN;
     }
 
-    public static int getCAPACITY() {
-        return CAPACITY;
+    private static int getMaxSizeStack() {
+        return MAX_SIZE_STACK;
+    }
+
+    protected void countIn(int in) {
+        if (!isFull())
+            getNumbers()[++total] = in;
+    }
+
+    protected boolean callCheck() {
+        return total == getDefaultIndexStack();
+    }
+
+    protected boolean isFull() {
+        return total == getMaxSizeStack() -1;
+    }
+    protected int isEmpty() {
+        return IntStorageInterface.STACKEMPTY;
+    }
+
+
+    protected int peekaboo() {
+        if (callCheck())
+            return getNotFoundReturn();
+        return getNumbers()[total];
+    }
+
+    protected int countOut() {
+        if (callCheck())
+            return getNotFoundReturn();
+        return getNumbers()[total--];
     }
 
     public int getTotal() {
         return total;
     }
 
-    private int total = getDefaultIndex();
-
-    protected void countIn(int in) {
-        if (!isFull())
-            getNUMBERS()[++total] = in;
-    }
-
-    protected boolean callCheck() {
-        return total == getDefaultIndex();
-    }
-
-    protected boolean isFull() {
-        return total == getMaxValue();
-    }
-
-    protected int peekaboo() {
-        if (callCheck())
-            return getDefaultIndex();
-        return getNUMBERS()[total];
-    }
-
-    protected int countOut() {
-        if (callCheck())
-            return getDefaultIndex();
-        return getNUMBERS()[total--];
-    }
-
-    public int[] getNUMBERS() {
-        return NUMBERS;
+    private int[] getNumbers() {
+        return numbers;
     }
 
 }
