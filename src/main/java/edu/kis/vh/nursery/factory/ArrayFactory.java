@@ -6,7 +6,7 @@ import edu.kis.vh.nursery.HanoiRhymer;
 import edu.kis.vh.nursery.collection.IntArrayStack;
 import edu.kis.vh.nursery.collection.IntLinkedList;
 
-public class ArrayFactory implements Rhymersfactory {
+public class ArrayFactory implements RhymersFactory {
 
     @Override
     public DefaultCountingOutRhymer getStandardRhymer() {
