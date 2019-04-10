@@ -1,6 +1,18 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.container.IntLinkedList;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
+
+	public HanoiRhymer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public HanoiRhymer(IntLinkedList linkedList) {
+		super(linkedList);
+		// TODO Auto-generated constructor stub
+	}
 
 	private int totalRejected = 0;
 
