@@ -8,7 +8,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		StackInterface rhymer = new DefaultCountingOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int testValue = 4;
 		rhymer.countIn(testValue);
 
@@ -18,7 +18,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCallCheck() {
-		StackInterface rhymer = new DefaultCountingOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
 		Assert.assertEquals(true, result);
 
@@ -31,7 +31,7 @@ public class RhymersJUnitTest {
 	@Ignore("Linked list dont have max capacity")
 	@Test
 	public void testIsFull() {
-		StackInterface rhymer = new DefaultCountingOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
@@ -45,8 +45,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testPeekaboo() {
-		StackInterface rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -62,8 +62,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountOut() {
-		StackInterface rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -79,8 +79,8 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testFIFORhymerCount() {
-		StackInterface rhymer = new FIFORhymer();
-		final int DEFAULT_RETURN_VALUE = -1;
+		DefaultCountingOutRhymer rhymer = new FIFORhymer();
+		final int DEFAULT_RETURN_VALUE = 0;
 		int testValues[] = { 1, 2, 3 };
 
 		for (int i = 0; i < 3; i++)
@@ -99,7 +99,7 @@ public class RhymersJUnitTest {
 	@Ignore("Test is ignored coz of failure")
 	@Test
 	public void testHanoiRhymerCount() {
-		StackInterface rhymer = new HanoiRhymer();
+		DefaultCountingOutRhymer rhymer = new HanoiRhymer();
 		final int DEFAULT_RETURN_VALUE = -1;
 		final int[][] testValues = { { 1, 33, 33, 4, 33, 33, 33, 3, 33, 2 }, { 5, 33, 33, 33, 33, 33, 6, 33, 8, 7 },
 				{ 8, 33, 33, 11, 33, 33, 9, 33, 10, 33 } };

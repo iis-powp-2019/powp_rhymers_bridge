@@ -11,8 +11,8 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public HanoiRhymer(IntLinkedList linkedList) {
-		super(linkedList);
+	public HanoiRhymer(StackInterface stack) {
+		super(stack);
 		// TODO Auto-generated constructor stub
 	}
 

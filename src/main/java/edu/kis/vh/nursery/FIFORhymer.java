@@ -12,8 +12,8 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public FIFORhymer(IntLinkedList linkedList) {
-		super(linkedList);
+	public FIFORhymer(StackInterface stack) {
+		super(stack);
 		// TODO Auto-generated constructor stub
 	}
 
