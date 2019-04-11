@@ -4,6 +4,8 @@ import edu.kis.vh.nursery.container.IntLinkedList;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
+	private int totalRejected = 0;
+
 	public HanoiRhymer() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -14,12 +16,10 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		// TODO Auto-generated constructor stub
 	}
 
-	private int totalRejected = 0;
-
 	public int reportRejected() {
 		return totalRejected;
 	}
-	
+
 	@Override
 	public void countIn(int in) {
 		if (!callCheck() && in > peekaboo())

@@ -4,6 +4,8 @@ import edu.kis.vh.nursery.container.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
+	private final StackInterface temp = new DefaultCountingOutRhymer();
+
 	public FIFORhymer() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -13,8 +15,6 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		super(linkedList);
 		// TODO Auto-generated constructor stub
 	}
-
-	private final StackInterface temp = new DefaultCountingOutRhymer();
 
 	@Override
 	public int countOut() {
