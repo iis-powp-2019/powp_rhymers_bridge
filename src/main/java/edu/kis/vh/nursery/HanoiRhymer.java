@@ -1,10 +1,21 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntStorageInterface;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private int totalRejected = 0;
 
-    protected int reportRejected() {
+    public HanoiRhymer(int totalRejected) {
+        this.totalRejected = totalRejected;
+    }
+
+    public HanoiRhymer(IntStorageInterface intStorageInterface, int totalRejected) {
+        super(intStorageInterface);
+        this.totalRejected = totalRejected;
+    }
+
+    private int reportRejected() {
 
         return getTotalRejected();
     }
@@ -17,11 +28,11 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
     }
 
-    public int getTotalRejected() {
+    private int getTotalRejected() {
         return totalRejected;
     }
 
-    public void setTotalRejected(int totalRejected) {
+    private void setTotalRejected(int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }
