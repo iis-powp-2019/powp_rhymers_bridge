@@ -36,11 +36,12 @@ class Node {
 
 }
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStorageInterface {
 
 	private Node last;
 	private int i;
-	private static final int EMPTY_STACK = -1;
+	public static final int EMPTY_STACK = -1;
+	private int size = 0;
 
 	public static int getEMPTY() {
 		return EMPTY_STACK;
@@ -51,10 +52,11 @@ public class IntLinkedList {
      * @param i will be added
      */
 
-	public void push(int i) {
+	@Override public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
+			size ++;
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();
@@ -65,7 +67,7 @@ public class IntLinkedList {
      * Checking whether LinkedList is empty or not
      * @return 'true' value if LinkedList is empty
      */
-	public boolean isEmpty() {
+	@Override public boolean isEmpty() {
 		return last == null;
 	}
 
@@ -73,7 +75,7 @@ public class IntLinkedList {
      * Checking whether LinkedList is full
      * @return false if it's not full
      */
-	public boolean isFull() {
+	@Override public boolean isFull() {
 		return false;
 	}
 
@@ -81,7 +83,7 @@ public class IntLinkedList {
      * Getting top element from the LinkedList
      * @return top element of the list
      */
-	public int top() {
+	@Override public int top() {
 		if (isEmpty())
 			return EMPTY_STACK;
 		return last.getValue();
@@ -91,9 +93,10 @@ public class IntLinkedList {
      * Deleting top element from LinkedList
      * @return top element of the list
      */
-	public int pop() {
+	@Override public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK;
+		size--;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
@@ -103,7 +106,7 @@ public class IntLinkedList {
      * Getting last node of LinkedList
      * @return last node of the list
      */
-	public Node getLast() {
+	@Override public Node getLast() {
 		return last;
 	}
 
@@ -111,7 +114,7 @@ public class IntLinkedList {
      * Setting last node to the LinkedList
      * @param last is set as the last element node of the list
      */
-	public void setLast(Node last) {
+	@Override public void setLast(Node last) {
 		this.last = last;
 	}
 
@@ -121,6 +124,10 @@ public class IntLinkedList {
      */
 	public int getI() {
 		return i;
+	}
+
+	public int getSize() {
+		return size;
 	}
 
 }
