@@ -14,8 +14,7 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         super(intStorageInterface);
     }
 
-    private int reportRejected() {
-
+    protected int reportRejected() {
         return getTotalRejected();
     }
 
@@ -27,11 +26,11 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
             super.countIn(in);
     }
 
-    private int getTotalRejected() {
+    public int getTotalRejected() {
         return totalRejected;
     }
 
-    private void setTotalRejected(int totalRejected) {
+    public void setTotalRejected(int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }

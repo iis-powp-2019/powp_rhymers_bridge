@@ -26,7 +26,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return ret;
     }
 
-    private IntLinkedList getTemp() {
+    public IntLinkedList getTemp() {
         return temp;
     }
 
