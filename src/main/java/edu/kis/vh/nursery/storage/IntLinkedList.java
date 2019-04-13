@@ -40,11 +40,10 @@ public class IntLinkedList implements IntStorageInterface {
 
 	private Node last;
 	private int i;
-	public static final int EMPTY_STACK = -1;
 	private int size = 0;
 
 	public static int getEMPTY() {
-		return EMPTY_STACK;
+		return STACKEMPTY;
 	}
 
     /**
@@ -85,7 +84,7 @@ public class IntLinkedList implements IntStorageInterface {
      */
 	@Override public int top() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return STACKEMPTY;
 		return last.getValue();
 	}
 
@@ -95,7 +94,7 @@ public class IntLinkedList implements IntStorageInterface {
      */
 	@Override public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return STACKEMPTY;
 		size--;
 		int ret = last.getValue();
 		last = last.getPrev();
