@@ -1,11 +1,9 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.storage;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Collections;
-
-import static org.junit.Assert.*;
 
 public class IntLinkedListTest {
 
