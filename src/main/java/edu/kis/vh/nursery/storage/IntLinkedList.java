@@ -60,15 +60,15 @@ public class IntLinkedList implements IntStorageInterface {
 		return false;
 	}
 
-	@Override public int top() {
+	@Override public int peekaboo() {
 		if (isEmpty())
-			return EMPTY_STACK_INDEX;
+			return RETURN_DEFAULT;
 		return last.getValue();
 	}
 
 	@Override public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK_INDEX;
+			return RETURN_DEFAULT;
 		int ret = last.getValue();
 		last = last.getPrev();
 		size--;
@@ -76,7 +76,7 @@ public class IntLinkedList implements IntStorageInterface {
 	}
 
 	public int getReturnedValue() {
-		return EMPTY_STACK_INDEX;
+		return RETURN_DEFAULT;
 	}
 
 

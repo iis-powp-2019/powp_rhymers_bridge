@@ -50,7 +50,7 @@ public class DefaultCountingOutRhymerTest {
 //		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
-		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
+		Assert.assertEquals(IntStorageInterface.RETURN_DEFAULT, result);
 
 		final int TEST_VALUE = 4;
 		rhymer.countIn(TEST_VALUE);
@@ -66,7 +66,7 @@ public class DefaultCountingOutRhymerTest {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 
 		int result = rhymer.countOut();
-		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
+		Assert.assertEquals(IntStorageInterface.RETURN_DEFAULT, result);
 
 		final int TEST_VALUE = 4;
 		rhymer.countIn(TEST_VALUE);
@@ -74,7 +74,7 @@ public class DefaultCountingOutRhymerTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(TEST_VALUE, result);
 		result = rhymer.countOut();
-		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
+		Assert.assertEquals(IntStorageInterface.RETURN_DEFAULT, result);
 	}
 
 }

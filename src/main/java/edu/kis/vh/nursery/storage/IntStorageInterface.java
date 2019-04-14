@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.storage;
 
 public interface IntStorageInterface {
 	
-	static final int EMPTY_STACK_INDEX = 0;
+	static final int RETURN_DEFAULT = 0;
 	
     void push(int i);
 
@@ -10,7 +10,7 @@ public interface IntStorageInterface {
 
     boolean isFull();
 
-    int top();
+    int peekaboo();
 
     int pop();
 

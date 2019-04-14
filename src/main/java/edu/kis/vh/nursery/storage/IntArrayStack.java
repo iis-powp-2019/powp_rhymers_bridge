@@ -3,11 +3,11 @@ package edu.kis.vh.nursery.storage;
 public class IntArrayStack implements IntStorageInterface{
 	private static final int MAX_STACK_SIZE = 12;
 
-	private static final int RETURN_DEFAULT = -1;
+	private static final int EMPTY_STACK_INDEX = -1;
 
-	private int[] numbers = new int[MAX_STACK_SIZE];
+	private int[] numbers = new int[MAX_STACK_SIZE + 1];
 	
-	private int total = EMPTY_STACK_INDEX;
+	private int total = RETURN_DEFAULT;
 
 	public int[] getNumbers() {
 		return numbers;
@@ -41,11 +41,12 @@ public class IntArrayStack implements IntStorageInterface{
         return total == MAX_STACK_SIZE;
     }
 
-    public int top() {
-        if (isEmpty())
-            return EMPTY_STACK_INDEX;
-        return numbers[total];
-    }
+    @Override
+    public int peekaboo() {
+		if (isEmpty())
+			return RETURN_DEFAULT;
+		return numbers[total];
+	}
 
 	@Override
 	public int pop() {
