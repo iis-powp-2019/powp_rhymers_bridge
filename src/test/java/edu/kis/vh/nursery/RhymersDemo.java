@@ -11,7 +11,9 @@ import java.util.List;
 class RhymersDemo {
 
 	public static void main(String[] args) {
+		
 		List<Rhymersfactory> rhymersFactories = new ArrayList<>();
+		
         rhymersFactories.add(new DefaultRhymersFactory());
         rhymersFactories.add(new ArrayRhymersFactory());
         rhymersFactories.add(new ListRhymersFactory());
