@@ -1,6 +1,16 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntStorageInterface;
+
 public class FIFORhymer extends DefaultCountingOutRhymer {
+
+	public FIFORhymer() {
+		super();
+	}
+
+	public FIFORhymer(IntStorageInterface intStorageInterface) {
+		super(intStorageInterface);
+	}
 
 	private final DefaultCountingOutRhymer TEMP = new DefaultCountingOutRhymer();
 
