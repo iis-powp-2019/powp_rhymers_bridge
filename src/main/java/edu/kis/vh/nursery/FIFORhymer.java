@@ -1,11 +1,11 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.storage.IntLinkedList;
+import edu.kis.vh.nursery.storage.IntArrayStack;
 import edu.kis.vh.nursery.storage.IntStorageInterface;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 	
-	private final IntLinkedList TEMP = new IntLinkedList();
+	private final IntArrayStack TEMP = new IntArrayStack();
 
 	public FIFORhymer() {
 		super();
@@ -31,10 +31,11 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 		return ret;
 	}
 
-	public IntLinkedList getTemp() {
+	public IntArrayStack getTemp() {
 		return TEMP;
 	}
 
+	//używanie IntArrayStack będzie szybsze
 
 	
 //	alt ze strzalka w lewo lub w prawo przelacza miedzy otwartymi plikami w kartach
