@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public interface IIntCounter
 {
-    int EMPTY_STACK_INDEX = -1;
+    int EMPTY_STACK_INDEX = 0;
 
     void push(int in);
 
