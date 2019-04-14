@@ -1,11 +1,26 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IIntCounter;
+import edu.kis.vh.nursery.list.IntArrayStack;
+import edu.kis.vh.nursery.list.IntLinkedList;
+
 /**
  * FIFORhymer extends defaultCountingOutRhymer
  */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+	private IIntCounter temp = new IntArrayStack();
+	//najlepiej użyć raczej tablicy niż listy
+
+	public FIFORhymer()
+	{
+
+	}
+
+	public FIFORhymer(IntLinkedList intCounter)
+	{
+		super(intCounter);
+	}
 
 	/**
 	 * countOut
@@ -28,7 +43,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 	 * getTemp
 	 * @return
 	 */
-	public DefaultCountingOutRhymer getTemp()
+	public IIntCounter getTemp()
 	{
 		return temp;
 	}

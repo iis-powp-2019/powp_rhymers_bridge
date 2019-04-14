@@ -18,16 +18,6 @@ public class DefaultCountingOutRhymer
         this.intCounter = intCounter;
     }
 
-    /*public int getTotal()
-    {
-        return intCounter.getTotal();
-    }
-
-    public void setTotal(int total)
-    {
-        intCounter.setTotal(total);
-    }*/
-
     public void push(int in)
     {
         intCounter.push(in);
