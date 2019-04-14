@@ -32,18 +32,17 @@ class Node {
 }
 
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStorageInterface {
 
 	private static final int RETURNED_VALUE = -1;
 	private Node last;
-	private int i;
 	private int size = 0;
 	
 	public int getSize() {
 		return size;
 	}
 
-	public void push(int i) {
+	@Override public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -54,21 +53,21 @@ public class IntLinkedList {
 		size++;
 	}
 
-	public boolean isEmpty() {
+	@Override public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean isFull() {
+	@Override public boolean isFull() {
 		return false;
 	}
 
-	public int top() {
+	@Override public int top() {
 		if (isEmpty())
 			return RETURNED_VALUE;
 		return last.getValue();
 	}
 
-	public int pop() {
+	@Override public int pop() {
 		if (isEmpty())
 			return RETURNED_VALUE;
 		int ret = last.getValue();
@@ -77,17 +76,19 @@ public class IntLinkedList {
 		return ret;
 	}
 
-	public static int getReturnedValue() {
+	@Override public int getReturnedValue() {
 		return RETURNED_VALUE;
 	}
 
-	public int getI() {
-		return i;
+
+	@Override public Node getLast() {
+		return last;
 	}
 
-
-	public Node getLast() {
-		return last;
+	@Override
+	public void setLast(Node last) {
+		this.last = last;
+		
 	}
 
 	

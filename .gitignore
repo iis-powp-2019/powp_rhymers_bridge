@@ -1,2 +1,4 @@
 /target/
 *.classpath
+src/main/java/uml.png
+src/main/java/uml.ucls
