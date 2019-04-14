@@ -1,51 +1,20 @@
 package edu.kis.vh.nursery.storage;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntStorageInterface{
 	private static final int MAX_STACK_SIZE = 12;
 
 	private static final int RETURN_DEFAULT = -1;
-	
-	private static final int INITIAL_STACK_INDEX = -1;
 
 	private int[] numbers = new int[MAX_STACK_SIZE];
+	
+	private int total = EMPTY_STACK_INDEX;
 
 	public int[] getNumbers() {
 		return numbers;
 	}
 
-	private int total = INITIAL_STACK_INDEX;
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
-	}
-
-	public boolean callCheck() {
-		return total == INITIAL_STACK_INDEX;
-	}
-
-	public boolean isFull() {
-		return total == MAX_STACK_SIZE - 1;
-	}
-
-	protected int peekaboo() {
-		if (callCheck())
-			return RETURN_DEFAULT;
-		return numbers[total];
-	}
-
-	public int countOut() {
-		if (callCheck())
-			return RETURN_DEFAULT;
-		return numbers[total--];
-	}
-
 	public static int getInitialStackIndex() {
-		return INITIAL_STACK_INDEX;
+		return EMPTY_STACK_INDEX;
 	}
 
 	public static int getReturnDefault() {
@@ -55,4 +24,38 @@ public class IntArrayStack {
 	public static int getMaxStackSize() {
 		return MAX_STACK_SIZE;
 	}
+
+	@Override
+    public void push(int in) {
+        if (!isFull())
+            numbers[++total] = in;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return total == EMPTY_STACK_INDEX;
+    }
+
+    @Override
+    public boolean isFull() {
+        return total == MAX_STACK_SIZE;
+    }
+
+    public int top() {
+        if (isEmpty())
+            return EMPTY_STACK_INDEX;
+        return numbers[total];
+    }
+
+	@Override
+	public int pop() {
+		if (isEmpty())
+            return EMPTY_STACK_INDEX;
+        return numbers[total--];
+	}
+	
+	public int getTotal() {
+        return total;
+    }
+
 }

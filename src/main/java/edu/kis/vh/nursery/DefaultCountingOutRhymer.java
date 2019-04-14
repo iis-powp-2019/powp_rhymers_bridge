@@ -19,9 +19,6 @@ public class DefaultCountingOutRhymer {
         return intStorageInterface.top();
     }
 	
-	public int getTotal() {
-		return intStorageInterface.getSize();
-	}
 
 	public void countIn(int in) {
 		intStorageInterface.push(in);

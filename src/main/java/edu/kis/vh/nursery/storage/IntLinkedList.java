@@ -34,7 +34,6 @@ class Node {
 
 public class IntLinkedList implements IntStorageInterface {
 
-	private static final int RETURNED_VALUE = -1;
 	private Node last;
 	private int size = 0;
 	
@@ -63,32 +62,26 @@ public class IntLinkedList implements IntStorageInterface {
 
 	@Override public int top() {
 		if (isEmpty())
-			return RETURNED_VALUE;
+			return EMPTY_STACK_INDEX;
 		return last.getValue();
 	}
 
 	@Override public int pop() {
 		if (isEmpty())
-			return RETURNED_VALUE;
+			return EMPTY_STACK_INDEX;
 		int ret = last.getValue();
 		last = last.getPrev();
 		size--;
 		return ret;
 	}
 
-	@Override public int getReturnedValue() {
-		return RETURNED_VALUE;
+	public int getReturnedValue() {
+		return EMPTY_STACK_INDEX;
 	}
 
 
-	@Override public Node getLast() {
+	public Node getLast() {
 		return last;
-	}
-
-	@Override
-	public void setLast(Node last) {
-		this.last = last;
-		
 	}
 
 	

@@ -2,6 +2,8 @@ package edu.kis.vh.nursery.storage;
 
 public interface IntStorageInterface {
 	
+	static final int EMPTY_STACK_INDEX = -1;
+	
     void push(int i);
 
     boolean isEmpty();
@@ -12,12 +14,5 @@ public interface IntStorageInterface {
 
     int pop();
 
-    Node getLast();
-
-    void setLast(Node last);
-
-    int getSize();
-    
-    int getReturnedValue();
 
 }
