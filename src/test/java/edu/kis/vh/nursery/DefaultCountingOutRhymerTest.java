@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.storage.IntStorageInterface;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -40,16 +41,16 @@ public class DefaultCountingOutRhymerTest {
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void testPeekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+//		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.peekaboo();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
 
 		final int TEST_VALUE = 4;
 		rhymer.countIn(TEST_VALUE);
@@ -63,10 +64,9 @@ public class DefaultCountingOutRhymerTest {
 	@Test
 	public void testCountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
 
 		final int TEST_VALUE = 4;
 		rhymer.countIn(TEST_VALUE);
@@ -74,7 +74,7 @@ public class DefaultCountingOutRhymerTest {
 		result = rhymer.countOut();
 		Assert.assertEquals(TEST_VALUE, result);
 		result = rhymer.countOut();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IntStorageInterface.EMPTY_STACK_INDEX, result);
 	}
 
 }
