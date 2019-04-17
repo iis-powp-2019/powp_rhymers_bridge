@@ -4,13 +4,11 @@ import edu.kis.vh.nursery.IStack;
 
 public class IntArrayStack implements IStack {
 
-	private static final int STACK_EMPTY = -1;
-
 	private static final int STACK_CAPACITY = 12;
 
 	private final int[] numbers = new int[STACK_CAPACITY];
 
-	public int total = STACK_EMPTY;
+	public int total = EMPTY;
 
 	@Override
 	public void countIn(final int in) {
@@ -25,7 +23,7 @@ public class IntArrayStack implements IStack {
 
 	@Override
 	public boolean callCheck() {
-		return total == STACK_EMPTY;
+		return total == EMPTY;
 	}
 
 	@Override
@@ -36,14 +34,14 @@ public class IntArrayStack implements IStack {
 	@Override
 	public int peekaboo() {
 		if (callCheck())
-			return STACK_EMPTY;
+			return EMPTY;
 		return numbers[total];
 	}
 
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return STACK_EMPTY;
+			return EMPTY;
 		return numbers[total--];
 	}
 }
