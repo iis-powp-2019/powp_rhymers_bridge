@@ -34,14 +34,14 @@ public class IntArrayStack implements IStack {
 	@Override
 	public int peekaboo() {
 		if (callCheck())
-			return EMPTY;
+			return 0;
 		return numbers[total];
 	}
 
 	@Override
 	public int countOut() {
 		if (callCheck())
-			return EMPTY;
+			return 0;
 		return numbers[total--];
 	}
 }
