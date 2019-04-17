@@ -4,21 +4,27 @@ package edu.kis.vh.nursery.list;
 /**
  * The type Int linked list.
  */
-class IntLinkedList {
-    private Node last;
-    private int i;
+public class IntLinkedList {
 
-    private void push(final int i) {
-        if (last == null)
+    private static final int RETURN_VALUE = -1;
+    private static final int INITIAL_STACK_INDEX = -1;
+
+    private Node last;
+    private int countNode = INITIAL_STACK_INDEX;
+
+
+    public void countIn(final int i) {
+        if (last == null) {
             last = new Node(i);
-        else {
+            countNode++;
+        } else {
             last.next = new Node(i);
             last.next.prev = last;
             last = last.next;
         }
     }
 
-    private boolean isEmpty() {
+    public boolean callCheck() {
         return last == null;
     }
 
@@ -37,8 +43,8 @@ class IntLinkedList {
      * @return the int
      */
     public int top() {
-        if (isEmpty())
-            return -1;
+        if (callCheck())
+            return RETURN_VALUE;
         return last.value;
     }
 
@@ -47,13 +53,22 @@ class IntLinkedList {
      *
      * @return the int
      */
-    public int pop() {
-        if (isEmpty())
-            return -1;
+    public int countOut() {
+        if (callCheck())
+            return RETURN_VALUE;
         int ret = last.value;
         last = last.prev;
+        countNode--;
         return ret;
     }
+
+    public int peekaboo() {
+        if (callCheck())
+            return RETURN_VALUE;
+        return last.value;
+    }
+
+    public int getTotal() { return countNode; }
 
     /**
      * Gets last.
