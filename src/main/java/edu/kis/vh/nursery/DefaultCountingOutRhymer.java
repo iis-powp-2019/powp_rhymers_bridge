@@ -4,9 +4,8 @@ import edu.kis.vh.nursery.list.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
 
-	//private IntArrayStack stack;
 	private IntLinkedList stack;
-	
+
 	public void countIn(final int in) {
 		stack.countIn(in);
 	}

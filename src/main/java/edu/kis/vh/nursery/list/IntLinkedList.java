@@ -3,21 +3,18 @@ package edu.kis.vh.nursery.list;
 import edu.kis.vh.nursery.IStack;
 
 /**
- * @author 202247
- * Lista przechowujaca liczby całkowite.
+ * @author 202247 Lista przechowujaca liczby całkowite.
  *
  */
 
-public class IntLinkedList implements IStack{
+public class IntLinkedList implements IStack {
 
 	private static final int EMPTY = -1;
 	private Node last;
 	private int total = EMPTY;
 
-
 	/**
-	 * @param i
-	 * Umieszczenie w liscie elementu
+	 * @param i Umieszczenie w liscie elementu
 	 *
 	 */
 	@Override
@@ -34,8 +31,7 @@ public class IntLinkedList implements IStack{
 
 	/**
 	 * 
-	 * @return boolean
-	 * Sprawdza czy lista jest pusta.
+	 * @return boolean Sprawdza czy lista jest pusta.
 	 */
 	@Override
 	public boolean callCheck() {
@@ -43,8 +39,7 @@ public class IntLinkedList implements IStack{
 	}
 
 	/**
-	 * @return boolean
-	 * Sprawdza czy lista jest pełna.
+	 * @return boolean Sprawdza czy lista jest pełna.
 	 */
 	@Override
 	public boolean isFull() {
@@ -52,8 +47,7 @@ public class IntLinkedList implements IStack{
 	}
 
 	/**
-	 * @return int
-	 * Ostatni element z listy jest zwracany i usuwany
+	 * @return int Ostatni element z listy jest zwracany i usuwany
 	 */
 	@Override
 	public int peekaboo() {
@@ -61,6 +55,7 @@ public class IntLinkedList implements IStack{
 			return EMPTY;
 		return last.getValue();
 	}
+
 	@Override
 	public int countOut() {
 		total--;
@@ -70,6 +65,7 @@ public class IntLinkedList implements IStack{
 		last = last.getPrev();
 		return ret;
 	}
+
 	@Override
 	public int getTotal() {
 		return total;

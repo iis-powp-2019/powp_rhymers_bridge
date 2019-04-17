@@ -20,14 +20,17 @@ public class IntArrayStack implements IStack {
 	public int getTotal() {
 		return total;
 	}
+
 	@Override
 	public boolean callCheck() {
 		return total == STACK_EMPTY;
 	}
+
 	@Override
 	public boolean isFull() {
 		return total == STACK_CAPACITY - 1;
 	}
+
 	@Override
 	public int peekaboo() {
 		if (callCheck())
