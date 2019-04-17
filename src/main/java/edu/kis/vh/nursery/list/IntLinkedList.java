@@ -1,12 +1,14 @@
 package edu.kis.vh.nursery.list;
 
+import edu.kis.vh.nursery.IStack;
+
 /**
  * @author 202247
  * Lista przechowujaca liczby całkowite.
  *
  */
 
-public class IntLinkedList {
+public class IntLinkedList implements IStack{
 
 	private static final int EMPTY = -1;
 	private Node last;
@@ -18,6 +20,7 @@ public class IntLinkedList {
 	 * Umieszczenie w liscie elementu
 	 *
 	 */
+	@Override
 	public void countIn(int i) {
 		total++;
 		if (last == null)
@@ -34,6 +37,7 @@ public class IntLinkedList {
 	 * @return boolean
 	 * Sprawdza czy lista jest pusta.
 	 */
+	@Override
 	public boolean callCheck() {
 		return last == null;
 	}
@@ -42,6 +46,7 @@ public class IntLinkedList {
 	 * @return boolean
 	 * Sprawdza czy lista jest pełna.
 	 */
+	@Override
 	public boolean isFull() {
 		return false;
 	}
@@ -50,12 +55,13 @@ public class IntLinkedList {
 	 * @return int
 	 * Ostatni element z listy jest zwracany i usuwany
 	 */
+	@Override
 	public int peekaboo() {
 		if (callCheck())
 			return EMPTY;
 		return last.getValue();
 	}
-
+	@Override
 	public int countOut() {
 		total--;
 		if (callCheck())
@@ -64,7 +70,7 @@ public class IntLinkedList {
 		last = last.getPrev();
 		return ret;
 	}
-	
+	@Override
 	public int getTotal() {
 		return total;
 	}
