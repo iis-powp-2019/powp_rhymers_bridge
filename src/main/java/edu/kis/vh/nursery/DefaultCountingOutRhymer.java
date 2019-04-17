@@ -17,8 +17,16 @@ public class DefaultCountingOutRhymer { //All of the tests passed without proble
         this.intStackableInterface = intLinkedList;
     }
 
+    public DefaultCountingOutRhymer(IntStackableInterface intStackableInterface) {
+        this.intStackableInterface = intStackableInterface;
+    }
+
     public DefaultCountingOutRhymer() {
         this.intStackableInterface = new IntLinkedList();
+    }
+
+    public IntStackableInterface getIntStackableInterface() {
+        return intStackableInterface;
     }
 
     public int getTotal() {
@@ -44,4 +52,5 @@ public class DefaultCountingOutRhymer { //All of the tests passed without proble
     public int countOut() {
         return intStackableInterface.countOut();
     }
+
 }
