@@ -4,7 +4,7 @@ package edu.kis.vh.nursery.list;
 /**
  * The type Int linked list.
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntStackableInterface {
 
     private static final int RETURN_VALUE = -1;
     private static final int INITIAL_STACK_INDEX = -1;
@@ -13,6 +13,7 @@ public class IntLinkedList {
     private int countNode = INITIAL_STACK_INDEX;
 
 
+    @Override
     public void countIn(final int i) {
         if (last == null) {
             last = new Node(i);
@@ -24,6 +25,7 @@ public class IntLinkedList {
         }
     }
 
+    @Override
     public boolean callCheck() {
         return last == null;
     }
@@ -33,6 +35,7 @@ public class IntLinkedList {
      *
      * @return the boolean
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -53,6 +56,7 @@ public class IntLinkedList {
      *
      * @return the int
      */
+    @Override
     public int countOut() {
         if (callCheck())
             return RETURN_VALUE;
@@ -62,12 +66,14 @@ public class IntLinkedList {
         return ret;
     }
 
+    @Override
     public int peekaboo() {
         if (callCheck())
             return RETURN_VALUE;
         return last.value;
     }
 
+    @Override
     public int getTotal() { return countNode; }
 
     /**

@@ -1,41 +1,46 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.IntStackableInterface;
 
 public class DefaultCountingOutRhymer { //All of the tests passed without problem
     //Checked how open Declaration works - it shows where selected method is used.
 
-    private IntLinkedList intLinkedList;
+    private IntStackableInterface intStackableInterface;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(IntArrayStack intArrayStack) {
+        this.intStackableInterface = intArrayStack;
+    }
+
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList){
+        this.intStackableInterface = intLinkedList;
     }
 
     public DefaultCountingOutRhymer() {
-        this.intLinkedList = new IntLinkedList();
+        this.intStackableInterface = new IntLinkedList();
     }
 
     public int getTotal() {
-        return intLinkedList.getTotal();
+        return intStackableInterface.getTotal();
     }
 
     public void countIn(int in) {
-        intLinkedList.countIn(in);
+        intStackableInterface.countIn(in);
     }
 
     public boolean callCheck() {
-        return intLinkedList.callCheck();
+        return intStackableInterface.callCheck();
     }
 
     public boolean isFull() {
-        return intLinkedList.isFull();
+        return intStackableInterface.isFull();
     }
 
     public int peekaboo() {
-        return intLinkedList.peekaboo();
+        return intStackableInterface.peekaboo();
     }
 
     public int countOut() {
-        return intLinkedList.countOut();
+        return intStackableInterface.countOut();
     }
 }
