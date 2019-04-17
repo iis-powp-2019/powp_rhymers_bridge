@@ -2,8 +2,6 @@ package edu.kis.vh.nursery.stackable;
 
 public class IntArrayStack implements IntStackableInterface {
 
-    private static final int INITIAL_STACK_INDEX = -1;
-    private static final int RETURN_VALUE = -1;
     private static final int FULL_STACK_SIZE = 11;
     private static final int MAX_STACK_SIZE = 12;
 

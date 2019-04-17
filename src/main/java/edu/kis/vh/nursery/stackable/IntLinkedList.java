@@ -6,8 +6,7 @@ package edu.kis.vh.nursery.stackable;
  */
 public class IntLinkedList implements IntStackableInterface {
 
-    private static final int RETURN_VALUE = -1;
-    private static final int INITIAL_STACK_INDEX = -1;
+
 
     private Node last;
     private int countNode = INITIAL_STACK_INDEX;
