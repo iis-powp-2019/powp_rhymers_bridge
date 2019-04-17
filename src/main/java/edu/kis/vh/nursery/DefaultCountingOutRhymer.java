@@ -11,13 +11,13 @@ public class DefaultCountingOutRhymer {
 		stack.countIn(in);
 	}
 
-	public DefaultCountingOutRhymer(IntArrayStack stack) {
+	public DefaultCountingOutRhymer(IntLinkedList stack) {
 		super();
 		this.stack = stack;
 	}
 
 	public DefaultCountingOutRhymer() {
-		this.stack = new IntArrayStack();
+		this.stack = new IntLinkedList();
 	}
 
 	public int getTotal() {

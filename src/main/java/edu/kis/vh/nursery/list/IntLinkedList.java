@@ -34,7 +34,7 @@ public class IntLinkedList {
 	 * @return boolean
 	 * Sprawdza czy lista jest pusta.
 	 */
-	public boolean isEmpty() {
+	public boolean callCheck() {
 		return last == null;
 	}
 
@@ -50,14 +50,15 @@ public class IntLinkedList {
 	 * @return int
 	 * Ostatni element z listy jest zwracany i usuwany
 	 */
-	public int top() {
-		if (isEmpty())
+	public int peekaboo() {
+		if (callCheck())
 			return EMPTY;
 		return last.getValue();
 	}
 
-	public int pop() {
-		if (isEmpty())
+	public int countOut() {
+		total--;
+		if (callCheck())
 			return EMPTY;
 		final int ret = last.getValue();
 		last = last.getPrev();
