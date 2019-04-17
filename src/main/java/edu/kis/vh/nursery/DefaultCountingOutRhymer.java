@@ -1,8 +1,8 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntArrayStack;
-import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.IntStackableInterface;
+import edu.kis.vh.nursery.stackable.IntArrayStack;
+import edu.kis.vh.nursery.stackable.IntLinkedList;
+import edu.kis.vh.nursery.stackable.IntStackableInterface;
 
 public class DefaultCountingOutRhymer { //All of the tests passed without problem
     //Checked how open Declaration works - it shows where selected method is used.

@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stackable;
 
 public interface IntStackableInterface {
     void countIn(int i);

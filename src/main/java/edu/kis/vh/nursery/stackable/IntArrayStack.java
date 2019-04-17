@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.IntStackableInterface;
+package edu.kis.vh.nursery.stackable;
 
 public class IntArrayStack implements IntStackableInterface {
 

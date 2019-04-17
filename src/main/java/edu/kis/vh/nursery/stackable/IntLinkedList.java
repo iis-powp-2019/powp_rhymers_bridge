@@ -1,8 +1,8 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stackable;
 
 
 /**
- * The type Int linked list.
+ * The type Int linked stackable.
  */
 public class IntLinkedList implements IntStackableInterface {
 
