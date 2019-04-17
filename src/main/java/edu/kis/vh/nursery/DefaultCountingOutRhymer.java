@@ -12,7 +12,7 @@ public class DefaultCountingOutRhymer { //All of the tests passed without proble
         this.intStackableInterface = intArrayStack;
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList){
+    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         this.intStackableInterface = intLinkedList;
     }
 

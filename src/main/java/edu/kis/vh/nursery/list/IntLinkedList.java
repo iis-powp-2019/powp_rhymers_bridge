@@ -74,7 +74,9 @@ public class IntLinkedList implements IntStackableInterface {
     }
 
     @Override
-    public int getTotal() { return countNode; }
+    public int getTotal() {
+        return countNode;
+    }
 
     /**
      * Gets last.
