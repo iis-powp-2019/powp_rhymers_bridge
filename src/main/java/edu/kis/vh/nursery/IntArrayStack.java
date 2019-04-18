@@ -6,7 +6,7 @@ public class IntArrayStack {
 
 	private static final int STACK_MAX_SIZE = 12;
 
-	private final int[] numbers = new int[STACK_MAX_SIZE];
+	private int[] numbers = new int[STACK_MAX_SIZE];
 
 	private int total = STACK_VALUE;
 
