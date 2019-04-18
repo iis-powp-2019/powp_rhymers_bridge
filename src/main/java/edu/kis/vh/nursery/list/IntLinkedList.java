@@ -5,6 +5,7 @@ public class IntLinkedList {
 	private static final int EMPTY_STACK = -1;
 	private Node last;
 	int i;
+	int total = 0;
 
 	public void push(int i) {
 		if (last == null)
@@ -14,6 +15,7 @@ public class IntLinkedList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		++total;
 	}
 
 	public boolean isEmpty() {
@@ -35,7 +37,12 @@ public class IntLinkedList {
 			return EMPTY_STACK;
 		int ret = last.getValue();
 		last = last.getPrev();
+		--total;
 		return ret;
+	}
+	
+	public int getTotal() {
+		return total;
 	}
 
 }
