@@ -2,8 +2,6 @@ package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements StackInterface{
 	
-	private static final int STACK_MAX_SIZE = 12;
-
 	private int[] numbers = new int[STACK_MAX_SIZE];
 
 	private int total = STACK_VALUE;

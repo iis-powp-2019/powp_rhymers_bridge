@@ -25,7 +25,7 @@ public class IntLinkedList implements StackInterface {
 
 	@Override
 	public boolean isFull() {
-		return false;
+		return total == STACK_MAX_SIZE;
 	}
 
 	@Override
