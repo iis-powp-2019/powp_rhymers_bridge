@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.StackInterface;
 
 public class RhymersJUnitTest {
 
@@ -106,7 +107,7 @@ public class RhymersJUnitTest {
 	
 	@Test
 	public void testPushIntLinkedList() {
-		IntLinkedList intLinkedList = new IntLinkedList();
+		StackInterface intLinkedList = new IntLinkedList();
 		int testValue = 4;
 		intLinkedList.push(testValue);
 		int result = intLinkedList.top();
@@ -115,21 +116,21 @@ public class RhymersJUnitTest {
 	
 	@Test
 	public void testIsEmptyIntLinkedList() {
-		IntLinkedList intLinkedList = new IntLinkedList();
+		StackInterface intLinkedList = new IntLinkedList();
 		boolean result = intLinkedList.isEmpty();
 		Assert.assertEquals(true, result);
 	}
 	
 	@Test
 	public void testIsFullIntLinkedList() {
-		IntLinkedList intLinkedList = new IntLinkedList();
+		StackInterface intLinkedList = new IntLinkedList();
 		boolean result = intLinkedList.isFull();
 		Assert.assertEquals(false, result);
 	}
 	
 	@Test
 	public void testTopIntLinkedList() {
-		IntLinkedList intLinkedList = new IntLinkedList();
+		StackInterface intLinkedList = new IntLinkedList();
 		int testValue = 4;
 		intLinkedList.push(testValue);
 		int result = intLinkedList.top();
@@ -138,7 +139,7 @@ public class RhymersJUnitTest {
 	
 	@Test
 	public void testPopIntLinkedList() {
-		IntLinkedList intLinkedList = new IntLinkedList();
+		StackInterface intLinkedList = new IntLinkedList();
 		int testValue = 4;
 		int testValue2 = 5;
 		intLinkedList.push(testValue);
