@@ -2,7 +2,6 @@ package edu.kis.vh.nursery.stack;
 
 public class IntLinkedList implements StackInterface {
 
-	private static final int EMPTY_STACK = -1;
 	private Node last;
 	int i;
 	int total = 0;
@@ -32,14 +31,14 @@ public class IntLinkedList implements StackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return STACK_VALUE;
 		return last.getValue();
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return STACK_VALUE;
 		int ret = last.getValue();
 		last = last.getPrev();
 		--total;
