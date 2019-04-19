@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.StackInterface;
+
 /**
  * @author Delicja05
  *
@@ -7,6 +9,14 @@ package edu.kis.vh.nursery;
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 	private int totalRejected = 0;
+
+	public HanoiRhymer() {
+		super();
+	}
+
+	public HanoiRhymer(StackInterface intLinkedList) {
+		super(intLinkedList);
+	}
 
 	/**
 	 * @return dzialanie metody getTotalRejected()
