@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.stack;
 
 public interface StackInterface {
 	
-	int STACK_VALUE = -1;
+	int STACK_VALUE = 0;
 
 	void push(int i);
 
