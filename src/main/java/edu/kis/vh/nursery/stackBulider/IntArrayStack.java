@@ -1,7 +1,5 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.stackBulider;
 
-
-import edu.kis.vh.nursery.list.StackInterface;
 
 public class IntArrayStack implements StackInterface {
     private static final int STACK_VALUE = -1;
