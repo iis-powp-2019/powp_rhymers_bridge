@@ -5,14 +5,13 @@ package edu.kis.vh.nursery.stackBulider;
 public class IntLinkedList implements StackInterface {
 
     private Node last;
-    private int i;
 
     @Override
     public int getTotal() {
         return total;
     }
 
-    private int total = -1;
+    private int total = STACK_EMPTY;
 
 
     @Override

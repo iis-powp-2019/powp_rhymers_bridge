@@ -2,8 +2,7 @@ package edu.kis.vh.nursery.stackBulider;
 
 
 public class IntArrayStack implements StackInterface {
-    private static final int STACK_VALUE = -1;
-    private static final int STACK_MAX_SIZE = 12;
+    int STACK_MAX_SIZE = 12;
     private int[] NUMBERS = new int[STACK_MAX_SIZE];
 
     public int getTotal() {
@@ -21,7 +20,7 @@ public class IntArrayStack implements StackInterface {
     }
 
 
-    private int total = STACK_VALUE;
+    private int total = STACK_EMPTY;
 
     public void countIn(int in) {
         if (!isFull())
@@ -29,7 +28,7 @@ public class IntArrayStack implements StackInterface {
     }
 
     public boolean callCheck() {
-        return total == STACK_VALUE;
+        return total == STACK_EMPTY;
     }
 
 
@@ -50,13 +49,13 @@ public class IntArrayStack implements StackInterface {
 
     public int peekaboo() {
         if (callCheck())
-            return STACK_VALUE;
+            return STACK_EMPTY;
         return NUMBERS[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return STACK_VALUE;
+            return STACK_EMPTY;
         return NUMBERS[total--];
     }
 
