@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stackBulider;
 
 public interface StackInterface {
-    int STACK_EMPTY = -1;
+    int STACK_EMPTY = 0;
 
 
     int getTotal();

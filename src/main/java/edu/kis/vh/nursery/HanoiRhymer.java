@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stackBulider.IntLinkedList;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
     private static final int NUMBER_ZERO = 0;
@@ -20,8 +22,12 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
         return totalRejected;
     }
 
+    public HanoiRhymer(IntLinkedList intLinkedList, int totalRejected) {
+        super(intLinkedList);
+        this.totalRejected = totalRejected;
+    }
+
     public void setTotalRejected(int totalRejected) {
         this.totalRejected = totalRejected;
     }
 }
-//5,12,14,15
