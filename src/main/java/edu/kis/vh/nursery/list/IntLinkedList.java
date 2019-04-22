@@ -5,6 +5,13 @@ public class IntLinkedList {
     private Node last;
     private int i;
 
+    public int getTotal() {
+        return total;
+    }
+
+    private int total = -1;
+
+
     public void push(int i) {
         if (last == null)
             last = new Node(i);
@@ -12,6 +19,7 @@ public class IntLinkedList {
             last.setNext(new Node(i));
             last.getNext().setPrev(last);
             last = last.getNext();
+            total++;
         }
     }
 
