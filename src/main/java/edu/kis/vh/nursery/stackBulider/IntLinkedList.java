@@ -39,14 +39,14 @@ public class IntLinkedList implements StackInterface {
     @Override
     public int top() {
         if (isEmpty())
-            return -1;
+            return 0;
         return last.getValue();
     }
 
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return 0;
         int ret = last.getValue();
         last = last.getPrev();
         return ret;
