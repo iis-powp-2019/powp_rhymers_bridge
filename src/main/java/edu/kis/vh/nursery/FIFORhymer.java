@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.Interface;
+
 /**
  * @author Paulina Stelmasiak
  */
@@ -8,7 +10,15 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 	private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
-    /**
+	public FIFORhymer(Interface intLinkedList) {
+		super(intLinkedList);
+	}
+
+	public FIFORhymer() {
+		super();
+	}
+
+	/**
      * Metoda DefautlCountingOutRhymer
      * @return temp
      */
