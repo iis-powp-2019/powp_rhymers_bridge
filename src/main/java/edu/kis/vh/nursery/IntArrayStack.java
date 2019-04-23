@@ -1,6 +1,8 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+import edu.kis.vh.nursery.list.Interface;
+
+public class IntArrayStack implements Interface {
 	
 	private static final int STACK_SIZE = 12;
     private static final int STACK_VALUE = -1;
@@ -40,5 +42,25 @@ public class IntArrayStack {
 		if (callCheck())
 			return STACK_VALUE;
 		return numbers[total--];
+	}
+	@Override
+	public void push(int i) {
+		countIn(i);
+
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return callCheck();
+	}
+
+	@Override
+	public int top() {
+		return peekaboo();
+	}
+
+	@Override
+	public int pop() {
+		return countOut();
 	}
 }
