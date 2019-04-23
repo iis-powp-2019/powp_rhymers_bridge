@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.Interface;
+import edu.kis.vh.nursery.stack.IntLinkedList;
+import edu.kis.vh.nursery.stack.Interface;
 //3.1.5 zmiana typu atrybutu została dokonana automatycznie
 public class DefaultCountingOutRhymer {
 

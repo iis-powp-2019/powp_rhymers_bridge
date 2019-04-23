@@ -1,11 +1,8 @@
-package edu.kis.vh.nursery.list;
-
-import edu.kis.vh.nursery.list.Interface;
+package edu.kis.vh.nursery.stack;
 
 public class IntArrayStack implements Interface {
 	
 	private static final int STACK_SIZE = 12;
-    private static final int STACK_VALUE = -1;
 
     private final int[] numbers = new int[STACK_SIZE];
 
