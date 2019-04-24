@@ -1,10 +1,9 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collection;
 
-/*
- * TODO: needs refactoring to either limit maximum list size and implement isFull() method property,
- *       or delete members that serve no functionality
+/**
+ * Class storing array implementation of linked list
  */
-public class IntLinkedList {
+public class IntLinkedList implements IntCollection {
 
     private class Node {
 
@@ -12,7 +11,7 @@ public class IntLinkedList {
         Node prev, next;
 
 
-        Node(final int i) {
+        Node(int i) {
             VALUE = i;
         }
 
@@ -22,28 +21,31 @@ public class IntLinkedList {
     private int elementCount = NUMBERS_EMPTY;
     private static final int EMPTY_VALUE = -1;
     private Node last;
-    int i;
 
-    public void push(final int I) {
+    @Override
+    public void push(int i) {
 
         if (last == null)
-            last = new Node(I);
+            last = new Node(i);
         else {
-            last.next = new Node(I);
+            last.next = new Node(i);
             last.next.prev = last;
             last = last.next;
         }
         elementCount++;
     }
 
+    @Override
     public boolean isEmpty() {
         return last == null;
     }
 
+    @Override
     public boolean isFull() {
         return false;
     }
 
+    @Override
     public int top() {
 
         if (isEmpty())
@@ -51,6 +53,7 @@ public class IntLinkedList {
         return last.VALUE;
     }
 
+    @Override
     public int pop() {
 
         if (isEmpty())
@@ -61,6 +64,7 @@ public class IntLinkedList {
         return ret;
     }
 
+    @Override
     public int getElementCount() {
         return elementCount;
     }
