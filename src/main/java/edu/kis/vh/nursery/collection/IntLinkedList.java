@@ -17,9 +17,7 @@ public class IntLinkedList implements IntCollection {
 
     }
 
-    private static final int NUMBERS_EMPTY = 0;
     private int elementCount = NUMBERS_EMPTY;
-    private static final int EMPTY_VALUE = -1;
     private Node last;
 
     @Override

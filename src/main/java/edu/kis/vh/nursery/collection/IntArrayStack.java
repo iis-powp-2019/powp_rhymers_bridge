@@ -7,16 +7,6 @@ package edu.kis.vh.nursery.collection;
 public class IntArrayStack implements IntCollection {
 
     /**
-     * Value of {@link #total total} when rhymer stores no numbers
-     */
-    private static final int NUMBERS_EMPTY = -1;
-
-    /**
-     * Value returned by {@link #top() top()} or {@link #pop() pop()} when rhymer stores no number
-     */
-    private static final int NUMBERS_EMPTY_VALUE = -1;
-
-    /**
      * Maximum quantity of numbers to store in rhymer
      */
     private static final int NUMBERS_MAX_SIZE = 12;
@@ -34,7 +24,7 @@ public class IntArrayStack implements IntCollection {
     /**
      * Quantity of numbers stored in rhymer
      */
-    private int total = NUMBERS_EMPTY;
+    private int total = NUMBERS_EMPTY-1;
 
     @Override
     public void push(int in) {
@@ -45,7 +35,7 @@ public class IntArrayStack implements IntCollection {
 
     @Override
     public boolean isEmpty() {
-        return total == NUMBERS_EMPTY;
+        return total == NUMBERS_EMPTY-1;
     }
 
     @Override
@@ -57,7 +47,7 @@ public class IntArrayStack implements IntCollection {
     public int top() {
 
         if (isEmpty())
-            return NUMBERS_EMPTY_VALUE;
+            return EMPTY_VALUE;
         return NUMBERS[total];
     }
 
@@ -65,7 +55,7 @@ public class IntArrayStack implements IntCollection {
     public int pop() {
 
         if (isEmpty())
-            return NUMBERS_EMPTY_VALUE;
+            return EMPTY_VALUE;
         return NUMBERS[total--];
     }
 }

@@ -2,6 +2,9 @@ package edu.kis.vh.nursery.collection;
 
 public interface IntCollection {
 
+    int NUMBERS_EMPTY = 0;
+    int EMPTY_VALUE = -1;
+
     /**
      * Adds number to collection
      * @param in value to add to the collection
