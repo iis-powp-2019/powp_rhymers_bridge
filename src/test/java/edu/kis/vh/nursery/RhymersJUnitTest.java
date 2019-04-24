@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collection.IntCollection;
 import edu.kis.vh.nursery.collection.IntLinkedList;
 import org.junit.Assert;
 import org.junit.Test;
@@ -170,7 +171,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testI_L_L_push() {
-		IntLinkedList list = new IntLinkedList();
+		IntCollection list = new IntLinkedList();
 		final int testValue = 5;
 		list.push(testValue);
 
@@ -180,7 +181,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testI_L_L_isEmpty() {
-		IntLinkedList list = new IntLinkedList();
+		IntCollection list = new IntLinkedList();
 		boolean result = list.isEmpty();
 		Assert.assertEquals(true, result);
 
@@ -196,7 +197,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testI_L_L_top() {
-		IntLinkedList list = new IntLinkedList();
+		IntCollection list = new IntLinkedList();
 		final int EMPTY_LIST_VALUE = -1;
 
 		int result = list.top();
@@ -213,7 +214,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testI_L_L_pop() {
-		IntLinkedList list = new IntLinkedList();
+		IntCollection list = new IntLinkedList();
 		final int EMPTY_LIST_VALUE = -1;
 
 		int result = list.pop();
