@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.collection;
 public interface IntCollection {
 
     int NUMBERS_EMPTY = 0;
-    int EMPTY_VALUE = -1;
+    int EMPTY_VALUE = 0;
 
     /**
      * Adds number to collection
