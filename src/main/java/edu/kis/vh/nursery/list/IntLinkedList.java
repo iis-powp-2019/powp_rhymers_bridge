@@ -38,7 +38,9 @@ class Node {
 public class IntLinkedList {
 
     private Node last;
+    private int total = 0;
 
+    public IntLinkedList(){}
     /**
      * Added Node to IntLikedList
      *
@@ -52,6 +54,7 @@ public class IntLinkedList {
             getLast().getNext().setPrev(getLast());
             setLast(getLast().getNext());
         }
+        total++;
     }
 
     /**
@@ -77,7 +80,7 @@ public class IntLinkedList {
      *
      * @return value of last element of IntLikedList or -1 if it is empty
      */
-    protected int top() {
+    public int top() {
         if (isEmpty())
             return -1;
         return getLast().getValue();
@@ -88,12 +91,18 @@ public class IntLinkedList {
      *
      * @return vale of last element of IntLikedList or -1 if  it is empty
      */
-    protected int pop() {
+    public int pop() {
         if (isEmpty())
             return -1;
         int ret = getLast().getValue();
         setLast(getLast().getPrev());
+        total--;
         return ret;
+    }
+
+    public int getTotal()
+    {
+        return total;
     }
 
     /**
