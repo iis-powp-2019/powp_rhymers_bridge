@@ -1,6 +1,9 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.list.IntArrayStack;
+
 public class DefaultCountingOutRhymer {
+    
     private static final int DEFAULT_RETURN_VALUE = -1;
     private static final int MAX_STACK_SIZE = 12;
     private int[] numbers = new int[getMaxStackSize()];
