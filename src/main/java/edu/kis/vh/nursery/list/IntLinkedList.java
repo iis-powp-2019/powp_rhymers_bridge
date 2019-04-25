@@ -35,7 +35,7 @@ class Node {
     }
 }
 
-public class IntLinkedList {
+public class IntLinkedList implements IntStack{
 
     private Node last;
     private int total = 0;
@@ -46,6 +46,7 @@ public class IntLinkedList {
      *
      * @param i value of Node that will be the last element on the list
      */
+    @Override
     public void push(int i) {
         if (getLast() == null)
             setLast(new Node(i));
@@ -62,6 +63,7 @@ public class IntLinkedList {
      *
      * @return true if IntLikedList is empty, or false if it is empty
      */
+    @Override
     public boolean isEmpty() {
         return getLast() == null;
     }
@@ -71,6 +73,7 @@ public class IntLinkedList {
      *
      * @return always return false
      */
+    @Override
     public boolean isFull() {
         return false;
     }
@@ -80,6 +83,7 @@ public class IntLinkedList {
      *
      * @return value of last element of IntLikedList or -1 if it is empty
      */
+    @Override
     public int top() {
         if (isEmpty())
             return -1;
@@ -91,6 +95,7 @@ public class IntLinkedList {
      *
      * @return vale of last element of IntLikedList or -1 if  it is empty
      */
+    @Override
     public int pop() {
         if (isEmpty())
             return -1;
@@ -99,7 +104,7 @@ public class IntLinkedList {
         total--;
         return ret;
     }
-
+    @Override
     public int getTotal()
     {
         return total;
