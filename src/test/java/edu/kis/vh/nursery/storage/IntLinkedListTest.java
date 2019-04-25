@@ -3,6 +3,8 @@ package edu.kis.vh.nursery.storage;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static edu.kis.vh.nursery.storage.IntStack.EMPTY_STACK_VALUE;
+
 public class IntLinkedListTest {
 
     @Test
@@ -64,20 +66,18 @@ public class IntLinkedListTest {
 
     @Test
     public void topEmptyList() {
-        final int EMPTY_LIST_VALUE = -1;
 
         IntLinkedList intLinkedList = new IntLinkedList();
 
-        Assert.assertEquals(intLinkedList.top(), EMPTY_LIST_VALUE);
+        Assert.assertEquals(intLinkedList.top(), EMPTY_STACK_VALUE);
     }
 
     @Test
     public void popEmptyList() {
-        final int EMPTY_LIST_VALUE = -1;
 
         IntLinkedList intLinkedList = new IntLinkedList();
 
-        Assert.assertEquals(intLinkedList.pop(), EMPTY_LIST_VALUE);
+        Assert.assertEquals(intLinkedList.pop(), EMPTY_STACK_VALUE);
     }
 
     @Test

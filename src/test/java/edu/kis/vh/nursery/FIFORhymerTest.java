@@ -3,14 +3,15 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static edu.kis.vh.nursery.storage.IntStack.EMPTY_STACK_VALUE;
+
 public class FIFORhymerTest {
 
     @Test public void countOut() {
         DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-        final int DEFAUL_STACK_VALUE = -1;
 
         int result = rhymer.countOut();
-        Assert.assertEquals(DEFAUL_STACK_VALUE, result);
+        Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
         int testVal = 1;
         rhymer.countIn(testVal);
@@ -18,7 +19,7 @@ public class FIFORhymerTest {
         result = rhymer.countOut();
         Assert.assertEquals(testVal , result);
         result = rhymer.countOut();
-        Assert.assertEquals(DEFAUL_STACK_VALUE, result);
+        Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
     }
 }
