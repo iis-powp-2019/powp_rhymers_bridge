@@ -2,10 +2,11 @@ package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.list.IntArrayStack;
 import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.list.IntStack;
 
 public class DefaultCountingOutRhymer {
 
-    IntLinkedList intLinkedList;
+    IntStack intLinkedList;
 
     public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
         this.intLinkedList = intLinkedList;
