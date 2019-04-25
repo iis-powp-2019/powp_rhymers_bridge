@@ -1,4 +1,3 @@
-// Zrobione wczesniej
 package edu.kis.vh.nursery.list;
 
 import org.junit.Assert;
