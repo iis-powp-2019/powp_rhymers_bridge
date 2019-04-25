@@ -8,8 +8,8 @@ public class DefaultCountingOutRhymer {
 
     IntStack intLinkedList;
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
-        this.intLinkedList = intLinkedList;
+    public DefaultCountingOutRhymer(IntStack intStack) {
+        this.intLinkedList = intStack;
     }
 
     public DefaultCountingOutRhymer(){

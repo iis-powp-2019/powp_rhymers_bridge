@@ -8,6 +8,10 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private IntStack temp = new IntArrayStack();
 
+    public FIFORhymer(IntArrayStack intArrayStack) {
+        super(intArrayStack);
+    }
+
     public FIFORhymer(IntLinkedList intLinkedList) {
         super(intLinkedList);
     }
