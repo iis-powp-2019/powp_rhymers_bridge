@@ -1,7 +1,6 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.IntLinkedList;
-import edu.kis.vh.nursery.list.IntStack;
+import edu.kis.vh.nursery.storage.IntStack;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 

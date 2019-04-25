@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.storage;
 
 class Node {
 
@@ -18,11 +18,11 @@ class Node {
         this.value = value;
     }
 
-    public edu.kis.vh.nursery.list.Node getPrev() {
+    public edu.kis.vh.nursery.storage.Node getPrev() {
         return prev;
     }
 
-    public edu.kis.vh.nursery.list.Node getNext() {
+    public edu.kis.vh.nursery.storage.Node getNext() {
         return next;
     }
 
@@ -44,7 +44,7 @@ public class IntLinkedList implements IntStack{
     /**
      * Added Node to IntLikedList
      *
-     * @param i value of Node that will be the last element on the list
+     * @param i value of Node that will be the last element on the storage
      */
     @Override
     public void push(int i) {

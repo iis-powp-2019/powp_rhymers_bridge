@@ -1,4 +1,4 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.storage;
 
 public class IntArrayStack implements IntStack{
     private static final int MAX_STACK_SIZE = 12;

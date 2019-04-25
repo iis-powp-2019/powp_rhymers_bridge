@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.factory;
 import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.storage.IntLinkedList;
 
 public class ListRhymersFactory implements Rhymersfactory {
     @Override

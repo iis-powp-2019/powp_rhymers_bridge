@@ -3,7 +3,7 @@ package edu.kis.vh.nursery;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static edu.kis.vh.nursery.list.IntStack.EMPTY_STACK_VALUE;
+import static edu.kis.vh.nursery.storage.IntStack.EMPTY_STACK_VALUE;
 
 public class RhymersJUnitTest {
 
