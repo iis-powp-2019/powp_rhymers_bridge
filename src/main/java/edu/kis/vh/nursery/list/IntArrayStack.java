@@ -1,14 +1,13 @@
 package edu.kis.vh.nursery.list;
 
 public class IntArrayStack implements IntStack{
-    private static final int DEFAULT_RETURN_VALUE = -1;
     private static final int MAX_STACK_SIZE = 12;
     private int[] numbers = new int[getMaxStackSize()];
 
     private int total = getDefaultReturnValue();
 
     public static int getDefaultReturnValue() {
-        return DEFAULT_RETURN_VALUE;
+        return EMPTY_STACK_VALUE;
     }
 
     public static int getMaxStackSize() {
