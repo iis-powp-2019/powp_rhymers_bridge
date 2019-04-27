@@ -10,7 +10,7 @@ public class DefaultCountingOutRhymer {
         intLinkedListInterface= new IntLinkedList();
     }
 
-    public DefaultCountingOutRhymer(IntLinkedList intLinkedList) {
+    public DefaultCountingOutRhymer(IntLinkedListInterface intLinkedList) {
         this.intLinkedListInterface = intLinkedList;
     }
 
