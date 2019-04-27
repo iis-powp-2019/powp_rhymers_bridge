@@ -4,6 +4,8 @@ import edu.kis.vh.nursery.RhymersStacks.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
+    private IntLinkedList temp = new IntLinkedList();
+
     public FIFORhymer() {
     }
 
@@ -20,12 +22,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     @Override
     public int countOut() {
         while (!callCheck())
-            this.countIn(this.countOut());
+            temp.push(super.countOut());
 
-        int ret = this.countOut();
+        int ret = temp.pop();
 
-        while (!this.callCheck())
-            countIn(this.countOut());
+        while (!temp.isEmpty())
+            countIn(temp.pop());
 
         return ret;
     }
