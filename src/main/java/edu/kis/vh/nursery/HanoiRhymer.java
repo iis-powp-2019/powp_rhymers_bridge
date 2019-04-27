@@ -4,6 +4,9 @@ import edu.kis.vh.nursery.RhymersStacks.IntLinkedList;
 
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
+    public HanoiRhymer() {
+    }
+
     public HanoiRhymer(int totalRejected) {
         this.totalRejected = totalRejected;
     }
