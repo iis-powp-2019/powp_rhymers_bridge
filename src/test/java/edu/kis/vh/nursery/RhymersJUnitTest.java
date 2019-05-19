@@ -23,12 +23,12 @@ public class RhymersJUnitTest {
 	public void testD_C_O_R_CallCheck() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
 		boolean result = rhymer.callCheck();
-		Assert.assertEquals(true, result);
+		Assert.assertTrue(result);
 
 		rhymer.countIn(888);
 
 		result = rhymer.callCheck();
-		Assert.assertEquals(false, result);
+		Assert.assertFalse(result);
 	}
 
 	/// Test nie ma już sensu, ponieważ nowa implementacja stosu ma teoretycznie nieograniczony rozmiar maksymalny
@@ -55,18 +55,18 @@ public class RhymersJUnitTest {
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = rhymer.isFull();
-			Assert.assertEquals(false, result);
+			Assert.assertFalse(result);
 			rhymer.countIn(888);
 		}
 
 		boolean result = rhymer.isFull();
-		Assert.assertEquals(false, result);
+		Assert.assertFalse(result);
 	}
 
 	@Test
 	public void testD_C_O_R_Peekaboo() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.peekaboo();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -83,7 +83,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testD_C_O_R_CountOut() {
 		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 
 		int result = rhymer.countOut();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -102,7 +102,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testFIFORhymerCount() {
 		DefaultCountingOutRhymer rhymer = new FIFORhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		final int[] testValues = {1, 2, 3};
 
 		for (int tV : testValues)
@@ -123,7 +123,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testHanoiRhymerCount() {
 		DefaultCountingOutRhymer rhymer = new HanoiRhymer();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		final int[][] testValues = {
 				{13, 99, 99,  7, 99, 99, 99,  3, 99,  2},
 				{14, 99, 99, 99, 99, 99,  7, 99,  5,  4},
@@ -183,12 +183,12 @@ public class RhymersJUnitTest {
 	public void testI_L_L_isEmpty() {
 		IntCollection list = new IntLinkedList();
 		boolean result = list.isEmpty();
-		Assert.assertEquals(true, result);
+		Assert.assertTrue(result);
 
 		list.push(999);
 
 		result = list.isEmpty();
-		Assert.assertEquals(false, result);
+		Assert.assertFalse(result);
 	}
 
 //	Method not implemented
@@ -198,7 +198,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testI_L_L_top() {
 		IntCollection list = new IntLinkedList();
-		final int EMPTY_LIST_VALUE = -1;
+		final int EMPTY_LIST_VALUE = 0;
 
 		int result = list.top();
 		Assert.assertEquals(EMPTY_LIST_VALUE, result);
@@ -215,7 +215,7 @@ public class RhymersJUnitTest {
 	@Test
 	public void testI_L_L_pop() {
 		IntCollection list = new IntLinkedList();
-		final int EMPTY_LIST_VALUE = -1;
+		final int EMPTY_LIST_VALUE = 0;
 
 		int result = list.pop();
 		Assert.assertEquals(EMPTY_LIST_VALUE, result);
