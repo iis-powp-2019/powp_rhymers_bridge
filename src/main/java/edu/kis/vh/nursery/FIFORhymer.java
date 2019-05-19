@@ -2,10 +2,11 @@ package edu.kis.vh.nursery;
 
 
 import edu.kis.vh.nursery.collection.IntCollection;
+import edu.kis.vh.nursery.collection.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+    private IntCollection temp = new IntLinkedList();
 
     public FIFORhymer() {
     }
@@ -18,12 +19,12 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     public int countOut() {
 
         while (!callCheck())
-            temp.countIn(super.countOut());
+            temp.push(super.countOut());
 
-        int ret = temp.countOut();
+        int ret = temp.pop();
 
-        while (!temp.callCheck())
-            countIn(temp.countOut());
+        while (!temp.isEmpty())
+            countIn(temp.pop());
 
         return ret;
     }

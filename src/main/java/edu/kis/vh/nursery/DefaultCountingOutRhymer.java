@@ -8,7 +8,7 @@ import edu.kis.vh.nursery.collection.IntLinkedList;
  */
 public class DefaultCountingOutRhymer {
 
-    IntCollection stack;
+    private IntCollection stack;
 
     public DefaultCountingOutRhymer() {
         this.stack = new IntLinkedList();

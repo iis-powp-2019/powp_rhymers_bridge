@@ -3,7 +3,7 @@ package edu.kis.vh.nursery.collection;
 /**
  * Class storing array implementation of stack
  */
-@Deprecated
+
 public class IntArrayStack implements IntCollection {
 
     /**
