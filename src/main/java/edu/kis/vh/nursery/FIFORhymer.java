@@ -1,10 +1,11 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.collections.IntCollection;
 import edu.kis.vh.nursery.collections.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
+    private IntCollection temp = new IntLinkedList();
 
     public FIFORhymer(IntLinkedList stack) {
         super(stack);
@@ -14,14 +15,16 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     public int countOut() {
         while (!callCheck())
 
-            temp.countIn(super.countOut());
+            temp.push(super.countOut());
 
-        int ret = temp.countOut();
+        int ret = temp.pop();
 
-        while (!temp.callCheck())
+        while (!temp.isEmpty())
 
-            countIn(temp.countOut());
+            countIn(temp.pop());
 
         return ret;
     }
 }
+
+//Najlepszy wyborem będzie IntLinkedList gdyż nie ma ograniczenia na dłogość stosu
