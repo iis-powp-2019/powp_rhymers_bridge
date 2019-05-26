@@ -9,7 +9,7 @@ public interface Rhymersfactory {
 
     DefaultCountingOutRhymer getFalseRhymer();
 
-    FIFORhymer getFIFORhymer();
+    DefaultCountingOutRhymer getFIFORhymer();
 
     DefaultCountingOutRhymer getHanoiRhymer();
 

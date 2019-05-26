@@ -11,7 +11,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
     }
 
 
-    public FIFORhymer(IntLinkedList stack) {
+    public FIFORhymer(IntCollection stack) {
         super(stack);
     }
 
