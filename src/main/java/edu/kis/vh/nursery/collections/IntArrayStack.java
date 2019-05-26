@@ -2,8 +2,6 @@ package edu.kis.vh.nursery.collections;
 
 public class IntArrayStack implements IntCollection{
     private static final int STACK_LAST_POSITION = 11;
-    private static final int STACK_STARTING_POSITION = -1;
-    private static final int STACK_VALUE_ON_STARTING_POSITION = -1;
     private int[] numbers = new int[12];
 
     private int total = STACK_STARTING_POSITION;

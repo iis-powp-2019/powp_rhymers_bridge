@@ -1,9 +1,11 @@
 package edu.kis.vh.nursery.collections;
 
+import java.util.Collections;
+
 public class IntLinkedList implements IntCollection {
 
     private Node last;
-    private int i = 0;
+    private int i = IntCollection.STACK_STARTING_POSITION+1;
 
     /**
      *
@@ -54,7 +56,7 @@ public class IntLinkedList implements IntCollection {
     @Override
     public int top() {
         if (isEmpty())
-            return -1;
+            return IntCollection.STACK_VALUE_ON_STARTING_POSITION;
         return last.value;
     }
 
@@ -66,7 +68,7 @@ public class IntLinkedList implements IntCollection {
     @Override
     public int pop() {
         if (isEmpty())
-            return -1;
+            return IntCollection.STACK_VALUE_ON_STARTING_POSITION;
         int ret = last.value;
         last = last.prev;
         this.i--;
