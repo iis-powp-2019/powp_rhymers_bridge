@@ -1,60 +1,85 @@
 package edu.kis.vh.nursery.list;
 
 /**
- * @author tobia
- * Klasa 
+ * @author tobiasz
+ * Lista przechowujaca liczby całkowite.
+ *
  */
+
 public class IntLinkedList {
 
-	private Node last;
-	int i;
+    private static final int EMPTY = -1;
+    private Node last;
+    private int total = EMPTY;
 
-	public void push(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.setNext(new Node(i));
+    public void countIn(int i) {
+        total++;
+        if (last == null)
+            last = new Node(i);
+        else {
+            last.setNext(new Node(i));
             last.getNext().setPrev(last);
             last = last.getNext();
-		}
-	}
+        }
+    }
 
-	/**
-	 * Sprawdzanie listy
-	 * @return zwraca prawde jeśli lista jest pusta albo fałsz jeśli coś w niej jest
-	 */
-	public boolean isEmpty() {
-		return last == null;
-	}
+    public boolean callCheck() {
+        return last == null;
+    }
 
-	/**
-	 * Sprawdza czy lista jest pełna
-	 * @return zawsze fałszywe
-	 */
-	public boolean isFull() {
-		return false;
-	}
+    public boolean isFull() {
+        return false;
+    }
 
-	/**
-	 * Zwraca top wartość
-	 * @return wartość ostatniego elementu  albo -1 jeśli jest pusta
-	 */
-	public int top() {
-		if (isEmpty())
-			return -1;
-		return last.getValue();
-	}
+    public int peekaboo() {
+        if (callCheck())
+            return EMPTY;
+        return last.getValue();
+    }
 
-	/**
-	 * Usuwanie elementu z listy
-	 * @return wartość elementu albo -1 jeśli jest pusty
-	 */
-	public int pop() {
-		if (isEmpty())
-			return -1;
-		int ret = last.getValue();
+    public int countOut() {
+        total--;
+        if (callCheck())
+            return EMPTY;
+        final int ret = last.getValue();
         last = last.getPrev();
-		return ret;
-	}
+        return ret;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    private class Node {
+
+        private final int value;
+        private Node prev;
+        private Node next;
+
+        public Node(int i) {
+            value = i;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public Node getPrev() {
+            return prev;
+        }
+
+        public void setPrev(final Node prev) {
+            this.prev = prev;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(final Node next) {
+            this.next = next;
+        }
+
+    }
 
 }
