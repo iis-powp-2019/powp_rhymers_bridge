@@ -1,17 +1,18 @@
 package edu.kis.vh.nursery;
 
-public class IntArrayStack {
+public class IntArrayStack implements Stack{
 
     private static final int DEFAULT_INDEX = -1;
     private static final int MAX_STACK_CAPACITY = 12;
 
     private int[] numbers = new int[MAX_STACK_CAPACITY];
 
+    private int total = DEFAULT_INDEX;
+
     public int getTotal() {
         return total;
     }
 
-    private int total = DEFAULT_INDEX;
 
     public void countIn(int in) {
         if (!isFull())
@@ -22,8 +23,28 @@ public class IntArrayStack {
         return total == DEFAULT_INDEX;
     }
 
+    @Override
+    public void push(int i) {
+        countIn(i);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return isCheck();
+    }
+
     public boolean isFull() {
         return total == MAX_STACK_CAPACITY - 1;
+    }
+
+    @Override
+    public int top() {
+        return peekaboo();
+    }
+
+    @Override
+    public int pop() {
+        return countOut();
     }
 
     protected int peekaboo() {
