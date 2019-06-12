@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.containers;
 
 public class Node {
-    public static final int DEFAULT_INDEX = -1;
+    public static final int DEFAULT_INDEX = 0;
 
 
     public int getValue() {
