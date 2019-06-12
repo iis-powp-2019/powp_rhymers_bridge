@@ -1,8 +1,9 @@
-package edu.kis.vh.nursery;
+package edu.kis.vh.nursery.containers;
 
-public class IntArrayStack implements Stack{
+import static edu.kis.vh.nursery.containers.Node.DEFAULT_INDEX;
 
-    private static final int DEFAULT_INDEX = -1;
+public class IntArrayStack implements Stack {
+
     private static final int MAX_STACK_CAPACITY = 12;
 
     private int[] numbers = new int[MAX_STACK_CAPACITY];
