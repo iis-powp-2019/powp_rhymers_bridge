@@ -8,7 +8,7 @@ public class IntArrayStack implements IStack {
 
     private final int[] numbers = new int[STACK_CAPACITY];
 
-    public int total = EMPTY;
+    public int total = -1;
 
     public void countIn(final int in) {
         if (!isFull())

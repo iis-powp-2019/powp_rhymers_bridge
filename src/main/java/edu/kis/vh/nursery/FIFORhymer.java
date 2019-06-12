@@ -4,7 +4,7 @@ import edu.kis.vh.nursery.stack.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-	private final IntLinkedList temp = new IntLinkedList(); // Bardziej optymalny jest IntLinkedList
+	private final IntLinkedList temp = new IntLinkedList(); // Bardziej optymalny jest IntLinkedList i bardziej poprawny
 
 	@Override
 	public int countOut() {

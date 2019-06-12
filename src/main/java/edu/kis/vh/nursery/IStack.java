@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 public interface IStack {
 
-    static final int EMPTY = -1;
+    static final int EMPTY = 0;
 
     void countIn(int in);
 
