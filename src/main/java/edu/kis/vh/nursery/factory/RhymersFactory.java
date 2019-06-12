@@ -6,20 +6,12 @@ import edu.kis.vh.nursery.HanoiRhymer;
 
 public interface RhymersFactory {
 
-    static DefaultCountingOutRhymer getStandardRhymer(){
-        return new DefaultCountingOutRhymer();
-    }
+    public DefaultCountingOutRhymer getStandardRhymer();
 
-    static DefaultCountingOutRhymer getFalseRhymer(){
-        return new DefaultCountingOutRhymer();
-    }
+    public DefaultCountingOutRhymer getFalseRhymer();
 
-    static DefaultCountingOutRhymer getFIFORhymer(){
-        return new FIFORhymer();
-    }
+    public DefaultCountingOutRhymer getFIFORhymer();
 
-    static DefaultCountingOutRhymer getHanoiRhymer(){
-        return new HanoiRhymer();
-    }
+    public DefaultCountingOutRhymer getHanoiRhymer();
 
 }
