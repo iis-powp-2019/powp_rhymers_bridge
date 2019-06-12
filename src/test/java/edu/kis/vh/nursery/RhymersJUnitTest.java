@@ -1,5 +1,6 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntArrayStack;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,7 +8,7 @@ public class RhymersJUnitTest {
 
 	@Test
 	public void testCountIn() {
-		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer();
+		DefaultCountingOutRhymer rhymer = new DefaultCountingOutRhymer(new IntArrayStack());
 		int testValue = 4;
 		rhymer.countIn(testValue);
 
