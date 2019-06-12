@@ -5,7 +5,7 @@ import edu.kis.vh.nursery.containers.Stack;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private final Stack temp = new IntLinkedList();
+    private final Stack temp = new IntLinkedList(); // Zapewnia nieograniczoną pojemność, a w dużej tablicy nie zajmuje jednego bloku w pamięci
 
     public FIFORhymer() {
     }
