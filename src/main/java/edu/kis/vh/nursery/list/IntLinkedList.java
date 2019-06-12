@@ -6,6 +6,7 @@ public class IntLinkedList {
 
     private Node last;
     private int i;
+    private int total = 0;
 
     private int test;
 
@@ -17,6 +18,7 @@ public class IntLinkedList {
             last.getNext().setPrev(last);
             last = last.getNext();
         }
+        total++;
     }
 
 
@@ -42,10 +44,15 @@ public class IntLinkedList {
         int ret = last.getValue();
         last = last.getPrev();
 
+        total--;
         return ret;
     }
 
     public int getTest() {
         return test;
+    }
+
+    public int getTotal(){
+        return total;
     }
 }
