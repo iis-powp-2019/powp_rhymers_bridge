@@ -15,5 +15,13 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		else
 			super.countIn(in);
 	}
+
+	public HanoiRhymer() {
+		super();
+	}
+
+	public HanoiRhymer(IStack stack) {
+		super(stack);
+	}
 	// skrót kalwiszowy daje nam możliwość przemieszczania między kratami na których pracujemy
 }

@@ -10,7 +10,6 @@ import edu.kis.vh.nursery.IStack;
 
 public class IntLinkedList implements IStack {
 
-    private static final int EMPTY = -1;
     private Node last;
     private int total = EMPTY;
 

@@ -10,7 +10,7 @@ public class DefaultCountingOutRhymer {
 		stack.countIn(in);
 	}
 
-	public DefaultCountingOutRhymer(IntLinkedList stack) {
+	public DefaultCountingOutRhymer(IStack stack) {
 		super();
 		this.stack = stack;
 	}

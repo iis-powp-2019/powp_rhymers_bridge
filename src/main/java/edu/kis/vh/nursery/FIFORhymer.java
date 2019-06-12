@@ -16,4 +16,13 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
 		return ret;
 	}
+
+	public FIFORhymer() {
+		super();
+	}
+
+	public FIFORhymer(IStack stack) {
+		super(stack);
+
+	}
 }
