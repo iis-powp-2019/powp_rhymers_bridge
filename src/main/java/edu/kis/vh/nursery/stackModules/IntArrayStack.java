@@ -1,6 +1,4 @@
-package edu.kis.vh.nursery;
-
-import edu.kis.vh.nursery.list.Data;
+package edu.kis.vh.nursery.stackModules;
 
 public class IntArrayStack implements Data {
     private static final int EMPTY = -1;

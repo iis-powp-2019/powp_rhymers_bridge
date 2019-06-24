@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.list.Data;
-import edu.kis.vh.nursery.list.IntLinkedList;
+import edu.kis.vh.nursery.stackModules.Data;
+import edu.kis.vh.nursery.stackModules.IntLinkedList;
 
 public class DefaultCountingOutRhymer {
     private Data data;
