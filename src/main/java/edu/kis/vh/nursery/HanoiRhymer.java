@@ -10,6 +10,9 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
     public HanoiRhymer(Data data) {
         super(data);
     }
+    public HanoiRhymer(){
+
+    }
 
     public int reportRejected() {
         return totalRejected;

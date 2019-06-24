@@ -1,14 +1,17 @@
 package edu.kis.vh.nursery;
 
 import edu.kis.vh.nursery.stackModules.Data;
+import edu.kis.vh.nursery.stackModules.IntLinkedList;
 
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
-    private DefaultCountingOutRhymer temp;
+    private IntLinkedList temp = new IntLinkedList(); //linked list doesn't have size limitation
 
-    public FIFORhymer(Data data, DefaultCountingOutRhymer temp) {
+    public FIFORhymer(Data data) {
         super(data);
-        this.temp = temp;
+    }
+    public FIFORhymer(){
+
     }
 
     @Override
