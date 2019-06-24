@@ -6,7 +6,7 @@ package edu.kis.vh.nursery.stackModules;
 public class IntLinkedList implements Data{
 
     private Node last;
-    private static final int EMPTY_INDEX = -1;
+    private static final int EMPTY_INDEX = 0;
 
     @Override
     public void countIn(int i) {

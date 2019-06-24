@@ -1,7 +1,7 @@
 package edu.kis.vh.nursery.stackModules;
 
 public class IntArrayStack implements Data {
-    private static final int EMPTY = -1;
+    private static final int EMPTY = 0;
     private static final int CAPACITY = 12;
     private int[] numbers = new int[CAPACITY];
 
